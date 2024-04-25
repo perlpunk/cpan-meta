@@ -2,19 +2,22 @@
 perl-Acme-MetaSyntactic:
   conf:
     ignore_requires: Win32::Locale
-  spec: perl-Acme-MetaSyntactic/perl-Acme-MetaSyntactic.spec
+  specfile: perl-Acme-MetaSyntactic/perl-Acme-MetaSyntactic.spec
+  version: '1.015'
 perl-Alien-Base-ModuleBuild:
   conf:
     preamble: |-
       %if 0%{?suse_version} <= 1530
       BuildRequires:  perl(PkgConfig)
       %endif
-  spec: perl-Alien-Base-ModuleBuild/perl-Alien-Base-ModuleBuild.spec
+  specfile: perl-Alien-Base-ModuleBuild/perl-Alien-Base-ModuleBuild.spec
+  version: '1.17'
 perl-Alien-Build:
   conf:
     description_paragraphs: 1
     preamble: 'BuildRequires:  pkg-config'
-  spec: perl-Alien-Build/perl-Alien-Build.spec
+  specfile: perl-Alien-Build/perl-Alien-Build.spec
+  version: '2.80'
 perl-Alien-GMP:
   conf:
     preamble: |-
@@ -29,11 +32,13 @@ perl-Alien-GMP:
       BuildRequires:  gmp-devel
       %endif
     skip_noarch: 1
-  spec: perl-Alien-GMP/perl-Alien-GMP.spec
+  specfile: perl-Alien-GMP/perl-Alien-GMP.spec
+  version: '1.16'
 perl-Alien-GSL:
   conf:
     preamble: 'BuildRequires: gsl-devel'
-  spec: perl-Alien-GSL/perl-Alien-GSL.spec
+  specfile: perl-Alien-GSL/perl-Alien-GSL.spec
+  version: '1.02'
 perl-Alien-Hunspell:
   conf:
     preamble: |-
@@ -41,7 +46,8 @@ perl-Alien-Hunspell:
       BuildRequires:  pkgconfig(hunspell)
       Requires: pkgconfig(hunspell)
     skip_noarch: 1
-  spec: perl-Alien-Hunspell/perl-Alien-Hunspell.spec
+  specfile: perl-Alien-Hunspell/perl-Alien-Hunspell.spec
+  version: '0.17'
 perl-Alien-Libxml2:
   conf:
     preamble: |-
@@ -49,14 +55,13 @@ perl-Alien-Libxml2:
       BuildRequires:  perl-URI
       BuildRequires:  perl(Mojo::DOM58)
       BuildRequires:  perl(Sort::Versions)
-  spec: perl-Alien-Libxml2/perl-Alien-Libxml2.spec
+  specfile: perl-Alien-Libxml2/perl-Alien-Libxml2.spec
+  version: '0.19'
 perl-Alien-SDL:
   conf:
     custom_build: |-
       %{__perl} Build.PL installdirs=vendor optimize="%{optflags}"  --travis
       ./Build build flags=%{?_smp_mflags}
-    patches:
-      reproducible.patch: -p1
     post_install: sed "s:^%{_bindir}:%%attr(755,root,root) %{_bindir}:" %{name}.files -i
     preamble: |-
       BuildRequires:  Mesa-devel
@@ -66,7 +71,8 @@ perl-Alien-SDL:
       BuildRequires:  libSDL_net-devel
       BuildRequires:  libSDL_ttf-devel
       BuildRequires:  gcc-c++
-  spec: perl-Alien-SDL/perl-Alien-SDL.spec
+  specfile: perl-Alien-SDL/perl-Alien-SDL.spec
+  version: '1.446'
 perl-Alien-libmaxminddb:
   conf:
     preamble: |-
@@ -74,7 +80,8 @@ perl-Alien-libmaxminddb:
       Requires: pkgconfig(libmaxminddb) >= 1.2.0
     skip_doc: alienfile
     skip_noarch: 1
-  spec: perl-Alien-libmaxminddb/perl-Alien-libmaxminddb.spec
+  specfile: perl-Alien-libmaxminddb/perl-Alien-libmaxminddb.spec
+  version: 1.14.0
 perl-Alien-libtermkey:
   conf:
     description_paragraphs: 2
@@ -86,7 +93,8 @@ perl-Alien-libtermkey:
       Requires: perl(Alien::unibilium)
     skip_noarch: 1
     summary: Alien wrapping for libtermkey
-  spec: perl-Alien-libtermkey/perl-Alien-libtermkey.spec
+  specfile: perl-Alien-libtermkey/perl-Alien-libtermkey.spec
+  version: '0.22'
 perl-Alien-unibilium:
   conf:
     description_paragraphs: 2
@@ -95,17 +103,14 @@ perl-Alien-unibilium:
       BuildRequires: unibilium-devel
       Requires: unibilium-devel
     skip_noarch: 1
-  spec: perl-Alien-unibilium/perl-Alien-unibilium.spec
+  specfile: perl-Alien-unibilium/perl-Alien-unibilium.spec
+  version: '0.15'
 perl-Alien-wxWidgets:
   conf:
     custom_build: |-
       yes no | %__perl ./Build.PL installdirs=vendor
       yes no | ./Build
       ./Build build flags=%{?_smp_mflags}
-    patches:
-      perl-Alien-wxWidgets-do_not_build_wxgtk.patch: null
-      perl-Alien-wxWidgets-dump_sorted_config.patch: null
-      perl-Alien-wxWidgets-ignore_cbuilder_version.patch: null
     post_prep: |-
       # this copy of GNU patch is only used on win32, remove it for license clarity
       # see https://build.opensuse.org/request/show/237465
@@ -118,68 +123,77 @@ perl-Alien-wxWidgets:
       BuildRequires:  wxWidgets-ansi-devel
       %endif
     skip_noarch: 1
-  spec: perl-Alien-wxWidgets/perl-Alien-wxWidgets.spec
+  specfile: perl-Alien-wxWidgets/perl-Alien-wxWidgets.spec
+  version: '0.69'
 perl-AnyEvent:
   conf:
     license: GPL-1.0+ or Artistic-1.0
     skip_noarch: 1
-  spec: perl-AnyEvent/perl-AnyEvent.spec
+  specfile: perl-AnyEvent/perl-AnyEvent.spec
+  version: '7.17'
 perl-AnyEvent-AIO:
   conf:
     license: Artistic-1.0 OR GPL-1.0-or-later
-  spec: perl-AnyEvent-AIO/perl-AnyEvent-AIO.spec
+  specfile: perl-AnyEvent-AIO/perl-AnyEvent-AIO.spec
+  version: '1.1'
 perl-AnyEvent-HTTP:
   conf:
     license: Perl License
-  spec: perl-AnyEvent-HTTP/perl-AnyEvent-HTTP.spec
+  specfile: perl-AnyEvent-HTTP/perl-AnyEvent-HTTP.spec
+  version: '2.25'
 perl-AnyEvent-I3:
   conf:
     license: GPL-1.0+ or Artistic-1.0
-  spec: perl-AnyEvent-I3/perl-AnyEvent-I3.spec
+  specfile: perl-AnyEvent-I3/perl-AnyEvent-I3.spec
+  version: '0.17'
 perl-Apache-ASP:
   conf:
     preamble: 'BuildRequires:  perl(MLDBM) perl(MLDBM::Sync)'
-  spec: perl-Apache-ASP/perl-Apache-ASP.spec
+  specfile: perl-Apache-ASP/perl-Apache-ASP.spec
+  version: '2.63'
 perl-Apache-AuthCookie:
   conf:
     preamble: 'BuildRequires:  netcfg'
-  spec: perl-Apache-AuthCookie/perl-Apache-AuthCookie.spec
+  specfile: perl-Apache-AuthCookie/perl-Apache-AuthCookie.spec
+  version: '3.31'
 perl-Apache-DBI:
   conf:
     description_paragraphs: 4
-    patches:
-      Apache-DBI-1.11-path.patch: null
-  spec: perl-Apache-DBI/perl-Apache-DBI.spec
+  specfile: perl-Apache-DBI/perl-Apache-DBI.spec
+  version: '1.12'
 perl-Apache-LogFormat-Compiler:
   conf:
     preamble: 'BuildRequires:  timezone'
-  spec: perl-Apache-LogFormat-Compiler/perl-Apache-LogFormat-Compiler.spec
+  specfile: perl-Apache-LogFormat-Compiler/perl-Apache-LogFormat-Compiler.spec
+  version: '0.36'
 perl-Apache-Test:
   conf:
     ignore_requires: Win32::Process
     license: Apache-2.0
-    patches:
-      fix-provides.diff: -p1
     preamble: |-
       BuildRequires:  netcfg
       Requires:  netcfg
-  spec: perl-Apache-Test/perl-Apache-Test.spec
+  specfile: perl-Apache-Test/perl-Apache-Test.spec
+  version: '1.43'
 perl-Apache2-SOAP:
   conf:
     preamble: |-
       BuildRequires: apache2-mod_perl-devel
       BuildRequires: netcfg
-  spec: perl-Apache2-SOAP/perl-Apache2-SOAP.spec
+  specfile: perl-Apache2-SOAP/perl-Apache2-SOAP.spec
+  version: '0.73'
 perl-App-CLI:
   conf:
     ignore_requires: Test::Kwalitee
-  spec: perl-App-CLI/perl-App-CLI.spec
+  specfile: perl-App-CLI/perl-App-CLI.spec
+  version: '0.52'
 perl-App-Nopaste:
   conf:
     post_prep: '%__install -m 0644 "%{SOURCE1}" lib/App/Nopaste/Service/'
     sources:
     - SusePaste.pm
-  spec: perl-App-Nopaste/perl-App-Nopaste.spec
+  specfile: perl-App-Nopaste/perl-App-Nopaste.spec
+  version: '1.013'
 perl-App-Rad:
   conf:
     description: |-
@@ -191,7 +205,8 @@ perl-App-Rad:
       It also provides an interface for common command-line
       tasks.
     summary: Framework to facilitate creation of command line applications
-  spec: perl-App-Rad/perl-App-Rad.spec
+  specfile: perl-App-Rad/perl-App-Rad.spec
+  version: '1.05'
 perl-App-Sqitch:
   conf:
     misc: |-
@@ -251,7 +266,8 @@ perl-App-Sqitch:
       Provides:      sqitch
       Requires:      perl(Class::XSAccessor)
       Requires:      perl(Template)
-  spec: perl-App-Sqitch/perl-App-Sqitch.spec
+  specfile: perl-App-Sqitch/perl-App-Sqitch.spec
+  version: 1.4.1
 perl-App-cpanminus:
   conf:
     post_prep: |-
@@ -339,140 +355,155 @@ perl-App-cpanminus:
       Obsoletes:      cpanm <= 1.5010
     sources:
     - fatunpack
-  spec: perl-App-cpanminus/perl-App-cpanminus.spec
+  specfile: perl-App-cpanminus/perl-App-cpanminus.spec
+  version: '1.7047'
 perl-App-cpm:
   conf:
     skip_doc: cpm.yml
-  spec: perl-App-cpm/perl-App-cpm.spec
+  specfile: perl-App-cpm/perl-App-cpm.spec
+  version: '0.997015'
 perl-App-perlbrew:
   conf:
     post_prep: chmod a+x t/fake-bin/curl
     preamble: 'BuildRequires:  wget curl groff'
-  spec: perl-App-perlbrew/perl-App-perlbrew.spec
+  specfile: perl-App-perlbrew/perl-App-perlbrew.spec
+  version: 0.980.0
 perl-Archive-Any:
   conf:
     description_paragraphs: 1
     preamble: 'BuildRequires:  perl(Test::Warn)'
-  spec: perl-Archive-Any/perl-Archive-Any.spec
+  specfile: perl-Archive-Any/perl-Archive-Any.spec
+  version: '0.0946'
 perl-Archive-Cpio:
   conf:
     license: GPL-1.0+ or Artistic-1.0
-  spec: perl-Archive-Cpio/perl-Archive-Cpio.spec
+  specfile: perl-Archive-Cpio/perl-Archive-Cpio.spec
+  version: '0.10'
 perl-Archive-Tar-Wrapper:
   conf:
     license: GPL-3.0-or-later
-  spec: perl-Archive-Tar-Wrapper/perl-Archive-Tar-Wrapper.spec
+  specfile: perl-Archive-Tar-Wrapper/perl-Archive-Tar-Wrapper.spec
+  version: '0.38'
 perl-Async:
   conf:
     license: CC0-1.0
-  spec: perl-Async/perl-Async.spec
+  specfile: perl-Async/perl-Async.spec
+  version: '0.14'
 perl-Audio-Mixer:
-  conf:
-    patches:
-      https://rt.cpan.org/Ticket/Attachment/1343038/712677/clang_FTBFS_Wreturn-type.patch: -p1 PATCH-FIX-UPSTREAM https://rt.cpan.org/Public/Bug/Display.html?id=94186
-  spec: perl-Audio-Mixer/perl-Audio-Mixer.spec
+  conf: {}
+  specfile: perl-Audio-Mixer/perl-Audio-Mixer.spec
+  version: '0.7'
 perl-Audio-Scan:
   conf:
     license: GPL-2.0+
     preamble: 'BuildRequires:  zlib-devel pkgconfig'
-  spec: perl-Audio-Scan/perl-Audio-Scan.spec
+  specfile: perl-Audio-Scan/perl-Audio-Scan.spec
+  version: '1.01'
 perl-Audio-Wav:
   conf:
     license: GPL-1.0+ or Artistic-1.0
-  spec: perl-Audio-Wav/perl-Audio-Wav.spec
+  specfile: perl-Audio-Wav/perl-Audio-Wav.spec
+  version: '0.14'
 perl-Authen-DecHpwd:
   conf:
     license: GPL-2.0+
-  spec: perl-Authen-DecHpwd/perl-Authen-DecHpwd.spec
+  specfile: perl-Authen-DecHpwd/perl-Authen-DecHpwd.spec
+  version: '2.007'
 perl-Authen-PAM:
   conf:
     description: This module provides a Perl interface to the PAM library.
     license: Perl
     no_testing: needs tty
-    patches:
-      Authen-PAM-0.16-Fix-building-on-Perl-without-dot-in-INC.patch: -p1 PATCH-FIX-UPSTREAM load config with full path
     preamble: 'BuildRequires:  pam-devel'
     skip_doc: configure.ac
-  spec: perl-Authen-PAM/perl-Authen-PAM.spec
+  specfile: perl-Authen-PAM/perl-Authen-PAM.spec
+  version: '0.16'
 perl-B-Flags:
   conf:
     license: Perl License
-  spec: perl-B-Flags/perl-B-Flags.spec
+  specfile: perl-B-Flags/perl-B-Flags.spec
+  version: '0.17'
 perl-B-Generate:
   conf:
     license: Perl License
-  spec: perl-B-Generate/perl-B-Generate.spec
+  specfile: perl-B-Generate/perl-B-Generate.spec
+  version: '1.56'
 perl-B-Hooks-OP-Check:
   conf:
     sources:
     - perl-B-Hooks-OP-Check-rpmlintrc
-  spec: perl-B-Hooks-OP-Check/perl-B-Hooks-OP-Check.spec
+  specfile: perl-B-Hooks-OP-Check/perl-B-Hooks-OP-Check.spec
+  version: '0.22'
 perl-B-Hooks-OP-PPAddr:
   conf:
     sources:
     - perl-B-Hooks-OP-PPAddr-rpmlintrc
-  spec: perl-B-Hooks-OP-PPAddr/perl-B-Hooks-OP-PPAddr.spec
+  specfile: perl-B-Hooks-OP-PPAddr/perl-B-Hooks-OP-PPAddr.spec
+  version: '0.06'
 perl-B-Keywords:
   conf:
     license: GPL-2.0 or Artistic-1.0
-  spec: perl-B-Keywords/perl-B-Keywords.spec
+  specfile: perl-B-Keywords/perl-B-Keywords.spec
+  version: '1.26'
 perl-B-Lint:
   conf:
-    patches:
-      fix-bare.diff: -p2
     skip_noarch: 1
-  spec: perl-B-Lint/perl-B-Lint.spec
+  specfile: perl-B-Lint/perl-B-Lint.spec
+  version: '1.20'
 perl-B-Utils:
   conf:
-    patches:
-      parent-impl.patch: -p1
     sources:
     - perl-B-Utils-rpmlintrc
-  spec: perl-B-Utils/perl-B-Utils.spec
+  specfile: perl-B-Utils/perl-B-Utils.spec
+  version: '0.27'
 perl-BSD-Resource:
   conf:
     license: Artistic-2.0 or LGPL-2.0
-  spec: perl-BSD-Resource/perl-BSD-Resource.spec
+  specfile: perl-BSD-Resource/perl-BSD-Resource.spec
+  version: '1.2911'
 perl-Badger:
   conf:
     preamble: 'BuildRequires:  perl(YAML)'
-  spec: perl-Badger/perl-Badger.spec
+  specfile: perl-Badger/perl-Badger.spec
+  version: '0.16'
 perl-Benchmark-Timer:
   conf:
     license: GPL-2.0+
     post_prep: |-
       sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
       sed -i -e 's,/usr/local/bin/perl,/usr/bin/perl,' delta.pl
-  spec: perl-Benchmark-Timer/perl-Benchmark-Timer.spec
+  specfile: perl-Benchmark-Timer/perl-Benchmark-Timer.spec
+  version: '0.7112'
 perl-BerkeleyDB:
   conf:
     preamble: 'BuildRequires:  db-devel'
-  spec: perl-BerkeleyDB/perl-BerkeleyDB.spec
+  specfile: perl-BerkeleyDB/perl-BerkeleyDB.spec
+  version: '0.65'
 perl-BioPerl:
   conf:
     preamble: 'BuildRequires:  perl(GD)'
-  spec: perl-BioPerl/perl-BioPerl.spec
+  specfile: perl-BioPerl/perl-BioPerl.spec
+  version: 1.7.8
 perl-Bit-Vector:
   conf:
     license: GPL-1.0+ or Artistic-1.0
-    patches:
-      Bit-Vector-7.1.diff: null
-  spec: perl-Bit-Vector/perl-Bit-Vector.spec
+  specfile: perl-Bit-Vector/perl-Bit-Vector.spec
+  version: '7.4'
 perl-CBOR-XS:
   conf:
     license: GPL-3.0
-  spec: perl-CBOR-XS/perl-CBOR-XS.spec
+  specfile: perl-CBOR-XS/perl-CBOR-XS.spec
+  version: 1.870.0
 perl-CDDB_get:
   conf:
     license: Artistic-1.0 or GPL-1.0+
-    patches:
-      '%name-2.23-tmpfile.diff': -p1
     post_install: |-
       install -d -m755  $RPM_BUILD_ROOT/%{_mandir}/man1
       install -m644 %{SOURCE1} $RPM_BUILD_ROOT/%{_mandir}/man1
     sources:
     - cddb.pl.1.gz
-  spec: perl-CDDB_get/perl-CDDB_get.spec
+  specfile: perl-CDDB_get/perl-CDDB_get.spec
+  version: '2.28'
 perl-CGI-Session:
   conf:
     license: GPL-1.0+ or Artistic-1.0
@@ -486,7 +517,8 @@ perl-CGI-Session:
       BuildRequires:  perl-DBD-SQLite
       BuildRequires:  perl(CGI::Simple)
       BuildRequires:  perl(FreezeThaw)
-  spec: perl-CGI-Session/perl-CGI-Session.spec
+  specfile: perl-CGI-Session/perl-CGI-Session.spec
+  version: '4.48'
 perl-CGI-Simple:
   conf:
     preamble: |-
@@ -494,11 +526,13 @@ perl-CGI-Simple:
       Provides:       perl(CGI::Simple) = %{version}0
       Provides:       perl(CGI::Simple::Cookie) = %{version}0
     summary: Object-oriented CGI interface compliant to CGI.pm
-  spec: perl-CGI-Simple/perl-CGI-Simple.spec
+  specfile: perl-CGI-Simple/perl-CGI-Simple.spec
+  version: 1.281.0
 perl-CHI-Driver-Memcached:
   conf:
     preamble: 'BuildRequires:  perl(Test::Deep) perl(Test::Exception) perl(Date::Parse) perl(Test::Warn) '
-  spec: perl-CHI-Driver-Memcached/perl-CHI-Driver-Memcached.spec
+  specfile: perl-CHI-Driver-Memcached/perl-CHI-Driver-Memcached.spec
+  version: '0.16'
 perl-CHI-Driver-Redis:
   conf:
     preamble: |-
@@ -506,7 +540,8 @@ perl-CHI-Driver-Redis:
       BuildRequires:  perl(Test::Deep)
       BuildRequires:  perl(Test::Exception)
       BuildRequires:  perl(Test::Warn)
-  spec: perl-CHI-Driver-Redis/perl-CHI-Driver-Redis.spec
+  specfile: perl-CHI-Driver-Redis/perl-CHI-Driver-Redis.spec
+  version: '0.10'
 perl-CPAN:
   conf:
     post_install: |-
@@ -514,7 +549,8 @@ perl-CPAN:
       mv $RPM_BUILD_ROOT/usr/bin/cpan              $RPM_BUILD_ROOT/usr/bin/CPAN
       mv $RPM_BUILD_ROOT/usr/share/man/man1/cpan.1 $RPM_BUILD_ROOT/usr/share/man/man1/CPAN.1
       #mv $RPM_BUILD_ROOT/usr/share/man/man3        $RPM_BUILD_ROOT/usr/share/man/man3pm
-  spec: perl-CPAN/perl-CPAN.spec
+  specfile: perl-CPAN/perl-CPAN.spec
+  version: '2.36'
 perl-CSS-Sass:
   conf:
     preamble: |-
@@ -522,127 +558,149 @@ perl-CSS-Sass:
       BuildRequires:  perl(ExtUtils::CppGuess)
       BuildRequires:  perl(Test::Differences)
       BuildRequires:  perl(YAML::XS)
-  spec: perl-CSS-Sass/perl-CSS-Sass.spec
+  specfile: perl-CSS-Sass/perl-CSS-Sass.spec
+  version: 3.6.4
 perl-Cache-Cache:
   conf:
     license: GPL-1.0+ or Artistic-1.0
-  spec: perl-Cache-Cache/perl-Cache-Cache.spec
+  specfile: perl-Cache-Cache/perl-Cache-Cache.spec
+  version: '1.08'
 perl-Cache-LRU:
-  conf:
-    patches:
-      perl526.patch: -p1
-  spec: perl-Cache-LRU/perl-Cache-LRU.spec
+  conf: {}
+  specfile: perl-Cache-LRU/perl-Cache-LRU.spec
+  version: '0.04'
 perl-Cache-Memcached:
   conf:
     license: Perl License
-  spec: perl-Cache-Memcached/perl-Cache-Memcached.spec
+  specfile: perl-Cache-Memcached/perl-Cache-Memcached.spec
+  version: '1.30'
 perl-Cache-Memcached-Fast:
   conf:
     custom_build: |-
       perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
       make -j1
     skip_doc: Changes-new
-  spec: perl-Cache-Memcached-Fast/perl-Cache-Memcached-Fast.spec
+  specfile: perl-Cache-Memcached-Fast/perl-Cache-Memcached-Fast.spec
+  version: '0.28'
 perl-Cairo:
   conf:
     license: LGPL-2.1-or-later
     preamble: 'BuildRequires:  pkgconfig(cairo)'
     skip_doc: ^(cairo-perl.typemap|doctypes|perl-cairo.doap)$
-  spec: perl-Cairo/perl-Cairo.spec
+  specfile: perl-Cairo/perl-Cairo.spec
+  version: '1.109'
 perl-Cairo-GObject:
   conf:
     license: LGPL-2.1+
     preamble: 'BuildRequires:  pkgconfig(cairo-gobject)'
-  spec: perl-Cairo-GObject/perl-Cairo-GObject.spec
+  specfile: perl-Cairo-GObject/perl-Cairo-GObject.spec
+  version: '1.005'
 perl-Canary-Stability:
   conf:
     license: Perl License
-  spec: perl-Canary-Stability/perl-Canary-Stability.spec
+  specfile: perl-Canary-Stability/perl-Canary-Stability.spec
+  version: '2013'
 perl-Catalyst-Authentication-Store-DBIx-Class:
   conf:
     preamble: |-
       BuildRequires:  perl(Class::Accessor::Fast)
       Requires: perl(Class::Accessor::Fast)
-  spec: perl-Catalyst-Authentication-Store-DBIx-Class/perl-Catalyst-Authentication-Store-DBIx-Class.spec
+  specfile: perl-Catalyst-Authentication-Store-DBIx-Class/perl-Catalyst-Authentication-Store-DBIx-Class.spec
+  version: '0.1506'
 perl-Catalyst-Plugin-Cache:
   conf:
     preamble: |-
       Requires:       perl(Class::Accessor::Fast)
       BuildRequires:  perl(Class::Accessor::Fast)
-  spec: perl-Catalyst-Plugin-Cache/perl-Catalyst-Plugin-Cache.spec
+  specfile: perl-Catalyst-Plugin-Cache/perl-Catalyst-Plugin-Cache.spec
+  version: '0.12'
 perl-Catalyst-Plugin-Session-State-URI:
   conf:
     preamble: 'BuildRequires:  perl(Class::Accessor)'
-  spec: perl-Catalyst-Plugin-Session-State-URI/perl-Catalyst-Plugin-Session-State-URI.spec
+  specfile: perl-Catalyst-Plugin-Session-State-URI/perl-Catalyst-Plugin-Session-State-URI.spec
+  version: '0.15'
 perl-Catalyst-Plugin-Session-Store-Delegate:
   conf:
     preamble: 'BuildRequires:  perl(Class::Accessor::Fast)'
-  spec: perl-Catalyst-Plugin-Session-Store-Delegate/perl-Catalyst-Plugin-Session-Store-Delegate.spec
+  specfile: perl-Catalyst-Plugin-Session-Store-Delegate/perl-Catalyst-Plugin-Session-Store-Delegate.spec
+  version: '0.06'
 perl-Catalyst-View-Component-SubInclude:
   conf:
     preamble: |-
       # https://rt.cpan.org/Ticket/Display.html?id=81574
       BuildRequires:  perl(File::Copy::Recursive)
       Requires:       perl(File::Copy::Recursive)
-  spec: perl-Catalyst-View-Component-SubInclude/perl-Catalyst-View-Component-SubInclude.spec
+  specfile: perl-Catalyst-View-Component-SubInclude/perl-Catalyst-View-Component-SubInclude.spec
+  version: '0.10'
 perl-Class-Accessor-Lite:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
-  spec: perl-Class-Accessor-Lite/perl-Class-Accessor-Lite.spec
+  specfile: perl-Class-Accessor-Lite/perl-Class-Accessor-Lite.spec
+  version: '0.08'
 perl-Class-Adapter:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Class-Adapter/perl-Class-Adapter.spec
+  specfile: perl-Class-Adapter/perl-Class-Adapter.spec
+  version: '1.09'
 perl-Class-Autouse:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Class-Autouse/perl-Class-Autouse.spec
+  specfile: perl-Class-Autouse/perl-Class-Autouse.spec
+  version: '2.01'
 perl-Class-C3-Componentised:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Class-C3-Componentised/perl-Class-C3-Componentised.spec
+  specfile: perl-Class-C3-Componentised/perl-Class-C3-Componentised.spec
+  version: '1.001002'
 perl-Class-Method-Modifiers-Fast:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
     preamble: 'BuildRequires:  perl(Sub::Uplevel) '
-  spec: perl-Class-Method-Modifiers-Fast/perl-Class-Method-Modifiers-Fast.spec
+  specfile: perl-Class-Method-Modifiers-Fast/perl-Class-Method-Modifiers-Fast.spec
+  version: '0.041'
 perl-Class-Multimethods:
   conf:
     description_paragraphs: 1
     license: Artistic-1.0
-  spec: perl-Class-Multimethods/perl-Class-Multimethods.spec
+  specfile: perl-Class-Multimethods/perl-Class-Multimethods.spec
+  version: '1.701'
 perl-Class-Refresh:
   conf:
     preamble: |-
       # dependency for tests
       BuildRequires:  perl(Moose)
-  spec: perl-Class-Refresh/perl-Class-Refresh.spec
+  specfile: perl-Class-Refresh/perl-Class-Refresh.spec
+  version: '0.07'
 perl-Class-ReturnValue:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Class-ReturnValue/perl-Class-ReturnValue.spec
+  specfile: perl-Class-ReturnValue/perl-Class-ReturnValue.spec
+  version: '0.55'
 perl-Class-Spiffy:
   conf:
     description_paragraphs: 3
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Class-Spiffy/perl-Class-Spiffy.spec
+  specfile: perl-Class-Spiffy/perl-Class-Spiffy.spec
+  version: '0.15'
 perl-Class-Tangram:
-  conf:
-    patches:
-      Class-Tangram-1.57-RT108841.patch: -p1
-  spec: perl-Class-Tangram/perl-Class-Tangram.spec
+  conf: {}
+  specfile: perl-Class-Tangram/perl-Class-Tangram.spec
+  version: '1.57'
 perl-Class-Trigger:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Class-Trigger/perl-Class-Trigger.spec
+  specfile: perl-Class-Trigger/perl-Class-Trigger.spec
+  version: '0.15'
 perl-Code-DRY:
   conf:
     description_paragraphs: 1
-  spec: perl-Code-DRY/perl-Code-DRY.spec
+  specfile: perl-Code-DRY/perl-Code-DRY.spec
+  version: '0.10'
 perl-Code-TidyAll:
   conf:
     skip_doc: .(yml|json)$
-  spec: perl-Code-TidyAll/perl-Code-TidyAll.spec
+  specfile: perl-Code-TidyAll/perl-Code-TidyAll.spec
+  version: 0.840.0
 perl-ColorThemeBase-Static:
   conf:
     description: |-
@@ -654,112 +712,124 @@ perl-ColorThemeBase-Static:
 
       Note that the item color itself can be dynamic, e.g. return a coderef.
     summary: Base class for color theme modules with static list of items
-  spec: perl-ColorThemeBase-Static/perl-ColorThemeBase-Static.spec
+  specfile: perl-ColorThemeBase-Static/perl-ColorThemeBase-Static.spec
+  version: '0.008'
 perl-Command-Runner:
   conf:
     ignore_requires: Win32::ShellQuote
-    patches:
-      nowin32.diff: -p1
-  spec: perl-Command-Runner/perl-Command-Runner.spec
+  specfile: perl-Command-Runner/perl-Command-Runner.spec
+  version: '0.200'
 perl-Compiler-Lexer:
   conf:
     preamble: 'BuildRequires:  gcc-c++'
     skip_doc: cpanfile\.snapshot|minil\.toml
-  spec: perl-Compiler-Lexer/perl-Compiler-Lexer.spec
+  specfile: perl-Compiler-Lexer/perl-Compiler-Lexer.spec
+  version: '0.23'
 perl-Compress-Bzip2:
   conf:
     preamble: |-
       BuildRequires:  libbz2-devel
       Requires:       bzip2
-  spec: perl-Compress-Bzip2/perl-Compress-Bzip2.spec
+  specfile: perl-Compress-Bzip2/perl-Compress-Bzip2.spec
+  version: '2.28'
 perl-Compress-LZO:
   conf:
     preamble: 'BuildRequires:  lzo-devel'
-  spec: perl-Compress-LZO/perl-Compress-LZO.spec
+  specfile: perl-Compress-LZO/perl-Compress-LZO.spec
+  version: '1.09'
 perl-Compress-Raw-Bzip2:
   conf:
     license: BSD-3-Clause and (GPL-1.0+ or Artistic-1.0)
-  spec: perl-Compress-Raw-Bzip2/perl-Compress-Raw-Bzip2.spec
+  specfile: perl-Compress-Raw-Bzip2/perl-Compress-Raw-Bzip2.spec
+  version: 2.210.0
 perl-Compress-Raw-Lzma:
   conf:
     preamble: |-
       BuildRequires:  xz
       BuildRequires:  xz-devel
-  spec: perl-Compress-Raw-Lzma/perl-Compress-Raw-Lzma.spec
+  specfile: perl-Compress-Raw-Lzma/perl-Compress-Raw-Lzma.spec
+  version: 2.209.0
 perl-Compress-Raw-Zlib:
   conf:
     license: Zlib and (GPL-1.0+ or Artistic-1.0)
-  spec: perl-Compress-Raw-Zlib/perl-Compress-Raw-Zlib.spec
+  specfile: perl-Compress-Raw-Zlib/perl-Compress-Raw-Zlib.spec
+  version: 2.209.0
 perl-Config-MySQL:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Config-MySQL/perl-Config-MySQL.spec
+  specfile: perl-Config-MySQL/perl-Config-MySQL.spec
+  version: '0.02'
 perl-Const-Exporter:
   conf:
     description_paragraphs: 1
-  spec: perl-Const-Exporter/perl-Const-Exporter.spec
+  specfile: perl-Const-Exporter/perl-Const-Exporter.spec
+  version: 1.2.3
 perl-Convert-ASN1:
-  conf:
-    patches:
-      perl-Convert-ASN1-0.31-test.patch: -p0
-  spec: perl-Convert-ASN1/perl-Convert-ASN1.spec
+  conf: {}
+  specfile: perl-Convert-ASN1/perl-Convert-ASN1.spec
+  version: 0.340.0
 perl-Convert-Bencode_XS:
-  conf:
-    patches:
-      storable-canonical.patch: null
-  spec: perl-Convert-Bencode_XS/perl-Convert-Bencode_XS.spec
+  conf: {}
+  specfile: perl-Convert-Bencode_XS/perl-Convert-Bencode_XS.spec
+  version: '0.06'
 perl-Convert-UUlib:
   conf:
     license: GPL-1.0-or-later
     preamble: |-
       Provides:       p_conulb
       Obsoletes:      p_conulb
-  spec: perl-Convert-UUlib/perl-Convert-UUlib.spec
+  specfile: perl-Convert-UUlib/perl-Convert-UUlib.spec
+  version: '1.8'
 perl-Coro:
   conf:
     license: Artistic-1.0 OR GPL-1.0-or-later
     post_install: find %buildroot%perl_vendorlib -name jit-*-unix.pl | xargs sed -i '1 s|#\!/opt/bin/perl|#\!/usr/bin/perl|'
-  spec: perl-Coro/perl-Coro.spec
+  specfile: perl-Coro/perl-Coro.spec
+  version: '6.57'
 perl-Crypt-CBC:
   conf:
     license: Artistic-1.0 OR GPL-1.0-or-later
-  spec: perl-Crypt-CBC/perl-Crypt-CBC.spec
+  specfile: perl-Crypt-CBC/perl-Crypt-CBC.spec
+  version: '3.04'
 perl-Crypt-Curve25519:
   conf:
     misc: '%license curve25519-donna-license.md'
     skip_doc: curve25519-donna-license.md
-  spec: perl-Crypt-Curve25519/perl-Crypt-Curve25519.spec
+  specfile: perl-Crypt-Curve25519/perl-Crypt-Curve25519.spec
+  version: '0.07'
 perl-Crypt-DH-GMP:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
     preamble: 'BuildRequires:  gmp-devel'
-  spec: perl-Crypt-DH-GMP/perl-Crypt-DH-GMP.spec
+  specfile: perl-Crypt-DH-GMP/perl-Crypt-DH-GMP.spec
+  version: '0.00012'
 perl-Crypt-HSXKPasswd:
-  conf:
-    patches:
-      multisig.patch: -p1 PATCH-FIX-https://rt.cpan.org/Ticket/Display.html?id=144672
-  spec: perl-Crypt-HSXKPasswd/perl-Crypt-HSXKPasswd.spec
+  conf: {}
+  specfile: perl-Crypt-HSXKPasswd/perl-Crypt-HSXKPasswd.spec
+  version: '3.6'
 perl-Crypt-OpenSSL-AES:
   conf:
     description_paragraphs: 3
     preamble: |-
       BuildRequires:  openssl-devel
       Requires:       openssl
-  spec: perl-Crypt-OpenSSL-AES/perl-Crypt-OpenSSL-AES.spec
+  specfile: perl-Crypt-OpenSSL-AES/perl-Crypt-OpenSSL-AES.spec
+  version: 0.190.0
 perl-Crypt-OpenSSL-DSA:
   conf:
     preamble: 'BuildRequires: libopenssl-devel'
-  spec: perl-Crypt-OpenSSL-DSA/perl-Crypt-OpenSSL-DSA.spec
+  specfile: perl-Crypt-OpenSSL-DSA/perl-Crypt-OpenSSL-DSA.spec
+  version: '0.20'
 perl-Crypt-OpenSSL-RSA:
   conf:
-    patches:
-      Crypt-OpenSSL-RSA.patch: -p1
     preamble: 'BuildRequires:  openssl-devel'
-  spec: perl-Crypt-OpenSSL-RSA/perl-Crypt-OpenSSL-RSA.spec
+  specfile: perl-Crypt-OpenSSL-RSA/perl-Crypt-OpenSSL-RSA.spec
+  version: '0.33'
 perl-Crypt-OpenSSL-Verify:
   conf:
     preamble: 'BuildRequires:  openssl-devel'
-  spec: perl-Crypt-OpenSSL-Verify/perl-Crypt-OpenSSL-Verify.spec
+  specfile: perl-Crypt-OpenSSL-Verify/perl-Crypt-OpenSSL-Verify.spec
+  version: '0.36'
 perl-Crypt-OpenSSL-X509:
   conf:
     preamble: |-
@@ -768,36 +838,38 @@ perl-Crypt-OpenSSL-X509:
       BuildRequires:  make
       BuildRequires:  openssl-devel
       BuildRequires:  perl(Test::Pod) >= 1.00
-  spec: perl-Crypt-OpenSSL-X509/perl-Crypt-OpenSSL-X509.spec
+  specfile: perl-Crypt-OpenSSL-X509/perl-Crypt-OpenSSL-X509.spec
+  version: '1.915'
 perl-Crypt-Password:
   conf:
     license: Artistic-2.0
     preamble: |-
       BuildRequires:  man
       BuildRequires:  perl(Module::Install)
-  spec: perl-Crypt-Password/perl-Crypt-Password.spec
+  specfile: perl-Crypt-Password/perl-Crypt-Password.spec
+  version: '0.28'
 perl-Crypt-Primes:
-  conf:
-    patches:
-      math-pariinit.patch: -p0
-  spec: perl-Crypt-Primes/perl-Crypt-Primes.spec
+  conf: {}
+  specfile: perl-Crypt-Primes/perl-Crypt-Primes.spec
+  version: '0.50'
 perl-Crypt-Rijndael:
   conf:
     license: LGPL-3.0
-  spec: perl-Crypt-Rijndael/perl-Crypt-Rijndael.spec
+  specfile: perl-Crypt-Rijndael/perl-Crypt-Rijndael.spec
+  version: '1.16'
 perl-Crypt-SSLeay:
   conf:
     description_paragraphs: 2
-    patches:
-      no-dot-inc.patch: -p1
     preamble: |-
       BuildRequires:  openssl-devel
       Requires:       openssl
-  spec: perl-Crypt-SSLeay/perl-Crypt-SSLeay.spec
+  specfile: perl-Crypt-SSLeay/perl-Crypt-SSLeay.spec
+  version: '0.72'
 perl-Crypt-Twofish:
   conf:
     license: Perl License
-  spec: perl-Crypt-Twofish/perl-Crypt-Twofish.spec
+  specfile: perl-Crypt-Twofish/perl-Crypt-Twofish.spec
+  version: '2.18'
 perl-Curses:
   conf:
     custom_build: |-
@@ -812,7 +884,8 @@ perl-Curses:
       chmod +x makeConfig
     preamble: 'BuildRequires:  ncurses5-devel'
     skip_doc: gdc gen.tar list.syms makeConfig testcurses testsyms
-  spec: perl-Curses/perl-Curses.spec
+  specfile: perl-Curses/perl-Curses.spec
+  version: '1.44'
 perl-DBD-MariaDB:
   conf:
     custom_build: |-
@@ -832,8 +905,6 @@ perl-DBD-MariaDB:
       the MariaDB/MySQL relational database management system. Most functions
       provided by this programming API are supported. Some rarely used functions
       are missing, mainly because no-one ever requested them.
-    patches:
-      perl-DBD-MariaDB-fix_c_32x_test.patch: -p1
     preamble: |-
       BuildRequires:  libmariadb-devel
       BuildRequires:  mariadb
@@ -866,11 +937,10 @@ perl-DBD-MariaDB:
     sources:
     - test-setup.sh
     - test-clean.sh
-  spec: perl-DBD-MariaDB/perl-DBD-MariaDB.spec
+  specfile: perl-DBD-MariaDB/perl-DBD-MariaDB.spec
+  version: 1.230.0
 perl-DBD-ODBC:
   conf:
-    patches:
-      perl-DBD-ODBC-1.29-Makefile.diff: -p0
     post_prep: |-
       for file in README.af README.unicode; do
         perl -p -i -e "s|\r\n|\n|" "$file"
@@ -885,7 +955,8 @@ perl-DBD-ODBC:
       done
       popd
     preamble: 'BuildRequires:  unixODBC-devel'
-  spec: perl-DBD-ODBC/perl-DBD-ODBC.spec
+  specfile: perl-DBD-ODBC/perl-DBD-ODBC.spec
+  version: '1.61'
 perl-DBD-Pg:
   conf:
     custom_test: HARNESS_TIMER=1 HARNESS_VERBOSE=1 make test
@@ -897,7 +968,8 @@ perl-DBD-Pg:
       %endif
       # For the Testsuite
       BuildRequires:  postgresql-server
-  spec: perl-DBD-Pg/perl-DBD-Pg.spec
+  specfile: perl-DBD-Pg/perl-DBD-Pg.spec
+  version: 3.18.0
 perl-DBD-SQLite:
   conf:
     misc: |-
@@ -906,20 +978,20 @@ perl-DBD-SQLite:
       %else
       %{perl_vendorarch}/auto/share/dist/%{cpan_name}/*.h
       %endif
-    patches:
-      perl-DBD-SQLite-use-external-sqlite3.patch: -p1 PATCH-FIX-OPENSUSE use system sqlite
     post_install: |-
       %if 0%{?sle_version} >= 140000 && 0%{?sle_version} <= 150400
       %else
+      mkdir -p %{buildroot}%{perl_vendorarch}/auto/share/dist/%{cpan_name}
       ln -fs %{_includedir}/sqlite3ext.h %{buildroot}%{perl_vendorarch}/auto/share/dist/%{cpan_name}/
       ln -fs %{_includedir}/sqlite3.h %{buildroot}%{perl_vendorarch}/auto/share/dist/%{cpan_name}/
-      rm %{buildroot}%{perl_vendorarch}/auto/share/dist/%{cpan_name}/sqlite3.c
-      echo >%{buildroot}%{perl_vendorarch}/auto/share/dist/%{cpan_name}/sqlite3.c
-      chmod 444 %{buildroot}%{perl_vendorarch}/auto/share/dist/%{cpan_name}/sqlite3.c
       %endif
     post_prep: |-
       %if 0%{?sle_version} >= 140000 && 0%{?sle_version} <= 150400
       patch -p1 --reverse <%{PATCH0}
+      %else
+      # system sqlite librairies will be used
+      rm sqlite*
+      perl -i -ne 'print $_ unless m{^sqlite}' MANIFEST
       %endif
     preamble: |-
       %if 0%{?sle_version} >= 140000 && 0%{?sle_version} <= 150400
@@ -927,7 +999,8 @@ perl-DBD-SQLite:
       BuildRequires: sqlite3-devel >= 3.35
       Recommends: sqlite3-devel
       %endif
-  spec: perl-DBD-SQLite/perl-DBD-SQLite.spec
+  specfile: perl-DBD-SQLite/perl-DBD-SQLite.spec
+  version: 1.740.0
 perl-DBD-Sybase:
   conf:
     custom_build: |
@@ -940,27 +1013,27 @@ perl-DBD-Sybase:
     preamble: |-
       BuildRequires:  freetds-devel
       Requires:       freetds-devel
-  spec: perl-DBD-Sybase/perl-DBD-Sybase.spec
+  specfile: perl-DBD-Sybase/perl-DBD-Sybase.spec
+  version: '1.23'
 perl-DBD-XBase:
   conf:
     license: Perl License
-  spec: perl-DBD-XBase/perl-DBD-XBase.spec
+  specfile: perl-DBD-XBase/perl-DBD-XBase.spec
+  version: '1.08'
 perl-DBD-mysql:
   conf:
     description_paragraphs: 1
-    patches:
-      perl-DBD-mysql-gcc14.patch: -p1
     preamble: |-
       BuildRequires:  libmariadb-devel
       BuildRequires:  zlib-devel
-  spec: perl-DBD-mysql/perl-DBD-mysql.spec
+  specfile: perl-DBD-mysql/perl-DBD-mysql.spec
+  version: '4.050'
 perl-DBI:
   conf:
-    patches:
-      perl-DBI-CVE-2014-10402.patch: -p1
     sources:
     - perl-DBI.rpmlintrc
-  spec: perl-DBI/perl-DBI.spec
+  specfile: perl-DBI/perl-DBI.spec
+  version: '1.643'
 perl-DBI-Shell:
   conf:
     misc: |-
@@ -1008,42 +1081,51 @@ perl-DBI-Shell:
       %license LICENSE
     post_install: sed -i "s_/env perl_/perl_" %{buildroot}%{_bindir}/dbish
     skip_doc: dbish_config testsqlminus.sql testsql.sql testtiming.sql
-  spec: perl-DBI-Shell/perl-DBI-Shell.spec
+  specfile: perl-DBI-Shell/perl-DBI-Shell.spec
+  version: '11.97'
 perl-DBICx-TestDatabase:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
-  spec: perl-DBICx-TestDatabase/perl-DBICx-TestDatabase.spec
+  specfile: perl-DBICx-TestDatabase/perl-DBICx-TestDatabase.spec
+  version: '0.05'
 perl-DBIx-Class:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
     preamble: |-
       # workaround a spurious test failure in "skipped" t/cdbi/mk_group_accessors.t
       BuildRequires:  perl(Class::DBI)
-  spec: perl-DBIx-Class/perl-DBIx-Class.spec
+  specfile: perl-DBIx-Class/perl-DBIx-Class.spec
+  version: '0.082843'
 perl-DBIx-Class-DeploymentHandler:
   conf:
     preamble: 'BuildRequires:  perl(YAML)'
-  spec: perl-DBIx-Class-DeploymentHandler/perl-DBIx-Class-DeploymentHandler.spec
+  specfile: perl-DBIx-Class-DeploymentHandler/perl-DBIx-Class-DeploymentHandler.spec
+  version: '0.002233'
 perl-DBIx-Class-DynamicDefault:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
-  spec: perl-DBIx-Class-DynamicDefault/perl-DBIx-Class-DynamicDefault.spec
+  specfile: perl-DBIx-Class-DynamicDefault/perl-DBIx-Class-DynamicDefault.spec
+  version: '0.04'
 perl-DBIx-Class-IntrospectableM2M:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
-  spec: perl-DBIx-Class-IntrospectableM2M/perl-DBIx-Class-IntrospectableM2M.spec
+  specfile: perl-DBIx-Class-IntrospectableM2M/perl-DBIx-Class-IntrospectableM2M.spec
+  version: '0.001002'
 perl-DBIx-Class-Schema-Config:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
-  spec: perl-DBIx-Class-Schema-Config/perl-DBIx-Class-Schema-Config.spec
+  specfile: perl-DBIx-Class-Schema-Config/perl-DBIx-Class-Schema-Config.spec
+  version: '0.001014'
 perl-DBIx-Connector:
   conf:
     description_paragraphs: 2
-  spec: perl-DBIx-Connector/perl-DBIx-Connector.spec
+  specfile: perl-DBIx-Connector/perl-DBIx-Connector.spec
+  version: '0.59'
 perl-DBIx-Simple:
   conf:
     license: MIT
-  spec: perl-DBIx-Simple/perl-DBIx-Simple.spec
+  specfile: perl-DBIx-Simple/perl-DBIx-Simple.spec
+  version: '1.37'
 perl-DB_File:
   conf:
     preamble: |-
@@ -1052,133 +1134,146 @@ perl-DB_File:
       %else
       BuildRequires:  libdb-4_5-devel
       %endif
-  spec: perl-DB_File/perl-DB_File.spec
+  specfile: perl-DB_File/perl-DB_File.spec
+  version: 1.859.0
 perl-Daemon-Generic:
   conf:
     license: Perl License
-  spec: perl-Daemon-Generic/perl-Daemon-Generic.spec
+  specfile: perl-Daemon-Generic/perl-Daemon-Generic.spec
+  version: '0.85'
 perl-Dancer2:
   conf:
     ignore_requires: Role::Tiny
-  spec: perl-Dancer2/perl-Dancer2.spec
+  specfile: perl-Dancer2/perl-Dancer2.spec
+  version: 1.1.0
 perl-Dancer2-Plugin-Auth-Extensible:
-  conf:
-    patches:
-      remove-env-perl.patch: -p1
-  spec: perl-Dancer2-Plugin-Auth-Extensible/perl-Dancer2-Plugin-Auth-Extensible.spec
+  conf: {}
+  specfile: perl-Dancer2-Plugin-Auth-Extensible/perl-Dancer2-Plugin-Auth-Extensible.spec
+  version: '0.710'
 perl-Dancer2-Plugin-Auth-Extensible-Provider-DBIC:
   conf:
     preamble: |-
       BuildRequires:  perl(DBD::SQLite)
       BuildRequires:  perl(HTTP::Cookies)
       BuildRequires:  perl(Test::MockDateTime)
-  spec: perl-Dancer2-Plugin-Auth-Extensible-Provider-DBIC/perl-Dancer2-Plugin-Auth-Extensible-Provider-DBIC.spec
+  specfile: perl-Dancer2-Plugin-Auth-Extensible-Provider-DBIC/perl-Dancer2-Plugin-Auth-Extensible-Provider-DBIC.spec
+  version: '0.624'
 perl-Data-Clone:
   conf:
     sources:
     - perl-Data-Clone-rpmlintrc
-  spec: perl-Data-Clone/perl-Data-Clone.spec
+  specfile: perl-Data-Clone/perl-Data-Clone.spec
+  version: 0.6.0
 perl-Data-Compare:
   conf:
     license: Artistic-1.0 OR GPL-1.0-or-later
-  spec: perl-Data-Compare/perl-Data-Compare.spec
+  specfile: perl-Data-Compare/perl-Data-Compare.spec
+  version: '1.29'
 perl-Data-Dump:
   conf:
     description_paragraphs: 6
-  spec: perl-Data-Dump/perl-Data-Dump.spec
+  specfile: perl-Data-Dump/perl-Data-Dump.spec
+  version: '1.25'
 perl-Data-Locations:
   conf:
     description_paragraphs: 4
     license: Artistic-1.0 OR GPL-1.0-or-later
-    patches:
-      defined-hash.patch: -p1
-  spec: perl-Data-Locations/perl-Data-Locations.spec
+  specfile: perl-Data-Locations/perl-Data-Locations.spec
+  version: '5.5'
 perl-Data-Munge:
   conf:
     skip_doc: Makefile_PL_settings.plx
-  spec: perl-Data-Munge/perl-Data-Munge.spec
+  specfile: perl-Data-Munge/perl-Data-Munge.spec
+  version: 0.100.0
 perl-Data-Package:
-  conf:
-    patches:
-      defined-array.patch: -p1
-  spec: perl-Data-Package/perl-Data-Package.spec
+  conf: {}
+  specfile: perl-Data-Package/perl-Data-Package.spec
+  version: '1.05'
 perl-Data-Password:
   conf:
     preamble: 'Requires:  words'
-  spec: perl-Data-Password/perl-Data-Password.spec
+  specfile: perl-Data-Password/perl-Data-Password.spec
+  version: '1.12'
 perl-Data-Random:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
-  spec: perl-Data-Random/perl-Data-Random.spec
+  specfile: perl-Data-Random/perl-Data-Random.spec
+  version: '0.13'
 perl-Data-Stag:
   conf:
     license: Perl License
-  spec: perl-Data-Stag/perl-Data-Stag.spec
+  specfile: perl-Data-Stag/perl-Data-Stag.spec
+  version: '0.14'
 perl-Data-Undump:
-  conf:
-    patches:
-      Undump.xs-TOKEN_IV-fix.patch: PATCH-FIX-UPSTREAM https://rt.cpan.org/Public/Bug/Display.html?id=88462
-  spec: perl-Data-Undump/perl-Data-Undump.spec
+  conf: {}
+  specfile: perl-Data-Undump/perl-Data-Undump.spec
+  version: '0.15'
 perl-Date-Calc:
   conf:
     description_paragraphs: 3
-    patches:
-      fix2038.patch: -p1
-  spec: perl-Date-Calc/perl-Date-Calc.spec
+  specfile: perl-Date-Calc/perl-Date-Calc.spec
+  version: '6.4'
 perl-Date-Calc-XS:
-  conf:
-    patches:
-      fix2038.patch: -p1 PATCH-FIX-UPSTREAM bmwiedemann https://rt.cpan.org/Public/Bug/Display.html?id=147194
-  spec: perl-Date-Calc-XS/perl-Date-Calc-XS.spec
+  conf: {}
+  specfile: perl-Date-Calc-XS/perl-Date-Calc-XS.spec
+  version: '6.4'
 perl-Date-Holidays-DE:
   conf:
     license: ICS
-  spec: perl-Date-Holidays-DE/perl-Date-Holidays-DE.spec
+  specfile: perl-Date-Holidays-DE/perl-Date-Holidays-DE.spec
+  version: '2.06'
 perl-Date-ICal:
   conf:
     license: Perl
-  spec: perl-Date-ICal/perl-Date-ICal.spec
+  specfile: perl-Date-ICal/perl-Date-ICal.spec
+  version: '2.682'
 perl-Date-Range:
   conf:
     license: GPL-2.0-or-later
-  spec: perl-Date-Range/perl-Date-Range.spec
+  specfile: perl-Date-Range/perl-Date-Range.spec
+  version: '1.41'
 perl-DateTime-Format-ISO8601:
   conf:
     skip_doc: precious.toml|azure-pipelines.yml
-  spec: perl-DateTime-Format-ISO8601/perl-DateTime-Format-ISO8601.spec
+  specfile: perl-DateTime-Format-ISO8601/perl-DateTime-Format-ISO8601.spec
+  version: '0.16'
 perl-DateTime-HiRes:
   conf:
     skip_doc: azure-pipelines.yml
-  spec: perl-DateTime-HiRes/perl-DateTime-HiRes.spec
+  specfile: perl-DateTime-HiRes/perl-DateTime-HiRes.spec
+  version: '0.04'
 perl-DateTime-TimeZone:
   conf:
     skip_doc: '#dist.ini# azure-pipelines.yml precious.toml'
-  spec: perl-DateTime-TimeZone/perl-DateTime-TimeZone.spec
+  specfile: perl-DateTime-TimeZone/perl-DateTime-TimeZone.spec
+  version: 2.620.0
 perl-Declare-Constraints-Simple:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Declare-Constraints-Simple/perl-Declare-Constraints-Simple.spec
+  specfile: perl-Declare-Constraints-Simple/perl-Declare-Constraints-Simple.spec
+  version: '0.03'
 perl-Devel-CheckOS:
   conf:
     license: GPL-2.0 or Artistic-1.0
-  spec: perl-Devel-CheckOS/perl-Devel-CheckOS.spec
+  specfile: perl-Devel-CheckOS/perl-Devel-CheckOS.spec
+  version: '1.96'
 perl-Devel-Cover:
   conf:
     preamble: |-
       BuildRequires:  perl-B-Debug
       Requires:       perl-B-Debug
-  spec: perl-Devel-Cover/perl-Devel-Cover.spec
+  specfile: perl-Devel-Cover/perl-Devel-Cover.spec
+  version: '1.40'
 perl-Devel-Cover-Report-Codecov:
   conf:
     post_install: rm %{buildroot}/usr/bin/dev/create-perlcriticrc.pl
     post_prep: rm t/codecov/service/mercurial/configuration.t
-  spec: perl-Devel-Cover-Report-Codecov/perl-Devel-Cover-Report-Codecov.spec
+  specfile: perl-Devel-Cover-Report-Codecov/perl-Devel-Cover-Report-Codecov.spec
+  version: '0.25'
 perl-Devel-Cycle:
-  conf:
-    patches:
-      Devel-Cycle-pm.patch: null
-      Devel-Cycle-t.patch: null
-  spec: perl-Devel-Cycle/perl-Devel-Cycle.spec
+  conf: {}
+  specfile: perl-Devel-Cycle/perl-Devel-Cycle.spec
+  version: '1.12'
 perl-Devel-PPPort:
   conf:
     description: |-
@@ -1199,26 +1294,31 @@ perl-Devel-PPPort:
       writing it out.
 
       This module is used by 'h2xs' to write the file _ppport.h_.
-  spec: perl-Devel-PPPort/perl-Devel-PPPort.spec
+  specfile: perl-Devel-PPPort/perl-Devel-PPPort.spec
+  version: '3.68'
 perl-Devel-Symdump:
   conf:
     description_paragraphs: 1
-  spec: perl-Devel-Symdump/perl-Devel-Symdump.spec
+  specfile: perl-Devel-Symdump/perl-Devel-Symdump.spec
+  version: '2.18'
 perl-Devel-Trace:
   conf:
     license: SUSE-Public-Domain
-  spec: perl-Devel-Trace/perl-Devel-Trace.spec
+  specfile: perl-Devel-Trace/perl-Devel-Trace.spec
+  version: '0.12'
 perl-Devel-ptkdb:
   conf:
     license: Artistic-1.0 or GPL-1.0-or-later
     preamble: |-
       BuildRequires:  perl(Tk) >= 800
       Requires:       perl(Tk) >= 800
-  spec: perl-Devel-ptkdb/perl-Devel-ptkdb.spec
+  specfile: perl-Devel-ptkdb/perl-Devel-ptkdb.spec
+  version: 1.109.100
 perl-Digest-CRC:
   conf:
     license: SUSE-Public-Domain
-  spec: perl-Digest-CRC/perl-Digest-CRC.spec
+  specfile: perl-Digest-CRC/perl-Digest-CRC.spec
+  version: '0.24'
 perl-Digest-SHA:
   conf:
     description_paragraphs: 2
@@ -1226,11 +1326,13 @@ perl-Digest-SHA:
       mv %{buildroot}%{_mandir}/man1/shasum.1{,.cpan}
       mv %{buildroot}%{_bindir}/shasum{,.cpan}
     post_prep: find . -type f -print0 | xargs -0 -n1 sed -e 's,^#!perl,#!/usr/bin/perl,' -i
-  spec: perl-Digest-SHA/perl-Digest-SHA.spec
+  specfile: perl-Digest-SHA/perl-Digest-SHA.spec
+  version: '6.04'
 perl-Dist-Zilla:
   conf:
     preamble: 'BuildRequires:  timezone'
-  spec: perl-Dist-Zilla/perl-Dist-Zilla.spec
+  specfile: perl-Dist-Zilla/perl-Dist-Zilla.spec
+  version: 6.31.0
 perl-Dist-Zilla-Plugin-ApacheTest:
   conf:
     description: |-
@@ -1243,28 +1345,25 @@ perl-Dist-Zilla-Plugin-ApacheTest:
       * Dist::Zilla::PluginBundle::ApacheTest
         Dist::Zilla Plugin Bundle That Configures Makefile.PL for Apache::Test
     summary: Dist::Zilla Plugin That Configures Makefile.PL for Apache::Test
-  spec: perl-Dist-Zilla-Plugin-ApacheTest/perl-Dist-Zilla-Plugin-ApacheTest.spec
+  specfile: perl-Dist-Zilla-Plugin-ApacheTest/perl-Dist-Zilla-Plugin-ApacheTest.spec
+  version: '0.04'
 perl-Dist-Zilla-Plugin-CheckChangesHasContent:
   conf:
     custom_test: |-
       export TZ=US/Central
       make test
-  spec: perl-Dist-Zilla-Plugin-CheckChangesHasContent/perl-Dist-Zilla-Plugin-CheckChangesHasContent.spec
+  specfile: perl-Dist-Zilla-Plugin-CheckChangesHasContent/perl-Dist-Zilla-Plugin-CheckChangesHasContent.spec
+  version: '0.011'
 perl-Dist-Zilla-Plugin-PromptIfStale:
   conf:
     preamble: 'BuildRequires: perl(IO::Pty)'
-  spec: perl-Dist-Zilla-Plugin-PromptIfStale/perl-Dist-Zilla-Plugin-PromptIfStale.spec
+  specfile: perl-Dist-Zilla-Plugin-PromptIfStale/perl-Dist-Zilla-Plugin-PromptIfStale.spec
+  version: 0.60.0
 perl-EV:
   conf:
     license: Artistic-1.0 or GPL-1.0-or-later
-    patches:
-      ev_iouring.diff: -p0
-  spec: perl-EV/perl-EV.spec
-perl-Email-Valid:
-  conf:
-    patches:
-      fix-test.patch: -p1
-  spec: perl-Email-Valid/perl-Email-Valid.spec
+  specfile: perl-EV/perl-EV.spec
+  version: '4.33'
 perl-Encode:
   conf:
     post_install: |-
@@ -1276,264 +1375,288 @@ perl-Encode:
       %__rm -f ${RPM_BUILD_ROOT}/usr/share/man/man1/piconv.1*
     sources:
     - perl-Encode-rpmlintrc
-  spec: perl-Encode/perl-Encode.spec
+  specfile: perl-Encode/perl-Encode.spec
+  version: 3.210.0
 perl-Eval-LineNumbers:
   conf:
     license: Artistic-2.0 or LGPL-2.1
-  spec: perl-Eval-LineNumbers/perl-Eval-LineNumbers.spec
+  specfile: perl-Eval-LineNumbers/perl-Eval-LineNumbers.spec
+  version: '0.35'
 perl-Event:
   conf:
     sources:
     - perl-Event-rpmlintrc
-  spec: perl-Event/perl-Event.spec
+  specfile: perl-Event/perl-Event.spec
+  version: '1.28'
 perl-Exception-Base:
   conf:
-    patches:
-      fix_perl538.patch: -p0 PATCH-FIX-UPSTREAM deprecated smartmatch operator https://github.com/dex4er/perl-Exception-Base/issues/5
     preamble: 'BuildRequires:  perl(Module::Build)'
-  spec: perl-Exception-Base/perl-Exception-Base.spec
+  specfile: perl-Exception-Base/perl-Exception-Base.spec
+  version: '0.2501'
 perl-Expect:
-  conf:
-    patches:
-      Expect.diff: -p1
-  spec: perl-Expect/perl-Expect.spec
+  conf: {}
+  specfile: perl-Expect/perl-Expect.spec
+  version: 1.380.0
 perl-ExtUtils-CppGuess:
   conf:
     preamble: 'BuildRequires:  gcc-c++'
-  spec: perl-ExtUtils-CppGuess/perl-ExtUtils-CppGuess.spec
+  specfile: perl-ExtUtils-CppGuess/perl-ExtUtils-CppGuess.spec
+  version: 0.270.0
 perl-ExtUtils-Depends:
   conf:
     license: Artistic-1.0 or GPL-1.0-or-later
-  spec: perl-ExtUtils-Depends/perl-ExtUtils-Depends.spec
+  specfile: perl-ExtUtils-Depends/perl-ExtUtils-Depends.spec
+  version: '0.8001'
 perl-ExtUtils-F77:
   conf:
     preamble: 'BuildRequires:  gcc-fortran gmp-devel'
-  spec: perl-ExtUtils-F77/perl-ExtUtils-F77.spec
+  specfile: perl-ExtUtils-F77/perl-ExtUtils-F77.spec
+  version: '1.26'
 perl-ExtUtils-MakeMaker:
   conf:
     custom_build: |-
       export BUILDING_AS_PACKAGE=1
       %{__perl} Makefile.PL INSTALLDIRS=vendor
       %{__make} %{?_smp_mflags}
-    patches:
-      Do_not_set_RPATH_by_default.patch: -p1
     post_build: ''
     post_install: |-
       rm $RPM_BUILD_ROOT/usr/bin/instmodsh
       rm $RPM_BUILD_ROOT/usr/share/man/man1/instmodsh.1
-  spec: perl-ExtUtils-MakeMaker/perl-ExtUtils-MakeMaker.spec
+  specfile: perl-ExtUtils-MakeMaker/perl-ExtUtils-MakeMaker.spec
+  version: '7.70'
 perl-ExtUtils-PkgConfig:
   conf:
     license: LGPL-2.1+
     preamble: |-
       BuildRequires:  pkgconfig
       Requires:       pkgconfig
-  spec: perl-ExtUtils-PkgConfig/perl-ExtUtils-PkgConfig.spec
+  specfile: perl-ExtUtils-PkgConfig/perl-ExtUtils-PkgConfig.spec
+  version: '1.160000'
 perl-FCGI:
   conf:
     license: BSD-2-Clause
-  spec: perl-FCGI/perl-FCGI.spec
+  specfile: perl-FCGI/perl-FCGI.spec
+  version: '0.82'
 perl-FFI-CheckLib:
   conf:
     description_paragraphs: 1
-  spec: perl-FFI-CheckLib/perl-FFI-CheckLib.spec
+  specfile: perl-FFI-CheckLib/perl-FFI-CheckLib.spec
+  version: '0.31'
 perl-Feature-Compat-Try:
   conf:
     summary: Make try/catch syntax available
-  spec: perl-Feature-Compat-Try/perl-Feature-Compat-Try.spec
+  specfile: perl-Feature-Compat-Try/perl-Feature-Compat-Try.spec
+  version: '0.05'
 perl-File-ANVL:
   conf:
     description_paragraphs: 1
-  spec: perl-File-ANVL/perl-File-ANVL.spec
+  specfile: perl-File-ANVL/perl-File-ANVL.spec
+  version: '1.05'
 perl-File-Binary:
   conf:
     license: Perl
-  spec: perl-File-Binary/perl-File-Binary.spec
+  specfile: perl-File-Binary/perl-File-Binary.spec
+  version: '1.7'
 perl-File-Comments:
   conf:
     license: Perl
-  spec: perl-File-Comments/perl-File-Comments.spec
+  specfile: perl-File-Comments/perl-File-Comments.spec
+  version: '0.08'
 perl-File-Find-Rule-Perl:
   conf:
     no_testing: broken within build env
-  spec: perl-File-Find-Rule-Perl/perl-File-Find-Rule-Perl.spec
+  specfile: perl-File-Find-Rule-Perl/perl-File-Find-Rule-Perl.spec
+  version: '1.16'
 perl-File-Flock:
   conf:
     license: Perl License
-  spec: perl-File-Flock/perl-File-Flock.spec
+  specfile: perl-File-Flock/perl-File-Flock.spec
+  version: '2014.01'
 perl-File-HomeDir:
   conf:
     ignore_requires: Mac::SystemDirectory
-  spec: perl-File-HomeDir/perl-File-HomeDir.spec
+  specfile: perl-File-HomeDir/perl-File-HomeDir.spec
+  version: '1.006'
 perl-File-LibMagic:
   conf:
     preamble: |-
       BuildRequires:  file-devel
       BuildRequires:  zlib-devel
-  spec: perl-File-LibMagic/perl-File-LibMagic.spec
+  specfile: perl-File-LibMagic/perl-File-LibMagic.spec
+  version: '1.23'
 perl-File-MimeInfo:
   conf:
     preamble: |-
       BuildRequires:  shared-mime-info
       Requires:       shared-mime-info
       Requires:       perl(File::BaseDir) >= 0.03
-  spec: perl-File-MimeInfo/perl-File-MimeInfo.spec
+  specfile: perl-File-MimeInfo/perl-File-MimeInfo.spec
+  version: 0.340.0
 perl-File-Mork:
   conf:
     license: MIT
-  spec: perl-File-Mork/perl-File-Mork.spec
+  specfile: perl-File-Mork/perl-File-Mork.spec
+  version: '0.4'
 perl-File-NFSLock:
   conf:
     license: Perl License
-  spec: perl-File-NFSLock/perl-File-NFSLock.spec
+  specfile: perl-File-NFSLock/perl-File-NFSLock.spec
+  version: '1.29'
 perl-File-Path:
   conf:
     description_paragraphs: 1
     license: Perl License
-  spec: perl-File-Path/perl-File-Path.spec
+  specfile: perl-File-Path/perl-File-Path.spec
+  version: '2.180000'
 perl-File-Rename:
-  conf:
-    patches:
-      change-command-name.patch: -p1 PATCH-FIX-OPENSUSE
-  spec: perl-File-Rename/perl-File-Rename.spec
+  conf: {}
+  specfile: perl-File-Rename/perl-File-Rename.spec
+  version: 2.20.0
 perl-File-Rsync:
   conf:
     description_paragraphs: 1
     preamble: |-
       BuildRequires:  rsync
       Requires:       rsync
-  spec: perl-File-Rsync/perl-File-Rsync.spec
+  specfile: perl-File-Rsync/perl-File-Rsync.spec
+  version: '0.49'
 perl-File-ShareDir:
   conf:
     preamble: |-
       # because File::ShareDir::Install is in inc/ it won't be seen as a
       # dependency by cpanspec
       BuildRequires:  perl(File::ShareDir::Install)
-  spec: perl-File-ShareDir/perl-File-ShareDir.spec
+  specfile: perl-File-ShareDir/perl-File-ShareDir.spec
+  version: '1.118'
 perl-File-Slurp:
   conf:
     summary: Perl module for reading/writing/modifying complete files
-  spec: perl-File-Slurp/perl-File-Slurp.spec
+  specfile: perl-File-Slurp/perl-File-Slurp.spec
+  version: '9999.32'
 perl-File-Stat-OO:
   conf:
     custom_test: TZ=UTC %{__make} test
-  spec: perl-File-Stat-OO/perl-File-Stat-OO.spec
+  specfile: perl-File-Stat-OO/perl-File-Stat-OO.spec
+  version: '0.03'
 perl-File-Which:
   conf:
     post_prep: chmod a+x corpus/test-bin-unix/0
-  spec: perl-File-Which/perl-File-Which.spec
+  specfile: perl-File-Which/perl-File-Which.spec
+  version: '1.27'
 perl-FileHandle-Unget:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
-  spec: perl-FileHandle-Unget/perl-FileHandle-Unget.spec
+  specfile: perl-FileHandle-Unget/perl-FileHandle-Unget.spec
+  version: '0.1634'
 perl-Finance-Quote:
   conf:
     license: GPL-2.0-or-later
-    patches:
-      https://github.com/finance-quote/finance-quote/commit/504fcc1ae35f.patch#/Fix-FTFunds-regex.patch: -p1 PATCH-FIX-UPSTREAM https://github.com/finance-quote/finance-quote/commit/504fcc1ae35fd9c1e59949281e2939bda6a971a5
-      perl-Finance-Quote-66235-Cdnfundlibrary-row.patch: -p1 PATCH-FIX-UPSTREAM https://rt.cpan.org/Public/Bug/Display.html?id=66235
-  spec: perl-Finance-Quote/perl-Finance-Quote.spec
+  specfile: perl-Finance-Quote/perl-Finance-Quote.spec
+  version: '1.54'
 perl-FindBin-libs:
   conf:
     ignore_requires: File::Copy::Recursive::Reduced
     preamble: |-
       BuildRequires:  perl(File::Copy::Recursive::Reduced) >= 0.006
       Requires:       perl(File::Copy::Recursive::Reduced) >= 0.002
-  spec: perl-FindBin-libs/perl-FindBin-libs.spec
+  specfile: perl-FindBin-libs/perl-FindBin-libs.spec
+  version: 3.0.2
 perl-Font-FreeType:
   conf:
     description_paragraphs: 2
     preamble: 'BuildRequires: freetype2-devel'
-  spec: perl-Font-FreeType/perl-Font-FreeType.spec
+  specfile: perl-Font-FreeType/perl-Font-FreeType.spec
+  version: '0.16'
 perl-Font-TTF:
   conf:
     license: Artistic-2.0 and OFL-1.1
-  spec: perl-Font-TTF/perl-Font-TTF.spec
+  specfile: perl-Font-TTF/perl-Font-TTF.spec
+  version: '1.06'
 perl-FormValidator-Simple:
   conf:
     preamble: 'BuildRequires:  perl(CGI)'
-  spec: perl-FormValidator-Simple/perl-FormValidator-Simple.spec
+  specfile: perl-FormValidator-Simple/perl-FormValidator-Simple.spec
+  version: '0.29'
 perl-Furl:
   conf:
     ignore_requires: Mozilla::CA
-    patches:
-      0001-Remove-use-of-Mozilla-CA.patch: -p1
-  spec: perl-Furl/perl-Furl.spec
+  specfile: perl-Furl/perl-Furl.spec
+  version: '3.14'
 perl-GD:
   conf:
     description_paragraphs: 1
-    patches:
-      GD-cflags.patch: -p1
     preamble: |-
       BuildRequires:  gd-devel >= 2.0.28
       Requires: gd
     skip_doc: testcpan.sh testlibs.sh
-  spec: perl-GD/perl-GD.spec
+  specfile: perl-GD/perl-GD.spec
+  version: '2.78'
 perl-GDGraph:
   conf:
     license: (Artistic-1.0 or GPL-1.0+) and GPL-2.0+
-    patches:
-      perl-GDGraph-XBM-Magic.patch: -p1
     post_prep: perl -pi -e 's/\r\n/\n/' samples/sample64.pl
-  spec: perl-GDGraph/perl-GDGraph.spec
+  specfile: perl-GDGraph/perl-GDGraph.spec
+  version: 1.560.0
 perl-Geo-IP2Location:
   conf:
     license: MIT
     post_prep: sed -i 's/\r$//' samples/WHERE_TO_DOWNLOAD_MORE_SAMPLES.TXT
-  spec: perl-Geo-IP2Location/perl-Geo-IP2Location.spec
+  specfile: perl-Geo-IP2Location/perl-Geo-IP2Location.spec
+  version: '8.70'
 perl-Geo-ShapeFile:
   conf:
     ignore_requires: Win32::LongPath
-  spec: perl-Geo-ShapeFile/perl-Geo-ShapeFile.spec
+  specfile: perl-Geo-ShapeFile/perl-Geo-ShapeFile.spec
+  version: '3.03'
 perl-Getopt-Helpful:
-  conf:
-    patches:
-      hash-randomization1.patch: -p1
-      hash-randomization2.patch: -p1
-      hash-randomization3.patch: -p1
-  spec: perl-Getopt-Helpful/perl-Getopt-Helpful.spec
+  conf: {}
+  specfile: perl-Getopt-Helpful/perl-Getopt-Helpful.spec
+  version: '0.04'
 perl-Getopt-Long:
   conf:
     license: Artistic-1.0 OR GPL-2.0-or-later
-  spec: perl-Getopt-Long/perl-Getopt-Long.spec
+  specfile: perl-Getopt-Long/perl-Getopt-Long.spec
+  version: 2.570.0
 perl-Git-Repository:
   conf:
-    patches:
-      git-2.40.0.patch: -p1 PATCH-FIX-UPSTREAM https://github.com/book/Git-Repository/pull/23
-      https://patch-diff.githubusercontent.com/raw/book/Git-Repository/pull/22.patch: -p1 PATCH-FIX-UPSTREAM https://github.com/book/Git-Repository/pull/22
-      https://salsa.debian.org/perl-team/modules/packages/libgit-repository-perl/-/raw/c5e0eca06ca27fdaa547634b1e49f4637e7c1ca6/debian/patches/git-2.30.0.patch: -p1 PATCH-FIX-UPSTREAM https://rt.cpan.org/Public/Ticket/Attachment/1923740/1029935
     preamble: 'BuildRequires:  git-core'
-  spec: perl-Git-Repository/perl-Git-Repository.spec
+  specfile: perl-Git-Repository/perl-Git-Repository.spec
+  version: '1.325'
 perl-Git-Wrapper:
   conf:
     preamble: |-
       BuildRequires:  git-core
       Requires:       git-core
-  spec: perl-Git-Wrapper/perl-Git-Wrapper.spec
+  specfile: perl-Git-Wrapper/perl-Git-Wrapper.spec
+  version: '0.048'
 perl-Glib:
   conf:
     license: LGPL-2.1-or-later
     preamble: 'BuildRequires:  glib2-devel >= 2.0.0'
-  spec: perl-Glib/perl-Glib.spec
+  specfile: perl-Glib/perl-Glib.spec
+  version: '1.3294'
 perl-Glib-Object-Introspection:
   conf:
     license: LGPL-2.1
     preamble: |-
       BuildRequires:  pkgconfig
       BuildRequires:  pkgconfig(gobject-introspection-1.0)
-  spec: perl-Glib-Object-Introspection/perl-Glib-Object-Introspection.spec
+  specfile: perl-Glib-Object-Introspection/perl-Glib-Object-Introspection.spec
+  version: 0.51.0
 perl-Gnome2-Canvas:
   conf:
     license: GPL-2.0-or-later
     preamble: 'BuildRequires: libgnomecanvas-devel'
-  spec: perl-Gnome2-Canvas/perl-Gnome2-Canvas.spec
+  specfile: perl-Gnome2-Canvas/perl-Gnome2-Canvas.spec
+  version: '1.006'
 perl-GnuPG-Interface:
   conf:
     post_build: chmod 755 ./test/fake-gpg-v*
     preamble: |-
       BuildRequires:  gpg2
       Requires:       gpg2
-  spec: perl-GnuPG-Interface/perl-GnuPG-Interface.spec
+  specfile: perl-GnuPG-Interface/perl-GnuPG-Interface.spec
+  version: 1.40.0
 perl-GraphViz:
   conf:
     post_prep: sed -i -e s,/usr/local/bin/perl,/usr/bin/perl, examples/*.pl
@@ -1544,7 +1667,8 @@ perl-GraphViz:
       Requires:       graphviz
       Requires:       graphviz-gnome
       Requires:       pango
-  spec: perl-GraphViz/perl-GraphViz.spec
+  specfile: perl-GraphViz/perl-GraphViz.spec
+  version: '2.26'
 perl-GraphViz2:
   conf:
     preamble: |-
@@ -1555,7 +1679,8 @@ perl-GraphViz2:
       Requires:       graphviz
       Requires:       graphviz-gnome
       Requires:       pango
-  spec: perl-GraphViz2/perl-GraphViz2.spec
+  specfile: perl-GraphViz2/perl-GraphViz2.spec
+  version: '2.67'
 perl-Gtk2:
   conf:
     custom_test: |-
@@ -1576,14 +1701,13 @@ perl-Gtk2:
       %if 0%{?suse_version} >= 01550
       BuildRequires:  xvfb-run
       %endif
-  spec: perl-Gtk2/perl-Gtk2.spec
+  specfile: perl-Gtk2/perl-Gtk2.spec
+  version: '1.24993'
 perl-Gtk2-Notify:
   conf:
     custom_test: |-
       # tests fail - unable to open display
       # make test
-    patches:
-      Gtk2-Notify-libnotify-0.7.patch: -p0
     preamble: |-
       BuildRequires:  perl(Test::Pod)
       BuildRequires:  perl(Test::Exception)
@@ -1591,7 +1715,8 @@ perl-Gtk2-Notify:
       BuildRequires:  pango-devel
       BuildRequires:  cairo-devel
       BuildRequires:  gtk2-devel
-  spec: perl-Gtk2-Notify/perl-Gtk2-Notify.spec
+  specfile: perl-Gtk2-Notify/perl-Gtk2-Notify.spec
+  version: '0.05'
 perl-Gtk3:
   conf:
     preamble: |-
@@ -1599,12 +1724,14 @@ perl-Gtk3:
       %if 0%{?sle_version} >= 150200 && 0%{?is_opensuse} || 0%{?sle_version} >= 150200 || 0%{?suse_version} > 1500
       BuildRequires:  typelib(GdkPixdata) = 2.0
       %endif
-  spec: perl-Gtk3/perl-Gtk3.spec
+  specfile: perl-Gtk3/perl-Gtk3.spec
+  version: '0.038'
 perl-Gtk3-ImageView:
   conf:
     no_testing: requires Display
     preamble: 'BuildRequires:  libgtkimageview-devel'
-  spec: perl-Gtk3-ImageView/perl-Gtk3-ImageView.spec
+  specfile: perl-Gtk3-ImageView/perl-Gtk3-ImageView.spec
+  version: '10'
 perl-Gtk3-SimpleList:
   conf:
     license: LGPL-2.1
@@ -1613,40 +1740,47 @@ perl-Gtk3-SimpleList:
       %if 0%{?suse_version} >= 01550
       BuildRequires:  typelib(GdkPixdata) = 2.0
       %endif
-  spec: perl-Gtk3-SimpleList/perl-Gtk3-SimpleList.spec
+  specfile: perl-Gtk3-SimpleList/perl-Gtk3-SimpleList.spec
+  version: '0.21'
 perl-Guard:
   conf:
     license: Perl License
-  spec: perl-Guard/perl-Guard.spec
+  specfile: perl-Guard/perl-Guard.spec
+  version: '1.023'
 perl-HTML-Escape:
   conf:
     skip_doc: minil.toml
-  spec: perl-HTML-Escape/perl-HTML-Escape.spec
+  specfile: perl-HTML-Escape/perl-HTML-Escape.spec
+  version: '1.11'
 perl-HTML-FillInForm:
   conf:
     license: GPL-1.0+ or Artistic-1.0
-  spec: perl-HTML-FillInForm/perl-HTML-FillInForm.spec
+  specfile: perl-HTML-FillInForm/perl-HTML-FillInForm.spec
+  version: '2.22'
 perl-HTML-Form:
   conf:
     description_paragraphs: 1
-  spec: perl-HTML-Form/perl-HTML-Form.spec
+  specfile: perl-HTML-Form/perl-HTML-Form.spec
+  version: '6.11'
 perl-HTML-Restrict:
   conf:
     skip_doc: perlimports.toml
-  spec: perl-HTML-Restrict/perl-HTML-Restrict.spec
+  specfile: perl-HTML-Restrict/perl-HTML-Restrict.spec
+  version: 3.0.2
 perl-HTML-RewriteAttributes:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-HTML-RewriteAttributes/perl-HTML-RewriteAttributes.spec
+  specfile: perl-HTML-RewriteAttributes/perl-HTML-RewriteAttributes.spec
+  version: '0.05'
 perl-HTML-TableExtract:
-  conf:
-    patches:
-      perl-HTML-TableExtract-test-30_tree.patch: -p1
-  spec: perl-HTML-TableExtract/perl-HTML-TableExtract.spec
+  conf: {}
+  specfile: perl-HTML-TableExtract/perl-HTML-TableExtract.spec
+  version: '2.15'
 perl-HTML-Template-JIT:
   conf:
     license: Perl
-  spec: perl-HTML-Template-JIT/perl-HTML-Template-JIT.spec
+  specfile: perl-HTML-Template-JIT/perl-HTML-Template-JIT.spec
+  version: '0.05'
 perl-HTML-Tidy:
   conf:
     preamble: |-
@@ -1655,25 +1789,26 @@ perl-HTML-Tidy:
       Requires:       perl(LWP::Simple)
       BuildRequires:  perl(LWP::Simple)
       BuildRequires:  perl(Test::Exception)
-  spec: perl-HTML-Tidy/perl-HTML-Tidy.spec
+  specfile: perl-HTML-Tidy/perl-HTML-Tidy.spec
+  version: '1.60'
 perl-HTML-TreeBuilder-LibXML:
-  conf:
-    patches:
-      fix-05_empty.patch: -p1 PATCH-FIX-UPSTREAM fix 05_empty.t https://github.com/tokuhirom/HTML-TreeBuilder-LibXML/pull/17
-  spec: perl-HTML-TreeBuilder-LibXML/perl-HTML-TreeBuilder-LibXML.spec
+  conf: {}
+  specfile: perl-HTML-TreeBuilder-LibXML/perl-HTML-TreeBuilder-LibXML.spec
+  version: '0.26'
 perl-HTML-TreeBuilder-XPath:
-  conf:
-    patches:
-      HTML-TreeBuilder-XPath-break.diff: -p1
-  spec: perl-HTML-TreeBuilder-XPath/perl-HTML-TreeBuilder-XPath.spec
+  conf: {}
+  specfile: perl-HTML-TreeBuilder-XPath/perl-HTML-TreeBuilder-XPath.spec
+  version: '0.14'
 perl-HTTP-BrowserDetect:
   conf:
     skip_doc: precious.toml perlimports.toml
-  spec: perl-HTTP-BrowserDetect/perl-HTTP-BrowserDetect.spec
+  specfile: perl-HTTP-BrowserDetect/perl-HTTP-BrowserDetect.spec
+  version: 3.400.0
 perl-HTTP-Cache-Transparent:
   conf:
     preamble: 'BuildRequires:  perl(Test::RequiresInternet)'
-  spec: perl-HTTP-Cache-Transparent/perl-HTTP-Cache-Transparent.spec
+  specfile: perl-HTTP-Cache-Transparent/perl-HTTP-Cache-Transparent.spec
+  version: '1.4'
 perl-HTTP-CookieJar:
   conf:
     ignore_requires: Time::Local
@@ -1683,7 +1818,8 @@ perl-HTTP-CookieJar:
       # In perl, 1.1901 equals v1.190.1 and 1.28 v.1.280
       BuildRequires: perl(Time::Local) >= 1.28
       Requires: perl(Time::Local) >= 1.28
-  spec: perl-HTTP-CookieJar/perl-HTTP-CookieJar.spec
+  specfile: perl-HTTP-CookieJar/perl-HTTP-CookieJar.spec
+  version: '0.014'
 perl-HTTP-CookieMonster:
   conf:
     description: |-
@@ -1691,58 +1827,71 @@ perl-HTTP-CookieMonster:
       non-trivial. HTTP::Cookies a very useful module, but using it is not always
       as easy and clean as it could be. For instance, if you want to find a
       particular cookie, you can't just ask for it by name.
-  spec: perl-HTTP-CookieMonster/perl-HTTP-CookieMonster.spec
+  specfile: perl-HTTP-CookieMonster/perl-HTTP-CookieMonster.spec
+  version: '0.11'
 perl-HTTP-DAV:
   conf:
     description_paragraphs: 1
     license: Artistic-1.0 or GPL-1.0+
-  spec: perl-HTTP-DAV/perl-HTTP-DAV.spec
+  specfile: perl-HTTP-DAV/perl-HTTP-DAV.spec
+  version: '0.49'
 perl-HTTP-Daemon:
   conf:
     description_paragraphs: 3
-  spec: perl-HTTP-Daemon/perl-HTTP-Daemon.spec
+  specfile: perl-HTTP-Daemon/perl-HTTP-Daemon.spec
+  version: '6.16'
 perl-HTTP-HeaderParser-XS:
   conf:
     preamble: 'BuildRequires:  gcc-c++'
-  spec: perl-HTTP-HeaderParser-XS/perl-HTTP-HeaderParser-XS.spec
+  specfile: perl-HTTP-HeaderParser-XS/perl-HTTP-HeaderParser-XS.spec
+  version: '0.20'
 perl-HTTP-Headers-ActionPack:
   conf:
     preamble: 'BuildRequires:  perl(Plack)'
-  spec: perl-HTTP-Headers-ActionPack/perl-HTTP-Headers-ActionPack.spec
+  specfile: perl-HTTP-Headers-ActionPack/perl-HTTP-Headers-ActionPack.spec
+  version: '0.09'
 perl-HTTP-Parser-XS:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-HTTP-Parser-XS/perl-HTTP-Parser-XS.spec
+  specfile: perl-HTTP-Parser-XS/perl-HTTP-Parser-XS.spec
+  version: '0.17'
 perl-HTTP-Recorder:
   conf:
     license: GPL-1.0+
-  spec: perl-HTTP-Recorder/perl-HTTP-Recorder.spec
+  specfile: perl-HTTP-Recorder/perl-HTTP-Recorder.spec
+  version: '0.07'
 perl-HTTP-Server-Simple:
   conf:
     preamble: 'BuildRequires:  netcfg'
-  spec: perl-HTTP-Server-Simple/perl-HTTP-Server-Simple.spec
+  specfile: perl-HTTP-Server-Simple/perl-HTTP-Server-Simple.spec
+  version: '0.52'
 perl-Hash-AutoHash:
   conf:
     description_paragraphs: 3
-  spec: perl-Hash-AutoHash/perl-Hash-AutoHash.spec
+  specfile: perl-Hash-AutoHash/perl-Hash-AutoHash.spec
+  version: '1.17'
 perl-Hash-FieldHash:
   conf:
     custom_build: |-
       PERL_USE_UNSAFE_INC=1 perl Build.PL installdirs=vendor optimize="%{optflags}"
       ./Build build flags=%{?_smp_mflags}
-  spec: perl-Hash-FieldHash/perl-Hash-FieldHash.spec
+  specfile: perl-Hash-FieldHash/perl-Hash-FieldHash.spec
+  version: '0.15'
 perl-Hash-Merge:
   conf:
     description_paragraphs: 2
-  spec: perl-Hash-Merge/perl-Hash-Merge.spec
+  specfile: perl-Hash-Merge/perl-Hash-Merge.spec
+  version: '0.302'
 perl-Hash-SharedMem:
   conf:
     skip_doc: magic
-  spec: perl-Hash-SharedMem/perl-Hash-SharedMem.spec
+  specfile: perl-Hash-SharedMem/perl-Hash-SharedMem.spec
+  version: '0.005'
 perl-Heap:
   conf:
     license: Perl
-  spec: perl-Heap/perl-Heap.spec
+  specfile: perl-Heap/perl-Heap.spec
+  version: '0.80'
 perl-IO-AIO:
   conf:
     license: Artistic-1.0 OR GPL-1.0-or-later
@@ -1762,15 +1911,16 @@ perl-IO-AIO:
       %defattr(-,root,root)
       %{_bindir}/treescan
     skip_doc: (autogen.sh|configure.ac|gendef0)
-  spec: perl-IO-AIO/perl-IO-AIO.spec
+  specfile: perl-IO-AIO/perl-IO-AIO.spec
+  version: 4.810.0
 perl-IO-Async:
   conf:
     description_paragraphs: 1
-    patches: null
     preamble: |-
       BuildRequires:  netcfg
       BuildRequires:  perl(Test2::V0)
-  spec: perl-IO-Async/perl-IO-Async.spec
+  specfile: perl-IO-Async/perl-IO-Async.spec
+  version: 0.803.0
 perl-IO-Compress:
   conf:
     post_install: |-
@@ -1779,7 +1929,8 @@ perl-IO-Compress:
       mv %{buildroot}/usr/bin/zipdetails %{buildroot}/usr/bin/zipdetails-%{version}
       mv %{buildroot}/usr/share/man/man1/streamzip.1 %{buildroot}/usr/share/man/man1/streamzip-%{version}.1
       mv %{buildroot}/usr/share/man/man1/zipdetails.1 %{buildroot}/usr/share/man/man1/zipdetails-%{version}.1
-  spec: perl-IO-Compress/perl-IO-Compress.spec
+  specfile: perl-IO-Compress/perl-IO-Compress.spec
+  version: 2.206.0
 perl-IO-Compress-Lzma:
   conf:
     description: |-
@@ -1788,19 +1939,23 @@ perl-IO-Compress-Lzma:
 
       For reading lzma files/buffers, see the companion module
       IO::Uncompress::UnLzma.
-  spec: perl-IO-Compress-Lzma/perl-IO-Compress-Lzma.spec
+  specfile: perl-IO-Compress-Lzma/perl-IO-Compress-Lzma.spec
+  version: 2.206.0
 perl-IO-Extended:
   conf:
     license: Perl License
-  spec: perl-IO-Extended/perl-IO-Extended.spec
+  specfile: perl-IO-Extended/perl-IO-Extended.spec
+  version: '0.16'
 perl-IO-FDPass:
   conf:
     license: Perl License
-  spec: perl-IO-FDPass/perl-IO-FDPass.spec
+  specfile: perl-IO-FDPass/perl-IO-FDPass.spec
+  version: '1.3'
 perl-IO-Multiplex:
   conf:
     license: GPL-1.0+ or Artistic-1.0
-  spec: perl-IO-Multiplex/perl-IO-Multiplex.spec
+  specfile: perl-IO-Multiplex/perl-IO-Multiplex.spec
+  version: '1.16'
 perl-IO-Pager:
   conf:
     custom_build: |
@@ -1809,34 +1964,35 @@ perl-IO-Pager:
       #   make: *** No rule to make target 'blib/lib/IO/Pager/tp', needed by 'manifypods'.  Stop.
       perl Makefile.PL INSTALLDIRS=vendor
       make
-  spec: perl-IO-Pager/perl-IO-Pager.spec
+  specfile: perl-IO-Pager/perl-IO-Pager.spec
+  version: '2.10'
 perl-IO-Socket-INET6:
   conf:
     no_testing: needs network connectivity
-  spec: perl-IO-Socket-INET6/perl-IO-Socket-INET6.spec
+  specfile: perl-IO-Socket-INET6/perl-IO-Socket-INET6.spec
+  version: '2.73'
 perl-IO-Socket-SSL:
   conf:
     ignore_requires: Mozilla::CA
-    patches:
-      perl-IO-Socket-SSL-use-system-default-cipher-list.patch: -p1 PATCH-FIX-UPSTREAM (bsc1200295) perl-IO-Socket-SSL doesn't follow system "PROFILE=SYSTEM" openSSL ciphers - https://git.centos.org/rpms/perl-IO-Socket-SSL/blob/e0b0ae04f5cdb41b1f29cb7d76c23abba7ac35e9/f/SOURCES/IO-Socket-SSL-2.066-use-system-default-cipher-list.patch
     prep: rm README.Win32
-  spec: perl-IO-Socket-SSL/perl-IO-Socket-SSL.spec
+  specfile: perl-IO-Socket-SSL/perl-IO-Socket-SSL.spec
+  version: 2.85.0
 perl-IO-stringy:
   conf:
     license: Perl License
-  spec: perl-IO-stringy/perl-IO-stringy.spec
+  specfile: perl-IO-stringy/perl-IO-stringy.spec
+  version: '2.113'
 perl-IOC:
-  conf:
-    patches:
-      defined-array-ConstructorInjection.patch: -p1
-      defined-array-SetterInjection.patch: -p1
-  spec: perl-IOC/perl-IOC.spec
+  conf: {}
+  specfile: perl-IOC/perl-IOC.spec
+  version: '0.29'
 perl-IP-Country:
   conf:
     license: (GPL-1.0+ or Artistic-1.0) and SUSE-Redistributable-Content
     sources:
     - perl-IP-Country-rpmlintrc
-  spec: perl-IP-Country/perl-IP-Country.spec
+  specfile: perl-IP-Country/perl-IP-Country.spec
+  version: '2.28'
 perl-IPC-Run:
   conf:
     description_paragraphs: 2
@@ -1844,15 +2000,18 @@ perl-IPC-Run:
       # run.t sometimes fails with "Resource temporarily unavailable"
       mv t/run.t t/run.tt
     preamble: 'BuildRequires:  netcfg'
-  spec: perl-IPC-Run/perl-IPC-Run.spec
+  specfile: perl-IPC-Run/perl-IPC-Run.spec
+  version: 20231003.0.0
 perl-IPC-Run3:
   conf:
     license: BSD-2-Clause or GPL-2.0+ or Artistic-1.0
-  spec: perl-IPC-Run3/perl-IPC-Run3.spec
+  specfile: perl-IPC-Run3/perl-IPC-Run3.spec
+  version: 0.49.0
 perl-IPC-Signal:
   conf:
     license: Perl License
-  spec: perl-IPC-Signal/perl-IPC-Signal.spec
+  specfile: perl-IPC-Signal/perl-IPC-Signal.spec
+  version: '1.00'
 perl-Image-ExifTool:
   conf:
     add_doc: html config_files
@@ -1903,43 +2062,41 @@ perl-Image-ExifTool:
       %{_mandir}/man?/File::RandomAccess*
     preamble: 'Requires:       perl(File::RandomAccess) >= 1.11'
     skip_doc: exiftool
-  spec: perl-Image-ExifTool/perl-Image-ExifTool.spec
+  specfile: perl-Image-ExifTool/perl-Image-ExifTool.spec
+  version: '12.82'
 perl-Image-Imlib2:
   conf:
-    patches:
-      0001-Make-Build.PL-compatible-with-Imlib2-v1.7.5.patch: -p1 PATCH-FIX-USPTREAM https://rt.cpan.org/Public/Bug/Display.html?id=149742
-      Image-Imlib2-2.03.diff: -p1 PATCH-FIX-USPTREAM add error checks
     post_prep: rm t/simple.t
     preamble: |-
       BuildRequires:  imlib2-devel
       BuildRequires:  imlib2
       BuildRequires:  imlib2-loaders
       Requires:       imlib2
-  spec: perl-Image-Imlib2/perl-Image-Imlib2.spec
+  specfile: perl-Image-Imlib2/perl-Image-Imlib2.spec
+  version: '2.03'
 perl-Image-MetaData-JPEG:
   conf:
     license: Perl License
-  spec: perl-Image-MetaData-JPEG/perl-Image-MetaData-JPEG.spec
+  specfile: perl-Image-MetaData-JPEG/perl-Image-MetaData-JPEG.spec
+  version: '0.159'
 perl-Image-Sane:
   conf:
-    patches:
-      Image-Sane-5-Replace-deprecated-given-and-when-operators.patch: -p1
     preamble: 'BuildRequires:  pkgconfig(sane-backends)'
-  spec: perl-Image-Sane/perl-Image-Sane.spec
+  specfile: perl-Image-Sane/perl-Image-Sane.spec
+  version: '5'
 perl-Image-Scale:
   conf:
     preamble: |-
       BuildRequires:  libjpeg8-devel
       BuildRequires:  libpng16-compat-devel
       BuildRequires:  libpng16-devel
-  spec: perl-Image-Scale/perl-Image-Scale.spec
+  specfile: perl-Image-Scale/perl-Image-Scale.spec
+  version: '0.14'
 perl-Image-Size:
   conf:
     license: LGPL-2.1 or Artistic-1.0
-    patches:
-      Image-Size-3.300_Fix_JPEG_00_Markers.patch: -p1 PATCH-FIX-UPSTREAM do not fail on JPEG files with 0x00XX markers
-      endian.patch: -p1
-  spec: perl-Image-Size/perl-Image-Size.spec
+  specfile: perl-Image-Size/perl-Image-Size.spec
+  version: '3.300'
 perl-Imager:
   conf:
     post_install: rm -r %{buildroot}%{perl_vendorarch}/Imager/include
@@ -1953,11 +2110,13 @@ perl-Imager:
       BuildRequires:  libpng-devel
       BuildRequires:  libtiff-devel
       BuildRequires:  make
-  spec: perl-Imager/perl-Imager.spec
+  specfile: perl-Imager/perl-Imager.spec
+  version: 1.23.0
 perl-Imager-Graph:
   conf:
     description_paragraphs: 1
-  spec: perl-Imager-Graph/perl-Imager-Graph.spec
+  specfile: perl-Imager-Graph/perl-Imager-Graph.spec
+  version: '0.12'
 perl-Inline-Python:
   conf:
     custom_build: |-
@@ -1965,7 +2124,8 @@ perl-Inline-Python:
       perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
       make %{?_smp_mflags}
     preamble: 'BuildRequires:  python3-devel'
-  spec: perl-Inline-Python/perl-Inline-Python.spec
+  specfile: perl-Inline-Python/perl-Inline-Python.spec
+  version: '0.57'
 perl-JSON-PP:
   conf:
     post_install: |-
@@ -1980,7 +2140,8 @@ perl-JSON-PP:
       # => Provide a package version which is bigger....
       Provides:       %{name} = %{version}000-%{release}
       Provides:       perl(JSON::PP) = %{version}000
-  spec: perl-JSON-PP/perl-JSON-PP.spec
+  specfile: perl-JSON-PP/perl-JSON-PP.spec
+  version: '4.16'
 perl-JSON-Parse:
   conf:
     post_prep: |-
@@ -1990,19 +2151,20 @@ perl-JSON-Parse:
                   s|use lib '/home/ben/projects/Json3/blib/arch';||g;" "$file"
       done
       # hunspell=`pkg-config --libs hunspell | sed -e 's,-l,,; s,  *,,g'`
-  spec: perl-JSON-Parse/perl-JSON-Parse.spec
+  specfile: perl-JSON-Parse/perl-JSON-Parse.spec
+  version: '0.62'
 perl-JSON-XS:
   conf:
     license: Perl License
-  spec: perl-JSON-XS/perl-JSON-XS.spec
+  specfile: perl-JSON-XS/perl-JSON-XS.spec
+  version: '4.03'
 perl-LWP-ConsoleLogger:
   conf:
-    patches:
-      0001-replace-env.patch: -p1
     preamble: |-
       BuildRequires:  netcfg
       Requires: perl(Term::Size::Any)
-  spec: perl-LWP-ConsoleLogger/perl-LWP-ConsoleLogger.spec
+  specfile: perl-LWP-ConsoleLogger/perl-LWP-ConsoleLogger.spec
+  version: '1.000001'
 perl-LWP-Curl:
   conf:
     preamble: |-
@@ -2011,85 +2173,98 @@ perl-LWP-Curl:
       BuildRequires:  perl(WWW::Curl::Easy)
       Requires:       perl(WWW::Curl::Easy)
       Requires:       perl(URI::Escape)
-  spec: perl-LWP-Curl/perl-LWP-Curl.spec
+  specfile: perl-LWP-Curl/perl-LWP-Curl.spec
+  version: '0.14'
 perl-LWP-Online:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-LWP-Online/perl-LWP-Online.spec
+  specfile: perl-LWP-Online/perl-LWP-Online.spec
+  version: '1.08'
 perl-LWP-Protocol-https:
   conf:
     ignore_requires: Mozilla::CA
-    patches:
-      '%{cpan_name}-6.09-systemca.diff': -p1
-  spec: perl-LWP-Protocol-https/perl-LWP-Protocol-https.spec
+  specfile: perl-LWP-Protocol-https/perl-LWP-Protocol-https.spec
+  version: 6.140.0
 perl-LaTeX-Driver:
   conf:
     preamble: |-
       BuildRequires: texlive-latex-bin
       Requires: texlive-latex-bin
-  spec: perl-LaTeX-Driver/perl-LaTeX-Driver.spec
+  specfile: perl-LaTeX-Driver/perl-LaTeX-Driver.spec
+  version: 1.2.0
 perl-Libssh-Session:
   conf:
     license: Apache-2.0
     preamble: 'BuildRequires: libssh-devel '
-  spec: perl-Libssh-Session/perl-Libssh-Session.spec
+  specfile: perl-Libssh-Session/perl-Libssh-Session.spec
+  version: '0.8'
 perl-Lingua-EN-Numbers:
   conf:
     license: GPL-2.0
-  spec: perl-Lingua-EN-Numbers/perl-Lingua-EN-Numbers.spec
+  specfile: perl-Lingua-EN-Numbers/perl-Lingua-EN-Numbers.spec
+  version: '2.03'
 perl-Lingua-EN-Tagger:
   conf:
     license: GPL-3.0
     skip_noarch: 1
-  spec: perl-Lingua-EN-Tagger/perl-Lingua-EN-Tagger.spec
+  specfile: perl-Lingua-EN-Tagger/perl-Lingua-EN-Tagger.spec
+  version: '0.31'
 perl-Linux-Inotify2:
   conf:
     license: GPL-1.0-or-later or Artistic-1.0
-  spec: perl-Linux-Inotify2/perl-Linux-Inotify2.spec
+  specfile: perl-Linux-Inotify2/perl-Linux-Inotify2.spec
+  version: '2.3'
 perl-Linux-Systemd:
   conf:
     license: LGPL-2.1
     preamble: 'BuildRequires:  pkgconfig(libsystemd)'
-  spec: perl-Linux-Systemd/perl-Linux-Systemd.spec
+  specfile: perl-Linux-Systemd/perl-Linux-Systemd.spec
+  version: 1.201.600
 perl-List-MoreUtils-XS:
   conf:
     license: (Artistic-1.0 or GPL-1.0+) and Apache-2.0
-  spec: perl-List-MoreUtils-XS/perl-List-MoreUtils-XS.spec
+  specfile: perl-List-MoreUtils-XS/perl-List-MoreUtils-XS.spec
+  version: '0.430'
 perl-List-SomeUtils:
   conf:
     skip_doc: .*\.yml .*\.toml
-  spec: perl-List-SomeUtils/perl-List-SomeUtils.spec
+  specfile: perl-List-SomeUtils/perl-List-SomeUtils.spec
+  version: '0.59'
 perl-Locale-Msgfmt:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Locale-Msgfmt/perl-Locale-Msgfmt.spec
+  specfile: perl-Locale-Msgfmt/perl-Locale-Msgfmt.spec
+  version: '0.15'
 perl-Log-Agent:
   conf:
     license: Artistic-1.0
-  spec: perl-Log-Agent/perl-Log-Agent.spec
+  specfile: perl-Log-Agent/perl-Log-Agent.spec
+  version: '1.005'
 perl-Log-Any-Adapter-Screen:
   conf:
     description_paragraphs: 1
     summary: Send logs to screen, with colors and some other features
-  spec: perl-Log-Any-Adapter-Screen/perl-Log-Any-Adapter-Screen.spec
+  specfile: perl-Log-Any-Adapter-Screen/perl-Log-Any-Adapter-Screen.spec
+  version: 0.141.0
 perl-MCE-Shared:
   conf:
     description_paragraphs: 1
-  spec: perl-MCE-Shared/perl-MCE-Shared.spec
+  specfile: perl-MCE-Shared/perl-MCE-Shared.spec
+  version: 1.886.0
 perl-MP3-Info:
   conf:
     description_paragraphs: 3
-  spec: perl-MP3-Info/perl-MP3-Info.spec
+  specfile: perl-MP3-Info/perl-MP3-Info.spec
+  version: '1.26'
 perl-MP3-Tag:
   conf:
     description_paragraphs: 2
     license: Artistic-2.0
     preamble: 'BuildRequires:  unzip'
-  spec: perl-MP3-Tag/perl-MP3-Tag.spec
+  specfile: perl-MP3-Tag/perl-MP3-Tag.spec
+  version: '1.16'
 perl-Mail-DMARC:
   conf:
-    patches:
-      no-network-tests.patch: -p1 PATCH-FIX-OPENSUSE prevent network access in tests
     preamble: |-
       BuildRequires: perl(CGI)
       BuildRequires: perl(JSON)
@@ -2097,11 +2272,13 @@ perl-Mail-DMARC:
       BuildRequires: perl(Net::HTTP)
       BuildRequires: perl(Net::Server::HTTP)
       BuildRequires: perl(XML::Validator::Schema)
-  spec: perl-Mail-DMARC/perl-Mail-DMARC.spec
+  specfile: perl-Mail-DMARC/perl-Mail-DMARC.spec
+  version: '1.20240314'
 perl-Mail-GnuPG:
   conf:
     license: Artistic-1.0 OR GPL-2.0-or-later
-  spec: perl-Mail-GnuPG/perl-Mail-GnuPG.spec
+  specfile: perl-Mail-GnuPG/perl-Mail-GnuPG.spec
+  version: '0.23'
 perl-Mail-IMAPClient:
   conf:
     post_prep: |-
@@ -2109,22 +2286,21 @@ perl-Mail-IMAPClient:
       do
          sed -i 's|^#!/usr/local/bin/perl|%{__perl}|' ${f}
       done
-  spec: perl-Mail-IMAPClient/perl-Mail-IMAPClient.spec
+  specfile: perl-Mail-IMAPClient/perl-Mail-IMAPClient.spec
+  version: '3.43'
 perl-Mail-Message:
   conf:
     description_paragraphs: 1
-  spec: perl-Mail-Message/perl-Mail-Message.spec
+  specfile: perl-Mail-Message/perl-Mail-Message.spec
+  version: 3.15.0
 perl-Mail-SPF:
-  conf:
-    patches:
-      fix_pod.patch: -p1
-      skip_test.patch: -p1
-  spec: perl-Mail-SPF/perl-Mail-SPF.spec
+  conf: {}
+  specfile: perl-Mail-SPF/perl-Mail-SPF.spec
+  version: 3.202.402.60
 perl-Math-Base-Convert:
-  conf:
-    patches:
-      reproducible.patch: -p1
-  spec: perl-Math-Base-Convert/perl-Math-Base-Convert.spec
+  conf: {}
+  specfile: perl-Math-Base-Convert/perl-Math-Base-Convert.spec
+  version: '0.11'
 perl-Math-BigInt:
   conf:
     preamble: |-
@@ -2133,7 +2309,8 @@ perl-Math-BigInt:
       Recommends:     perl(Math::BigInt::GMP) >= 1.35
       Recommends:     perl(Math::BigInt::Pari) >= 1.15
       Recommends:     perl(Math::BigRat) >= 0.2602
-  spec: perl-Math-BigInt/perl-Math-BigInt.spec
+  specfile: perl-Math-BigInt/perl-Math-BigInt.spec
+  version: 2.3.2
 perl-Math-BigInt-FastCalc:
   conf:
     preamble: |-
@@ -2142,7 +2319,8 @@ perl-Math-BigInt-FastCalc:
       Requires:       perl-Math-BigInt >= 1.999713
       %endif
       BuildRequires:  perl(parent)
-  spec: perl-Math-BigInt-FastCalc/perl-Math-BigInt-FastCalc.spec
+  specfile: perl-Math-BigInt-FastCalc/perl-Math-BigInt-FastCalc.spec
+  version: 0.501.600
 perl-Math-BigInt-GMP:
   conf:
     description: |-
@@ -2163,7 +2341,8 @@ perl-Math-BigInt-GMP:
       BuildRequires:  perl-Math-BigInt >= 1.999714
       Requires:       perl-Math-BigInt >= 1.999714
       %endif
-  spec: perl-Math-BigInt-GMP/perl-Math-BigInt-GMP.spec
+  specfile: perl-Math-BigInt-GMP/perl-Math-BigInt-GMP.spec
+  version: '1.7000'
 perl-Math-BigInt-Pari:
   conf:
     preamble: |-
@@ -2172,74 +2351,86 @@ perl-Math-BigInt-Pari:
       BuildRequires:  perl-Math-BigInt >= 1.999713
       Requires:       perl-Math-BigInt >= 1.999713
       %endif
-  spec: perl-Math-BigInt-Pari/perl-Math-BigInt-Pari.spec
+  specfile: perl-Math-BigInt-Pari/perl-Math-BigInt-Pari.spec
+  version: 1.301.300
 perl-Math-Complex:
   conf:
     description_paragraphs: 1
-  spec: perl-Math-Complex/perl-Math-Complex.spec
+  specfile: perl-Math-Complex/perl-Math-Complex.spec
+  version: '1.59'
 perl-Math-GMP:
   conf:
     preamble: 'BuildRequires:  gmp-devel'
-  spec: perl-Math-GMP/perl-Math-GMP.spec
+  specfile: perl-Math-GMP/perl-Math-GMP.spec
+  version: '2.25'
 perl-Math-GSL:
   conf:
     preamble: 'BuildRequires:  gsl-devel'
-  spec: perl-Math-GSL/perl-Math-GSL.spec
+  specfile: perl-Math-GSL/perl-Math-GSL.spec
+  version: 0.440.0
 perl-Math-Int64:
   conf:
     preamble: 'Requires: perl-base = %{perl_version}'
-  spec: perl-Math-Int64/perl-Math-Int64.spec
+  specfile: perl-Math-Int64/perl-Math-Int64.spec
+  version: 0.570.0
 perl-Math-Pari:
   conf:
     sources: https://pari.math.u-bordeaux.fr/pub/pari/unix/pari-2.11.4.tar.gz
-  spec: perl-Math-Pari/perl-Math-Pari.spec
+  specfile: perl-Math-Pari/perl-Math-Pari.spec
+  version: '2.030518'
 perl-Math-PlanePath:
   conf:
     license: GPL-3.0+
-  spec: perl-Math-PlanePath/perl-Math-PlanePath.spec
+  specfile: perl-Math-PlanePath/perl-Math-PlanePath.spec
+  version: '129'
 perl-Math-Prime-Util-GMP:
   conf:
-    patches:
-      fix-shebang.patch: -p1
     preamble: 'BuildRequires:  gmp-devel'
-  spec: perl-Math-Prime-Util-GMP/perl-Math-Prime-Util-GMP.spec
+  specfile: perl-Math-Prime-Util-GMP/perl-Math-Prime-Util-GMP.spec
+  version: '0.52'
 perl-Math-Random:
   conf:
     license: Artistic-1.0 or GPL-2.0+
-  spec: perl-Math-Random/perl-Math-Random.spec
+  specfile: perl-Math-Random/perl-Math-Random.spec
+  version: '0.72'
 perl-MediaWiki-API:
   conf:
     license: GPL-3.0+
-  spec: perl-MediaWiki-API/perl-MediaWiki-API.spec
+  specfile: perl-MediaWiki-API/perl-MediaWiki-API.spec
+  version: '0.52'
 perl-MemHandle:
   conf:
     license: Perl License
-  spec: perl-MemHandle/perl-MemHandle.spec
+  specfile: perl-MemHandle/perl-MemHandle.spec
+  version: '0.07'
 perl-Menlo:
   conf:
     ignore_requires: Win32::ShellQuote
-    patches:
-      dropwindows.diff: -p1
-  spec: perl-Menlo/perl-Menlo.spec
+  specfile: perl-Menlo/perl-Menlo.spec
+  version: '1.9019'
 perl-Module-Build:
   conf:
     post_install: |-
       # avoid conflict with Perl's own supplied version
       mv %{buildroot}/usr/bin/config_data %{buildroot}/usr/bin/config_data-%{version}
       rename config_data config_data-%{version} %{buildroot}/%{_mandir}/man1/config_data.*
-  spec: perl-Module-Build/perl-Module-Build.spec
+  specfile: perl-Module-Build/perl-Module-Build.spec
+  version: '0.423400'
 perl-Module-Build-CleanInstall:
   conf:
     no_testing: not working with rpm installed deps
-  spec: perl-Module-Build-CleanInstall/perl-Module-Build-CleanInstall.spec
+  specfile: perl-Module-Build-CleanInstall/perl-Module-Build-CleanInstall.spec
+  version: '0.05'
 perl-Module-Build-Using-PkgConfig:
   conf:
     summary: Extend Module::Build to more easily use platform libraries provided by pkg-config
-  spec: perl-Module-Build-Using-PkgConfig/perl-Module-Build-Using-PkgConfig.spec
+  specfile: perl-Module-Build-Using-PkgConfig/perl-Module-Build-Using-PkgConfig.spec
+  version: '0.03'
 perl-Module-CPANTS-Analyse:
   conf:
     preamble: 'Source99: rpmlintrc'
-  spec: perl-Module-CPANTS-Analyse/perl-Module-CPANTS-Analyse.spec
+  specfile: perl-Module-CPANTS-Analyse/perl-Module-CPANTS-Analyse.spec
+  version: 1.20.0
 perl-Module-CoreList:
   conf:
     post_install: |-
@@ -2247,34 +2438,35 @@ perl-Module-CoreList:
       # the perl docu will do
       mv %{buildroot}%{_mandir}/man1/{corelist,corelist-%{name}}.1
       rm %{buildroot}%{_mandir}/man3/Module::CoreList.3pm
-  spec: perl-Module-CoreList/perl-Module-CoreList.spec
+  specfile: perl-Module-CoreList/perl-Module-CoreList.spec
+  version: '5.20240320'
 perl-Module-Depends:
-  conf:
-    patches:
-      left-brace.patch: -p1
-  spec: perl-Module-Depends/perl-Module-Depends.spec
+  conf: {}
+  specfile: perl-Module-Depends/perl-Module-Depends.spec
+  version: '0.16'
 perl-Module-ExtractUse:
   conf:
     post_install: ': > _build/runtime_params'
-  spec: perl-Module-ExtractUse/perl-Module-ExtractUse.spec
+  specfile: perl-Module-ExtractUse/perl-Module-ExtractUse.spec
+  version: '0.345'
 perl-Module-Install-ExtraTests:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Module-Install-ExtraTests/perl-Module-Install-ExtraTests.spec
+  specfile: perl-Module-Install-ExtraTests/perl-Module-Install-ExtraTests.spec
+  version: '0.008'
 perl-Module-Manifest-Skip:
-  conf:
-    patches:
-      https://github.com/ppisar/module-manifest-skip-pm/commit/18e36d68c1c7b6db2a4fe51482e2f46107e764c6.patch: -p1
-  spec: perl-Module-Manifest-Skip/perl-Module-Manifest-Skip.spec
+  conf: {}
+  specfile: perl-Module-Manifest-Skip/perl-Module-Manifest-Skip.spec
+  version: '0.23'
 perl-Module-Reader:
-  conf:
-    patches:
-      0001-Adjust-require-exception-to-perl-5.37.8-wording.patch: -p1
-  spec: perl-Module-Reader/perl-Module-Reader.spec
+  conf: {}
+  specfile: perl-Module-Reader/perl-Module-Reader.spec
+  version: '0.003003'
 perl-Module-Refresh:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Module-Refresh/perl-Module-Refresh.spec
+  specfile: perl-Module-Refresh/perl-Module-Refresh.spec
+  version: '0.18'
 perl-Module-Signature:
   conf:
     license: CC0-1.0 and (GPL-1.0+ or Artistic-1.0)
@@ -2282,148 +2474,172 @@ perl-Module-Signature:
     preamble: |-
       BuildRequires:  gpg
       Requires:       gpg
-  spec: perl-Module-Signature/perl-Module-Signature.spec
+  specfile: perl-Module-Signature/perl-Module-Signature.spec
+  version: '0.88'
 perl-Mojo-Pg:
   conf:
     summary: Wrapper around DBD::Pg for using PostgreSql with Mojolicious
-  spec: perl-Mojo-Pg/perl-Mojo-Pg.spec
+  specfile: perl-Mojo-Pg/perl-Mojo-Pg.spec
+  version: '4.27'
 perl-Mojo-RabbitMQ-Client:
   conf:
     preamble: |-
       # Net::AMQP only supports 64 bit: https://rt.cpan.org/Public/Bug/Display.html?id=87816
       ExcludeArch:    i586 armv7l ppc
-  spec: perl-Mojo-RabbitMQ-Client/perl-Mojo-RabbitMQ-Client.spec
+  specfile: perl-Mojo-RabbitMQ-Client/perl-Mojo-RabbitMQ-Client.spec
+  version: 0.3.1
 perl-Mojolicious-Plugin-AssetPack:
   conf:
-    patches:
-      mojolicious-deprecate-spurt.patch: -p1 PATCH-FIX-UPSTREAM https://github.com/mojolicious/mojo-assetpack/pull/149
     preamble: |-
       BuildRequires:  perl(Mojolicious) >= 9.34
       Requires:       perl(Mojolicious) >= 9.34
-  spec: perl-Mojolicious-Plugin-AssetPack/perl-Mojolicious-Plugin-AssetPack.spec
+  specfile: perl-Mojolicious-Plugin-AssetPack/perl-Mojolicious-Plugin-AssetPack.spec
+  version: '2.14'
 perl-Mojolicious-Plugin-OAuth2:
   conf:
     description_paragraphs: 2
-  spec: perl-Mojolicious-Plugin-OAuth2/perl-Mojolicious-Plugin-OAuth2.spec
+  specfile: perl-Mojolicious-Plugin-OAuth2/perl-Mojolicious-Plugin-OAuth2.spec
+  version: '2.02'
 perl-Mojolicious-Plugin-RenderFile:
   conf:
     license: GPL-1.0-or-later or Artistic-1.0
     post_build: mv %{buildroot}/%{perl_vendorlib}/Mojolicious/Plugin/README{,-RenderFile}.pod
-  spec: perl-Mojolicious-Plugin-RenderFile/perl-Mojolicious-Plugin-RenderFile.spec
+  specfile: perl-Mojolicious-Plugin-RenderFile/perl-Mojolicious-Plugin-RenderFile.spec
+  version: '0.12'
 perl-Mojolicious-Plugin-Webpack:
   conf:
     description_paragraphs: 4
-  spec: perl-Mojolicious-Plugin-Webpack/perl-Mojolicious-Plugin-Webpack.spec
+  specfile: perl-Mojolicious-Plugin-Webpack/perl-Mojolicious-Plugin-Webpack.spec
+  version: '1.02'
 perl-MooX-late:
   conf:
     preamble: 'BuildRequires:  perl(Module::Runtime)'
-  spec: perl-MooX-late/perl-MooX-late.spec
+  specfile: perl-MooX-late/perl-MooX-late.spec
+  version: '0.100'
 perl-Moose:
   conf:
     license: GPL-1.0+ or Artistic-1.0
     preamble: |-
       Provides:       perl-Class-MOP = %{version}
       Obsoletes:      perl-Class-MOP < %{version}
-  spec: perl-Moose/perl-Moose.spec
+  specfile: perl-Moose/perl-Moose.spec
+  version: '2.2207'
 perl-MooseX-App:
   conf:
     description_paragraphs: 1
     preamble: 'BuildRequires: perl(Config::Any)'
     skip_doc: ^(meta)$
-  spec: perl-MooseX-App/perl-MooseX-App.spec
+  specfile: perl-MooseX-App/perl-MooseX-App.spec
+  version: 1.430.0
 perl-MooseX-Attribute-ENV:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-MooseX-Attribute-ENV/perl-MooseX-Attribute-ENV.spec
+  specfile: perl-MooseX-Attribute-ENV/perl-MooseX-Attribute-ENV.spec
+  version: '0.02'
 perl-MooseX-AuthorizedMethods:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
     preamble: 'BuildRequires:  perl(Sub::Name)'
-  spec: perl-MooseX-AuthorizedMethods/perl-MooseX-AuthorizedMethods.spec
+  specfile: perl-MooseX-AuthorizedMethods/perl-MooseX-AuthorizedMethods.spec
+  version: '0.006'
 perl-MooseX-Getopt:
   conf:
     license: Artistic-1.0 or GPL-1.0+
-  spec: perl-MooseX-Getopt/perl-MooseX-Getopt.spec
+  specfile: perl-MooseX-Getopt/perl-MooseX-Getopt.spec
+  version: 0.760.0
 perl-MooseX-HasDefaults:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-MooseX-HasDefaults/perl-MooseX-HasDefaults.spec
+  specfile: perl-MooseX-HasDefaults/perl-MooseX-HasDefaults.spec
+  version: '0.03'
 perl-MooseX-Iterator:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-MooseX-Iterator/perl-MooseX-Iterator.spec
+  specfile: perl-MooseX-Iterator/perl-MooseX-Iterator.spec
+  version: '0.11'
 perl-MooseX-LazyLogDispatch:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-MooseX-LazyLogDispatch/perl-MooseX-LazyLogDispatch.spec
+  specfile: perl-MooseX-LazyLogDispatch/perl-MooseX-LazyLogDispatch.spec
+  version: '0.02'
 perl-MooseX-Log-Log4perl:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-MooseX-Log-Log4perl/perl-MooseX-Log-Log4perl.spec
+  specfile: perl-MooseX-Log-Log4perl/perl-MooseX-Log-Log4perl.spec
+  version: '0.47'
 perl-MooseX-LogDispatch:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-MooseX-LogDispatch/perl-MooseX-LogDispatch.spec
+  specfile: perl-MooseX-LogDispatch/perl-MooseX-LogDispatch.spec
+  version: '1.2002'
 perl-MooseX-MultiMethods:
   conf:
     preamble: |-
       BuildRequires:  perl(Test::Exception)
       BuildRequires:  perl(MooseX::Declare)
       BuildRequires:  perl(Test::NoWarnings)
-  spec: perl-MooseX-MultiMethods/perl-MooseX-MultiMethods.spec
+  specfile: perl-MooseX-MultiMethods/perl-MooseX-MultiMethods.spec
+  version: '0.10'
 perl-MooseX-Role-Cmd:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-MooseX-Role-Cmd/perl-MooseX-Role-Cmd.spec
+  specfile: perl-MooseX-Role-Cmd/perl-MooseX-Role-Cmd.spec
+  version: '0.10'
 perl-MooseX-Role-Parameterized:
   conf:
     license: Artistic-1.0 or GPL-1.0+
-  spec: perl-MooseX-Role-Parameterized/perl-MooseX-Role-Parameterized.spec
+  specfile: perl-MooseX-Role-Parameterized/perl-MooseX-Role-Parameterized.spec
+  version: '1.11'
 perl-MooseX-Storage:
   conf:
     license: Artistic-1.0 or GPL-1.0+
-  spec: perl-MooseX-Storage/perl-MooseX-Storage.spec
+  specfile: perl-MooseX-Storage/perl-MooseX-Storage.spec
+  version: '0.53'
 perl-MooseX-TransactionalMethods:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-MooseX-TransactionalMethods/perl-MooseX-TransactionalMethods.spec
+  specfile: perl-MooseX-TransactionalMethods/perl-MooseX-TransactionalMethods.spec
+  version: '0.009'
 perl-MooseX-Types-Common:
   conf:
     license: Artistic-1.0 or GPL-1.0+
-  spec: perl-MooseX-Types-Common/perl-MooseX-Types-Common.spec
+  specfile: perl-MooseX-Types-Common/perl-MooseX-Types-Common.spec
+  version: '0.001014'
 perl-MooseX-Types-Parameterizable:
   conf:
     description_paragraphs: 1
-    patches:
-      remove-buggy-test.patch: -p1
     post_prep: |-
       sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
       rm t/09-coercions-bug.t
-  spec: perl-MooseX-Types-Parameterizable/perl-MooseX-Types-Parameterizable.spec
+  specfile: perl-MooseX-Types-Parameterizable/perl-MooseX-Types-Parameterizable.spec
+  version: '0.09'
 perl-MooseX-Types-Structured:
   conf:
     license: Artistic-1.0 or GPL-1.0+
-  spec: perl-MooseX-Types-Structured/perl-MooseX-Types-Structured.spec
+  specfile: perl-MooseX-Types-Structured/perl-MooseX-Types-Structured.spec
+  version: '0.36'
 perl-MouseX-Getopt:
   conf:
-    patches:
-      pr-15.patch: -p1
     preamble: |-
       Provides: perl-mousex-getopt = %{version}
       Obsoletes: perl-mousex-getopt <= 0.37
-  spec: perl-MouseX-Getopt/perl-MouseX-Getopt.spec
+  specfile: perl-MouseX-Getopt/perl-MouseX-Getopt.spec
+  version: '0.38'
 perl-MouseX-Types:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-MouseX-Types/perl-MouseX-Types.spec
+  specfile: perl-MouseX-Types/perl-MouseX-Types.spec
+  version: '0.06'
 perl-MouseX-Types-Path-Class:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install;/use lib q[.];\nuse inc::Module::Install;/' Makefile.PL
-  spec: perl-MouseX-Types-Path-Class/perl-MouseX-Types-Path-Class.spec
+  specfile: perl-MouseX-Types-Path-Class/perl-MouseX-Types-Path-Class.spec
+  version: '0.07'
 perl-Mozilla-CA:
   conf:
     license: MPL-1.1 or GPL-2.0+ or LGPL-2.1+
-  spec: perl-Mozilla-CA/perl-Mozilla-CA.spec
+  specfile: perl-Mozilla-CA/perl-Mozilla-CA.spec
+  version: 20240313.0.0
 perl-MusicBrainz-DiscID:
   conf:
     description: |-
@@ -2435,59 +2651,64 @@ perl-MusicBrainz-DiscID:
       BuildRequires:  pkgconfig(libdiscid) >= 0.2.2
       Requires:       perl(Carp)
       Requires:       perl(XSLoader)
-  spec: perl-MusicBrainz-DiscID/perl-MusicBrainz-DiscID.spec
+  specfile: perl-MusicBrainz-DiscID/perl-MusicBrainz-DiscID.spec
+  version: '0.06'
 perl-Net-AMQP-RabbitMQ:
   conf:
     license: MPL-1.1
     no_testing: needs network
     preamble: 'BuildRequires:  openssl-devel'
     skip_doc: MANIFEST.3
-  spec: perl-Net-AMQP-RabbitMQ/perl-Net-AMQP-RabbitMQ.spec
+  specfile: perl-Net-AMQP-RabbitMQ/perl-Net-AMQP-RabbitMQ.spec
+  version: '2.40010'
 perl-Net-ARP:
   conf:
     license: GPL-2.0-only
     no_testing: needs network
-  spec: perl-Net-ARP/perl-Net-ARP.spec
+  specfile: perl-Net-ARP/perl-Net-ARP.spec
+  version: 1.0.12
 perl-Net-Curl:
   conf:
-    patches:
-      fix-curl.diff: -p1
     preamble: 'BuildRequires:  perl(ExtUtils::PkgConfig) curl-devel'
-  spec: perl-Net-Curl/perl-Net-Curl.spec
+  specfile: perl-Net-Curl/perl-Net-Curl.spec
+  version: 0.550.0
 perl-Net-DBus:
   conf:
     license: GPL-2.0+
     preamble: 'BuildRequires:  dbus-1-devel pkg-config'
-  spec: perl-Net-DBus/perl-Net-DBus.spec
+  specfile: perl-Net-DBus/perl-Net-DBus.spec
+  version: 1.2.0
 perl-Net-DNS-Paranoid:
-  conf:
-    patches:
-      fake_dns_access.patch: -p1 PATCH-FIX-OPENSUSE fake the DNS access as we have no network on the build machines
-      https://github.com/tokuhirom/Net-DNS-Paranoid/commit/3b438f6f17f765f263801c61ec3111f789310eb0.patch: -p1 PATCH-FIX-UPSTREAM https://github.com/tokuhirom/Net-DNS-Paranoid/pull/1 Use Net::DNS::Resolver's retry functionality to check other NSs
-      https://github.com/tokuhirom/Net-DNS-Paranoid/pull/6/commits/2d84b68bcdcf1325ba15d6d0252894d828a0d765.patch: -p1 PATCH-FIX-UPSTREAM https://github.com/tokuhirom/Net-DNS-Paranoid/pull/6 Switch to nip.io, from xip.io
-  spec: perl-Net-DNS-Paranoid/perl-Net-DNS-Paranoid.spec
+  conf: {}
+  specfile: perl-Net-DNS-Paranoid/perl-Net-DNS-Paranoid.spec
+  version: 0.90.0
 perl-Net-DNS-SEC:
   conf:
     preamble: 'BuildRequires:  libopenssl-devel'
-  spec: perl-Net-DNS-SEC/perl-Net-DNS-SEC.spec
+  specfile: perl-Net-DNS-SEC/perl-Net-DNS-SEC.spec
+  version: 1.230.0
 perl-Net-Daemon:
   conf:
     license: Artistic-1.0 OR GPL-1.0-or-later
-  spec: perl-Net-Daemon/perl-Net-Daemon.spec
+  specfile: perl-Net-Daemon/perl-Net-Daemon.spec
+  version: '0.49'
 perl-Net-GPSD3:
   conf:
     license: BSD-3-Clause
-  spec: perl-Net-GPSD3/perl-Net-GPSD3.spec
+  specfile: perl-Net-GPSD3/perl-Net-GPSD3.spec
+  version: '0.19'
 perl-Net-HTTP:
   conf:
     description_paragraphs: 2
-  spec: perl-Net-HTTP/perl-Net-HTTP.spec
+  specfile: perl-Net-HTTP/perl-Net-HTTP.spec
+  version: '6.23'
 perl-Net-HTTP-Spore:
   conf:
     preamble: |-
       BuildRequires:  perl(Regexp::IPv6)
       Requires:       perl(Regexp::IPv6)
-  spec: perl-Net-HTTP-Spore/perl-Net-HTTP-Spore.spec
+  specfile: perl-Net-HTTP-Spore/perl-Net-HTTP-Spore.spec
+  version: '0.09'
 perl-Net-HTTPS-Any:
   conf:
     post_prep: |-
@@ -2496,21 +2717,22 @@ perl-Net-HTTPS-Any:
     preamble: |-
       BuildRequires: perl(Test::Pod::Coverage)
       BuildRequires: perl(Test::Pod)
-  spec: perl-Net-HTTPS-Any/perl-Net-HTTPS-Any.spec
+  specfile: perl-Net-HTTPS-Any/perl-Net-HTTPS-Any.spec
+  version: '0.12'
 perl-Net-IDN-Nameprep:
   conf:
     summary: Stringprep Profile for Internationalized Domain Names (RFC 3491)
-  spec: perl-Net-IDN-Nameprep/perl-Net-IDN-Nameprep.spec
+  specfile: perl-Net-IDN-Nameprep/perl-Net-IDN-Nameprep.spec
+  version: '1.102'
 perl-Net-IP:
-  conf:
-    patches:
-      ipcount-invalid_chars_in_IP.patch: -p1
-      perl-Net-IP-1.25-zero_address.diff: null
-  spec: perl-Net-IP/perl-Net-IP.spec
+  conf: {}
+  specfile: perl-Net-IP/perl-Net-IP.spec
+  version: '1.26'
 perl-Net-MQTT-Simple:
   conf:
     license: BSD-1-Clause
-  spec: perl-Net-MQTT-Simple/perl-Net-MQTT-Simple.spec
+  specfile: perl-Net-MQTT-Simple/perl-Net-MQTT-Simple.spec
+  version: 1.290.0
 perl-Net-Pcap:
   conf:
     misc: |-
@@ -2548,86 +2770,103 @@ perl-Net-Pcap:
       Requires:       perl(Data::Hexdumper)
       Requires:       perl(NetPacket)
     skip_doc: stubs.inc
-  spec: perl-Net-Pcap/perl-Net-Pcap.spec
+  specfile: perl-Net-Pcap/perl-Net-Pcap.spec
+  version: '0.21'
 perl-Net-SLP:
   conf:
     no_testing: we need a running SLP server to run the tests
     preamble: 'BuildRequires: openslp-devel'
-  spec: perl-Net-SLP/perl-Net-SLP.spec
+  specfile: perl-Net-SLP/perl-Net-SLP.spec
+  version: '1.5'
 perl-Net-SNMP-Mixin:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/system.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin/perl-Net-SNMP-Mixin.spec
+  specfile: perl-Net-SNMP-Mixin/perl-Net-SNMP-Mixin.spec
+  version: '0.14'
 perl-Net-SNMP-Mixin-CiscoDot1qVlanStatic:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/cisco-vlans.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-CiscoDot1qVlanStatic/perl-Net-SNMP-Mixin-CiscoDot1qVlanStatic.spec
+  specfile: perl-Net-SNMP-Mixin-CiscoDot1qVlanStatic/perl-Net-SNMP-Mixin-CiscoDot1qVlanStatic.spec
+  version: '0.10'
 perl-Net-SNMP-Mixin-CiscoDot1qVlanStaticTrunks:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/cisco-trunks.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-CiscoDot1qVlanStaticTrunks/perl-Net-SNMP-Mixin-CiscoDot1qVlanStaticTrunks.spec
+  specfile: perl-Net-SNMP-Mixin-CiscoDot1qVlanStaticTrunks/perl-Net-SNMP-Mixin-CiscoDot1qVlanStaticTrunks.spec
+  version: '0.04'
 perl-Net-SNMP-Mixin-Dot1abLldp:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/lldp.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-Dot1abLldp/perl-Net-SNMP-Mixin-Dot1abLldp.spec
+  specfile: perl-Net-SNMP-Mixin-Dot1abLldp/perl-Net-SNMP-Mixin-Dot1abLldp.spec
+  version: '0.18'
 perl-Net-SNMP-Mixin-Dot1dBase:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/dot1dbase.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-Dot1dBase/perl-Net-SNMP-Mixin-Dot1dBase.spec
+  specfile: perl-Net-SNMP-Mixin-Dot1dBase/perl-Net-SNMP-Mixin-Dot1dBase.spec
+  version: '0.10'
 perl-Net-SNMP-Mixin-Dot1dStp:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/stp.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-Dot1dStp/perl-Net-SNMP-Mixin-Dot1dStp.spec
+  specfile: perl-Net-SNMP-Mixin-Dot1dStp/perl-Net-SNMP-Mixin-Dot1dStp.spec
+  version: '0.04'
 perl-Net-SNMP-Mixin-Dot1qFdb:
   conf:
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-Dot1qFdb/perl-Net-SNMP-Mixin-Dot1qFdb.spec
+  specfile: perl-Net-SNMP-Mixin-Dot1qFdb/perl-Net-SNMP-Mixin-Dot1qFdb.spec
+  version: '0.06'
 perl-Net-SNMP-Mixin-Dot1qVlanStatic:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/vlanstatic.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-Dot1qVlanStatic/perl-Net-SNMP-Mixin-Dot1qVlanStatic.spec
+  specfile: perl-Net-SNMP-Mixin-Dot1qVlanStatic/perl-Net-SNMP-Mixin-Dot1qVlanStatic.spec
+  version: '0.10'
 perl-Net-SNMP-Mixin-IfInfo:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/ifinfo.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-IfInfo/perl-Net-SNMP-Mixin-IfInfo.spec
+  specfile: perl-Net-SNMP-Mixin-IfInfo/perl-Net-SNMP-Mixin-IfInfo.spec
+  version: '1.01'
 perl-Net-SNMP-Mixin-InetCidrRouteTable:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/inet_cidr_rtbl.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-InetCidrRouteTable/perl-Net-SNMP-Mixin-InetCidrRouteTable.spec
+  specfile: perl-Net-SNMP-Mixin-InetCidrRouteTable/perl-Net-SNMP-Mixin-InetCidrRouteTable.spec
+  version: '0.03'
 perl-Net-SNMP-Mixin-IpCidrRouteTable:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/ip_cidr_rtbl.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-IpCidrRouteTable/perl-Net-SNMP-Mixin-IpCidrRouteTable.spec
+  specfile: perl-Net-SNMP-Mixin-IpCidrRouteTable/perl-Net-SNMP-Mixin-IpCidrRouteTable.spec
+  version: '0.05'
 perl-Net-SNMP-Mixin-IpRouteTable:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/iprtbl.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-IpRouteTable/perl-Net-SNMP-Mixin-IpRouteTable.spec
+  specfile: perl-Net-SNMP-Mixin-IpRouteTable/perl-Net-SNMP-Mixin-IpRouteTable.spec
+  version: '0.04'
 perl-Net-SNMP-Mixin-NXOSDot1dBase:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/nxosdot1dbase.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-NXOSDot1dBase/perl-Net-SNMP-Mixin-NXOSDot1dBase.spec
+  specfile: perl-Net-SNMP-Mixin-NXOSDot1dBase/perl-Net-SNMP-Mixin-NXOSDot1dBase.spec
+  version: '0.10'
 perl-Net-SNMP-Mixin-NXOSDot1dStp:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/nxosstp.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-NXOSDot1dStp/perl-Net-SNMP-Mixin-NXOSDot1dStp.spec
+  specfile: perl-Net-SNMP-Mixin-NXOSDot1dStp/perl-Net-SNMP-Mixin-NXOSDot1dStp.spec
+  version: '0.01'
 perl-Net-SNMP-Mixin-NXOSDot1qFdb:
   conf:
     post_prep: sed -i "s_/env perl_/perl_" examples/nxosfdb.pl
     preamble: 'BuildRequires: netcfg'
-  spec: perl-Net-SNMP-Mixin-NXOSDot1qFdb/perl-Net-SNMP-Mixin-NXOSDot1qFdb.spec
+  specfile: perl-Net-SNMP-Mixin-NXOSDot1qFdb/perl-Net-SNMP-Mixin-NXOSDot1qFdb.spec
+  version: '0.10'
 perl-Net-SSH2:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
@@ -2635,7 +2874,8 @@ perl-Net-SSH2:
       BuildRequires:  libgcrypt-devel
       BuildRequires:  libssh2-devel
       BuildRequires:  openssl-devel
-  spec: perl-Net-SSH2/perl-Net-SSH2.spec
+  specfile: perl-Net-SSH2/perl-Net-SSH2.spec
+  version: '0.73'
 perl-Net-SSLeay:
   conf:
     preamble: |-
@@ -2645,27 +2885,31 @@ perl-Net-SSLeay:
       BuildRequires:  perl(Test::NoWarnings)
       BuildRequires:  perl(Test::Pod) >= 1.41
       BuildRequires:  perl(Test::Warn)
-  spec: perl-Net-SSLeay/perl-Net-SSLeay.spec
+  specfile: perl-Net-SSLeay/perl-Net-SSLeay.spec
+  version: 1.940.0
 perl-Net-Twitter:
   conf:
     ignore_requires: Net::HTTP
     preamble: |-
       BuildRequires: perl(Net::HTTP) > 6.05
       Requires: perl(Net::HTTP) > 6.05
-  spec: perl-Net-Twitter/perl-Net-Twitter.spec
+  specfile: perl-Net-Twitter/perl-Net-Twitter.spec
+  version: '4.01043'
 perl-Net-Twitter-Lite:
   conf:
     ignore_requires: Net::HTTP
     preamble: |-
       BuildRequires:  perl(Net::HTTP) > 6.05
       Requires:       perl(Net::HTTP) > 6.05
-  spec: perl-Net-Twitter-Lite/perl-Net-Twitter-Lite.spec
+  specfile: perl-Net-Twitter-Lite/perl-Net-Twitter-Lite.spec
+  version: '0.12008'
 perl-Net-XMPP:
   conf:
     custom_test: |-
       rm t/gtalk.t # skip tests that need network
       ./Build test
-  spec: perl-Net-XMPP/perl-Net-XMPP.spec
+  specfile: perl-Net-XMPP/perl-Net-XMPP.spec
+  version: '1.05'
 perl-Net-Z3950-ZOOM:
   conf:
     no_testing: needs network connection
@@ -2681,48 +2925,56 @@ perl-Net-Z3950-ZOOM:
     sources:
     - zselect.1
     - zoomdump.1
-  spec: perl-Net-Z3950-ZOOM/perl-Net-Z3950-ZOOM.spec
+  specfile: perl-Net-Z3950-ZOOM/perl-Net-Z3950-ZOOM.spec
+  version: '1.30'
 perl-NetAddr-IP:
   conf:
     license: Perl License
-  spec: perl-NetAddr-IP/perl-NetAddr-IP.spec
+  specfile: perl-NetAddr-IP/perl-NetAddr-IP.spec
+  version: '4.079'
 perl-Number-Bytes-Human:
   conf:
     description_paragraphs: 2
-  spec: perl-Number-Bytes-Human/perl-Number-Bytes-Human.spec
+  specfile: perl-Number-Bytes-Human/perl-Number-Bytes-Human.spec
+  version: '0.11'
 perl-Number-Format:
   conf:
     description_paragraphs: 3
-  spec: perl-Number-Format/perl-Number-Format.spec
+  specfile: perl-Number-Format/perl-Number-Format.spec
+  version: '1.76'
 perl-Number-Phone:
   conf:
     license: Artistic-1.0 OR GPL-1.0-or-later
-  spec: perl-Number-Phone/perl-Number-Phone.spec
+  specfile: perl-Number-Phone/perl-Number-Phone.spec
+  version: '3.9002'
 perl-Number-WithError:
-  conf:
-    patches:
-      Number-WithError-1.01-no-dot-inc.patch: -p1
-  spec: perl-Number-WithError/perl-Number-WithError.spec
+  conf: {}
+  specfile: perl-Number-WithError/perl-Number-WithError.spec
+  version: '1.01'
 perl-OLE-Storage_Lite:
   conf:
     license: Artistic-1.0 OR GPL-1.0-or-later
-  spec: perl-OLE-Storage_Lite/perl-OLE-Storage_Lite.spec
+  specfile: perl-OLE-Storage_Lite/perl-OLE-Storage_Lite.spec
+  version: '0.22'
 perl-ORLite:
   conf:
     preamble: |-
       BuildRequires: perl(Class::XSAccessor)
       BuildRequires: perl(Test::Deep)
       BuildRequires: sqlite
-  spec: perl-ORLite/perl-ORLite.spec
+  specfile: perl-ORLite/perl-ORLite.spec
+  version: 2.0.0
 perl-Object-Import:
   conf:
     license: Artistic-1.0 OR GPL-3.0-only
     preamble: 'BuildRequires:  netcfg'
-  spec: perl-Object-Import/perl-Object-Import.spec
+  specfile: perl-Object-Import/perl-Object-Import.spec
+  version: '1.005'
 perl-Object-Signature:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Object-Signature/perl-Object-Signature.spec
+  specfile: perl-Object-Signature/perl-Object-Signature.spec
+  version: '1.08'
 perl-Ogg-Vorbis-Header:
   conf:
     license: GPL-2.0+
@@ -2731,7 +2983,8 @@ perl-Ogg-Vorbis-Header:
       BuildRequires:  libogg-devel
       BuildRequires:  libvorbis-devel
       BuildRequires:  make
-  spec: perl-Ogg-Vorbis-Header/perl-Ogg-Vorbis-Header.spec
+  specfile: perl-Ogg-Vorbis-Header/perl-Ogg-Vorbis-Header.spec
+  version: '0.11'
 perl-OpenGL:
   conf:
     custom_build: |-
@@ -2742,10 +2995,6 @@ perl-OpenGL:
       %{__make} %{?_smp_mflags}
     custom_test: xvfb-run -a -s "+extension GLX -screen 0 1280x1024x24" %{__make} test
     license: GPL-1.0+ or Artistic-1.0
-    patches:
-      0001-Don-t-check-current-display-for-extensions.patch: -p1
-      OpenGL-0.6704-Delete-functions-removed-from-Mesa.patch: -p1
-      OpenGL-0.6704-Prefer-system-GL-gl.h-on-non-Win32.patch: -p1
     post_prep: find include -type f  \! -name glprocs.h -exec rm {} +
     preamble: |-
       %if 0%{suse_version} >= 1500
@@ -2755,7 +3004,8 @@ perl-OpenGL:
       BuildRequires:  xvfb-run
       BuildRequires:  pkgconfig(xi)
       BuildRequires:  pkgconfig(xmu)
-  spec: perl-OpenGL/perl-OpenGL.spec
+  specfile: perl-OpenGL/perl-OpenGL.spec
+  version: '0.70'
 perl-PAR-Packer:
   conf:
     custom_build: |-
@@ -2765,7 +3015,8 @@ perl-PAR-Packer:
     custom_test: |-
       export PERL_TEST_POD=1
       make test
-  spec: perl-PAR-Packer/perl-PAR-Packer.spec
+  specfile: perl-PAR-Packer/perl-PAR-Packer.spec
+  version: 1.61.0
 perl-PAR-Packer-test:
   conf:
     custom_build: |-
@@ -2775,11 +3026,13 @@ perl-PAR-Packer-test:
     custom_test: |-
       export PERL_TEST_POD=1
       make test
-  spec: perl-PAR-Packer-test/perl-PAR-Packer.spec
+  specfile: perl-PAR-Packer-test/perl-PAR-Packer.spec
+  version: 1.61.0
 perl-PDF-Reuse:
   conf:
     preamble: 'BuildRequires:  perl(Test::Deep)'
-  spec: perl-PDF-Reuse/perl-PDF-Reuse.spec
+  specfile: perl-PDF-Reuse/perl-PDF-Reuse.spec
+  version: '0.39'
 perl-PDF-Table:
   conf:
     description: |-
@@ -2793,7 +3046,8 @@ perl-PDF-Table:
       Also a (non)repeated header row with different layout properties can be
       specified.
     summary: Utility class for building table layouts in a PDF::Builder
-  spec: perl-PDF-Table/perl-PDF-Table.spec
+  specfile: perl-PDF-Table/perl-PDF-Table.spec
+  version: 1.6.0
 perl-PDL:
   conf:
     add_doc: Bugs.pod Example
@@ -2826,23 +3080,28 @@ perl-PDL:
       Requires:       perl(Inline) >= 0.83
       Requires:       perl(Inline::C) >= 0.62
     skip_doc: (m51.fits|pdldoc|perldl|perldl.conf)
-  spec: perl-PDL/perl-PDL.spec
+  specfile: perl-PDL/perl-PDL.spec
+  version: '2.081'
 perl-POE:
   conf:
     preamble: 'BuildRequires:  netcfg'
-  spec: perl-POE/perl-POE.spec
+  specfile: perl-POE/perl-POE.spec
+  version: '1.370'
 perl-POSIX-strftime-Compiler:
   conf:
     preamble: 'BuildRequires:  timezone'
-  spec: perl-POSIX-strftime-Compiler/perl-POSIX-strftime-Compiler.spec
+  specfile: perl-POSIX-strftime-Compiler/perl-POSIX-strftime-Compiler.spec
+  version: 0.460.0
 perl-PPI:
   conf:
     ignore_requires: File::Spec
-  spec: perl-PPI/perl-PPI.spec
+  specfile: perl-PPI/perl-PPI.spec
+  version: 1.278.0
 perl-PadWalker:
   conf:
     description_paragraphs: 3
-  spec: perl-PadWalker/perl-PadWalker.spec
+  specfile: perl-PadWalker/perl-PadWalker.spec
+  version: '2.5'
 perl-Pango:
   conf:
     custom_test: |-
@@ -2885,73 +3144,85 @@ perl-Pango:
       %if %{with Gtk2}
       BuildRequires:  perl(Gtk2) >= 1.220
       %endif
-  spec: perl-Pango/perl-Pango.spec
+  specfile: perl-Pango/perl-Pango.spec
+  version: '1.227'
 perl-Parallel-Scoreboard:
   conf:
     preamble: 'BuildRequires:  perl(Sub::Uplevel)'
-  spec: perl-Parallel-Scoreboard/perl-Parallel-Scoreboard.spec
+  specfile: perl-Parallel-Scoreboard/perl-Parallel-Scoreboard.spec
+  version: '0.08'
 perl-Params-Coerce:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Params-Coerce/perl-Params-Coerce.spec
+  specfile: perl-Params-Coerce/perl-Params-Coerce.spec
+  version: '0.15'
 perl-Parse-CPAN-Packages-Fast:
   conf:
     license: Perl
-  spec: perl-Parse-CPAN-Packages-Fast/perl-Parse-CPAN-Packages-Fast.spec
+  specfile: perl-Parse-CPAN-Packages-Fast/perl-Parse-CPAN-Packages-Fast.spec
+  version: '0.09'
 perl-Parse-Yapp:
   conf:
     license: Artistic-1.0 or GPL-2.0+
-  spec: perl-Parse-Yapp/perl-Parse-Yapp.spec
+  specfile: perl-Parse-Yapp/perl-Parse-Yapp.spec
+  version: '1.21'
 perl-Pass-OTP:
   conf:
     preamble: 'Provides: oath-toolkit'
-  spec: perl-Pass-OTP/perl-Pass-OTP.spec
+  specfile: perl-Pass-OTP/perl-Pass-OTP.spec
+  version: 1.702.0
 perl-Passwd-Keyring-Gnome:
   conf:
     preamble: 'BuildRequires:  libgnome-keyring-devel'
-  spec: perl-Passwd-Keyring-Gnome/perl-Passwd-Keyring-Gnome.spec
+  specfile: perl-Passwd-Keyring-Gnome/perl-Passwd-Keyring-Gnome.spec
+  version: '1.0000'
 perl-Passwd-Keyring-KDEWallet:
   conf:
     preamble: 'BuildRequires:  perl(File::Which)'
-  spec: perl-Passwd-Keyring-KDEWallet/perl-Passwd-Keyring-KDEWallet.spec
+  specfile: perl-Passwd-Keyring-KDEWallet/perl-Passwd-Keyring-KDEWallet.spec
+  version: '1.0001'
 perl-Perl-Critic-Community:
   conf:
     preamble: 'Obsoletes: perl-Perl-Critic-Freenode'
-  spec: perl-Perl-Critic-Community/perl-Perl-Critic-Community.spec
+  specfile: perl-Perl-Critic-Community/perl-Perl-Critic-Community.spec
+  version: 1.0.3
 perl-Perl-Critic-Pulp:
   conf:
     license: GPL-3.0+
-    patches:
-      avoid-wrong-provides.diff: -p1
-  spec: perl-Perl-Critic-Pulp/perl-Perl-Critic-Pulp.spec
+  specfile: perl-Perl-Critic-Pulp/perl-Perl-Critic-Pulp.spec
+  version: '99'
 perl-Perl-LanguageServer:
   conf:
     add_doc: README.pod
     post_prep: dos2unix README.pod
     preamble: 'BuildRequires:  dos2unix'
-  spec: perl-Perl-LanguageServer/perl-Perl-LanguageServer.spec
+  specfile: perl-Perl-LanguageServer/perl-Perl-LanguageServer.spec
+  version: 2.6.2
 perl-Perl-Tidy:
   conf:
     description_paragraphs: 4
     license: GPL-2.0+
-  spec: perl-Perl-Tidy/perl-Perl-Tidy.spec
+  specfile: perl-Perl-Tidy/perl-Perl-Tidy.spec
+  version: 20240202.0.0
 perl-PerlIO-gzip:
   conf:
     preamble: 'BuildRequires:  zlib-devel'
-  spec: perl-PerlIO-gzip/perl-PerlIO-gzip.spec
+  specfile: perl-PerlIO-gzip/perl-PerlIO-gzip.spec
+  version: '0.20'
 perl-PerlIO-utf8_strict:
-  conf:
-    patches:
-      no-return-in-nonvoid-function.patch: -p1
-  spec: perl-PerlIO-utf8_strict/perl-PerlIO-utf8_strict.spec
+  conf: {}
+  specfile: perl-PerlIO-utf8_strict/perl-PerlIO-utf8_strict.spec
+  version: '0.010'
 perl-PerlIO-via-dynamic:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-PerlIO-via-dynamic/perl-PerlIO-via-dynamic.spec
+  specfile: perl-PerlIO-via-dynamic/perl-PerlIO-via-dynamic.spec
+  version: '0.14'
 perl-Pinto:
   conf:
     preamble: 'BuildRequires:  timezone'
-  spec: perl-Pinto/perl-Pinto.spec
+  specfile: perl-Pinto/perl-Pinto.spec
+  version: '0.14'
 perl-PlRPC:
   conf:
     description: |-
@@ -2961,36 +3232,43 @@ perl-PlRPC:
       Method Interface, because PlRPC gives you the complete power of Perl's
       OO framework in a very simple manner.
     license: Artistic-1.0 or GPL-1.0-or-later
-  spec: perl-PlRPC/perl-PlRPC.spec
+  specfile: perl-PlRPC/perl-PlRPC.spec
+  version: 0.202.0
 perl-Plack-Middleware-Header:
   conf:
     description: Allows modification/rewriting of response headers.
-  spec: perl-Plack-Middleware-Header/perl-Plack-Middleware-Header.spec
+  specfile: perl-Plack-Middleware-Header/perl-Plack-Middleware-Header.spec
+  version: '0.04'
 perl-Plack-Middleware-Session:
   conf:
     custom_test: |-
       # put . back into @INC for tests
       export PERL5LIB=$PWD
       ./Build test
-  spec: perl-Plack-Middleware-Session/perl-Plack-Middleware-Session.spec
+  specfile: perl-Plack-Middleware-Session/perl-Plack-Middleware-Session.spec
+  version: '0.33'
 perl-Pod-AsciiDoctor:
   conf:
     license: Apache-2.0
     preamble: 'BuildRequires: perl(Pod::Parser)'
     skip_doc: .*\.old
-  spec: perl-Pod-AsciiDoctor/perl-Pod-AsciiDoctor.spec
+  specfile: perl-Pod-AsciiDoctor/perl-Pod-AsciiDoctor.spec
+  version: '0.102002'
 perl-Pod-MinimumVersion:
   conf:
     license: GPL-3.0+
-  spec: perl-Pod-MinimumVersion/perl-Pod-MinimumVersion.spec
+  specfile: perl-Pod-MinimumVersion/perl-Pod-MinimumVersion.spec
+  version: '50'
 perl-Pod-POM:
   conf:
     description_paragraphs: 1
-  spec: perl-Pod-POM/perl-Pod-POM.spec
+  specfile: perl-Pod-POM/perl-Pod-POM.spec
+  version: '2.01'
 perl-Pod-Readme:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Pod-Readme/perl-Pod-Readme.spec
+  specfile: perl-Pod-Readme/perl-Pod-Readme.spec
+  version: 1.2.3
 perl-Pod-Usage:
   conf:
     description_paragraphs: 1
@@ -3012,15 +3290,18 @@ perl-Pod-Usage:
           mv -v $file ${file/.3pm/}-${VERSION}.3pm
       done
       popd >/dev/null
-  spec: perl-Pod-Usage/perl-Pod-Usage.spec
+  specfile: perl-Pod-Usage/perl-Pod-Usage.spec
+  version: '2.03'
 perl-Pod-Xhtml:
   conf:
     license: GPL-2.0
-  spec: perl-Pod-Xhtml/perl-Pod-Xhtml.spec
+  specfile: perl-Pod-Xhtml/perl-Pod-Xhtml.spec
+  version: '1.61'
 perl-PostScript-Simple:
   conf:
     license: GPL-2.0+
-  spec: perl-PostScript-Simple/perl-PostScript-Simple.spec
+  specfile: perl-PostScript-Simple/perl-PostScript-Simple.spec
+  version: '0.09'
 perl-Prima:
   conf:
     description_paragraphs: 1
@@ -3049,40 +3330,44 @@ perl-Prima:
       BuildRequires:  pkgconfig(xrender)
       %define         X_display         ":98"
       Requires:       xorg-x11
-  spec: perl-Prima/perl-Prima.spec
+  specfile: perl-Prima/perl-Prima.spec
+  version: '1.72000'
 perl-Proc-Daemon:
   conf:
     description_paragraphs: 2
-  spec: perl-Proc-Daemon/perl-Proc-Daemon.spec
+  specfile: perl-Proc-Daemon/perl-Proc-Daemon.spec
+  version: '0.23'
 perl-Proc-PID-File:
   conf:
     license: GPL-2.0
-  spec: perl-Proc-PID-File/perl-Proc-PID-File.spec
+  specfile: perl-Proc-PID-File/perl-Proc-PID-File.spec
+  version: '1.29'
 perl-Proc-ProcessTable:
   conf:
     license: (Artistic-1.0 or GPL-1.0+) and GPL-2.0
-  spec: perl-Proc-ProcessTable/perl-Proc-ProcessTable.spec
+  specfile: perl-Proc-ProcessTable/perl-Proc-ProcessTable.spec
+  version: '0.636'
 perl-Proc-SyncExec:
   conf:
     description_paragraphs: 1
     license: Artistic-1.0 OR GPL-1.0-or-later
-  spec: perl-Proc-SyncExec/perl-Proc-SyncExec.spec
+  specfile: perl-Proc-SyncExec/perl-Proc-SyncExec.spec
+  version: '1.01'
 perl-Protocol-HTTP2:
   conf:
-    patches:
-      openssl3_1-adapt_tests.patch: -p1 PATCH-FIX-OPENSUSE https://github.com/vlet/p5-Protocol-HTTP2/pull/14
     skip_doc: minil.toml
-  spec: perl-Protocol-HTTP2/perl-Protocol-HTTP2.spec
+  specfile: perl-Protocol-HTTP2/perl-Protocol-HTTP2.spec
+  version: '1.10'
 perl-RDF-Simple:
   conf:
     preamble: 'BuildRequires:  perl(Module::Install)'
-  spec: perl-RDF-Simple/perl-RDF-Simple.spec
+  specfile: perl-RDF-Simple/perl-RDF-Simple.spec
+  version: '0.421'
 perl-RPC-XML:
   conf:
-    patches:
-      RPC-XML-0.77-fixtest.dif: -p1
     preamble: 'BuildRequires: perl(HTTP::Daemon)'
-  spec: perl-RPC-XML/perl-RPC-XML.spec
+  specfile: perl-RPC-XML/perl-RPC-XML.spec
+  version: '0.82'
 perl-RT-Extension-PriorityAsString:
   conf:
     post_install: |-
@@ -3091,7 +3376,8 @@ perl-RT-Extension-PriorityAsString:
     preamble: |-
       BuildRequires: perl(RT) >= 4.0.0
       Requires:      perl(RT) >= 4.0.0
-  spec: perl-RT-Extension-PriorityAsString/perl-RT-Extension-PriorityAsString.spec
+  specfile: perl-RT-Extension-PriorityAsString/perl-RT-Extension-PriorityAsString.spec
+  version: '1.04'
 perl-RT-Extension-ReferenceIDoitObjects:
   conf:
     description: |-
@@ -3107,19 +3393,23 @@ perl-RT-Extension-ReferenceIDoitObjects:
     preamble: |-
       BuildRequires:  perl(RT) >= 1.4.0
       Requires:       perl(RT) >= 1.4.0
-  spec: perl-RT-Extension-ReferenceIDoitObjects/perl-RT-Extension-ReferenceIDoitObjects.spec
+  specfile: perl-RT-Extension-ReferenceIDoitObjects/perl-RT-Extension-ReferenceIDoitObjects.spec
+  version: '1.00'
 perl-Readonly:
   conf:
     license: Perl License
-  spec: perl-Readonly/perl-Readonly.spec
+  specfile: perl-Readonly/perl-Readonly.spec
+  version: '2.05'
 perl-Regexp-Assemble:
   conf:
     post_prep: sed -i -e 's,/usr/local/bin/perl.*,/usr/bin/perl,' `find examples -type f`
-  spec: perl-Regexp-Assemble/perl-Regexp-Assemble.spec
+  specfile: perl-Regexp-Assemble/perl-Regexp-Assemble.spec
+  version: '0.38'
 perl-Regexp-Common:
   conf:
     license: Artistic-1.0 or Artistic-2.0 or BSD-3-Clause or MIT
-  spec: perl-Regexp-Common/perl-Regexp-Common.spec
+  specfile: perl-Regexp-Common/perl-Regexp-Common.spec
+  version: '2017060201'
 perl-Rex:
   conf:
     ignore_requires: YAML ExtUtils::MakeMaker
@@ -3129,7 +3419,8 @@ perl-Rex:
       BuildRequires:  git-core
       Requires:       perl(YAML) > 1.25
     summary: Automation framework for local and remote execution
-  spec: perl-Rex/perl-Rex.spec
+  specfile: perl-Rex/perl-Rex.spec
+  version: 1.14.3
 perl-SDL:
   conf:
     description: |-
@@ -3140,8 +3431,6 @@ perl-SDL:
       OpenGL, and 2D video framebuffer. It is used by MPEG playback software,
       emulators, and many popular games, including the award winning Linux port of
       "Civilization: Call To Power."
-    patches:
-      https://patch-diff.githubusercontent.com/raw/PerlGameDev/SDL/pull/304.patch: -p1
     post_prep: |-
       %ifarch %arm ppc64 ppc64le s390x
       # Remove hanging test. See: https://github.com/PerlGameDev/SDL/issues/289
@@ -3164,67 +3453,78 @@ perl-SDL:
       BuildRequires:  udev
     sources:
     - perl-SDL.rpmlintrc
-  spec: perl-SDL/perl-SDL.spec
+  specfile: perl-SDL/perl-SDL.spec
+  version: '2.548'
 perl-SOAP-Lite:
   conf:
     license: (Artistic-1.0 or GPL-1.0+) and CC-BY-ND-2.0
-    patches:
-      perl-SOAP-Lite-1.27-usr-bin-env.patch: -p1
     post_prep: sed -e 's,!/bin/env perl,!/usr/bin/perl,' -i bin/*pl
-  spec: perl-SOAP-Lite/perl-SOAP-Lite.spec
+  specfile: perl-SOAP-Lite/perl-SOAP-Lite.spec
+  version: '1.27'
 perl-SQL-Abstract-Classic:
   conf:
     description_paragraphs: 2
-  spec: perl-SQL-Abstract-Classic/perl-SQL-Abstract-Classic.spec
+  specfile: perl-SQL-Abstract-Classic/perl-SQL-Abstract-Classic.spec
+  version: '1.91'
 perl-SQL-Abstract-Limit:
   conf:
     description_paragraphs: 1
-  spec: perl-SQL-Abstract-Limit/perl-SQL-Abstract-Limit.spec
+  specfile: perl-SQL-Abstract-Limit/perl-SQL-Abstract-Limit.spec
+  version: '0.143'
 perl-SQL-Translator:
   conf:
     license: (Artistic-1.0 or GPL-1.0+) and GPL-2.0
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-SQL-Translator/perl-SQL-Translator.spec
+  specfile: perl-SQL-Translator/perl-SQL-Translator.spec
+  version: 1.650.0
 perl-SVN-Hooks:
   conf:
     preamble: |-
       BuildRequires:  subversion-perl >= 1.4.0
       Requires:       subversion-perl >= 1.4.0
-  spec: perl-SVN-Hooks/perl-SVN-Hooks.spec
+  specfile: perl-SVN-Hooks/perl-SVN-Hooks.spec
+  version: '1.36'
 perl-SVN-Look:
   conf:
     preamble: |-
       Requires:       subversion
       BuildRequires:  subversion
-  spec: perl-SVN-Look/perl-SVN-Look.spec
+  specfile: perl-SVN-Look/perl-SVN-Look.spec
+  version: '0.43'
 perl-Safe:
   conf:
     license: Perl License
-  spec: perl-Safe/perl-Safe.spec
+  specfile: perl-Safe/perl-Safe.spec
+  version: '2.35'
 perl-Scriptalicious:
   conf:
     description_paragraphs: 3
-  spec: perl-Scriptalicious/perl-Scriptalicious.spec
+  specfile: perl-Scriptalicious/perl-Scriptalicious.spec
+  version: '1.17'
 perl-Search-Elasticsearch:
   conf:
     license: Apache-2.0
-  spec: perl-Search-Elasticsearch/perl-Search-Elasticsearch.spec
+  specfile: perl-Search-Elasticsearch/perl-Search-Elasticsearch.spec
+  version: 8.120.0
 perl-Search-Xapian:
   conf:
     preamble: 'BuildRequires: libxapian-devel'
     skip_doc: generate-perl-exceptions handle_exception.cc makehtmldocs perlobject.map typemap-errorclasses
-  spec: perl-Search-Xapian/perl-Search-Xapian.spec
+  specfile: perl-Search-Xapian/perl-Search-Xapian.spec
+  version: 1.2.25.5
 perl-Selenium-Remote-Driver:
   conf:
     post_prep: sed -i -e 's,!/bin/env perl,/usr/bin/perl,' driver-example.pl
     preamble: 'Requires: lsof'
     skip_doc: diff.out
     skip_noarch: 1
-  spec: perl-Selenium-Remote-Driver/perl-Selenium-Remote-Driver.spec
+  specfile: perl-Selenium-Remote-Driver/perl-Selenium-Remote-Driver.spec
+  version: '1.49'
 perl-Sereal:
   conf:
     summary: Binary serialization module for Perl
-  spec: perl-Sereal/perl-Sereal.spec
+  specfile: perl-Sereal/perl-Sereal.spec
+  version: '5.004'
 perl-Sereal-Decoder:
   conf:
     custom_build: |-
@@ -3232,7 +3532,8 @@ perl-Sereal-Decoder:
       # Don't build with smp_flags!
       make
     summary: Binary serialization module for Perl (decoder part)
-  spec: perl-Sereal-Decoder/perl-Sereal-Decoder.spec
+  specfile: perl-Sereal-Decoder/perl-Sereal-Decoder.spec
+  version: '5.004'
 perl-Sereal-Encoder:
   conf:
     custom_build: |
@@ -3240,11 +3541,13 @@ perl-Sereal-Encoder:
       # Don't build with smp_flags!
       make
     summary: Binary serialization module for Perl (encoder part)
-  spec: perl-Sereal-Encoder/perl-Sereal-Encoder.spec
+  specfile: perl-Sereal-Encoder/perl-Sereal-Encoder.spec
+  version: '5.004'
 perl-Smart-Args:
   conf:
     custom_test: PERL_USE_UNSAFE_INC=1 ./Build test
-  spec: perl-Smart-Args/perl-Smart-Args.spec
+  specfile: perl-Smart-Args/perl-Smart-Args.spec
+  version: '0.14'
 perl-Sniffer-HTTP:
   conf:
     misc: |-
@@ -3281,24 +3584,26 @@ perl-Sniffer-HTTP:
       %files -n live-http-headers
       %{_bindir}/live-http-headers
     post_install: install -D -m0755 bin/live-http-headers.pl "%{buildroot}%{_bindir}/live-http-headers"
-  spec: perl-Sniffer-HTTP/perl-Sniffer-HTTP.spec
+  specfile: perl-Sniffer-HTTP/perl-Sniffer-HTTP.spec
+  version: '0.28'
 perl-Socket6:
   conf:
     description_paragraphs: 2
     license: BSD-3-Clause
-  spec: perl-Socket6/perl-Socket6.spec
+  specfile: perl-Socket6/perl-Socket6.spec
+  version: '0.29'
 perl-Specio:
   conf:
     skip_doc: precious.toml|azure-pipelines.yml
-  spec: perl-Specio/perl-Specio.spec
+  specfile: perl-Specio/perl-Specio.spec
+  version: '0.48'
 perl-Spoon:
   conf:
-    patches:
-      noprovides.diff: -p1
     preamble: |-
       BuildRequires:  perl(CGI)
       Requires:       perl(CGI)
-  spec: perl-Spoon/perl-Spoon.spec
+  specfile: perl-Spoon/perl-Spoon.spec
+  version: '0.24'
 perl-Spreadsheet-Read:
   conf:
     description: |-
@@ -3341,7 +3646,6 @@ perl-Spreadsheet-Read:
       %{_bindir}/xlsgrep
       %{_bindir}/xlsx2csv
       %{_mandir}/man1/xlsx2csv.1%{?ext_man}
-    patches: null
     post_install: |-
       # Remove xls2csv and xls2csv.1 (conflict with libxls-tools and xls2csv packages)
       rm -f %{buildroot}%{_bindir}/xls2csv
@@ -3353,65 +3657,73 @@ perl-Spreadsheet-Read:
       BuildRequires:  perl(Text::CSV_XS) >= 0.71
       Recommends:     perl(Spreadsheet::ReadSXC) >= 0.20
       Suggests:       perl-Spreadsheet-Read-scripts = %{version}
-  spec: perl-Spreadsheet-Read/perl-Spreadsheet-Read.spec
+  specfile: perl-Spreadsheet-Read/perl-Spreadsheet-Read.spec
+  version: 0.900.0
 perl-Spreadsheet-ReadSXC:
   conf:
     ignore_requires: Filter::signatures
-    patches:
-      remove_filter_signatures.diff: -p1 PATCH-FIX-OPENSUSE Do not requires Filter::signatures, as we have perl > 5.20
-  spec: perl-Spreadsheet-ReadSXC/perl-Spreadsheet-ReadSXC.spec
+  specfile: perl-Spreadsheet-ReadSXC/perl-Spreadsheet-ReadSXC.spec
+  version: 0.380.0
 perl-Starlet:
   conf:
     preamble: |-
       BuildRequires:  perl(Class::Accessor::Lite)
       BuildRequires:  perl(List::MoreUtils)
-  spec: perl-Starlet/perl-Starlet.spec
+  specfile: perl-Starlet/perl-Starlet.spec
+  version: '0.31'
 perl-Statistics-TTest:
   conf:
     license: Perl License
-  spec: perl-Statistics-TTest/perl-Statistics-TTest.spec
+  specfile: perl-Statistics-TTest/perl-Statistics-TTest.spec
+  version: 1.1.0
 perl-String-Approx:
   conf:
     license: LGPL-2.0 OR Artistic-2.0
-  spec: perl-String-Approx/perl-String-Approx.spec
+  specfile: perl-String-Approx/perl-String-Approx.spec
+  version: '3.28'
 perl-String-CRC32:
   conf:
     license: SUSE-Public-Domain
-  spec: perl-String-CRC32/perl-String-CRC32.spec
+  specfile: perl-String-CRC32/perl-String-CRC32.spec
+  version: '2.100'
 perl-String-Format:
   conf:
     license: GPL-2.0-only
-  spec: perl-String-Format/perl-String-Format.spec
+  specfile: perl-String-Format/perl-String-Format.spec
+  version: '1.18'
 perl-Sub-Delete:
   conf:
     license: Artistic-1.0 OR GPL-1.0-or-later
-  spec: perl-Sub-Delete/perl-Sub-Delete.spec
+  specfile: perl-Sub-Delete/perl-Sub-Delete.spec
+  version: '1.00002'
 perl-Sub-Name:
   conf:
     preamble: 'BuildRequires: perl(Devel::CheckBin)'
-  spec: perl-Sub-Name/perl-Sub-Name.spec
+  specfile: perl-Sub-Name/perl-Sub-Name.spec
+  version: '0.27'
 perl-Syntax-Keyword-Gather:
   conf:
     description_paragraphs: 2
-  spec: perl-Syntax-Keyword-Gather/perl-Syntax-Keyword-Gather.spec
+  specfile: perl-Syntax-Keyword-Gather/perl-Syntax-Keyword-Gather.spec
+  version: '1.003002'
 perl-Sys-LoadAvg:
-  conf:
-    patches:
-      0001-enhance-loadavg-array-from-2-to-3-doubles.patch: -p1
-  spec: perl-Sys-LoadAvg/perl-Sys-LoadAvg.spec
+  conf: {}
+  specfile: perl-Sys-LoadAvg/perl-Sys-LoadAvg.spec
+  version: '0.03'
 perl-Sys-MemInfo:
   conf:
     license: Perl License
-  spec: perl-Sys-MemInfo/perl-Sys-MemInfo.spec
+  specfile: perl-Sys-MemInfo/perl-Sys-MemInfo.spec
+  version: '0.99'
 perl-Sys-Syscall:
   conf:
     license: Perl License
-  spec: perl-Sys-Syscall/perl-Sys-Syscall.spec
+  specfile: perl-Sys-Syscall/perl-Sys-Syscall.spec
+  version: '0.25'
 perl-Sys-Utmp:
-  conf:
-    patches:
-      empty_utmp.patch: -p1
-  spec: perl-Sys-Utmp/perl-Sys-Utmp.spec
+  conf: {}
+  specfile: perl-Sys-Utmp/perl-Sys-Utmp.spec
+  version: '1.8'
 perl-Task-Weaken:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
@@ -3424,28 +3736,34 @@ perl-Task-Weaken:
       BuildRequires:  perl(Test::More)
       BuildRequires:  perl(Test::Warn)
       Requires:       perl(Scalar::Util) >= 1.14
-  spec: perl-Task-Weaken/perl-Task-Weaken.spec
+  specfile: perl-Task-Weaken/perl-Task-Weaken.spec
+  version: '1.06'
 perl-Template-GD:
   conf:
     license: Perl License
-  spec: perl-Template-GD/perl-Template-GD.spec
+  specfile: perl-Template-GD/perl-Template-GD.spec
+  version: '2.66'
 perl-Template-Plugin-JSON-Escape:
   conf:
     license: MIT
-  spec: perl-Template-Plugin-JSON-Escape/perl-Template-Plugin-JSON-Escape.spec
+  specfile: perl-Template-Plugin-JSON-Escape/perl-Template-Plugin-JSON-Escape.spec
+  version: '0.02'
 perl-Template-Plugin-Latex:
   conf:
     description_paragraphs: 1
-  spec: perl-Template-Plugin-Latex/perl-Template-Plugin-Latex.spec
+  specfile: perl-Template-Plugin-Latex/perl-Template-Plugin-Latex.spec
+  version: '3.12'
 perl-Tenjin:
   conf:
     license: MIT
     preamble: 'BuildRequires:  perl(Try::Tiny)'
-  spec: perl-Tenjin/perl-Tenjin.spec
+  specfile: perl-Tenjin/perl-Tenjin.spec
+  version: '1.000001'
 perl-Term-Encoding:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Term-Encoding/perl-Term-Encoding.spec
+  specfile: perl-Term-Encoding/perl-Term-Encoding.spec
+  version: '0.03'
 perl-Term-ReadLine-Gnu:
   conf:
     description: |-
@@ -3463,15 +3781,18 @@ perl-Term-ReadLine-Gnu:
       BuildRequires:  readline-devel
       Obsoletes:      perl-TermReadLine-Gnu < 1.36
       Provides:       perl-TermReadLine-Gnu = %{version}
-  spec: perl-Term-ReadLine-Gnu/perl-Term-ReadLine-Gnu.spec
+  specfile: perl-Term-ReadLine-Gnu/perl-Term-ReadLine-Gnu.spec
+  version: '1.46'
 perl-Term-TermKey:
   conf:
     preamble: 'BuildRequires:  perl(Alien::libtermkey) >= 0.16 '
-  spec: perl-Term-TermKey/perl-Term-TermKey.spec
+  specfile: perl-Term-TermKey/perl-Term-TermKey.spec
+  version: '0.17'
 perl-Term-Terminfo:
   conf:
     preamble: 'BuildRequires:  ncurses5-devel'
-  spec: perl-Term-Terminfo/perl-Term-Terminfo.spec
+  specfile: perl-Term-Terminfo/perl-Term-Terminfo.spec
+  version: '0.09'
 perl-Test-CheckManifest:
   conf:
     custom_test: |-
@@ -3479,63 +3800,76 @@ perl-Test-CheckManifest:
       mv *.files *.list ..
       %{__make} test
       mv ../*.files ../*.list .
-  spec: perl-Test-CheckManifest/perl-Test-CheckManifest.spec
+  specfile: perl-Test-CheckManifest/perl-Test-CheckManifest.spec
+  version: '1.43'
 perl-Test-ClassAPI:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Test-ClassAPI/perl-Test-ClassAPI.spec
+  specfile: perl-Test-ClassAPI/perl-Test-ClassAPI.spec
+  version: '1.07'
 perl-Test-Deep:
   conf:
     preamble: |-
       # necessary because Test::Deep::NoTest does "require Test::Builder"
       Requires:       perl-Test-Simple
-  spec: perl-Test-Deep/perl-Test-Deep.spec
+  specfile: perl-Test-Deep/perl-Test-Deep.spec
+  version: '1.204'
 perl-Test-DiagINC:
   conf:
     description_paragraphs: 1
-  spec: perl-Test-DiagINC/perl-Test-DiagINC.spec
+  specfile: perl-Test-DiagINC/perl-Test-DiagINC.spec
+  version: '0.010'
 perl-Test-Differences:
   conf:
     license: Perl License
-  spec: perl-Test-Differences/perl-Test-Differences.spec
+  specfile: perl-Test-Differences/perl-Test-Differences.spec
+  version: 0.710.0
 perl-Test-HTTP-MockServer:
   conf:
     preamble: |-
       BuildRequires: perl(LWP::UserAgent)
       BuildRequires: netcfg
       Requires: netcfg
-  spec: perl-Test-HTTP-MockServer/perl-Test-HTTP-MockServer.spec
+  specfile: perl-Test-HTTP-MockServer/perl-Test-HTTP-MockServer.spec
+  version: 0.0.1
 perl-Test-Harness:
   conf:
     post_install: |-
       mv %buildroot/usr/bin/prove %buildroot/usr/bin/prove-cpan
       mv %buildroot/usr/share/man/man1/prove.1 %buildroot/usr/share/man/man1/prove-cpan.1
     post_prep: chmod a+x t/source_tests/source.sh t/source_tests/source_args.sh
-  spec: perl-Test-Harness/perl-Test-Harness.spec
+  specfile: perl-Test-Harness/perl-Test-Harness.spec
+  version: 3.480.0
 perl-Test-Inter:
   conf:
     description_paragraphs: 5
-  spec: perl-Test-Inter/perl-Test-Inter.spec
+  specfile: perl-Test-Inter/perl-Test-Inter.spec
+  version: 1.110.0
 perl-Test-LWP-UserAgent:
   conf:
     license: Artistic-1.0 or GPL-1.0+
-  spec: perl-Test-LWP-UserAgent/perl-Test-LWP-UserAgent.spec
+  specfile: perl-Test-LWP-UserAgent/perl-Test-LWP-UserAgent.spec
+  version: '0.036'
 perl-Test-Log-Dispatch:
   conf:
     preamble: 'BuildRequires:  perl(Test::Tester)'
-  spec: perl-Test-Log-Dispatch/perl-Test-Log-Dispatch.spec
+  specfile: perl-Test-Log-Dispatch/perl-Test-Log-Dispatch.spec
+  version: '0.03'
 perl-Test-Memory-Cycle:
   conf:
     license: Artistic-2.0
-  spec: perl-Test-Memory-Cycle/perl-Test-Memory-Cycle.spec
+  specfile: perl-Test-Memory-Cycle/perl-Test-Memory-Cycle.spec
+  version: '1.06'
 perl-Test-MemoryGrowth:
   conf:
     description_paragraphs: 1
-  spec: perl-Test-MemoryGrowth/perl-Test-MemoryGrowth.spec
+  specfile: perl-Test-MemoryGrowth/perl-Test-MemoryGrowth.spec
+  version: '0.04'
 perl-Test-Mock-LWP:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Test-Mock-LWP/perl-Test-Mock-LWP.spec
+  specfile: perl-Test-Mock-LWP/perl-Test-Mock-LWP.spec
+  version: '0.08'
 perl-Test-MockFile:
   conf:
     description: |
@@ -3544,19 +3878,23 @@ perl-Test-MockFile:
       This is useful for small tests where file interaction is discouraged.
 
       A strict mode is even provided which can throw a die when files are accessed during your tests!
-  spec: perl-Test-MockFile/perl-Test-MockFile.spec
+  specfile: perl-Test-MockFile/perl-Test-MockFile.spec
+  version: 0.36.0
 perl-Test-MockTime-HiRes:
   conf:
     skip_doc: minil.toml
-  spec: perl-Test-MockTime-HiRes/perl-Test-MockTime-HiRes.spec
+  specfile: perl-Test-MockTime-HiRes/perl-Test-MockTime-HiRes.spec
+  version: '0.08'
 perl-Test-NoWarnings:
   conf:
     license: LGPL-2.1+
-  spec: perl-Test-NoWarnings/perl-Test-NoWarnings.spec
+  specfile: perl-Test-NoWarnings/perl-Test-NoWarnings.spec
+  version: '1.06'
 perl-Test-Object:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Test-Object/perl-Test-Object.spec
+  specfile: perl-Test-Object/perl-Test-Object.spec
+  version: '0.08'
 perl-Test-PerlTidy:
   conf:
     description: |-
@@ -3566,57 +3904,66 @@ perl-Test-PerlTidy:
 
       By default, perltidy will be run on files under the current directory
       and its subdirectories with extensions matching: .pm .pl .PL .t.
-  spec: perl-Test-PerlTidy/perl-Test-PerlTidy.spec
+  specfile: perl-Test-PerlTidy/perl-Test-PerlTidy.spec
+  version: '20230226'
 perl-Test-Pod:
   conf:
     license: Artistic-2.0 or GPL-2.0
-  spec: perl-Test-Pod/perl-Test-Pod.spec
+  specfile: perl-Test-Pod/perl-Test-Pod.spec
+  version: '1.52'
 perl-Test-Refcount:
   conf:
     description_paragraphs: 3
-  spec: perl-Test-Refcount/perl-Test-Refcount.spec
+  specfile: perl-Test-Refcount/perl-Test-Refcount.spec
+  version: '0.10'
 perl-Test-Simple:
   conf:
     description_paragraphs: 2
     preamble: |-
       Obsoletes:      perl-Test-Tester <= 0.109
       Obsoletes:      perl-Test-use-ok <= 0.11
-  spec: perl-Test-Simple/perl-Test-Simple.spec
+  specfile: perl-Test-Simple/perl-Test-Simple.spec
+  version: '1.302198'
 perl-Test-Spelling:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Test-Spelling/perl-Test-Spelling.spec
+  specfile: perl-Test-Spelling/perl-Test-Spelling.spec
+  version: '0.25'
 perl-Test-Strict:
-  conf:
-    patches:
-      test-perl-5.38.patch: -p1 PATCH-FIX-UPSTREAM test-perl-5.38.patch gh#manwar/Test-Strict#33 -- Don't simultaneously test -c and -v switches
-  spec: perl-Test-Strict/perl-Test-Strict.spec
+  conf: {}
+  specfile: perl-Test-Strict/perl-Test-Strict.spec
+  version: '0.52'
 perl-Test-SubCalls:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Test-SubCalls/perl-Test-SubCalls.spec
+  specfile: perl-Test-SubCalls/perl-Test-SubCalls.spec
+  version: '1.10'
 perl-Test-WWW-Mechanize-CGI:
   conf:
     license: Artistic-1.0 OR GPL-2.0-or-later
     preamble: |-
       BuildRequires:  perl(CGI)
       Requires:       perl(CGI)
-  spec: perl-Test-WWW-Mechanize-CGI/perl-Test-WWW-Mechanize-CGI.spec
+  specfile: perl-Test-WWW-Mechanize-CGI/perl-Test-WWW-Mechanize-CGI.spec
+  version: '0.1'
 perl-Test-YAML:
   conf:
     post_prep: sed -i -e 's,/usr/bin/bash,/bin/bash,' bin/test-yaml
-  spec: perl-Test-YAML/perl-Test-YAML.spec
+  specfile: perl-Test-YAML/perl-Test-YAML.spec
+  version: '1.07'
 perl-Test-YAML-Valid:
   conf:
     post_prep: sed -i -e 's/use inc::Module::Install/use lib q[.];\nuse inc::Module::Install/' Makefile.PL
-  spec: perl-Test-YAML-Valid/perl-Test-YAML-Valid.spec
+  specfile: perl-Test-YAML-Valid/perl-Test-YAML-Valid.spec
+  version: '0.04'
 perl-Text-Aspell:
   conf:
     preamble: |-
       BuildRequires:  aspell-en
       BuildRequires:  aspell-devel
       BuildRequires:  gcc glibc-devel
-  spec: perl-Text-Aspell/perl-Text-Aspell.spec
+  specfile: perl-Text-Aspell/perl-Text-Aspell.spec
+  version: '0.09'
 perl-Text-BibTeX:
   conf:
     misc: |-
@@ -3630,8 +3977,6 @@ perl-Text-BibTeX:
 
       %post devel -p /sbin/ldconfig
       %postun devel -p /sbin/ldconfig
-    patches:
-      manual-pages-for-libbtparse.patch: -p1
     preamble: |-
       BuildRequires:  glibc-devel
 
@@ -3645,17 +3990,20 @@ perl-Text-BibTeX:
       Note that the interface provided by libbtparse, while complete, is fairly
       low-level.  If you have more sophisticated needs, you might be interested
       the "Text::BibTeX" module for Perl.
-  spec: perl-Text-BibTeX/perl-Text-BibTeX.spec
+  specfile: perl-Text-BibTeX/perl-Text-BibTeX.spec
+  version: 0.890.0
 perl-Text-CSV_XS:
   conf:
     post_prep: sed -i -e 's,/pro/bin/perl,/usr/bin/perl,' examples/*
-  spec: perl-Text-CSV_XS/perl-Text-CSV_XS.spec
+  specfile: perl-Text-CSV_XS/perl-Text-CSV_XS.spec
+  version: 1.530.0
 perl-Text-Hunspell:
   conf:
     preamble: |-
       BuildRequires:  gcc-c++
       BuildRequires:  hunspell-devel
-  spec: perl-Text-Hunspell/perl-Text-Hunspell.spec
+  specfile: perl-Text-Hunspell/perl-Text-Hunspell.spec
+  version: '2.16'
 perl-Text-Markdown:
   conf:
     post_install: |-
@@ -3677,35 +4025,40 @@ perl-Text-Markdown:
       if [ $1 -eq 0 ] ; then
              update-alternatives --remove markdown %{_bindir}/Markdown.pl
       fi
-  spec: perl-Text-Markdown/perl-Text-Markdown.spec
+  specfile: perl-Text-Markdown/perl-Text-Markdown.spec
+  version: '1.000031'
 perl-Text-Markdown-Discount:
   conf:
-    patches:
-      use-system-markdown.patch: -p1
     preamble: |-
       Requires:       discount
       BuildRequires:  libmarkdown-devel
-  spec: perl-Text-Markdown-Discount/perl-Text-Markdown-Discount.spec
+  specfile: perl-Text-Markdown-Discount/perl-Text-Markdown-Discount.spec
+  version: '0.16'
 perl-Text-RecordParser:
   conf:
     license: GPL-2.0
-  spec: perl-Text-RecordParser/perl-Text-RecordParser.spec
+  specfile: perl-Text-RecordParser/perl-Text-RecordParser.spec
+  version: 1.6.5
 perl-Text-Soundex:
   conf:
     license: HPND
-  spec: perl-Text-Soundex/perl-Text-Soundex.spec
+  specfile: perl-Text-Soundex/perl-Text-Soundex.spec
+  version: '3.05'
 perl-Text-Table:
   conf:
     license: ISC
-  spec: perl-Text-Table/perl-Text-Table.spec
+  specfile: perl-Text-Table/perl-Text-Table.spec
+  version: '1.135'
 perl-Text-Textile:
   conf:
     license: Perl License
-  spec: perl-Text-Textile/perl-Text-Textile.spec
+  specfile: perl-Text-Textile/perl-Text-Textile.spec
+  version: '2.13'
 perl-Text-Tokenizer:
   conf:
     license: GPL-3.0
-  spec: perl-Text-Tokenizer/perl-Text-Tokenizer.spec
+  specfile: perl-Text-Tokenizer/perl-Text-Tokenizer.spec
+  version: 0.4.6
 perl-Text-VimColor:
   conf:
     preamble: |-
@@ -3714,25 +4067,30 @@ perl-Text-VimColor:
       BuildRequires: perl(Test::File::ShareDir::Dist)
       Requires:      vim >= 6
       Recommends:    vim-data >= 6
-  spec: perl-Text-VimColor/perl-Text-VimColor.spec
+  specfile: perl-Text-VimColor/perl-Text-VimColor.spec
+  version: '0.29'
 perl-Tickit:
   conf:
     ignore_requires: Alien::libtermkey Alien::unibilium
     preamble: 'BuildRequires:  libtermkey-devel pkgconfig'
-  spec: perl-Tickit/perl-Tickit.spec
+  specfile: perl-Tickit/perl-Tickit.spec
+  version: '0.51'
 perl-Tie-EncryptedHash:
   conf:
     license: Perl License
-  spec: perl-Tie-EncryptedHash/perl-Tie-EncryptedHash.spec
+  specfile: perl-Tie-EncryptedHash/perl-Tie-EncryptedHash.spec
+  version: '1.24'
 perl-Tie-Function:
   conf:
     license: Perl
-  spec: perl-Tie-Function/perl-Tie-Function.spec
+  specfile: perl-Tie-Function/perl-Tie-Function.spec
+  version: '0.02'
 perl-Time-ParseDate:
   conf:
     license: SUSE-Permissive
     preamble: 'BuildRequires:  timezone'
-  spec: perl-Time-ParseDate/perl-Time-ParseDate.spec
+  specfile: perl-Time-ParseDate/perl-Time-ParseDate.spec
+  version: '2015.103'
 perl-TimeDate:
   conf:
     description: |-
@@ -3750,7 +4108,8 @@ perl-TimeDate:
           ($ss,$mm,$hh,$day,$month,$year,$zone). Elements are only defined if they
           could be extracted from the date string. The $zone element is the timezone
           offset in seconds from GMT. An empty array is returned upon failure.
-  spec: perl-TimeDate/perl-TimeDate.spec
+  specfile: perl-TimeDate/perl-TimeDate.spec
+  version: '2.33'
 perl-Tk:
   conf:
     custom_build: |-
@@ -3801,12 +4160,6 @@ perl-Tk:
       %files devel
       %{perl_vendorarch}/Tk/pTk
       %{perl_vendorarch}/Tk/*.h
-    patches:
-      Tk-804.029-event.diff: -p0
-      Tk-804.029-macro.diff: -p0
-      Tk-804.029-null.diff: -p0
-      Tk-804.029-refcnt.diff: -p0
-      Tk-804.036-fix-strlen-vs-int-pointer-confusion.patch: -p0
     post_prep: |-
       find . -type f -name "Tcl-pTk" -print0 | xargs -0 chmod +x
       find . -type f -name "mkVFunc" -print0 | xargs -0 chmod +x
@@ -3838,11 +4191,13 @@ perl-Tk:
       BuildRequires:  xorg-x11-server
       %endif
     skip_doc: add_version build_ptk checklen check_source check_syms cleanup copydate db57 debug debug.bat dupsyms exetype fixfunc gdb.plx gedi generate hackMM keyWords menubug mkExt mkppm.bat myConfig needed perlfiles ptked ptksh r README-ActiveState.txt README.AIX README.cygwin README.darwin README.HPUX README.IRIX README.OpenBSD README.os2 README.OSF README.SCO README.Solaris README-Strawberry.txt README.SVR4 README.ultrix rebuild sm stripblib submethods symbols tcl2perl tkGlue.def tkGlue.exc tkGlue.m tkGlue.t TkXSUB.def uninstall vg vtab.def wal
-  spec: perl-Tk/perl-Tk.spec
+  specfile: perl-Tk/perl-Tk.spec
+  version: '804.036'
 perl-Tk-Clock:
   conf:
     post_prep: sed -i -e 's,/pro/bin/perl,/usr/bin/perl,' examples/*pl
-  spec: perl-Tk-Clock/perl-Tk-Clock.spec
+  specfile: perl-Tk-Clock/perl-Tk-Clock.spec
+  version: '0.44'
 perl-Tk-TableMatrix:
   conf:
     add_doc: demos license.terms.pTk license.terms.mTk
@@ -3867,32 +4222,37 @@ perl-Tk-TableMatrix:
       BuildRequires:  pkgconfig(xproto)
     skip_doc: debug.* myConfig Makefile
     summary: Table/Matrix Widget Extension to perl/tk
-  spec: perl-Tk-TableMatrix/perl-Tk-TableMatrix.spec
+  specfile: perl-Tk-TableMatrix/perl-Tk-TableMatrix.spec
+  version: '1.29'
 perl-Tree-DAG_Node:
   conf:
     description_paragraphs: 1
-  spec: perl-Tree-DAG_Node/perl-Tree-DAG_Node.spec
+  specfile: perl-Tree-DAG_Node/perl-Tree-DAG_Node.spec
+  version: '1.32'
 perl-Type-Tiny:
   conf:
     description_paragraphs: 2
-  spec: perl-Type-Tiny/perl-Type-Tiny.spec
+  specfile: perl-Type-Tiny/perl-Type-Tiny.spec
+  version: '2.004000'
 perl-Types-Serialiser:
   conf:
     license: Artistic-1.0 OR GPL-1.0-or-later
-  spec: perl-Types-Serialiser/perl-Types-Serialiser.spec
+  specfile: perl-Types-Serialiser/perl-Types-Serialiser.spec
+  version: '1.01'
 perl-UNIVERSAL-ref:
-  conf:
-    patches:
-      UNIVERSAL-ref-0.14-Fix-building-with-Perl-5.25.1.patch: -p1
-  spec: perl-UNIVERSAL-ref/perl-UNIVERSAL-ref.spec
+  conf: {}
+  specfile: perl-UNIVERSAL-ref/perl-UNIVERSAL-ref.spec
+  version: '0.14'
 perl-URPM:
   conf:
     preamble: 'BuildRequires:  rpm-devel >= 4.13.0'
-  spec: perl-URPM/perl-URPM.spec
+  specfile: perl-URPM/perl-URPM.spec
+  version: '5.224'
 perl-UUID:
   conf:
     preamble: 'BuildRequires:  libuuid-devel'
-  spec: perl-UUID/perl-UUID.spec
+  specfile: perl-UUID/perl-UUID.spec
+  version: 0.330.0
 perl-Unicode-Collate:
   conf:
     preamble: |-
@@ -3900,28 +4260,31 @@ perl-Unicode-Collate:
       # in an older version. we need to rebuild on version updates
       # to ensure we are always newer than the perl-core provided version (bsc#1185600)
       %requires_eq    perl
-  spec: perl-Unicode-Collate/perl-Unicode-Collate.spec
+  specfile: perl-Unicode-Collate/perl-Unicode-Collate.spec
+  version: '1.31'
 perl-Unicode-EastAsianWidth:
   conf:
     license: CC0-1.0
-  spec: perl-Unicode-EastAsianWidth/perl-Unicode-EastAsianWidth.spec
+  specfile: perl-Unicode-EastAsianWidth/perl-Unicode-EastAsianWidth.spec
+  version: '12.0'
 perl-Unix-Mknod:
   conf:
     license: SUSE-Public-Domain
-    patches:
-      https://rt.cpan.org/Ticket/Attachment/1774849/954993/Unix-Mknod-0.04-Include-sys-sysmacros.h-on-glibc.patch: -p1
-  spec: perl-Unix-Mknod/perl-Unix-Mknod.spec
+  specfile: perl-Unix-Mknod/perl-Unix-Mknod.spec
+  version: '0.04'
 perl-Variable-Magic:
   conf:
     description_paragraphs: 2
-  spec: perl-Variable-Magic/perl-Variable-Magic.spec
+  specfile: perl-Variable-Magic/perl-Variable-Magic.spec
+  version: 0.640.0
 perl-Verilog-Perl:
   conf:
     preamble: |-
       BuildRequires:  bison
       BuildRequires:  flex
       BuildRequires:  gcc-c++
-  spec: perl-Verilog-Perl/perl-Verilog-Perl.spec
+  specfile: perl-Verilog-Perl/perl-Verilog-Perl.spec
+  version: '3.480'
 perl-Vimana:
   conf:
     post_install: sed -i "s/env perl/perl/" %{buildroot}%{_bindir}/*
@@ -3930,11 +4293,13 @@ perl-Vimana:
       BuildRequires: vim
       BuildRequires: perl(Data::Util)
       Requires: vim
-  spec: perl-Vimana/perl-Vimana.spec
+  specfile: perl-Vimana/perl-Vimana.spec
+  version: '2.26'
 perl-WWW-Form-UrlEncoded:
   conf:
     skip_noarch: 1
-  spec: perl-WWW-Form-UrlEncoded/perl-WWW-Form-UrlEncoded.spec
+  specfile: perl-WWW-Form-UrlEncoded/perl-WWW-Form-UrlEncoded.spec
+  version: '0.26'
 perl-WWW-Mechanize:
   conf:
     description: |-
@@ -3957,59 +4322,58 @@ perl-WWW-Mechanize:
       the Test::*, like Test::HTML::Lint modules, you can check the fetched
       content and use that as input to a test call.
     description_paragraphs: 4
-  spec: perl-WWW-Mechanize/perl-WWW-Mechanize.spec
+  specfile: perl-WWW-Mechanize/perl-WWW-Mechanize.spec
+  version: 2.180.0
 perl-WWW-Mechanize-PhantomJS:
   conf:
     ignore_requires: Filter::signatures
-    patches:
-      nosig.diff: -p1
     preamble: 'Requires:  phantomjs'
-  spec: perl-WWW-Mechanize-PhantomJS/perl-WWW-Mechanize-PhantomJS.spec
+  specfile: perl-WWW-Mechanize-PhantomJS/perl-WWW-Mechanize-PhantomJS.spec
+  version: '0.24'
 perl-WWW-OpenSearch:
   conf:
     preamble: 'BuildRequires:  perl(Module::Install)'
-  spec: perl-WWW-OpenSearch/perl-WWW-OpenSearch.spec
+  specfile: perl-WWW-OpenSearch/perl-WWW-OpenSearch.spec
+  version: '0.17'
 perl-WWW-Pastebin-PastebinCom-Create:
   conf:
     no_testing: accesses pastebin
-  spec: perl-WWW-Pastebin-PastebinCom-Create/perl-WWW-Pastebin-PastebinCom-Create.spec
+  specfile: perl-WWW-Pastebin-PastebinCom-Create/perl-WWW-Pastebin-PastebinCom-Create.spec
+  version: '1.003'
 perl-WWW-Shorten:
   conf:
     no_testing: needs network
-  spec: perl-WWW-Shorten/perl-WWW-Shorten.spec
+  specfile: perl-WWW-Shorten/perl-WWW-Shorten.spec
+  version: '3.094'
 perl-WWW-Wikipedia:
   conf:
     no_testing: need network connection
-  spec: perl-WWW-Wikipedia/perl-WWW-Wikipedia.spec
+  specfile: perl-WWW-Wikipedia/perl-WWW-Wikipedia.spec
+  version: '2.05'
 perl-Web-Machine:
-  conf:
-    patches:
-      fix-tests-2036.patch: -p1
-  spec: perl-Web-Machine/perl-Web-Machine.spec
+  conf: {}
+  specfile: perl-Web-Machine/perl-Web-Machine.spec
+  version: '0.17'
 perl-Web-Simple:
   conf:
     description_paragraphs: 2
-  spec: perl-Web-Simple/perl-Web-Simple.spec
+  specfile: perl-Web-Simple/perl-Web-Simple.spec
+  version: '0.033'
 perl-WebService-MusicBrainz:
   conf:
     no_testing: needs network
-  spec: perl-WebService-MusicBrainz/perl-WebService-MusicBrainz.spec
+  specfile: perl-WebService-MusicBrainz/perl-WebService-MusicBrainz.spec
+  version: 1.0.6
 perl-Webinject-Gui:
   conf:
     custom_test: |-
       # needs Display
       # make test
-  spec: perl-Webinject-Gui/perl-Webinject-Gui.spec
+  specfile: perl-Webinject-Gui/perl-Webinject-Gui.spec
+  version: '1.56'
 perl-Wx:
   conf:
     no_testing: needs X
-    patches:
-      0001-Sort-output-of-dumped-dictionaries-for-reproducible-.patch: -p1
-      0001-fix-incomplete-Wx_Exp.pm-due-to-missing-dependecy-in.patch: -p1
-      0002-Provide-overload-methods-to-XSpp-in-sorted-order.patch: -p1
-      0003-Define-overload-constants-in-sorted-order.patch: -p1
-      0004-Define-enum-values-in-sorted-order.patch: -p1
-      fix_wxWidgets_3_0_3_API_break.patch: -p1
     preamble: |-
       BuildRequires:  gcc-c++
       BuildRequires:  wxWidgets-3_0-nostl-devel
@@ -4020,7 +4384,8 @@ perl-Wx:
       BuildRequires:  xspp
     sources:
     - perl-Wx-rpmlintrc
-  spec: perl-Wx/perl-Wx.spec
+  specfile: perl-Wx/perl-Wx.spec
+  version: '0.9932'
 perl-Wx-GLCanvas:
   conf:
     custom_test: xvfb-run -a -s "+extension GLX -screen 0 1280x1024x24" %{__make} test
@@ -4033,7 +4398,8 @@ perl-Wx-GLCanvas:
       BuildRequires:  wxWidgets-ansi-devel
       %endif
       BuildRequires:  xvfb-run
-  spec: perl-Wx-GLCanvas/perl-Wx-GLCanvas.spec
+  specfile: perl-Wx-GLCanvas/perl-Wx-GLCanvas.spec
+  version: '0.09'
 perl-Wx-Perl-ProcessStream:
   conf:
     custom_test: |-
@@ -4041,7 +4407,8 @@ perl-Wx-Perl-ProcessStream:
       # X-windows.. So make them go away.. they pass ;)
       #%check
       #make test
-  spec: perl-Wx-Perl-ProcessStream/perl-Wx-Perl-ProcessStream.spec
+  specfile: perl-Wx-Perl-ProcessStream/perl-Wx-Perl-ProcessStream.spec
+  version: '0.32'
 perl-X11-Xlib:
   conf:
     custom_test: xvfb-run -a %{__make} test
@@ -4050,28 +4417,30 @@ perl-X11-Xlib:
       BuildRequires:  libX11-devel
       BuildRequires:  libXtst-devel
       BuildRequires:  xvfb-run
-  spec: perl-X11-Xlib/perl-X11-Xlib.spec
+  specfile: perl-X11-Xlib/perl-X11-Xlib.spec
+  version: 0.250.0
 perl-XML-DT:
   conf:
     ignore_requires: HTTP::Simple
     preamble: |-
       BuildRequires: perl(HTTP::Tiny)
       Requires: perl(HTTP::Tiny)
-  spec: perl-XML-DT/perl-XML-DT.spec
+  specfile: perl-XML-DT/perl-XML-DT.spec
+  version: '0.69'
 perl-XML-Generator:
   conf:
     description_paragraphs: 2
     license: Perl License
-  spec: perl-XML-Generator/perl-XML-Generator.spec
+  specfile: perl-XML-Generator/perl-XML-Generator.spec
+  version: '1.13'
 perl-XML-Hash-LX:
   conf:
-    patches:
-      XML-Hash-LX-0.0603-Fix-unpredictable-order-at-empty-attr-test.patch: -p1
     preamble: |-
       BuildRequires:  perl(Test::Pod::Coverage)
       BuildRequires:  perl(Types::Serialiser)
       Requires:  perl(Types::Serialiser)
-  spec: perl-XML-Hash-LX/perl-XML-Hash-LX.spec
+  specfile: perl-XML-Hash-LX/perl-XML-Hash-LX.spec
+  version: '0.07'
 perl-XML-LibXML:
   conf:
     description_paragraphs: 1
@@ -4080,42 +4449,40 @@ perl-XML-LibXML:
       BuildRequires:  pkgconfig(libxml-2.0) >= 2.9.0
       Provides:       perl-XML-LibXML-Common = %{version}
       Obsoletes:      perl-XML-LibXML-Common < %{version}
-  spec: perl-XML-LibXML/perl-XML-LibXML.spec
+  specfile: perl-XML-LibXML/perl-XML-LibXML.spec
+  version: '2.0210'
 perl-XML-LibXSLT:
   conf:
     preamble: 'BuildRequires:  libxslt-devel'
-  spec: perl-XML-LibXSLT/perl-XML-LibXSLT.spec
+  specfile: perl-XML-LibXSLT/perl-XML-LibXSLT.spec
+  version: '2.002001'
 perl-XML-Parser:
   conf:
-    patches:
-      XML-Parser-2.40.diff: -p0
     post_prep: chmod 644 samples/{canonical,xml*}
     preamble: 'BuildRequires:  libexpat-devel'
-  spec: perl-XML-Parser/perl-XML-Parser.spec
+  specfile: perl-XML-Parser/perl-XML-Parser.spec
+  version: 2.470.0
 perl-XML-Quick:
-  conf:
-    patches:
-      fixperlversion.diff: -p1 PATCH-FIX-UPSTREAM specify perl 5.008001 instead of 5.008_001
-  spec: perl-XML-Quick/perl-XML-Quick.spec
+  conf: {}
+  specfile: perl-XML-Quick/perl-XML-Quick.spec
+  version: '0.07'
 perl-XML-SAX:
   conf:
-    patches:
-      perl-XML-SAX-0.96-utf8.diff: -p0
     post_install: |-
       touch %{buildroot}%{perl_vendorlib}/XML/SAX/ParserDetails.ini
       echo "%ghost %{perl_vendorlib}/XML/SAX/ParserDetails.ini" >> perl-XML-SAX.files
     preamble: |-
       %post
       perl -MXML::SAX -e "XML::SAX->add_parser(q(XML::SAX::PurePerl))->save_parsers()"
-  spec: perl-XML-SAX/perl-XML-SAX.spec
+  specfile: perl-XML-SAX/perl-XML-SAX.spec
+  version: '1.02'
 perl-XML-SAX-Expat:
   conf:
     post_section: perl -MXML::SAX -e "XML::SAX->add_parser(q(XML::SAX::Expat))->save_parsers()"
-  spec: perl-XML-SAX-Expat/perl-XML-SAX-Expat.spec
+  specfile: perl-XML-SAX-Expat/perl-XML-SAX-Expat.spec
+  version: '0.51'
 perl-XML-Twig:
   conf:
-    patches:
-      perl-XML-Twig-CVE-2016-9180.patch: -p1
     preamble: |-
       BuildRequires:  expat
       BuildRequires:  perl-HTML-Tidy
@@ -4136,32 +4503,38 @@ perl-XML-Twig:
       Requires:       expat
       Requires:       perl-XML-Parser
       Requires:       perl(Encode)
-  spec: perl-XML-Twig/perl-XML-Twig.spec
+  specfile: perl-XML-Twig/perl-XML-Twig.spec
+  version: '3.52'
 perl-XML-Writer:
   conf:
     license: MIT
-  spec: perl-XML-Writer/perl-XML-Writer.spec
+  specfile: perl-XML-Writer/perl-XML-Writer.spec
+  version: '0.900'
 perl-XML-XSLT:
   conf:
     post_install: '%fdupes %{buildroot}'
     preamble: 'BuildRequires:  fdupes'
-  spec: perl-XML-XSLT/perl-XML-XSLT.spec
+  specfile: perl-XML-XSLT/perl-XML-XSLT.spec
+  version: '0.48'
 perl-XSLoader:
   conf:
     skip_noarch: 1
-  spec: perl-XSLoader/perl-XSLoader.spec
+  specfile: perl-XSLoader/perl-XSLoader.spec
+  version: '0.24'
 perl-YAML-Syck:
   conf:
     custom_build: |-
       perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags} -DI_STDLIB -DI_STRING"
       make %{?_smp_mflags}
     summary: Perl YAML loader and dumper
-  spec: perl-YAML-Syck/perl-YAML-Syck.spec
+  specfile: perl-YAML-Syck/perl-YAML-Syck.spec
+  version: '1.34'
 perl-ZMQ-LibZMQ3:
   conf:
     no_testing: requires Display
     preamble: 'BuildRequires:  pkgconfig(libzmq)'
-  spec: perl-ZMQ-LibZMQ3/perl-ZMQ-LibZMQ3.spec
+  specfile: perl-ZMQ-LibZMQ3/perl-ZMQ-LibZMQ3.spec
+  version: '1.19'
 perl-ZMQ-LibZMQ4:
   conf:
     no_testing: requires Display
@@ -4177,28 +4550,34 @@ perl-ZMQ-LibZMQ4:
       BuildRequires:  perl(ZMQ::Constants) >= 1.00
       Requires:       perl(Task::Weaken)
       Requires:       perl(ZMQ::Constants) >= 1.00
-  spec: perl-ZMQ-LibZMQ4/perl-ZMQ-LibZMQ4.spec
+  specfile: perl-ZMQ-LibZMQ4/perl-ZMQ-LibZMQ4.spec
+  version: '0.01'
 perl-autobox:
   conf:
     description_paragraphs: 3
-  spec: perl-autobox/perl-autobox.spec
+  specfile: perl-autobox/perl-autobox.spec
+  version: 3.0.1
 perl-common-sense:
   conf:
     license: GPL-1.0+ or Artistic-1.0
     skip_noarch: 1
-  spec: perl-common-sense/perl-common-sense.spec
+  specfile: perl-common-sense/perl-common-sense.spec
+  version: '3.75'
 perl-constant-defer:
   conf:
     license: GPL-3.0+
-  spec: perl-constant-defer/perl-constant-defer.spec
+  specfile: perl-constant-defer/perl-constant-defer.spec
+  version: '6'
 perl-constant-lexical:
   conf:
     license: perl
-  spec: perl-constant-lexical/perl-constant-lexical.spec
+  specfile: perl-constant-lexical/perl-constant-lexical.spec
+  version: 2.0.300
 perl-experimental:
   conf:
     description_paragraphs: 4
-  spec: perl-experimental/perl-experimental.spec
+  specfile: perl-experimental/perl-experimental.spec
+  version: '0.031'
 perl-ldap:
   conf:
     description_paragraphs: 1
@@ -4210,7 +4589,8 @@ perl-ldap:
       BuildRequires:  perl(JSON)
       BuildRequires:  perl(MIME::Base64)
       BuildRequires:  perl(URI)
-  spec: perl-ldap/perl-ldap.spec
+  specfile: perl-ldap/perl-ldap.spec
+  version: '0.68'
 perl-libintl-perl:
   conf:
     description: |-
@@ -4221,11 +4601,13 @@ perl-libintl-perl:
     preamble: 'Requires:       gettext-runtime >= 0.12.2'
     sources:
     - libintl-perl-rpmlintrc
-  spec: perl-libintl-perl/perl-libintl-perl.spec
+  specfile: perl-libintl-perl/perl-libintl-perl.spec
+  version: '1.33'
 perl-libwww-perl:
   conf:
     preamble: 'Recommends:     perl(LWP::Protocol::https) >= 6.06'
-  spec: perl-libwww-perl/perl-libwww-perl.spec
+  specfile: perl-libwww-perl/perl-libwww-perl.spec
+  version: 6.770.0
 perl-local-lib:
   conf:
     misc: |-
@@ -4253,8 +4635,10 @@ perl-local-lib:
     sources:
     - perl-homedir.sh
     - perl-homedir.csh
-  spec: perl-local-lib/perl-local-lib.spec
+  specfile: perl-local-lib/perl-local-lib.spec
+  version: '2.000029'
 perl-threads:
   conf:
     description_paragraphs: 2
-  spec: perl-threads/perl-threads.spec
+  specfile: perl-threads/perl-threads.spec
+  version: '2.21'
