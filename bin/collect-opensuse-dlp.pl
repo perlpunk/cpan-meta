@@ -17,6 +17,7 @@ my $ypp_pres = YAML::PP->new( preserve => PRESERVE_SCALAR_STYLE );
 my %pkg;
 my %deps;
 my %patches;
+my %gendeps;
 
 sub main ($dir, @args) {
     find \&wanted, $dir;
@@ -73,11 +74,22 @@ sub main ($dir, @args) {
         if (my $patchlist = delete $pkgconf->{patches}) {
             $patches{ $p }->{ $version } = $patchlist;
         }
+        if (my $gendeps = delete $pkgconf->{gendeps}) {
+            $gendeps{ $p }->{ $version } = $gendeps;
+        }
     }
     YAML::PP::DumpFile('cpanspec.yaml', \%pkg);
     YAML::PP::DumpFile('deps.yaml', \%deps);
     $ypp_pres->dump_file('patches.yaml', \%patches);
+    $ypp_pres->dump_file('gendeps.yaml', \%gendeps);
 }
+
+my %deptypes = (
+    Requires => 'runtime',
+    BuildRequires => 'build',
+    Suggests => 'uggests',
+    Recmmends => 'recommends',
+);
 
 sub wanted {
     return if $File::Find::dir =~ m/\.osc/;
@@ -120,6 +132,14 @@ sub wanted {
             warn "$name: no Version";
         }
         $pkg{ $name }->{version} = $version;
+        my @req = $spec =~ m/^(Requires|BuildRequires|Suggests|Recmmends): +(\S+)/mg;
+        my %gendeps;
+        for (my $i = 0; $i < @req; $i += 2) {
+            my ($type, $req) = @req[$i, $i+1];
+            $type = $deptypes{ $type } or die "!!!!!!!!!! $type";
+            push @{ $gendeps{ $type } }, $req;
+        }
+        push @{ $pkg{ $name }->{gendeps} }, \%gendeps;
     }
 
 }

@@ -1,0 +1,8976 @@
+---
+perl-Acme-MetaSyntactic:
+  '1.015':
+  - build:
+    - perl
+    - perl-macros
+    - perl(LWP::UserAgent)
+    runtime:
+    - perl(LWP::UserAgent)
+perl-Alien-Base-ModuleBuild:
+  '1.17':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::Base)
+    - perl(Alien::Base::PkgConfig)
+    - perl(Archive::Extract)
+    - perl(Archive::Tar)
+    - perl(Capture::Tiny)
+    - perl(File::chdir)
+    - perl(HTTP::Tiny)
+    - perl(List::Util)
+    - perl(Module::Build)
+    - perl(Path::Tiny)
+    - perl(Shell::Config::Generate)
+    - perl(Shell::Guess)
+    - perl(Sort::Versions)
+    - perl(Test2::V0)
+    - perl(Text::ParseWords)
+    - perl(URI)
+    - perl(URI::file)
+    - perl(parent)
+    - perl(PkgConfig)
+    runtime:
+    - perl(Alien::Base)
+    - perl(Alien::Base::PkgConfig)
+    - perl(Archive::Extract)
+    - perl(Archive::Tar)
+    - perl(Capture::Tiny)
+    - perl(File::chdir)
+    - perl(HTTP::Tiny)
+    - perl(List::Util)
+    - perl(Module::Build)
+    - perl(Path::Tiny)
+    - perl(Shell::Config::Generate)
+    - perl(Shell::Guess)
+    - perl(Sort::Versions)
+    - perl(Text::ParseWords)
+    - perl(URI)
+    - perl(parent)
+perl-Alien-Build:
+  '2.80':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(Digest::SHA)
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::ParseXS)
+    - perl(FFI::CheckLib)
+    - perl(File::Which)
+    - perl(File::chdir)
+    - perl(JSON::PP)
+    - perl(List::Util)
+    - perl(Path::Tiny)
+    - perl(Test2::API)
+    - perl(Test2::V0)
+    - perl(Text::ParseWords)
+    - perl(parent)
+    - pkg-config
+    runtime:
+    - perl(Capture::Tiny)
+    - perl(Digest::SHA)
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::ParseXS)
+    - perl(FFI::CheckLib)
+    - perl(File::Which)
+    - perl(File::chdir)
+    - perl(JSON::PP)
+    - perl(List::Util)
+    - perl(Path::Tiny)
+    - perl(Test2::API)
+    - perl(Text::ParseWords)
+    - perl(parent)
+perl-Alien-GMP:
+  '1.16':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::Base)
+    - perl(Alien::Build)
+    - perl(Alien::Build::MM)
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Test2::V0)
+    - perl(Test::Alien)
+    - perl(Devel::CheckLib)
+    - perl(Mojo::DOM58)
+    - perl(Sort::Versions)
+    - perl(URI::Escape)
+    - pkgconfig(gmp)
+    - gmp-devel
+    runtime:
+    - perl(Alien::Base)
+perl-Alien-GSL:
+  '1.02':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::Base)
+    - perl(Alien::Base::ModuleBuild)
+    - perl(IO::Socket::SSL)
+    - perl(Module::Build)
+    - perl(Net::SSLeay)
+    - perl(parent)
+    - gsl-devel
+    runtime:
+    - perl(Alien::Base)
+    - perl(parent)
+perl-Alien-Hunspell:
+  '0.17':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::Base)
+    - perl(Alien::Build)
+    - perl(Alien::Build::MM)
+    - perl(Alien::Build::Plugin::Build::Autoconf)
+    - perl(Alien::Build::Plugin::Probe::Vcpkg)
+    - perl(ExtUtils::CppGuess)
+    - perl(Path::Tiny)
+    - perl(Test2::Require)
+    - perl(Test2::V0)
+    - perl(Test::Alien::CPP)
+    - perl(PkgConfig)
+    - pkgconfig(hunspell)
+    runtime:
+    - perl(Alien::Base)
+    - pkgconfig(hunspell)
+perl-Alien-Libxml2:
+  '0.19':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::Base)
+    - perl(Alien::Build)
+    - perl(Alien::Build::MM)
+    - perl(Alien::Build::Plugin::Build::SearchDep)
+    - perl(Alien::Build::Plugin::Download::GitLab)
+    - perl(Alien::Build::Plugin::Prefer::BadVersion)
+    - perl(Alien::Build::Plugin::Probe::Vcpkg)
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Test2::V0)
+    - perl(Test::Alien)
+    - pkgconfig(libxml-2.0)
+    - perl-URI
+    - perl(Mojo::DOM58)
+    - perl(Sort::Versions)
+    runtime:
+    - perl(Alien::Base)
+perl-Alien-SDL:
+  '1.446':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Archive::Extract)
+    - perl(Archive::Tar)
+    - perl(Archive::Zip)
+    - perl(Capture::Tiny)
+    - perl(Digest::SHA)
+    - perl(ExtUtils::CBuilder)
+    - perl(File::Fetch)
+    - perl(File::Path)
+    - perl(File::ShareDir)
+    - perl(File::Which)
+    - perl(Module::Build)
+    - perl(Text::Patch)
+    - Mesa-devel
+    - gcc-c++
+    - libSDL_Pango-devel
+    - libSDL_image-devel
+    - libSDL_mixer-devel
+    - libSDL_net-devel
+    - libSDL_ttf-devel
+    runtime:
+    - perl(Capture::Tiny)
+    - perl(ExtUtils::CBuilder)
+    - perl(File::ShareDir)
+    - perl(File::Which)
+perl-Alien-libmaxminddb:
+  1.14.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::Base)
+    - perl(Alien::Build)
+    - perl(Alien::Build::MM)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Path::Tiny)
+    - perl(Test::Alien)
+    - perl(parent)
+    - pkgconfig(libmaxminddb)
+    runtime:
+    - perl(Alien::Base)
+    - perl(parent)
+    - pkgconfig(libmaxminddb)
+perl-Alien-libtermkey:
+  '0.22':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Path)
+    - perl(Module::Build)
+    - perl(Alien::unibilium)
+    - pkgconfig(termkey)
+    runtime:
+    - perl(Alien::unibilium)
+    - pkgconfig(termkey)
+perl-Alien-unibilium:
+  '0.15':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::PkgConfig)
+    - perl(File::Path)
+    - perl(Module::Build)
+    - libtool
+    - unibilium-devel
+    runtime:
+    - perl(ExtUtils::PkgConfig)
+    - unibilium-devel
+perl-Alien-wxWidgets:
+  '0.69':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::CBuilder)
+    - perl(LWP::Protocol::https)
+    - perl(Module::Build)
+    - perl(Module::Pluggable)
+    - gcc-c++
+    - wxWidgets-3_0-nostl-devel
+    - wxWidgets-ansi-devel
+    runtime:
+    - perl(Module::Pluggable)
+perl-AnyEvent:
+  '7.17':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Canary::Stability)
+perl-AnyEvent-AIO:
+  '1.1':
+  - build:
+    - perl
+    - perl-macros
+    - perl(AnyEvent)
+    - perl(IO::AIO)
+    runtime:
+    - perl(AnyEvent)
+    - perl(IO::AIO)
+perl-AnyEvent-HTTP:
+  '2.25':
+  - build:
+    - perl
+    - perl-macros
+    - perl(AnyEvent)
+    - perl(common::sense)
+    runtime:
+    - perl(AnyEvent)
+    - perl(common::sense)
+perl-AnyEvent-I3:
+  '0.17':
+  - build:
+    - perl
+    - perl-macros
+    - perl(AnyEvent)
+    - perl(AnyEvent::Handle)
+    - perl(AnyEvent::Socket)
+    - perl(JSON::XS)
+    runtime:
+    - perl(AnyEvent)
+    - perl(AnyEvent::Handle)
+    - perl(AnyEvent::Socket)
+    - perl(JSON::XS)
+perl-Apache-ASP:
+  '2.63':
+  - build:
+    - perl
+    - perl-macros
+    - perl(MLDBM)
+    - perl(MLDBM::Sync)
+    - perl(MLDBM)
+    - perl(MLDBM::Sync)
+    runtime:
+    - perl(MLDBM)
+    - perl(MLDBM::Sync)
+perl-Apache-AuthCookie:
+  '3.31':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Apache::Test)
+    - perl(Class::Load)
+    - perl(HTTP::Body)
+    - perl(Hash::MultiValue)
+    - perl(Test::More)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(WWW::Form::UrlEncoded)
+    - netcfg
+    runtime:
+    - perl(Class::Load)
+    - perl(HTTP::Body)
+    - perl(Hash::MultiValue)
+    - perl(Test::More)
+    - perl(URI)
+    - perl(WWW::Form::UrlEncoded)
+perl-Apache-DBI:
+  '1.12':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    - perl(Digest::SHA1)
+    runtime:
+    - perl(DBI)
+    - perl(Digest::SHA1)
+perl-Apache-LogFormat-Compiler:
+  '0.36':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTTP::Request::Common)
+    - perl(Module::Build::Tiny)
+    - perl(POSIX::strftime::Compiler)
+    - perl(Test::MockTime)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(Try::Tiny)
+    - perl(URI::Escape)
+    - timezone
+    runtime:
+    - perl(POSIX::strftime::Compiler)
+perl-Apache-Test:
+  '1.43':
+  - build:
+    - perl
+    - perl-macros
+    - netcfg
+    runtime:
+    - netcfg
+perl-Apache2-SOAP:
+  '0.73':
+  - build:
+    - perl
+    - perl-macros
+    - perl(SOAP::Lite)
+    - perl(mod_perl2)
+    - apache2-mod_perl-devel
+    - netcfg
+    runtime:
+    - perl(SOAP::Lite)
+    - perl(mod_perl2)
+perl-App-CLI:
+  '0.52':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(Class::Load)
+    - perl(Locale::Maketext::Simple)
+    - perl(Pod::Simple::Text)
+    - perl(Test::Pod)
+    runtime:
+    - perl(Capture::Tiny)
+    - perl(Class::Load)
+    - perl(Locale::Maketext::Simple)
+    - perl(Pod::Simple::Text)
+perl-App-Nopaste:
+  '1.013':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Browser::Open)
+    - perl(CPAN::Meta::Requirements)
+    - perl(Class::Load)
+    - perl(Getopt::Long::Descriptive)
+    - perl(JSON::MaybeXS)
+    - perl(LWP::Protocol)
+    - perl(LWP::UserAgent)
+    - perl(Module::Metadata)
+    - perl(Module::Pluggable)
+    - perl(Module::Runtime)
+    - perl(Path::Tiny)
+    - perl(Test::Deep)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(URI::Escape)
+    - perl(WWW::Mechanize)
+    - perl(namespace::clean)
+    - perl(parent)
+    runtime:
+    - perl(Browser::Open)
+    - perl(Class::Load)
+    - perl(Getopt::Long::Descriptive)
+    - perl(JSON::MaybeXS)
+    - perl(LWP::UserAgent)
+    - perl(Module::Pluggable)
+    - perl(Module::Runtime)
+    - perl(Path::Tiny)
+    - perl(URI::Escape)
+    - perl(WWW::Mechanize)
+    - perl(namespace::clean)
+    - perl(parent)
+perl-App-Rad:
+  '1.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Getopt::Long)
+    runtime:
+    - perl(Getopt::Long)
+perl-App-Sqitch:
+  1.4.1:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Algorithm::Backoff::Exponential)
+    - perl(Capture::Tiny)
+    - perl(Clone)
+    - perl(Config::GitLike)
+    - perl(DBD::Mem)
+    - perl(DBI)
+    - perl(DateTime)
+    - perl(DateTime::TimeZone)
+    - perl(Devel::StackTrace)
+    - perl(Digest::SHA)
+    - perl(Encode::Locale)
+    - perl(Hash::Merge)
+    - perl(IO::Pager)
+    - perl(IPC::Run3)
+    - perl(IPC::System::Simple)
+    - perl(List::MoreUtils)
+    - perl(Locale::Messages)
+    - perl(Locale::TextDomain)
+    - perl(Module::Build)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Path::Class)
+    - perl(PerlIO::utf8_strict)
+    - perl(Pod::Escapes)
+    - perl(Pod::Find)
+    - perl(StackTrace::Auto)
+    - perl(String::Formatter)
+    - perl(String::ShellQuote)
+    - perl(Sub::Exporter)
+    - perl(Sub::Exporter::Util)
+    - perl(Template::Tiny)
+    - perl(Term::ANSIColor)
+    - perl(Test::Deep)
+    - perl(Test::Dir)
+    - perl(Test::Exception)
+    - perl(Test::Exit)
+    - perl(Test::File)
+    - perl(Test::File::Contents)
+    - perl(Test::MockModule)
+    - perl(Test::MockObject::Extends)
+    - perl(Test::More)
+    - perl(Test::NoWarnings)
+    - perl(Test::Warn)
+    - perl(Throwable)
+    - perl(Try::Tiny)
+    - perl(Type::Library)
+    - perl(Type::Utils)
+    - perl(Types::Standard)
+    - perl(URI)
+    - perl(URI::QueryParam)
+    - perl(URI::db)
+    - perl(namespace::autoclean)
+    - perl(parent)
+    - perl(Class::XSAccessor)
+    - timezone
+    - perl(Template)
+    runtime:
+    - perl(Algorithm::Backoff::Exponential)
+    - perl(Clone)
+    - perl(Config::GitLike)
+    - perl(DBI)
+    - perl(DateTime)
+    - perl(DateTime::TimeZone)
+    - perl(Devel::StackTrace)
+    - perl(Digest::SHA)
+    - perl(Encode::Locale)
+    - perl(Hash::Merge)
+    - perl(IO::Pager)
+    - perl(IPC::Run3)
+    - perl(IPC::System::Simple)
+    - perl(List::MoreUtils)
+    - perl(Locale::Messages)
+    - perl(Locale::TextDomain)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Path::Class)
+    - perl(PerlIO::utf8_strict)
+    - perl(Pod::Escapes)
+    - perl(Pod::Find)
+    - perl(StackTrace::Auto)
+    - perl(String::Formatter)
+    - perl(String::ShellQuote)
+    - perl(Sub::Exporter)
+    - perl(Sub::Exporter::Util)
+    - perl(Template::Tiny)
+    - perl(Term::ANSIColor)
+    - perl(Throwable)
+    - perl(Try::Tiny)
+    - perl(Type::Library)
+    - perl(Type::Utils)
+    - perl(Types::Standard)
+    - perl(URI)
+    - perl(URI::QueryParam)
+    - perl(URI::db)
+    - perl(namespace::autoclean)
+    - perl(parent)
+    - perl(Class::XSAccessor)
+    - perl(Template)
+    - postgresql
+    - sqitch
+    - perl(DBD::Pg)
+    - perl(DBI)
+    - sqitch
+    - sqlite3
+    - perl(DBD::SQLite)
+    - perl(DBI)
+    - mysql
+    - sqitch
+    - perl(DBD::mysql)
+    - perl(DBI)
+perl-App-cpanminus:
+  '1.7047':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Config)
+    - perl(aliased)
+    - perl(constant)
+    - perl(CPAN::Meta::Requirements)
+    - perl(Cwd)
+    - perl(File::Basename)
+    - perl(File::Copy)
+    - perl(File::Find)
+    - perl(File::Temp)
+    - perl(Parse::CPAN::Meta)
+    - perl(String::ShellQuote)
+    - perl(Symbol)
+    - perl(version)
+    - perl(warnings::register)
+    - perl(Test::More)
+    - perl(Pod::Select)
+    runtime:
+    - perl(CPAN::DistnameInfo)
+    - perl(CPAN::Meta)
+    - perl(CPAN::Meta::Check)
+    - perl(CPAN::Meta::Prereqs)
+    - perl(CPAN::Meta::YAML)
+    - perl(Digest::SHA)
+    - perl(ExtUtils::Install)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::Manifest)
+    - perl(File::pushd)
+    - perl(HTTP::Tiny)
+    - perl(Parse::PMFile)
+    - perl(local::lib)
+    - perl(Module::Build)
+    - perl(Module::CPANfile)
+    - perl(Module::CoreList)
+    - perl(Module::Metadata)
+    - perl(String::ShellQuote)
+    - perl(YAML)
+perl-App-cpm:
+  '0.997015':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::02Packages::Search)
+    - perl(CPAN::DistnameInfo)
+    - perl(CPAN::Meta)
+    - perl(CPAN::Meta::Requirements)
+    - perl(CPAN::Meta::YAML)
+    - perl(Command::Runner)
+    - perl(ExtUtils::Install)
+    - perl(ExtUtils::InstallPaths)
+    - perl(File::Copy::Recursive)
+    - perl(File::pushd)
+    - perl(HTTP::Tinyish)
+    - perl(JSON::PP)
+    - perl(Menlo::CLI::Compat)
+    - perl(Module::Build)
+    - perl(Module::Build::Tiny)
+    - perl(Module::CPANfile)
+    - perl(Module::Metadata)
+    - perl(Module::cpmfile)
+    - perl(Parallel::Pipes::App)
+    - perl(Parse::PMFile)
+    - perl(Proc::ForkSafe)
+    - perl(local::lib)
+    - perl(parent)
+    - perl(version)
+    runtime:
+    - perl(CPAN::02Packages::Search)
+    - perl(CPAN::DistnameInfo)
+    - perl(CPAN::Meta)
+    - perl(CPAN::Meta::Requirements)
+    - perl(CPAN::Meta::YAML)
+    - perl(Command::Runner)
+    - perl(ExtUtils::Install)
+    - perl(ExtUtils::InstallPaths)
+    - perl(File::Copy::Recursive)
+    - perl(File::pushd)
+    - perl(HTTP::Tinyish)
+    - perl(JSON::PP)
+    - perl(Menlo::CLI::Compat)
+    - perl(Module::CPANfile)
+    - perl(Module::Metadata)
+    - perl(Module::cpmfile)
+    - perl(Parallel::Pipes::App)
+    - perl(Parse::PMFile)
+    - perl(Proc::ForkSafe)
+    - perl(local::lib)
+    - perl(parent)
+    - perl(version)
+perl-App-perlbrew:
+  0.980.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Perl::Releases)
+    - perl(Capture::Tiny)
+    - perl(Devel::PatchPerl)
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::Temp)
+    - perl(File::Which)
+    - perl(IO::All)
+    - perl(JSON::PP)
+    - perl(Module::Build::Tiny)
+    - perl(Path::Class)
+    - perl(Pod::Usage)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    - perl(Test::NoWarnings)
+    - perl(Test::Output)
+    - perl(Test::Simple)
+    - perl(Test::Spec)
+    - perl(Test::TempDir::Tiny)
+    - perl(local::lib)
+    - wget
+    runtime:
+    - perl(CPAN::Perl::Releases)
+    - perl(Capture::Tiny)
+    - perl(Devel::PatchPerl)
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::Temp)
+    - perl(JSON::PP)
+    - perl(Pod::Usage)
+    - perl(local::lib)
+perl-Archive-Any:
+  '0.0946':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Archive::Tar)
+    - perl(Archive::Zip)
+    - perl(File::MMagic)
+    - perl(MIME::Types)
+    - perl(Module::Find)
+    - perl(Test::Warn)
+    - perl(Test::Warn)
+    runtime:
+    - perl(Archive::Tar)
+    - perl(Archive::Zip)
+    - perl(File::MMagic)
+    - perl(MIME::Types)
+    - perl(Module::Find)
+perl-Archive-Cpio:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+perl-Archive-Tar-Wrapper:
+  '0.38':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Meta)
+    - perl(File::Which)
+    - perl(IPC::Run)
+    - perl(Log::Log4perl)
+    - perl(Test::Simple)
+    runtime:
+    - perl(CPAN::Meta)
+    - perl(File::Which)
+    - perl(IPC::Run)
+    - perl(Log::Log4perl)
+perl-Async:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+perl-Audio-Mixer:
+  '0.7':
+  - build:
+    - perl
+    - perl-macros
+perl-Audio-Scan:
+  '1.01':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::Warn)
+    - pkgconfig
+    - zlib-devel
+    runtime:
+    - perl(Test::Warn)
+perl-Audio-Wav:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+perl-Authen-DecHpwd:
+  '2.007':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Data::Integer)
+    - perl(Digest::CRC)
+    - perl(Module::Build)
+    - perl(Scalar::String)
+    - perl(parent)
+    runtime:
+    - perl(Data::Integer)
+    - perl(Digest::CRC)
+    - perl(Scalar::String)
+    - perl(parent)
+perl-Authen-PAM:
+  '0.16':
+  - build:
+    - perl
+    - perl-macros
+    - pam-devel
+perl-B-Flags:
+  '0.17':
+  - build:
+    - perl
+    - perl-macros
+perl-B-Generate:
+  '1.56':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::CBuilder)
+    runtime:
+    - perl(ExtUtils::CBuilder)
+perl-B-Hooks-OP-Check:
+  '0.22':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::Depends)
+    - perl(parent)
+    runtime:
+    - perl(parent)
+perl-B-Hooks-OP-PPAddr:
+  '0.06':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::Depends)
+    - perl(parent)
+    runtime:
+    - perl(parent)
+perl-B-Keywords:
+  '1.26':
+  - build:
+    - perl
+    - perl-macros
+perl-B-Lint:
+  '1.20':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Pluggable)
+    runtime:
+    - perl(Module::Pluggable)
+perl-B-Utils:
+  '0.27':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::Depends)
+    - perl(Task::Weaken)
+    runtime:
+    - perl(Task::Weaken)
+perl-BSD-Resource:
+  '1.2911':
+  - build:
+    - perl
+    - perl-macros
+perl-Badger:
+  '0.16':
+  - build:
+    - perl
+    - perl-macros
+    - perl(YAML)
+perl-Benchmark-Timer:
+  '0.7112':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::Compile)
+    - perl(UNIVERSAL::require)
+perl-BerkeleyDB:
+  '0.65':
+  - build:
+    - perl
+    - perl-macros
+    - db-devel
+perl-BioPerl:
+  1.7.8:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Data::Stag)
+    - perl(Error)
+    - perl(Graph::Directed)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Response)
+    - perl(IO::Scalar)
+    - perl(IO::String)
+    - perl(IPC::Run)
+    - perl(LWP::UserAgent)
+    - perl(List::MoreUtils)
+    - perl(Module::Build)
+    - perl(Set::Scalar)
+    - perl(Test::Memory::Cycle)
+    - perl(Test::Most)
+    - perl(Test::RequiresInternet)
+    - perl(Test::Weaken)
+    - perl(URI)
+    - perl(XML::DOM)
+    - perl(XML::LibXML)
+    - perl(XML::LibXML::Reader)
+    - perl(XML::Parser::PerlSAX)
+    - perl(XML::SAX)
+    - perl(XML::SAX::Base)
+    - perl(XML::SAX::Writer)
+    - perl(XML::Twig)
+    - perl(XML::Writer)
+    - perl(YAML)
+    - perl(parent)
+    - perl(version)
+    - perl(GD)
+    runtime:
+    - perl(Data::Stag)
+    - perl(Error)
+    - perl(Graph::Directed)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Response)
+    - perl(IO::Scalar)
+    - perl(IO::String)
+    - perl(IPC::Run)
+    - perl(LWP::UserAgent)
+    - perl(List::MoreUtils)
+    - perl(Module::Build)
+    - perl(Set::Scalar)
+    - perl(Test::Most)
+    - perl(Test::RequiresInternet)
+    - perl(URI)
+    - perl(XML::DOM)
+    - perl(XML::LibXML)
+    - perl(XML::LibXML::Reader)
+    - perl(XML::Parser::PerlSAX)
+    - perl(XML::SAX)
+    - perl(XML::SAX::Base)
+    - perl(XML::SAX::Writer)
+    - perl(XML::Twig)
+    - perl(XML::Writer)
+    - perl(YAML)
+    - perl(parent)
+    - perl(version)
+perl-Bit-Vector:
+  '7.4':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp::Clan)
+    - perl(Storable)
+    runtime:
+    - perl(Carp::Clan)
+    - perl(Storable)
+perl-CBOR-XS:
+  1.870.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Canary::Stability)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Task::Weaken)
+    - perl(Types::Serialiser)
+    - perl(common::sense)
+    runtime:
+    - perl(Types::Serialiser)
+    - perl(common::sense)
+perl-CDDB_get:
+  '2.28':
+  - build:
+    - perl
+    - perl-macros
+perl-CGI-Session:
+  '4.48':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CGI)
+    - perl(Module::Build)
+    - perl-DBD-SQLite
+    - perl(CGI::Simple)
+    - perl(FreezeThaw)
+    runtime:
+    - perl(CGI)
+perl-CGI-Simple:
+  1.281.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::Exception)
+    - perl(Test::NoWarnings)
+perl-CHI-Driver-Memcached:
+  '0.16':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CHI)
+    - perl(Date::Parse)
+    - perl(Moose)
+    - perl(Test::Class)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::Warn)
+    runtime:
+    - perl(CHI)
+    - perl(Moose)
+perl-CHI-Driver-Redis:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CHI)
+    - perl(Moo)
+    - perl(Redis)
+    - perl(Test::Class)
+    - perl(Test::Mock::Redis)
+    - perl(URI)
+    - perl(Date::Parse)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::Warn)
+    runtime:
+    - perl(CHI)
+    - perl(Moo)
+    - perl(Redis)
+    - perl(URI)
+perl-CPAN:
+  '2.36':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Archive::Tar)
+    - perl(Archive::Zip)
+    - perl(CPAN::Checksums)
+    - perl(CPAN::Meta)
+    - perl(CPAN::Meta::Requirements)
+    - perl(CPAN::Meta::YAML)
+    - perl(CPAN::Perl::Releases)
+    - perl(Compress::Bzip2)
+    - perl(Compress::Zlib)
+    - perl(Digest::SHA)
+    - perl(Expect)
+    - perl(ExtUtils::CBuilder)
+    - perl(File::HomeDir)
+    - perl(File::Which)
+    - perl(HTTP::Tiny)
+    - perl(IO::Compress::Base)
+    - perl(IO::Zlib)
+    - perl(JSON::PP)
+    - perl(LWP::UserAgent)
+    - perl(Log::Log4perl)
+    - perl(Module::Build)
+    - perl(Module::Signature)
+    - perl(Parse::CPAN::Meta)
+    - perl(Term::ReadKey)
+    - perl(Test::Harness)
+    - perl(Text::Glob)
+    - perl(YAML)
+    - perl(YAML::Syck)
+    - perl(YAML::XS)
+    runtime:
+    - perl(Archive::Tar)
+    - perl(Archive::Zip)
+    - perl(CPAN::Checksums)
+    - perl(CPAN::Meta)
+    - perl(CPAN::Meta::Requirements)
+    - perl(CPAN::Meta::YAML)
+    - perl(CPAN::Perl::Releases)
+    - perl(Compress::Bzip2)
+    - perl(Compress::Zlib)
+    - perl(Digest::SHA)
+    - perl(Expect)
+    - perl(ExtUtils::CBuilder)
+    - perl(File::HomeDir)
+    - perl(File::Which)
+    - perl(HTTP::Tiny)
+    - perl(IO::Compress::Base)
+    - perl(IO::Zlib)
+    - perl(JSON::PP)
+    - perl(LWP::UserAgent)
+    - perl(Log::Log4perl)
+    - perl(Module::Build)
+    - perl(Module::Signature)
+    - perl(Parse::CPAN::Meta)
+    - perl(Term::ReadKey)
+    - perl(Test::Harness)
+    - perl(Text::Glob)
+    - perl(YAML)
+    - perl(YAML::Syck)
+    - perl(YAML::XS)
+perl-CSS-Sass:
+  3.6.4:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Encode::Locale)
+    - perl(ExtUtils::CppGuess)
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::chdir)
+    - perl(Filesys::Notify::Simple)
+    - perl(List::Util)
+    - perl(Test::Differences)
+    - perl(YAML::XS)
+    - perl(version)
+    - gcc-c++
+    - perl(ExtUtils::CppGuess)
+    - perl(Test::Differences)
+    - perl(YAML::XS)
+    runtime:
+    - perl(Encode::Locale)
+    - perl(Filesys::Notify::Simple)
+    - perl(List::Util)
+    - perl(version)
+perl-Cache-Cache:
+  '1.08':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Digest::SHA1)
+    - perl(Error)
+    - perl(IPC::ShareLite)
+    runtime:
+    - perl(Digest::SHA1)
+    - perl(Error)
+    - perl(IPC::ShareLite)
+perl-Cache-LRU:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+    - perl(Test::Requires)
+perl-Cache-Memcached:
+  '1.30':
+  - build:
+    - perl
+    - perl-macros
+    - perl(String::CRC32)
+    runtime:
+    - perl(String::CRC32)
+perl-Cache-Memcached-Fast:
+  '0.28':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp)
+    - perl(Test2::Suite)
+    - perl(XSLoader)
+    runtime:
+    - perl(Carp)
+    - perl(XSLoader)
+perl-Cairo:
+  '1.109':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - pkgconfig(cairo)
+    runtime:
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+perl-Cairo-GObject:
+  '1.005':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Cairo)
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib)
+    - pkgconfig(cairo-gobject)
+    runtime:
+    - perl(Cairo)
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib)
+perl-Canary-Stability:
+  '2013':
+  - build:
+    - perl
+    - perl-macros
+perl-Catalyst-Authentication-Store-DBIx-Class:
+  '0.1506':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Catalyst::Model::DBIC::Schema)
+    - perl(Catalyst::Plugin::Authentication)
+    - perl(Catalyst::Runtime)
+    - perl(DBIx::Class)
+    - perl(List::MoreUtils)
+    - perl(Moose)
+    - perl(Try::Tiny)
+    - perl(namespace::autoclean)
+    - perl(Class::Accessor::Fast)
+    runtime:
+    - perl(Catalyst::Model::DBIC::Schema)
+    - perl(Catalyst::Plugin::Authentication)
+    - perl(Catalyst::Runtime)
+    - perl(DBIx::Class)
+    - perl(List::MoreUtils)
+    - perl(Moose)
+    - perl(Try::Tiny)
+    - perl(namespace::autoclean)
+    - perl(Class::Accessor::Fast)
+perl-Catalyst-Plugin-Cache:
+  '0.12':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Catalyst)
+    - perl(MRO::Compat)
+    - perl(Task::Weaken)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    - perl(Class::Accessor::Fast)
+    runtime:
+    - perl(Catalyst)
+    - perl(MRO::Compat)
+    - perl(Task::Weaken)
+    - perl(Class::Accessor::Fast)
+perl-Catalyst-Plugin-Session-State-URI:
+  '0.15':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Catalyst::Plugin::Session)
+    - perl(Class::Data::Inheritable)
+    - perl(HTML::TokeParser::Simple)
+    - perl(MIME::Types)
+    - perl(MRO::Compat)
+    - perl(Moose)
+    - perl(MooseX::Emulate::Class::Accessor::Fast)
+    - perl(Test::MockObject)
+    - perl(URI)
+    - perl(URI::Find)
+    - perl(URI::QueryParam)
+    - perl(namespace::clean)
+    - perl(Class::Accessor)
+    runtime:
+    - perl(Catalyst::Plugin::Session)
+    - perl(Class::Data::Inheritable)
+    - perl(HTML::TokeParser::Simple)
+    - perl(MIME::Types)
+    - perl(MRO::Compat)
+    - perl(Moose)
+    - perl(MooseX::Emulate::Class::Accessor::Fast)
+    - perl(Test::MockObject)
+    - perl(URI)
+    - perl(URI::Find)
+    - perl(URI::QueryParam)
+    - perl(namespace::clean)
+perl-Catalyst-Plugin-Session-Store-Delegate:
+  '0.06':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Catalyst::Plugin::Session)
+    - perl(MRO::Compat)
+    - perl(Moose)
+    - perl(MooseX::Emulate::Class::Accessor::Fast)
+    - perl(Test::use::ok)
+    - perl(namespace::clean)
+    - perl(Class::Accessor::Fast)
+    runtime:
+    - perl(Catalyst::Plugin::Session)
+    - perl(MRO::Compat)
+    - perl(Moose)
+    - perl(MooseX::Emulate::Class::Accessor::Fast)
+    - perl(namespace::clean)
+perl-Catalyst-View-Component-SubInclude:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Catalyst::Action::RenderView)
+    - perl(Catalyst::Plugin::SubRequest)
+    - perl(Catalyst::Runtime)
+    - perl(Catalyst::View::TT)
+    - perl(LWP::UserAgent)
+    - perl(List::MoreUtils)
+    - perl(Moose)
+    - perl(Moose::Role)
+    - perl(MooseX::Types)
+    - perl(Test::More)
+    - perl(URI)
+    - perl(namespace::clean)
+    - perl(File::Copy::Recursive)
+    runtime:
+    - perl(Catalyst::Action::RenderView)
+    - perl(Catalyst::Plugin::SubRequest)
+    - perl(Catalyst::Runtime)
+    - perl(Catalyst::View::TT)
+    - perl(LWP::UserAgent)
+    - perl(List::MoreUtils)
+    - perl(Moose)
+    - perl(Moose::Role)
+    - perl(MooseX::Types)
+    - perl(Test::More)
+    - perl(URI)
+    - perl(namespace::clean)
+    - perl(File::Copy::Recursive)
+perl-Class-Accessor-Lite:
+  '0.08':
+  - build:
+    - perl
+    - perl-macros
+perl-Class-Adapter:
+  '1.09':
+  - build:
+    - perl
+    - perl-macros
+perl-Class-Autouse:
+  '2.01':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Temp)
+perl-Class-C3-Componentised:
+  '1.001002':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::C3)
+    - perl(Class::Inspector)
+    - perl(MRO::Compat)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    runtime:
+    - perl(Class::C3)
+    - perl(Class::Inspector)
+    - perl(MRO::Compat)
+perl-Class-Method-Modifiers-Fast:
+  '0.041':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Data::Util)
+    - perl(Sub::Uplevel)
+    runtime:
+    - perl(Data::Util)
+perl-Class-Multimethods:
+  '1.701':
+  - build:
+    - perl
+    - perl-macros
+perl-Class-Refresh:
+  '0.07':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Load)
+    - perl(Class::Unload)
+    - perl(Devel::OverrideGlobalRequire)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(Try::Tiny)
+    - perl(Moose)
+    runtime:
+    - perl(Class::Load)
+    - perl(Class::Unload)
+    - perl(Devel::OverrideGlobalRequire)
+    - perl(Try::Tiny)
+perl-Class-ReturnValue:
+  '0.55':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::StackTrace)
+    runtime:
+    - perl(Devel::StackTrace)
+perl-Class-Spiffy:
+  '0.15':
+  - build:
+    - perl
+    - perl-macros
+perl-Class-Tangram:
+  '1.57':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Date::Manip)
+    - perl(Set::Object)
+    runtime:
+    - perl(Date::Manip)
+    - perl(Set::Object)
+perl-Class-Trigger:
+  '0.15':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::Scalar)
+    - perl(IO::WrapTie)
+perl-Code-DRY:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::CBuilder)
+    - perl(Module::Build)
+    - perl(TAP::Harness)
+    runtime:
+    - perl(ExtUtils::CBuilder)
+    - perl(Module::Build)
+    - perl(TAP::Harness)
+perl-Code-TidyAll:
+  0.840.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(Config::INI::Reader)
+    - perl(Date::Format)
+    - perl(Digest::SHA)
+    - perl(File::Which)
+    - perl(File::pushd)
+    - perl(IPC::Run3)
+    - perl(IPC::System::Simple)
+    - perl(List::Compare)
+    - perl(List::SomeUtils)
+    - perl(Log::Any)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Path::Tiny)
+    - perl(Scope::Guard)
+    - perl(Specio)
+    - perl(Specio::Declare)
+    - perl(Specio::Library::Builtins)
+    - perl(Specio::Library::Numeric)
+    - perl(Specio::Library::Path::Tiny)
+    - perl(Specio::Library::String)
+    - perl(Test::Class::Most)
+    - perl(Test::Differences)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Warnings)
+    - perl(Text::Diff)
+    - perl(Text::Diff::Table)
+    - perl(Time::Duration::Parse)
+    - perl(Try::Tiny)
+    - perl(autodie)
+    - perl(lib::relative)
+    runtime:
+    - perl(Capture::Tiny)
+    - perl(Config::INI::Reader)
+    - perl(Date::Format)
+    - perl(Digest::SHA)
+    - perl(File::Which)
+    - perl(File::pushd)
+    - perl(IPC::Run3)
+    - perl(IPC::System::Simple)
+    - perl(List::Compare)
+    - perl(List::SomeUtils)
+    - perl(Log::Any)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Path::Tiny)
+    - perl(Scope::Guard)
+    - perl(Specio)
+    - perl(Specio::Declare)
+    - perl(Specio::Library::Builtins)
+    - perl(Specio::Library::Numeric)
+    - perl(Specio::Library::Path::Tiny)
+    - perl(Specio::Library::String)
+    - perl(Text::Diff)
+    - perl(Text::Diff::Table)
+    - perl(Time::Duration::Parse)
+    - perl(Try::Tiny)
+perl-ColorThemeBase-Static:
+  '0.008':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Color::RGB::Util)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    - perl(parent)
+    runtime:
+    - perl(Color::RGB::Util)
+    - perl(parent)
+perl-Command-Runner:
+  '0.200':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(File::pushd)
+    - perl(Module::Build::Tiny)
+    - perl(String::ShellQuote)
+    - perl(Test::More)
+    runtime:
+    - perl(Capture::Tiny)
+    - perl(File::pushd)
+    - perl(String::ShellQuote)
+perl-Compiler-Lexer:
+  '0.23':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::PPPort)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::ParseXS)
+    - perl(Module::Build)
+    - perl(Module::Build::XSUtil)
+    - perl(Test::More)
+    - gcc-c++
+perl-Compress-Bzip2:
+  '2.28':
+  - build:
+    - perl
+    - perl-macros
+    - libbz2-devel
+    runtime:
+    - bzip2
+perl-Compress-LZO:
+  '1.09':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::CheckLib)
+    - perl(Test::More)
+    - lzo-devel
+perl-Compress-Raw-Bzip2:
+  2.210.0:
+  - build:
+    - perl
+    - perl-macros
+perl-Compress-Raw-Lzma:
+  2.209.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Pod::Markdown)
+    - xz
+    - xz-devel
+perl-Compress-Raw-Zlib:
+  2.209.0:
+  - build:
+    - perl
+    - perl-macros
+perl-Config-MySQL:
+  '0.02':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Config::INI::Reader)
+    - perl(Config::INI::Writer)
+    runtime:
+    - perl(Config::INI::Reader)
+    - perl(Config::INI::Writer)
+perl-Const-Exporter:
+  1.2.3:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Const::Fast)
+    - perl(Hash::Objectify)
+    - perl(List::Util)
+    - perl(Module::Metadata)
+    - perl(Package::Stash)
+    - perl(Ref::Util)
+    - perl(Sub::Identify)
+    - perl(Test::Most)
+    runtime:
+    - perl(Const::Fast)
+    - perl(List::Util)
+    - perl(Package::Stash)
+    - perl(Ref::Util)
+perl-Convert-ASN1:
+  0.340.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Math::BigInt)
+    - perl(Test::More)
+perl-Convert-Bencode_XS:
+  '0.06':
+  - build:
+    - perl
+    - perl-macros
+perl-Convert-UUlib:
+  '1.8':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Canary::Stability)
+    - perl(common::sense)
+    runtime:
+    - perl(common::sense)
+perl-Coro:
+  '6.57':
+  - build:
+    - perl
+    - perl-macros
+    - perl(AnyEvent)
+    - perl(Canary::Stability)
+    - perl(Guard)
+    - perl(common::sense)
+    runtime:
+    - perl(AnyEvent)
+    - perl(Guard)
+    - perl(common::sense)
+perl-Crypt-CBC:
+  '3.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Crypt::Cipher::AES)
+    - perl(Crypt::PBKDF2)
+    - perl(Digest::SHA)
+    runtime:
+    - perl(Crypt::Cipher::AES)
+    - perl(Crypt::PBKDF2)
+    - perl(Digest::SHA)
+perl-Crypt-Curve25519:
+  '0.07':
+  - build:
+    - perl
+    - perl-macros
+perl-Crypt-DH-GMP:
+  '0.00012':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::CheckLib)
+    - perl(Devel::PPPort)
+    - perl(ExtUtils::ParseXS)
+    - perl(Test::Requires)
+    - gmp-devel
+perl-Crypt-HSXKPasswd:
+  '3.6':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Clone)
+    - perl(DateTime)
+    - perl(File::HomeDir)
+    - perl(File::Share)
+    - perl(File::ShareDir)
+    - perl(JSON)
+    - perl(List::MoreUtils)
+    - perl(Math::Round)
+    - perl(Module::Build)
+    - perl(Module::Load)
+    - perl(Readonly)
+    - perl(Text::Unidecode)
+    - perl(Type::Library)
+    - perl(Type::Params)
+    - perl(Type::Tiny)
+    - perl(Types::Standard)
+    runtime:
+    - perl(Clone)
+    - perl(DateTime)
+    - perl(File::HomeDir)
+    - perl(File::ShareDir)
+    - perl(JSON)
+    - perl(List::MoreUtils)
+    - perl(Math::Round)
+    - perl(Module::Load)
+    - perl(Readonly)
+    - perl(Text::Unidecode)
+    - perl(Type::Library)
+    - perl(Type::Params)
+    - perl(Type::Tiny)
+    - perl(Types::Standard)
+perl-Crypt-OpenSSL-AES:
+  0.190.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Crypt::OpenSSL::Guess)
+    - perl(Digest::SHA)
+    - perl(File::Which)
+    - openssl-devel
+    runtime:
+    - openssl
+perl-Crypt-OpenSSL-DSA:
+  '0.20':
+  - build:
+    - perl
+    - perl-macros
+    - libopenssl-devel
+perl-Crypt-OpenSSL-RSA:
+  '0.33':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Crypt::OpenSSL::Guess)
+    - perl(Crypt::OpenSSL::Random)
+    - openssl-devel
+    runtime:
+    - perl(Crypt::OpenSSL::Random)
+perl-Crypt-OpenSSL-Verify:
+  '0.36':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Crypt::OpenSSL::Guess)
+    - perl(Crypt::OpenSSL::X509)
+    - perl(File::Slurper)
+    - perl(Test::Exception)
+    - openssl-devel
+    runtime:
+    - perl(Crypt::OpenSSL::X509)
+perl-Crypt-OpenSSL-X509:
+  '1.915':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Convert::ASN1)
+    - perl(Crypt::OpenSSL::Guess)
+    - perl(Test::Pod)
+    - gcc
+    - glibc-devel
+    - make
+    - openssl-devel
+    - perl(Test::Pod)
+    runtime:
+    - perl(Convert::ASN1)
+perl-Crypt-Password:
+  '0.28':
+  - build:
+    - perl
+    - perl-macros
+    - man
+    - perl(Module::Install)
+perl-Crypt-Primes:
+  '0.50':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Crypt::Random)
+    - perl(Math::Pari)
+    runtime:
+    - perl(Crypt::Random)
+    - perl(Math::Pari)
+perl-Crypt-Rijndael:
+  '1.16':
+  - build:
+    - perl
+    - perl-macros
+perl-Crypt-SSLeay:
+  '0.72':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::CBuilder)
+    - perl(LWP::Protocol::https)
+    - perl(Path::Class)
+    - perl(Try::Tiny)
+    - pkgconfig(zlib)
+    - openssl-devel
+    runtime:
+    - perl(LWP::Protocol::https)
+    - openssl
+perl-Crypt-Twofish:
+  '2.18':
+  - build:
+    - perl
+    - perl-macros
+perl-Curses:
+  '1.44':
+  - build:
+    - perl
+    - perl-macros
+    - ncurses5-devel
+perl-DBD-MariaDB:
+  1.230.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    - perl(DBI::Const::GetInfoType)
+    - perl(Devel::CheckLib)
+    - perl(Test::Deep)
+    - perl(Test::More)
+    - libmariadb-devel
+    - mariadb
+    - zlib-devel
+    - perl(B)
+    - perl(CPAN::Meta::YAML)
+    - perl(Config)
+    - perl(Data::Dumper)
+    - perl(Encode)
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::Spec)
+    - perl(File::Temp)
+    - perl(FindBin)
+    - perl(Getopt::Long)
+    - perl(Net::SSLeay)
+    - perl(Proc::ProcessTable)
+    - perl(Storable)
+    - perl(TAP::Harness)
+    - perl(Test::Pod)
+    - perl(Time::HiRes)
+    - perl(bigint)
+    - perl(lib)
+    - perl(strict)
+    - perl(utf8)
+    - perl(vars)
+    - perl(warnings)
+    runtime:
+    - perl(DBI)
+    - perl(DynaLoader)
+    - perl(strict)
+    - perl(warnings)
+perl-DBD-ODBC:
+  '1.61':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    - perl(Test::Simple)
+    - unixODBC-devel
+    runtime:
+    - perl(DBI)
+    - perl(Test::Simple)
+perl-DBD-Pg:
+  3.18.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    - perl(Test::More)
+    - perl(version)
+    - openssl-devel
+    - postgresql-devel
+    - postgresql-server-devel
+    - postgresql-server
+    runtime:
+    - perl(DBI)
+    - perl(version)
+perl-DBD-SQLite:
+  1.740.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Test::More)
+    - sqlite3-devel
+    runtime:
+    - perl(DBI)
+perl-DBD-Sybase:
+  '1.23':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    - freetds-devel
+    runtime:
+    - perl(DBI)
+    - freetds-devel
+perl-DBD-XBase:
+  '1.08':
+  - build:
+    - perl
+    - perl-macros
+perl-DBD-mysql:
+  '4.050':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    - perl(Devel::CheckLib)
+    - perl(Test::Deep)
+    - perl(Test::Simple)
+    - libmariadb-devel
+    - zlib-devel
+    runtime:
+    - perl(DBI)
+perl-DBI:
+  '1.643':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::Simple)
+perl-DBI-Shell:
+  '11.97':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    - perl(File::HomeDir)
+    - perl(IO::Interactive)
+    - perl(IO::Tee)
+    - perl(Text::CSV_XS)
+    - perl(Text::Reform)
+    - perl(DBI)
+    - perl(Text::CSV_XS)
+    runtime:
+    - perl(DBI)
+    - perl(File::HomeDir)
+    - perl(IO::Interactive)
+    - perl(IO::Tee)
+    - perl(Text::CSV_XS)
+    - perl(Text::Reform)
+    - perl(DBI)
+    - perl(Text::CSV_XS)
+    - perl(DBI::Shell)
+perl-DBICx-TestDatabase:
+  '0.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBD::SQLite)
+    - perl(DBIx::Class)
+    - perl(SQL::Translator)
+    - perl(ok)
+    runtime:
+    - perl(DBD::SQLite)
+    - perl(SQL::Translator)
+perl-DBIx-Class:
+  '0.082843':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Accessor::Grouped)
+    - perl(Class::C3::Componentised)
+    - perl(Class::Inspector)
+    - perl(Config::Any)
+    - perl(Context::Preserve)
+    - perl(DBD::SQLite)
+    - perl(DBI)
+    - perl(Data::Dumper::Concise)
+    - perl(Devel::GlobalDestruction)
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::Temp)
+    - perl(Hash::Merge)
+    - perl(MRO::Compat)
+    - perl(Module::Find)
+    - perl(Moo)
+    - perl(Package::Stash)
+    - perl(Path::Class)
+    - perl(SQL::Abstract::Classic)
+    - perl(Scope::Guard)
+    - perl(Sub::Name)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    - perl(Test::Warn)
+    - perl(Text::Balanced)
+    - perl(Try::Tiny)
+    - perl(namespace::clean)
+    - perl(Class::DBI)
+    runtime:
+    - perl(Class::Accessor::Grouped)
+    - perl(Class::C3::Componentised)
+    - perl(Class::Inspector)
+    - perl(Config::Any)
+    - perl(Context::Preserve)
+    - perl(DBI)
+    - perl(Data::Dumper::Concise)
+    - perl(Devel::GlobalDestruction)
+    - perl(Hash::Merge)
+    - perl(MRO::Compat)
+    - perl(Module::Find)
+    - perl(Moo)
+    - perl(Path::Class)
+    - perl(SQL::Abstract::Classic)
+    - perl(Scope::Guard)
+    - perl(Sub::Name)
+    - perl(Text::Balanced)
+    - perl(Try::Tiny)
+    - perl(namespace::clean)
+perl-DBIx-Class-DeploymentHandler:
+  '0.002233':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp::Clan)
+    - perl(Context::Preserve)
+    - perl(DBD::SQLite)
+    - perl(DBIx::Class)
+    - perl(Log::Contextual)
+    - perl(Module::Runtime)
+    - perl(Moose)
+    - perl(MooseX::Role::Parameterized)
+    - perl(Path::Class)
+    - perl(SQL::SplitStatement)
+    - perl(SQL::Translator)
+    - perl(Sub::Exporter::Progressive)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(Text::Brew)
+    - perl(Try::Tiny)
+    - perl(YAML)
+    - perl(aliased)
+    - perl(autodie)
+    - perl(namespace::autoclean)
+    - perl(parent)
+    - perl(YAML)
+    runtime:
+    - perl(Carp::Clan)
+    - perl(Context::Preserve)
+    - perl(DBIx::Class)
+    - perl(Log::Contextual)
+    - perl(Module::Runtime)
+    - perl(Moose)
+    - perl(MooseX::Role::Parameterized)
+    - perl(Path::Class)
+    - perl(SQL::SplitStatement)
+    - perl(SQL::Translator)
+    - perl(Sub::Exporter::Progressive)
+    - perl(Text::Brew)
+    - perl(Try::Tiny)
+    - perl(YAML)
+    - perl(autodie)
+    - perl(namespace::autoclean)
+    - perl(parent)
+perl-DBIx-Class-DynamicDefault:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBICx::TestDatabase)
+    - perl(DBIx::Class)
+    runtime:
+    - perl(DBIx::Class)
+perl-DBIx-Class-IntrospectableM2M:
+  '0.001002':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBIx::Class)
+    runtime:
+    - perl(DBIx::Class)
+perl-DBIx-Class-Schema-Config:
+  '0.001014':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Config::Any)
+    - perl(DBD::SQLite)
+    - perl(DBIx::Class)
+    - perl(DBIx::Class::Schema)
+    - perl(File::HomeDir)
+    - perl(Hash::Merge)
+    - perl(URI)
+    - perl(namespace::clean)
+    runtime:
+    - perl(Config::Any)
+    - perl(DBD::SQLite)
+    - perl(DBIx::Class)
+    - perl(DBIx::Class::Schema)
+    - perl(File::HomeDir)
+    - perl(Hash::Merge)
+    - perl(URI)
+    - perl(namespace::clean)
+perl-DBIx-Connector:
+  '0.59':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    runtime:
+    - perl(DBI)
+perl-DBIx-Simple:
+  '1.37':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    runtime:
+    - perl(DBI)
+perl-DB_File:
+  1.859.0:
+  - build:
+    - perl
+    - perl-macros
+    - libdb-4_8-devel
+    - libdb-4_5-devel
+perl-Daemon-Generic:
+  '0.85':
+  - build:
+    - perl
+    - perl-macros
+    - perl(AnyEvent)
+    - perl(Eval::LineNumbers)
+    - perl(Event)
+    - perl(File::Flock)
+    - perl(File::Slurp)
+    runtime:
+    - perl(File::Flock)
+    - perl(File::Slurp)
+perl-Dancer2:
+  1.1.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(CLI::Osprey)
+    - perl(CPAN::Meta::Requirements)
+    - perl(Capture::Tiny)
+    - perl(Clone)
+    - perl(Config::Any)
+    - perl(Digest::SHA)
+    - perl(Exporter::Tiny)
+    - perl(File::Share)
+    - perl(File::ShareDir::Install)
+    - perl(File::Which)
+    - perl(HTTP::Cookies)
+    - perl(HTTP::Date)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Headers::Fast)
+    - perl(HTTP::Tiny)
+    - perl(Hash::Merge::Simple)
+    - perl(Hash::MultiValue)
+    - perl(Import::Into)
+    - perl(JSON::MaybeXS)
+    - perl(List::Util)
+    - perl(MIME::Base64)
+    - perl(Module::Metadata)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Path::Tiny)
+    - perl(Plack)
+    - perl(Plack::Middleware::FixMissingBodyInRedirect)
+    - perl(Plack::Middleware::RemoveRedundantBody)
+    - perl(Pod::Simple::SimpleTree)
+    - perl(Ref::Util)
+    - perl(parent)
+    - perl(Safe::Isa)
+    - perl(Sub::Quote)
+    - perl(Template)
+    - perl(Template::Tiny)
+    - perl(Test::EOL)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Type::Tiny)
+    - perl(Types::Standard)
+    - perl(URI::Escape)
+    - perl(YAML)
+    runtime:
+    - perl(CLI::Osprey)
+    - perl(Clone)
+    - perl(Config::Any)
+    - perl(Digest::SHA)
+    - perl(Exporter::Tiny)
+    - perl(File::Share)
+    - perl(File::Which)
+    - perl(HTTP::Date)
+    - perl(HTTP::Headers::Fast)
+    - perl(HTTP::Tiny)
+    - perl(Hash::Merge::Simple)
+    - perl(Hash::MultiValue)
+    - perl(Import::Into)
+    - perl(JSON::MaybeXS)
+    - perl(List::Util)
+    - perl(MIME::Base64)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Path::Tiny)
+    - perl(Plack)
+    - perl(Plack::Middleware::FixMissingBodyInRedirect)
+    - perl(Plack::Middleware::RemoveRedundantBody)
+    - perl(Ref::Util)
+    - perl(parent)
+    - perl(Safe::Isa)
+    - perl(Sub::Quote)
+    - perl(Template)
+    - perl(Template::Tiny)
+    - perl(Test::More)
+    - perl(Type::Tiny)
+    - perl(Types::Standard)
+    - perl(URI::Escape)
+    - perl(YAML)
+perl-Dancer2-Plugin-Auth-Extensible:
+  '0.710':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Crypt::SaltedHash)
+    - perl(Dancer2)
+    - perl(Dancer2::Core::Types)
+    - perl(Dancer2::FileUtils)
+    - perl(Dancer2::Plugin)
+    - perl(Dancer2::Template::Tiny)
+    - perl(DateTime)
+    - perl(File::Share)
+    - perl(File::ShareDir::Install)
+    - perl(HTTP::BrowserDetect)
+    - perl(HTTP::Cookies)
+    - perl(HTTP::Request::Common)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Path::Tiny)
+    - perl(Plack)
+    - perl(Plack::Test)
+    - perl(Session::Token)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::Fatal)
+    - perl(Test::MockDateTime)
+    - perl(Test::Warnings)
+    - perl(Try::Tiny)
+    - perl(URI::Escape)
+    - perl(YAML)
+    - perl(namespace::clean)
+    runtime:
+    - perl(Crypt::SaltedHash)
+    - perl(Dancer2)
+    - perl(Dancer2::Core::Types)
+    - perl(Dancer2::FileUtils)
+    - perl(Dancer2::Plugin)
+    - perl(Dancer2::Template::Tiny)
+    - perl(File::Share)
+    - perl(HTTP::BrowserDetect)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Plack)
+    - perl(Session::Token)
+    - perl(Try::Tiny)
+    - perl(URI::Escape)
+    - perl(YAML)
+    - perl(namespace::clean)
+perl-Dancer2-Plugin-Auth-Extensible-Provider-DBIC:
+  '0.624':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBIx::Class::ResultClass::HashRefInflator)
+    - perl(Dancer2)
+    - perl(Dancer2::Core::Types)
+    - perl(Dancer2::Plugin::Auth::Extensible)
+    - perl(Dancer2::Plugin::DBIC)
+    - perl(DateTime)
+    - perl(DateTime::Format::SQLite)
+    - perl(Moo)
+    - perl(String::CamelCase)
+    - perl(Test::MockObject)
+    - perl(Test::Warn)
+    - perl(namespace::clean)
+    - perl(DBD::SQLite)
+    - perl(HTTP::Cookies)
+    - perl(Test::MockDateTime)
+    runtime:
+    - perl(DBIx::Class::ResultClass::HashRefInflator)
+    - perl(Dancer2)
+    - perl(Dancer2::Core::Types)
+    - perl(Dancer2::Plugin::Auth::Extensible)
+    - perl(Dancer2::Plugin::DBIC)
+    - perl(DateTime)
+    - perl(Moo)
+    - perl(String::CamelCase)
+    - perl(namespace::clean)
+perl-Data-Clone:
+  0.6.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::PPPort)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::ParseXS)
+    - perl(Module::Build)
+    - perl(Module::Build::XSUtil)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(parent)
+    runtime:
+    - perl(parent)
+perl-Data-Compare:
+  '1.29':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Clone)
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::Find::Rule)
+    - perl(Test::More)
+    runtime:
+    - perl(Clone)
+    - perl(File::Find::Rule)
+    - perl(Test::More)
+perl-Data-Dump:
+  '1.25':
+  - build:
+    - perl
+    - perl-macros
+perl-Data-Locations:
+  '5.5':
+  - build:
+    - perl
+    - perl-macros
+perl-Data-Munge:
+  0.100.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test2::V0)
+perl-Data-Package:
+  '1.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Inspector)
+    - perl(File::ShareDir)
+    - perl(Params::Coerce)
+    - perl(Params::Util)
+    runtime:
+    - perl(Class::Inspector)
+    - perl(File::ShareDir)
+    - perl(Params::Coerce)
+    - perl(Params::Util)
+perl-Data-Password:
+  '1.12':
+  - build:
+    - perl
+    - perl-macros
+    runtime:
+    - words
+perl-Data-Random:
+  '0.13':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::ShareDir::Install)
+    - perl(Test::MockTime)
+    - perl(Test::More)
+    - perl(Time::Piece)
+    runtime:
+    - perl(Time::Piece)
+perl-Data-Stag:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::String)
+    runtime:
+    - perl(IO::String)
+perl-Data-Undump:
+  '0.15':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::LongString)
+    runtime:
+    - perl(Test::LongString)
+perl-Date-Calc:
+  '6.4':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Bit::Vector)
+    - perl(Carp::Clan)
+    runtime:
+    - perl(Bit::Vector)
+    - perl(Carp::Clan)
+perl-Date-Calc-XS:
+  '6.4':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Bit::Vector)
+    - perl(Carp::Clan)
+    - perl(Date::Calc)
+    runtime:
+    - perl(Bit::Vector)
+    - perl(Carp::Clan)
+    - perl(Date::Calc)
+perl-Date-Holidays-DE:
+  '2.06':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Date::Calc)
+    runtime:
+    - perl(Date::Calc)
+perl-Date-ICal:
+  '2.682':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Date::Leapyear)
+    runtime:
+    - perl(Date::Leapyear)
+perl-Date-Range:
+  '1.41':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Date::Simple)
+    runtime:
+    - perl(Date::Simple)
+perl-DateTime-Format-ISO8601:
+  '0.16':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DateTime)
+    - perl(DateTime::Format::Builder)
+    - perl(Params::ValidationCompiler)
+    - perl(Specio)
+    - perl(Specio::Declare)
+    - perl(Specio::Exporter)
+    - perl(Specio::Library::Builtins)
+    - perl(Test2::V0)
+    - perl(Test::More)
+    - perl(namespace::autoclean)
+    - perl(parent)
+    runtime:
+    - perl(DateTime)
+    - perl(DateTime::Format::Builder)
+    - perl(Params::ValidationCompiler)
+    - perl(Specio)
+    - perl(Specio::Declare)
+    - perl(Specio::Exporter)
+    - perl(Specio::Library::Builtins)
+    - perl(namespace::autoclean)
+    - perl(parent)
+perl-DateTime-HiRes:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DateTime)
+    - perl(Test::More)
+    runtime:
+    - perl(DateTime)
+perl-DateTime-TimeZone:
+  2.620.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Singleton)
+    - perl(List::Util)
+    - perl(Module::Runtime)
+    - perl(Params::ValidationCompiler)
+    - perl(Specio::Library::Builtins)
+    - perl(Specio::Library::String)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(Try::Tiny)
+    - perl(namespace::autoclean)
+    - perl(parent)
+    runtime:
+    - perl(Class::Singleton)
+    - perl(List::Util)
+    - perl(Module::Runtime)
+    - perl(Params::ValidationCompiler)
+    - perl(Specio::Library::Builtins)
+    - perl(Specio::Library::String)
+    - perl(Try::Tiny)
+    - perl(namespace::autoclean)
+    - perl(parent)
+perl-Declare-Constraints-Simple:
+  '0.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp::Clan)
+    - perl(Class::Inspector)
+    - perl(aliased)
+    runtime:
+    - perl(Carp::Clan)
+    - perl(Class::Inspector)
+    - perl(aliased)
+perl-Devel-CheckOS:
+  '1.96':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::Find::Rule)
+    - perl(File::Temp)
+    - perl(Test::More)
+    - perl(Test::Warnings)
+    runtime:
+    - perl(File::Find::Rule)
+    - perl(File::Temp)
+    - perl(Test::More)
+    - perl(Test::Warnings)
+perl-Devel-Cover:
+  '1.40':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::Entities)
+    - perl(Test::More)
+    - perl-B-Debug
+    runtime:
+    - perl(HTML::Entities)
+    - perl-B-Debug
+perl-Devel-Cover-Report-Codecov:
+  '0.25':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Archive::Tar)
+    - perl(Capture::Tiny)
+    - perl(Cwd)
+    - perl(Cwd::Guard)
+    - perl(Devel::Cover)
+    - perl(File::Temp)
+    - perl(File::Which)
+    - perl(Furl)
+    - perl(IO::Socket::SSL)
+    - perl(JSON::XS)
+    - perl(Module::Build::Tiny)
+    - perl(Module::Find)
+    - perl(Perl::Critic)
+    - perl(Sub::Retry)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::Mock::Guard)
+    - perl(Test::Mock::Time)
+    - perl(Test::MockObject)
+    - perl(Test::More)
+    - perl(Test::Perl::Critic)
+    - perl(Test::Requires::Git)
+    - perl(URI)
+    runtime:
+    - perl(Capture::Tiny)
+    - perl(Devel::Cover)
+    - perl(Furl)
+    - perl(IO::Socket::SSL)
+    - perl(JSON::XS)
+    - perl(Module::Find)
+    - perl(Sub::Retry)
+    - perl(URI)
+perl-Devel-Cycle:
+  '1.12':
+  - build:
+    - perl
+    - perl-macros
+perl-Devel-PPPort:
+  '3.68':
+  - build:
+    - perl
+    - perl-macros
+perl-Devel-Symdump:
+  '2.18':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Compress::Zlib)
+    runtime:
+    - perl(Compress::Zlib)
+perl-Devel-Trace:
+  '0.12':
+  - build:
+    - perl
+    - perl-macros
+perl-Devel-ptkdb:
+  1.109.100:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Tk)
+    runtime:
+    - perl(Tk)
+perl-Digest-CRC:
+  '0.24':
+  - build:
+    - perl
+    - perl-macros
+perl-Digest-SHA:
+  '6.04':
+  - build:
+    - perl
+    - perl-macros
+perl-Dist-Zilla:
+  6.31.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(App::Cmd::Command::version)
+    - perl(App::Cmd::Setup)
+    - perl(App::Cmd::Tester)
+    - perl(App::Cmd::Tester::CaptureExternal)
+    - perl(Archive::Tar)
+    - perl(CPAN::Meta::Check)
+    - perl(CPAN::Meta::Converter)
+    - perl(CPAN::Meta::Merge)
+    - perl(CPAN::Meta::Prereqs)
+    - perl(CPAN::Meta::Requirements)
+    - perl(CPAN::Meta::Validator)
+    - perl(CPAN::Uploader)
+    - perl(Config::INI::Reader)
+    - perl(Config::MVP)
+    - perl(Config::MVP::Assembler)
+    - perl(Config::MVP::Assembler::WithBundles)
+    - perl(Config::MVP::Reader)
+    - perl(Config::MVP::Reader::Findable::ByExtension)
+    - perl(Config::MVP::Reader::Finder)
+    - perl(Config::MVP::Reader::INI)
+    - perl(Config::MVP::Section)
+    - perl(Data::Section)
+    - perl(DateTime)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::Manifest)
+    - perl(File::Copy::Recursive)
+    - perl(File::Find::Rule)
+    - perl(File::ShareDir)
+    - perl(File::ShareDir::Install)
+    - perl(File::pushd)
+    - perl(JSON::MaybeXS)
+    - perl(List::Util)
+    - perl(Log::Dispatchouli)
+    - perl(Mixin::Linewise::Readers)
+    - perl(Module::CoreList)
+    - perl(Module::Runtime)
+    - perl(Moose)
+    - perl(Moose::Role)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::LazyRequire)
+    - perl(MooseX::Role::Parameterized)
+    - perl(MooseX::SetOnce)
+    - perl(MooseX::Types)
+    - perl(MooseX::Types::Moose)
+    - perl(MooseX::Types::Perl)
+    - perl(PPI::Document)
+    - perl(Params::Util)
+    - perl(Path::Tiny)
+    - perl(Perl::PrereqScanner)
+    - perl(Pod::Simple)
+    - perl(Software::License)
+    - perl(Software::License::None)
+    - perl(Software::LicenseUtils)
+    - perl(String::Formatter)
+    - perl(String::RewritePrefix)
+    - perl(Sub::Exporter)
+    - perl(Sub::Exporter::ForMethods)
+    - perl(Sub::Exporter::Util)
+    - perl(Term::ANSIColor)
+    - perl(Term::Encoding)
+    - perl(Term::ReadKey)
+    - perl(Term::UI)
+    - perl(Test::Deep)
+    - perl(Test::FailWarnings)
+    - perl(Test::Fatal)
+    - perl(Test::File::ShareDir)
+    - perl(Test::More)
+    - perl(Text::Glob)
+    - perl(Text::Template)
+    - perl(Try::Tiny)
+    - perl(YAML::Tiny)
+    - perl(autodie)
+    - perl(experimental)
+    - perl(namespace::autoclean)
+    - perl(parent)
+    - perl(version)
+    - timezone
+    runtime:
+    - perl(App::Cmd::Command::version)
+    - perl(App::Cmd::Setup)
+    - perl(App::Cmd::Tester)
+    - perl(App::Cmd::Tester::CaptureExternal)
+    - perl(Archive::Tar)
+    - perl(CPAN::Meta::Converter)
+    - perl(CPAN::Meta::Merge)
+    - perl(CPAN::Meta::Prereqs)
+    - perl(CPAN::Meta::Requirements)
+    - perl(CPAN::Meta::Validator)
+    - perl(CPAN::Uploader)
+    - perl(Config::INI::Reader)
+    - perl(Config::MVP)
+    - perl(Config::MVP::Assembler)
+    - perl(Config::MVP::Assembler::WithBundles)
+    - perl(Config::MVP::Reader)
+    - perl(Config::MVP::Reader::Findable::ByExtension)
+    - perl(Config::MVP::Reader::Finder)
+    - perl(Config::MVP::Reader::INI)
+    - perl(Config::MVP::Section)
+    - perl(Data::Section)
+    - perl(DateTime)
+    - perl(ExtUtils::Manifest)
+    - perl(File::Copy::Recursive)
+    - perl(File::Find::Rule)
+    - perl(File::ShareDir)
+    - perl(File::ShareDir::Install)
+    - perl(File::pushd)
+    - perl(JSON::MaybeXS)
+    - perl(List::Util)
+    - perl(Log::Dispatchouli)
+    - perl(Mixin::Linewise::Readers)
+    - perl(Module::CoreList)
+    - perl(Module::Runtime)
+    - perl(Moose)
+    - perl(Moose::Role)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::LazyRequire)
+    - perl(MooseX::Role::Parameterized)
+    - perl(MooseX::SetOnce)
+    - perl(MooseX::Types)
+    - perl(MooseX::Types::Moose)
+    - perl(MooseX::Types::Perl)
+    - perl(PPI::Document)
+    - perl(Params::Util)
+    - perl(Path::Tiny)
+    - perl(Perl::PrereqScanner)
+    - perl(Pod::Simple)
+    - perl(Software::License)
+    - perl(Software::LicenseUtils)
+    - perl(String::Formatter)
+    - perl(String::RewritePrefix)
+    - perl(Sub::Exporter)
+    - perl(Sub::Exporter::ForMethods)
+    - perl(Sub::Exporter::Util)
+    - perl(Term::ANSIColor)
+    - perl(Term::Encoding)
+    - perl(Term::ReadKey)
+    - perl(Term::UI)
+    - perl(Test::Deep)
+    - perl(Text::Glob)
+    - perl(Text::Template)
+    - perl(Try::Tiny)
+    - perl(YAML::Tiny)
+    - perl(autodie)
+    - perl(experimental)
+    - perl(namespace::autoclean)
+    - perl(parent)
+    - perl(version)
+perl-Dist-Zilla-Plugin-ApacheTest:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Dist::Zilla::Plugin::DynamicPrereqs)
+    - perl(Dist::Zilla::Plugin::MakeMaker::Awesome)
+    - perl(Dist::Zilla::Role::PluginBundle::Easy)
+    - perl(Moose)
+    runtime:
+    - perl(Dist::Zilla::Plugin::DynamicPrereqs)
+    - perl(Dist::Zilla::Plugin::MakeMaker::Awesome)
+    - perl(Dist::Zilla::Role::PluginBundle::Easy)
+    - perl(Moose)
+perl-Dist-Zilla-Plugin-CheckChangesHasContent:
+  '0.011':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(Data::Section)
+    - perl(Dist::Zilla)
+    - perl(Dist::Zilla::File::InMemory)
+    - perl(Dist::Zilla::Role::BeforeRelease)
+    - perl(Dist::Zilla::Role::FileGatherer)
+    - perl(Dist::Zilla::Role::FileMunger)
+    - perl(Dist::Zilla::Role::TextTemplate)
+    - perl(Dist::Zilla::Tester)
+    - perl(Moose)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(Path::Tiny)
+    - perl(Sub::Exporter::ForMethods)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(autodie)
+    - perl(namespace::autoclean)
+    runtime:
+    - perl(Data::Section)
+    - perl(Dist::Zilla)
+    - perl(Dist::Zilla::File::InMemory)
+    - perl(Dist::Zilla::Role::BeforeRelease)
+    - perl(Dist::Zilla::Role::FileGatherer)
+    - perl(Dist::Zilla::Role::FileMunger)
+    - perl(Dist::Zilla::Role::TextTemplate)
+    - perl(Moose)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(Sub::Exporter::ForMethods)
+    - perl(autodie)
+    - perl(namespace::autoclean)
+perl-Dist-Zilla-Plugin-PromptIfStale:
+  0.60.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(App::Cmd::Tester)
+    - perl(CPAN::DistnameInfo)
+    - perl(CPAN::Meta::Requirements)
+    - perl(Class::Method::Modifiers)
+    - perl(Config::MVP::Section)
+    - perl(Dist::Zilla)
+    - perl(Dist::Zilla::App)
+    - perl(Dist::Zilla::App::Tester)
+    - perl(Dist::Zilla::Chrome::Test)
+    - perl(Dist::Zilla::Role::AfterBuild)
+    - perl(Dist::Zilla::Role::BeforeBuild)
+    - perl(Dist::Zilla::Role::BeforeRelease)
+    - perl(Dist::Zilla::Role::Plugin)
+    - perl(Dist::Zilla::Role::PluginBundle::Easy)
+    - perl(Dist::Zilla::Util::AuthorDeps)
+    - perl(File::pushd)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Tiny)
+    - perl(IO::Pty)
+    - perl(List::Util)
+    - perl(Module::CoreList)
+    - perl(Module::Metadata)
+    - perl(Module::Runtime)
+    - perl(Moose)
+    - perl(Moose::Util)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(Parse::CPAN::Packages::Fast)
+    - perl(Path::Tiny)
+    - perl(Term::ANSIColor)
+    - perl(Test::DZil)
+    - perl(Test::Deep)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Try::Tiny)
+    - perl(YAML::Tiny)
+    - perl(experimental)
+    - perl(namespace::autoclean)
+    - perl(stable)
+    - perl(strictures)
+    - perl(version)
+    - perl(IO::Pty)
+    runtime:
+    - perl(CPAN::DistnameInfo)
+    - perl(Config::MVP::Section)
+    - perl(Dist::Zilla)
+    - perl(Dist::Zilla::App)
+    - perl(Dist::Zilla::Role::AfterBuild)
+    - perl(Dist::Zilla::Role::BeforeBuild)
+    - perl(Dist::Zilla::Role::BeforeRelease)
+    - perl(Dist::Zilla::Util::AuthorDeps)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Tiny)
+    - perl(List::Util)
+    - perl(Module::CoreList)
+    - perl(Module::Metadata)
+    - perl(Moose)
+    - perl(Moose::Util)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(Parse::CPAN::Packages::Fast)
+    - perl(Path::Tiny)
+    - perl(Term::ANSIColor)
+    - perl(Try::Tiny)
+    - perl(YAML::Tiny)
+    - perl(experimental)
+    - perl(namespace::autoclean)
+    - perl(stable)
+    - perl(strictures)
+    - perl(version)
+perl-EV:
+  '4.33':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Canary::Stability)
+    - perl(common::sense)
+    runtime:
+    - perl(common::sense)
+perl-Encode:
+  3.210.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+    - perl(parent)
+    runtime:
+    - perl(parent)
+perl-Eval-LineNumbers:
+  '0.35':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+perl-Event:
+  '1.28':
+  - build:
+    - perl
+    - perl-macros
+perl-Exception-Base:
+  '0.2501':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::Unit::Lite)
+    - perl(Module::Build)
+perl-Expect:
+  1.380.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(IO::Pty)
+    - perl(IO::Tty)
+    - perl(Test::More)
+    runtime:
+    - perl(IO::Pty)
+    - perl(IO::Tty)
+perl-ExtUtils-CppGuess:
+  0.270.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::ParseXS)
+    - perl(Module::Build)
+    - perl(Test::More)
+    - gcc-c++
+    runtime:
+    - perl(Capture::Tiny)
+    - perl(ExtUtils::ParseXS)
+perl-ExtUtils-Depends:
+  '0.8001':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    runtime:
+    - perl(ExtUtils::MakeMaker)
+perl-ExtUtils-F77:
+  '1.26':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Which)
+    - gcc-fortran
+    - gmp-devel
+    runtime:
+    - perl(File::Which)
+perl-ExtUtils-MakeMaker:
+  '7.70':
+  - build:
+    - perl
+    - perl-macros
+perl-ExtUtils-PkgConfig:
+  '1.160000':
+  - build:
+    - perl
+    - perl-macros
+    - pkgconfig
+    runtime:
+    - pkgconfig
+perl-FCGI:
+  '0.82':
+  - build:
+    - perl
+    - perl-macros
+    - perl(FCGI::Client)
+perl-FFI-CheckLib:
+  '0.31':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Which)
+    - perl(List::Util)
+    - perl(Test2::API)
+    - perl(Test2::Require::EnvVar)
+    - perl(Test2::Require::Module)
+    - perl(Test2::V0)
+    runtime:
+    - perl(File::Which)
+    - perl(List::Util)
+perl-Feature-Compat-Try:
+  '0.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Syntax::Keyword::Try)
+    - perl(Test::More)
+    runtime:
+    - perl(Syntax::Keyword::Try)
+perl-File-ANVL:
+  '1.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Value)
+    runtime:
+    - perl(File::Value)
+perl-File-Binary:
+  '1.7':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::File)
+    - perl(IO::Scalar)
+    runtime:
+    - perl(IO::File)
+    - perl(IO::Scalar)
+perl-File-Comments:
+  '0.08':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Archive::Tar)
+    - perl(HTML::TokeParser)
+    - perl(HTML::TreeBuilder)
+    - perl(Log::Log4perl)
+    - perl(Module::Pluggable)
+    - perl(PPI)
+    - perl(Pod::Parser)
+    - perl(Sysadm::Install)
+    runtime:
+    - perl(Archive::Tar)
+    - perl(HTML::TokeParser)
+    - perl(HTML::TreeBuilder)
+    - perl(Log::Log4perl)
+    - perl(Module::Pluggable)
+    - perl(PPI)
+    - perl(Pod::Parser)
+    - perl(Sysadm::Install)
+perl-File-Find-Rule-Perl:
+  '1.16':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Find::Rule)
+    - perl(Params::Util)
+    - perl(Parse::CPAN::Meta)
+    runtime:
+    - perl(File::Find::Rule)
+    - perl(Params::Util)
+    - perl(Parse::CPAN::Meta)
+perl-File-Flock:
+  '2014.01':
+  - build:
+    - perl
+    - perl-macros
+    - perl(AnyEvent)
+    - perl(Data::Structure::Util)
+    - perl(File::Slurp)
+    - perl(IO::Event)
+    - perl(Module::Build)
+    - perl(Test::SharedFork)
+    runtime:
+    - perl(AnyEvent)
+    - perl(Data::Structure::Util)
+    - perl(File::Slurp)
+    - perl(IO::Event)
+    - perl(Test::SharedFork)
+perl-File-HomeDir:
+  '1.006':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Path)
+    - perl(File::Temp)
+    - perl(File::Which)
+    - perl(Test::More)
+    runtime:
+    - perl(File::Path)
+    - perl(File::Temp)
+    - perl(File::Which)
+perl-File-LibMagic:
+  '1.23':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Config::AutoConf)
+    - perl(ExtUtils::CBuilder)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - file-devel
+    - zlib-devel
+perl-File-MimeInfo:
+  0.340.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Encode::Locale)
+    - perl(File::BaseDir)
+    - perl(File::DesktopEntry)
+    - perl(Test::More)
+    - shared-mime-info
+    runtime:
+    - perl(Encode::Locale)
+    - perl(File::BaseDir)
+    - perl(File::DesktopEntry)
+    - shared-mime-info
+    - perl(File::BaseDir)
+perl-File-Mork:
+  '0.4':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::Entities)
+    - perl(Module::Build)
+    runtime:
+    - perl(HTML::Entities)
+perl-File-NFSLock:
+  '1.29':
+  - build:
+    - perl
+    - perl-macros
+perl-File-Path:
+  '2.180000':
+  - build:
+    - perl
+    - perl-macros
+perl-File-Rename:
+  2.20.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(Pod::Parser)
+perl-File-Rsync:
+  '0.49':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IPC::Run3)
+    - rsync
+    runtime:
+    - perl(IPC::Run3)
+    - rsync
+perl-File-ShareDir:
+  '1.118':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Inspector)
+    - perl(File::Path)
+    - perl(Test::More)
+    - perl(File::ShareDir::Install)
+    runtime:
+    - perl(Class::Inspector)
+perl-File-Slurp:
+  '9999.32':
+  - build:
+    - perl
+    - perl-macros
+perl-File-Stat-OO:
+  '0.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Accessor)
+    - perl(DateTime)
+    runtime:
+    - perl(Class::Accessor)
+    - perl(DateTime)
+perl-File-Which:
+  '1.27':
+  - build:
+    - perl
+    - perl-macros
+perl-FileHandle-Unget:
+  '0.1634':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Slurper)
+    - perl(Test::Compile)
+    - perl(UNIVERSAL::require)
+perl-Finance-Quote:
+  '1.54':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Date::Manip)
+    - perl(Date::Range)
+    - perl(Date::Simple)
+    - perl(DateTime)
+    - perl(DateTime::Duration)
+    - perl(DateTime::Format::ISO8601)
+    - perl(DateTime::Format::Strptime)
+    - perl(HTML::Entities)
+    - perl(HTML::TableExtract)
+    - perl(HTML::TokeParser)
+    - perl(HTML::TokeParser::Simple)
+    - perl(HTML::TreeBuilder)
+    - perl(HTML::TreeBuilder::XPath)
+    - perl(HTTP::Cookies)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Status)
+    - perl(IO::Uncompress::Unzip)
+    - perl(JSON)
+    - perl(LWP::Protocol::https)
+    - perl(LWP::Simple)
+    - perl(LWP::UserAgent)
+    - perl(Module::Load)
+    - perl(Mozilla::CA)
+    - perl(Readonly)
+    - perl(Spreadsheet::XLSX)
+    - perl(String::Util)
+    - perl(Test::Kwalitee)
+    - perl(Test::Perl::Critic)
+    - perl(Test::Pod)
+    - perl(Test::Pod::Coverage)
+    - perl(Text::Template)
+    - perl(Time::Piece)
+    - perl(Time::Seconds)
+    - perl(Try::Tiny)
+    - perl(Web::Scraper)
+    - perl(XML::LibXML)
+    - perl(feature)
+    runtime:
+    - perl(DateTime)
+    - perl(DateTime::Format::Strptime)
+    - perl(HTML::Entities)
+    - perl(HTML::TableExtract)
+    - perl(HTML::TokeParser)
+    - perl(HTML::TokeParser::Simple)
+    - perl(HTML::TreeBuilder)
+    - perl(HTML::TreeBuilder::XPath)
+    - perl(HTTP::Cookies)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Status)
+    - perl(IO::Uncompress::Unzip)
+    - perl(JSON)
+    - perl(LWP::Protocol::https)
+    - perl(LWP::Simple)
+    - perl(LWP::UserAgent)
+    - perl(Module::Load)
+    - perl(Mozilla::CA)
+    - perl(Readonly)
+    - perl(Spreadsheet::XLSX)
+    - perl(String::Util)
+    - perl(Text::Template)
+    - perl(Time::Piece)
+    - perl(Time::Seconds)
+    - perl(Try::Tiny)
+    - perl(Web::Scraper)
+    - perl(XML::LibXML)
+perl-FindBin-libs:
+  3.0.2:
+  - build:
+    - perl
+    - perl-macros
+    - perl(version)
+    - perl(File::Copy::Recursive::Reduced)
+    runtime:
+    - perl(version)
+    - perl(File::Copy::Recursive::Reduced)
+perl-Font-FreeType:
+  '0.16':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::CheckLib)
+    - perl(File::Which)
+    - perl(Test::Warnings)
+    - freetype2-devel
+perl-Font-TTF:
+  '1.06':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::String)
+    runtime:
+    - perl(IO::String)
+perl-FormValidator-Simple:
+  '0.29':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Accessor)
+    - perl(Class::Data::Accessor)
+    - perl(Class::Data::Inheritable)
+    - perl(Class::Inspector)
+    - perl(Date::Calc)
+    - perl(DateTime::Format::Strptime)
+    - perl(Email::Valid)
+    - perl(Email::Valid::Loose)
+    - perl(List::MoreUtils)
+    - perl(Mail::Address)
+    - perl(Tie::IxHash)
+    - perl(UNIVERSAL::require)
+    - perl(YAML)
+    - perl(CGI)
+    runtime:
+    - perl(Class::Accessor)
+    - perl(Class::Data::Accessor)
+    - perl(Class::Data::Inheritable)
+    - perl(Class::Inspector)
+    - perl(Date::Calc)
+    - perl(DateTime::Format::Strptime)
+    - perl(Email::Valid)
+    - perl(Email::Valid::Loose)
+    - perl(List::MoreUtils)
+    - perl(Mail::Address)
+    - perl(Tie::IxHash)
+    - perl(UNIVERSAL::require)
+    - perl(YAML)
+perl-Furl:
+  '3.14':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Accessor::Lite)
+    - perl(HTTP::Parser::XS)
+    - perl(Module::Build::Tiny)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(Test::TCP)
+    runtime:
+    - perl(Class::Accessor::Lite)
+    - perl(HTTP::Parser::XS)
+perl-GD:
+  '2.78':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::Constant)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Test::Fork)
+    - perl(Test::More)
+    - perl(Test::NoWarnings)
+    - gd-devel
+    runtime:
+    - gd
+perl-GDGraph:
+  1.560.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(ExtUtils::MakeMaker)
+    - perl(GD)
+    - perl(GD::Text)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    runtime:
+    - perl(GD)
+    - perl(GD::Text)
+perl-Geo-IP2Location:
+  '8.70':
+  - build:
+    - perl
+    - perl-macros
+perl-Geo-ShapeFile:
+  '3.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Math::Trig)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    - perl(Tree::R)
+    - perl(autovivification)
+    - perl(parent)
+    - perl(rlib)
+    runtime:
+    - perl(autovivification)
+    - perl(Math::Trig)
+    - perl(Tree::R)
+    - perl(parent)
+perl-Getopt-Helpful:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IPC::Run)
+    - perl(Module::Build)
+    - perl(YAML)
+    runtime:
+    - perl(IPC::Run)
+    - perl(YAML)
+perl-Getopt-Long:
+  2.570.0:
+  - build:
+    - perl
+    - perl-macros
+perl-Git-Repository:
+  '1.325':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Git::Version::Compare)
+    - perl(System::Command)
+    - perl(Test::Requires::Git)
+    - perl(namespace::clean)
+    - git-core
+    runtime:
+    - perl(Git::Version::Compare)
+    - perl(System::Command)
+    - perl(namespace::clean)
+perl-Git-Wrapper:
+  '0.048':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::CheckBin)
+    - perl(File::chdir)
+    - perl(IPC::Cmd)
+    - perl(Sort::Versions)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - git-core
+    runtime:
+    - perl(File::chdir)
+    - perl(IPC::Cmd)
+    - perl(Sort::Versions)
+    - git-core
+perl-Glib:
+  '1.3294':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - glib2-devel
+    runtime:
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+perl-Glib-Object-Introspection:
+  0.51.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib)
+    - pkgconfig
+    - pkgconfig(gobject-introspection-1.0)
+    runtime:
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib)
+perl-Gnome2-Canvas:
+  '1.006':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib)
+    - perl(Gtk2)
+    - libgnomecanvas-devel
+    runtime:
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib)
+    - perl(Gtk2)
+perl-GnuPG-Interface:
+  1.40.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(Math::BigInt)
+    - perl(Moo)
+    - perl(MooX::HandlesVia)
+    - perl(MooX::late)
+    - gpg2
+    runtime:
+    - perl(Math::BigInt)
+    - perl(Moo)
+    - perl(MooX::HandlesVia)
+    - perl(MooX::late)
+    - gpg2
+perl-GraphViz:
+  '2.26':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Which)
+    - perl(IPC::Run)
+    - perl(LWP::Simple)
+    - perl(Parse::RecDescent)
+    - perl(Test::More)
+    - perl(XML::Twig)
+    - perl(XML::XPath)
+    - graphviz
+    runtime:
+    - perl(File::Which)
+    - perl(IPC::Run)
+    - perl(LWP::Simple)
+    - perl(Parse::RecDescent)
+    - perl(XML::Twig)
+    - perl(XML::XPath)
+    - cairo
+    - graphviz
+    - graphviz-gnome
+    - pango
+perl-GraphViz2:
+  '2.67':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Data::Section::Simple)
+    - perl(File::Which)
+    - perl(Graph)
+    - perl(IPC::Run3)
+    - perl(Moo)
+    - perl(Test::More)
+    - perl(Test::Snapshot)
+    - perl(Types::Standard)
+    - graphviz
+    - graphviz-gnome
+    runtime:
+    - perl(Data::Section::Simple)
+    - perl(File::Which)
+    - perl(Graph)
+    - perl(IPC::Run3)
+    - perl(Moo)
+    - perl(Types::Standard)
+    - cairo
+    - graphviz
+    - graphviz-gnome
+    - pango
+perl-Gtk2:
+  '1.24993':
+  - build:
+    - perl
+    - perl-macros
+    - xorg-x11
+    - xorg-x11-Xvfb
+    - xorg-x11-server
+    - xvfb-run
+    - perl(Cairo)
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib)
+    - perl(Pango)
+    - pkgconfig(gtk+-2.0)
+    runtime:
+    - perl(Cairo)
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib)
+    - perl(Pango)
+perl-Gtk2-Notify:
+  '0.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib::MakeHelper)
+    - perl(Gtk2)
+    - perl(Gtk2::CodeGen)
+    - cairo-devel
+    - gtk2-devel
+    - libnotify-devel
+    - pango-devel
+    - perl(Test::Exception)
+    - perl(Test::Pod)
+    runtime:
+    - perl(Gtk2)
+perl-Gtk3:
+  '0.038':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Cairo::GObject)
+    - perl(Glib::Object::Introspection)
+    - perl(Test::Simple)
+    - typelib(Gtk)
+    - typelib(GdkPixdata)
+    runtime:
+    - perl(Cairo::GObject)
+    - perl(Glib::Object::Introspection)
+    - perl(Test::Simple)
+perl-Gtk3-ImageView:
+  '10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Cairo)
+    - perl(Carp::Always)
+    - perl(Glib)
+    - perl(Glib::Object::Subclass)
+    - perl(Gtk3)
+    - perl(Image::Magick)
+    - perl(Readonly)
+    - perl(Test::Deep)
+    - perl(Test::MockObject)
+    - perl(Test::Perl::Critic)
+    - perl(Try::Tiny)
+    - perl(feature)
+    - libgtkimageview-devel
+    runtime:
+    - perl(Cairo)
+    - perl(Glib)
+    - perl(Glib::Object::Subclass)
+    - perl(Gtk3)
+    - perl(Readonly)
+    - perl(feature)
+perl-Gtk3-SimpleList:
+  '0.21':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Gtk3)
+    - typelib(Gtk)
+    - typelib(GdkPixdata)
+    runtime:
+    - perl(Gtk3)
+perl-Guard:
+  '1.023':
+  - build:
+    - perl
+    - perl-macros
+perl-HTML-Escape:
+  '1.11':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::PPPort)
+    - perl(ExtUtils::CBuilder)
+    - perl(Module::Build)
+    - perl(Module::Build::Pluggable::PPPort)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(parent)
+    runtime:
+    - perl(parent)
+perl-HTML-FillInForm:
+  '2.22':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CGI)
+    - perl(HTML::TokeParser)
+    - perl(Test::More)
+perl-HTML-Form:
+  '6.11':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::TokeParser)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Response)
+    - perl(Test::More)
+    - perl(Test::Warnings)
+    - perl(URI)
+    - perl(parent)
+    runtime:
+    - perl(HTML::TokeParser)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(Test::More)
+    - perl(URI)
+    - perl(parent)
+perl-HTML-Restrict:
+  3.0.2:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Data::Dump)
+    - perl(HTML::Entities)
+    - perl(HTML::Parser)
+    - perl(List::Util)
+    - perl(Moo)
+    - perl(Sub::Quote)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Type::Tiny)
+    - perl(Types::Standard)
+    - perl(URI)
+    - perl(namespace::clean)
+    - perl(version)
+    runtime:
+    - perl(Data::Dump)
+    - perl(HTML::Entities)
+    - perl(HTML::Parser)
+    - perl(List::Util)
+    - perl(Moo)
+    - perl(Sub::Quote)
+    - perl(Type::Tiny)
+    - perl(Types::Standard)
+    - perl(URI)
+    - perl(namespace::clean)
+    - perl(version)
+perl-HTML-RewriteAttributes:
+  '0.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::Entities)
+    - perl(HTML::Parser)
+    - perl(HTML::Tagset)
+    - perl(URI)
+    runtime:
+    - perl(HTML::Entities)
+    - perl(HTML::Parser)
+    - perl(HTML::Tagset)
+    - perl(URI)
+perl-HTML-TableExtract:
+  '2.15':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::ElementTable)
+    - perl(HTML::Parser)
+    runtime:
+    - perl(HTML::ElementTable)
+    - perl(HTML::Parser)
+perl-HTML-Template-JIT:
+  '0.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::Template)
+    - perl(Inline)
+    - perl(Inline::C)
+    runtime:
+    - perl(HTML::Template)
+    - perl(Inline)
+    - perl(Inline::C)
+perl-HTML-Tidy:
+  '1.60':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+    - libtidyp-devel
+    - perl(Alien::Tidyp)
+    - perl(LWP::Simple)
+    - perl(Test::Exception)
+    runtime:
+    - perl(Test::More)
+    - perl(LWP::Simple)
+perl-HTML-TreeBuilder-LibXML:
+  '0.26':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::TreeBuilder::XPath)
+    - perl(LWP::UserAgent)
+    - perl(Module::Build::Tiny)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    - perl(URI)
+    - perl(XML::LibXML)
+    runtime:
+    - perl(HTML::TreeBuilder::XPath)
+    - perl(LWP::UserAgent)
+    - perl(URI)
+    - perl(XML::LibXML)
+perl-HTML-TreeBuilder-XPath:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::TreeBuilder)
+    - perl(XML::XPathEngine)
+    runtime:
+    - perl(HTML::TreeBuilder)
+    - perl(XML::XPathEngine)
+perl-HTTP-BrowserDetect:
+  3.400.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(JSON::PP)
+    - perl(List::Util)
+    - perl(Path::Tiny)
+    - perl(Test::Differences)
+    - perl(Test::More)
+    - perl(Test::NoWarnings)
+    - perl(Test::Warnings)
+perl-HTTP-Cache-Transparent:
+  '1.4':
+  - build:
+    - perl
+    - perl-macros
+    - perl(LWP)
+    - perl(Test::RequiresInternet)
+    runtime:
+    - perl(LWP)
+perl-HTTP-CookieJar:
+  '0.014':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTTP::Date)
+    - perl(Test::Deep)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(parent)
+    - perl(URI)
+    - perl(Time::Local)
+    runtime:
+    - perl(HTTP::Date)
+    - perl(parent)
+    - perl(Time::Local)
+perl-HTTP-CookieMonster:
+  '0.11':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTTP::Cookies)
+    - perl(Moo)
+    - perl(Safe::Isa)
+    - perl(Sub::Exporter)
+    - perl(Test::Fatal)
+    - perl(URI::Escape)
+    runtime:
+    - perl(HTTP::Cookies)
+    - perl(Moo)
+    - perl(Safe::Isa)
+    - perl(Sub::Exporter)
+    - perl(URI::Escape)
+perl-HTTP-DAV:
+  '0.49':
+  - build:
+    - perl
+    - perl-macros
+    - perl(LWP)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(XML::DOM)
+    runtime:
+    - perl(LWP)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(XML::DOM)
+perl-HTTP-Daemon:
+  '6.16':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTTP::Date)
+    - perl(HTTP::Request)
+    - perl(HTTP::Response)
+    - perl(HTTP::Status)
+    - perl(IO::Socket::IP)
+    - perl(LWP::MediaTypes)
+    - perl(Module::Build::Tiny)
+    - perl(Module::Metadata)
+    - perl(Test::More)
+    - perl(Test::Needs)
+    runtime:
+    - perl(HTTP::Date)
+    - perl(HTTP::Request)
+    - perl(HTTP::Response)
+    - perl(HTTP::Status)
+    - perl(IO::Socket::IP)
+    - perl(LWP::MediaTypes)
+perl-HTTP-HeaderParser-XS:
+  '0.20':
+  - build:
+    - gcc-c++
+    - perl
+    - perl-macros
+perl-HTTP-Headers-ActionPack:
+  '0.09':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTTP::Date)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Headers::Util)
+    - perl(HTTP::Request)
+    - perl(HTTP::Response)
+    - perl(Module::Runtime)
+    - perl(Sub::Exporter)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Warnings)
+    - perl(Time::Piece)
+    - perl(URI::Escape)
+    - perl(parent)
+    - perl(Plack)
+    runtime:
+    - perl(HTTP::Date)
+    - perl(HTTP::Headers::Util)
+    - perl(Module::Runtime)
+    - perl(Sub::Exporter)
+    - perl(Time::Piece)
+    - perl(URI::Escape)
+    - perl(parent)
+perl-HTTP-Parser-XS:
+  '0.17':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+perl-HTTP-Recorder:
+  '0.07':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::Parser)
+    - perl(HTML::TokeParser)
+    - perl(HTTP::Proxy)
+    - perl(HTTP::Request::Params)
+    - perl(LWP::UserAgent)
+    - perl(URI::Escape)
+    - perl(URI::QueryParam)
+    runtime:
+    - perl(HTML::Parser)
+    - perl(HTML::TokeParser)
+    - perl(HTTP::Proxy)
+    - perl(HTTP::Request::Params)
+    - perl(LWP::UserAgent)
+    - perl(URI::Escape)
+    - perl(URI::QueryParam)
+perl-HTTP-Server-Simple:
+  '0.52':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CGI)
+    - perl(Socket)
+    - netcfg
+    runtime:
+    - perl(CGI)
+    - perl(Socket)
+perl-Hash-AutoHash:
+  '1.17':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp)
+    - perl(Cwd)
+    - perl(Exporter)
+    - perl(File::Spec)
+    - perl(List::MoreUtils)
+    - perl(List::Util)
+    - perl(Module::Build)
+    - perl(Scalar::Util)
+    - perl(Storable)
+    - perl(Test::Deep)
+    - perl(Test::More)
+    - perl(Test::Pod)
+    - perl(Test::Pod::Content)
+    - perl(Tie::Hash)
+    - perl(Tie::Hash::MultiValue)
+    - perl(Tie::ToObject)
+    - perl(XSLoader)
+    runtime:
+    - perl(Carp)
+    - perl(Cwd)
+    - perl(Exporter)
+    - perl(List::MoreUtils)
+    - perl(List::Util)
+    - perl(Tie::Hash)
+    - perl(Tie::ToObject)
+    - perl(XSLoader)
+perl-Hash-FieldHash:
+  '0.15':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::PPPort)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::ParseXS)
+    - perl(Module::Build)
+    - perl(Test::LeakTrace)
+    - perl(parent)
+    runtime:
+    - perl(parent)
+perl-Hash-Merge:
+  '0.302':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Clone::Choose)
+    - perl(Test::More)
+    runtime:
+    - perl(Clone::Choose)
+perl-Hash-SharedMem:
+  '0.005':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::ParseXS)
+    - perl(File::Temp)
+    - perl(Module::Build)
+    - perl(Scalar::String)
+    - perl(parent)
+    runtime:
+    - perl(parent)
+perl-Heap:
+  '0.80':
+  - build:
+    - perl
+    - perl-macros
+perl-IO-AIO:
+  4.810.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Canary::Stability)
+    - perl(ExtUtils::MakeMaker)
+    - perl(common::sense)
+    runtime:
+    - perl(common::sense)
+    - perl(IO::AIO)
+perl-IO-Async:
+  0.803.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Future)
+    - perl(Future::Utils)
+    - perl(Module::Build)
+    - perl(Socket)
+    - perl(Struct::Dumb)
+    - perl(Test2::V0)
+    - perl(Test::Future::IO::Impl)
+    - perl(Test::Metrics::Any)
+    - netcfg
+    - perl(Test2::V0)
+    runtime:
+    - perl(Future)
+    - perl(Future::Utils)
+    - perl(Socket)
+    - perl(Struct::Dumb)
+perl-IO-Compress:
+  2.206.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Compress::Raw::Bzip2)
+    - perl(Compress::Raw::Zlib)
+    runtime:
+    - perl(Compress::Raw::Bzip2)
+    - perl(Compress::Raw::Zlib)
+perl-IO-Compress-Lzma:
+  2.206.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Compress::Raw::Lzma)
+    - perl(IO::Compress::Base)
+    - perl(IO::Uncompress::Base)
+    runtime:
+    - perl(Compress::Raw::Lzma)
+    - perl(IO::Compress::Base)
+    - perl(IO::Uncompress::Base)
+perl-IO-Extended:
+  '0.16':
+  - build:
+    - perl
+    - perl-macros
+perl-IO-FDPass:
+  '1.3':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Canary::Stability)
+perl-IO-Multiplex:
+  '1.16':
+  - build:
+    - perl
+    - perl-macros
+perl-IO-Pager:
+  '2.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Which)
+    - perl(Term::ReadKey)
+    - perl(Test::More)
+    runtime:
+    - perl(File::Which)
+    - perl(Term::ReadKey)
+perl-IO-Socket-INET6:
+  '2.73':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Socket6)
+    runtime:
+    - perl(Socket6)
+perl-IO-Socket-SSL:
+  2.85.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Net::SSLeay)
+    runtime:
+    - perl(Net::SSLeay)
+perl-IO-stringy:
+  '2.113':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+    - perl(Test::Tester)
+    - perl(parent)
+    runtime:
+    - perl(parent)
+perl-IOC:
+  '0.29':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Interfaces)
+    - perl(Class::StrongSingleton)
+    - perl(Class::Throwable)
+    - perl(Test::Exception)
+    - perl(XML::SAX)
+    runtime:
+    - perl(Class::Interfaces)
+    - perl(Class::StrongSingleton)
+    - perl(Class::Throwable)
+    - perl(Test::Exception)
+    - perl(XML::SAX)
+perl-IP-Country:
+  '2.28':
+  - build:
+    - perl
+    - perl-macros
+    runtime:
+    - perl(Geography::Countries)
+perl-IPC-Run:
+  20231003.0.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::Pty)
+    - perl(Readonly::Array)
+    - netcfg
+    runtime:
+    - perl(IO::Pty)
+perl-IPC-Run3:
+  0.49.0:
+  - build:
+    - perl
+    - perl-macros
+perl-IPC-Signal:
+  '1.00':
+  - build:
+    - perl
+    - perl-macros
+perl-Image-ExifTool:
+  '12.82':
+  - build:
+    - perl
+    - perl-macros
+    runtime:
+    - perl(File::RandomAccess)
+    - perl(Image::ExifTool)
+perl-Image-Imlib2:
+  '2.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - imlib2-devel
+    - imlib2
+    - imlib2-loaders
+    runtime:
+    - perl(Module::Build)
+    - imlib2
+perl-Image-MetaData-JPEG:
+  '0.159':
+  - build:
+    - perl
+    - perl-macros
+perl-Image-Sane:
+  '5':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Exception::Class)
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Readonly)
+    - perl(Test::Requires)
+    - perl(Try::Tiny)
+    - ImageMagick
+    - sane-backends
+    - perl(Test::Pod)
+    - pkgconfig(sane-backends)
+    runtime:
+    - perl(Exception::Class)
+    - perl(Readonly)
+perl-Image-Scale:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::NoWarnings)
+    - libjpeg8-devel
+    - libpng16-compat-devel
+    - libpng16-devel
+    runtime:
+    - perl(Test::NoWarnings)
+perl-Image-Size:
+  '3.300':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Test::More)
+    runtime:
+    - perl(Module::Build)
+    - perl(Test::More)
+perl-Imager:
+  1.23.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+    - freetype-devel
+    - freetype2-devel
+    - gcc
+    - giflib-devel
+    - glibc-devel
+    - libjpeg-devel
+    - libpng-devel
+    - libtiff-devel
+    - make
+    runtime:
+    - perl(Test::More)
+perl-Imager-Graph:
+  '0.12':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Imager)
+    runtime:
+    - perl(Imager)
+perl-Inline-Python:
+  '0.57':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Digest::MD5)
+    - perl(Inline)
+    - perl(Proc::ProcessTable)
+    - perl(Test::Deep)
+    - perl(Test::Number::Delta)
+    - python3-devel
+    runtime:
+    - perl(Digest::MD5)
+    - perl(Inline)
+perl-JSON-PP:
+  '4.16':
+  - build:
+    - perl
+    - perl-macros
+perl-JSON-Parse:
+  '0.62':
+  - build:
+    - perl
+    - perl-macros
+perl-JSON-XS:
+  '4.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Canary::Stability)
+    - perl(Types::Serialiser)
+    - perl(common::sense)
+    runtime:
+    - perl(Types::Serialiser)
+    - perl(common::sense)
+perl-LWP-ConsoleLogger:
+  '1.000001':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(Class::Method::Modifiers)
+    - perl(Data::Printer)
+    - perl(DateTime)
+    - perl(HTML::FormatText::WithLinks)
+    - perl(HTML::Restrict)
+    - perl(HTTP::Body)
+    - perl(HTTP::CookieJar::LWP)
+    - perl(HTTP::CookieMonster)
+    - perl(HTTP::Request)
+    - perl(HTTP::Response)
+    - perl(JSON::MaybeXS)
+    - perl(LWP::UserAgent)
+    - perl(List::AllUtils)
+    - perl(Log::Dispatch)
+    - perl(Log::Dispatch::Array)
+    - perl(Module::Load::Conditional)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(MooX::StrictConstructor)
+    - perl(Parse::MIME)
+    - perl(Path::Tiny)
+    - perl(Plack::Handler::HTTP::Server::Simple)
+    - perl(Plack::Test)
+    - perl(Plack::Test::Agent)
+    - perl(Ref::Util)
+    - perl(String::Trim)
+    - perl(Sub::Exporter)
+    - perl(Term::Size::Any)
+    - perl(Test::Fatal)
+    - perl(Test::LWP::UserAgent)
+    - perl(Test::Most)
+    - perl(Test::Warnings)
+    - perl(Text::SimpleTable::AutoWidth)
+    - perl(Try::Tiny)
+    - perl(Types::Common::Numeric)
+    - perl(Types::Standard)
+    - perl(URI::QueryParam)
+    - perl(URI::file)
+    - perl(WWW::Mechanize)
+    - perl(XML::Simple)
+    - perl(version)
+    - netcfg
+    runtime:
+    - perl(Class::Method::Modifiers)
+    - perl(Data::Printer)
+    - perl(DateTime)
+    - perl(HTML::Restrict)
+    - perl(HTTP::Body)
+    - perl(HTTP::CookieMonster)
+    - perl(HTTP::Request)
+    - perl(HTTP::Response)
+    - perl(JSON::MaybeXS)
+    - perl(List::AllUtils)
+    - perl(Log::Dispatch)
+    - perl(Module::Load::Conditional)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(MooX::StrictConstructor)
+    - perl(Parse::MIME)
+    - perl(Ref::Util)
+    - perl(String::Trim)
+    - perl(Sub::Exporter)
+    - perl(Term::Size::Any)
+    - perl(Text::SimpleTable::AutoWidth)
+    - perl(Try::Tiny)
+    - perl(Types::Common::Numeric)
+    - perl(Types::Standard)
+    - perl(URI::QueryParam)
+    - perl(XML::Simple)
+    - perl(Term::Size::Any)
+perl-LWP-Curl:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Net::Curl::Easy)
+    - perl(Test::Exception)
+    - perl(URI::Escape)
+    - perl(URI::file)
+    - perl(Test::Exception)
+    - perl(URI)
+    - perl(WWW::Curl::Easy)
+    runtime:
+    - perl(Net::Curl::Easy)
+    - perl(URI::Escape)
+    - perl(URI::Escape)
+    - perl(WWW::Curl::Easy)
+perl-LWP-Online:
+  '1.08':
+  - build:
+    - perl
+    - perl-macros
+    - perl(LWP::Simple)
+    - perl(URI)
+    runtime:
+    - perl(LWP::Simple)
+    - perl(URI)
+perl-LWP-Protocol-https:
+  6.140.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::Socket::SSL)
+    - perl(IO::Socket::SSL::Utils)
+    - perl(LWP::Protocol::http)
+    - perl(LWP::UserAgent)
+    - perl(Net::HTTPS)
+    - perl(Test::More)
+    - perl(Test::Needs)
+    - perl(Test::RequiresInternet)
+    runtime:
+    - perl(IO::Socket::SSL)
+    - perl(LWP::Protocol::http)
+    - perl(LWP::UserAgent)
+    - perl(Net::HTTPS)
+perl-LaTeX-Driver:
+  1.2.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(Class::Accessor)
+    - perl(Exception::Class)
+    - perl(File::Slurp)
+    - perl(File::Temp)
+    - perl(File::pushd)
+    - perl(Log::Any)
+    - perl(Readonly)
+    - perl(Test::More)
+    - perl(parent)
+    - texlive-latex-bin
+    runtime:
+    - perl(Capture::Tiny)
+    - perl(Class::Accessor)
+    - perl(Exception::Class)
+    - perl(File::Slurp)
+    - perl(File::Temp)
+    - perl(File::pushd)
+    - perl(Log::Any)
+    - perl(Readonly)
+    - perl(parent)
+    - texlive-latex-bin
+perl-Libssh-Session:
+  '0.8':
+  - build:
+    - perl
+    - perl-macros
+    - libssh-devel
+perl-Lingua-EN-Numbers:
+  '2.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+perl-Lingua-EN-Tagger:
+  '0.31':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::Parser)
+    - perl(HTML::Tagset)
+    - perl(Lingua::Stem)
+    - perl(Memoize::ExpireLRU)
+    runtime:
+    - perl(HTML::Parser)
+    - perl(HTML::Tagset)
+    - perl(Lingua::Stem)
+    - perl(Memoize::ExpireLRU)
+perl-Linux-Inotify2:
+  '2.3':
+  - build:
+    - perl
+    - perl-macros
+    - perl(common::sense)
+    runtime:
+    - perl(common::sense)
+perl-Linux-Systemd:
+  1.201.600:
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::PkgConfig)
+    - perl(Module::Build)
+    - perl(Moo)
+    - perl(Test::CheckDeps)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(strictures)
+    - pkgconfig(libsystemd)
+    runtime:
+    - perl(Moo)
+    - perl(strictures)
+perl-List-MoreUtils-XS:
+  '0.430':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IPC::Cmd)
+    - perl(Test::More)
+    - perl(XSLoader)
+    runtime:
+    - perl(XSLoader)
+perl-List-SomeUtils:
+  '0.59':
+  - build:
+    - perl
+    - perl-macros
+    - perl(List::SomeUtils::XS)
+    - perl(Module::Implementation)
+    - perl(Test::LeakTrace)
+    - perl(Test::More)
+    runtime:
+    - perl(List::SomeUtils::XS)
+    - perl(Module::Implementation)
+perl-Locale-Msgfmt:
+  '0.15':
+  - build:
+    - perl
+    - perl-macros
+perl-Log-Agent:
+  '1.005':
+  - build:
+    - perl
+    - perl-macros
+perl-Log-Any-Adapter-Screen:
+  0.141.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Log::Any)
+    - perl(Log::Any::Adapter)
+    - perl(parent)
+    runtime:
+    - perl(Log::Any)
+    - perl(Log::Any::Adapter)
+    - perl(parent)
+perl-MCE-Shared:
+  1.886.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(MCE)
+    - perl(Test::More)
+    runtime:
+    - perl(MCE)
+perl-MP3-Info:
+  '1.26':
+  - build:
+    - perl
+    - perl-macros
+perl-MP3-Tag:
+  '1.16':
+  - build:
+    - perl
+    - perl-macros
+    - unzip
+perl-Mail-DMARC:
+  '1.20240314':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Config::Tiny)
+    - perl(DBD::SQLite)
+    - perl(DBIx::Simple)
+    - perl(Email::MIME)
+    - perl(Email::Sender)
+    - perl(Email::Sender::Simple)
+    - perl(Email::Simple)
+    - perl(File::ShareDir)
+    - perl(File::ShareDir::Install)
+    - perl(HTTP::Tiny)
+    - perl(IO::Compress::Gzip)
+    - perl(IO::Compress::Zip)
+    - perl(IO::Socket::SSL)
+    - perl(IO::Uncompress::Gunzip)
+    - perl(IO::Uncompress::Unzip)
+    - perl(Module::Build)
+    - perl(Net::DNS::Resolver)
+    - perl(Net::DNS::Resolver::Mock)
+    - perl(Net::IDN::Encode)
+    - perl(Net::IP)
+    - perl(Net::SSLeay)
+    - perl(Regexp::Common)
+    - perl(Socket6)
+    - perl(Test::Exception)
+    - perl(Test::File::ShareDir)
+    - perl(Test::Output)
+    - perl(URI)
+    - perl(XML::LibXML)
+    - perl(CGI)
+    - perl(JSON)
+    - perl(Net::DNS::Resolver::Mock)
+    - perl(Net::HTTP)
+    - perl(Net::Server::HTTP)
+    - perl(XML::Validator::Schema)
+    runtime:
+    - perl(Config::Tiny)
+    - perl(DBD::SQLite)
+    - perl(DBIx::Simple)
+    - perl(Email::MIME)
+    - perl(Email::Sender)
+    - perl(Email::Sender::Simple)
+    - perl(Email::Simple)
+    - perl(File::ShareDir)
+    - perl(HTTP::Tiny)
+    - perl(IO::Compress::Gzip)
+    - perl(IO::Compress::Zip)
+    - perl(IO::Socket::SSL)
+    - perl(IO::Uncompress::Gunzip)
+    - perl(IO::Uncompress::Unzip)
+    - perl(Net::DNS::Resolver)
+    - perl(Net::IDN::Encode)
+    - perl(Net::IP)
+    - perl(Net::SSLeay)
+    - perl(Regexp::Common)
+    - perl(Socket6)
+    - perl(Test::File::ShareDir)
+    - perl(URI)
+    - perl(XML::LibXML)
+perl-Mail-GnuPG:
+  '0.23':
+  - build:
+    - perl
+    - perl-macros
+    - perl(GnuPG::Interface)
+    - perl(MIME::Entity)
+    - perl(MIME::Parser)
+    - perl(Mail::Address)
+    - perl(Module::Build)
+    - perl(Test::Pod)
+    runtime:
+    - perl(GnuPG::Interface)
+    - perl(MIME::Entity)
+    - perl(MIME::Parser)
+    - perl(Mail::Address)
+    - perl(Test::Pod)
+perl-Mail-IMAPClient:
+  '3.43':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Parse::RecDescent)
+    runtime:
+    - perl(Parse::RecDescent)
+perl-Mail-Message:
+  3.15.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Date::Format)
+    - perl(Date::Parse)
+    - perl(Encode)
+    - perl(IO::Scalar)
+    - perl(MIME::Types)
+    - perl(Mail::Address)
+    - perl(Time::Zone)
+    - perl(URI)
+    - perl(User::Identity)
+    runtime:
+    - perl(Date::Format)
+    - perl(Date::Parse)
+    - perl(Encode)
+    - perl(IO::Scalar)
+    - perl(MIME::Types)
+    - perl(Mail::Address)
+    - perl(Time::Zone)
+    - perl(URI)
+    - perl(User::Identity)
+perl-Mail-SPF:
+  3.202.402.60:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Error)
+    - perl(Net::DNS::RR)
+    - perl(Net::DNS::Resolver)
+    - perl(Net::DNS::Resolver::Programmable)
+    - perl(NetAddr::IP)
+    - perl(URI::Escape)
+    runtime:
+    - perl(Error)
+    - perl(Net::DNS::Resolver)
+    - perl(NetAddr::IP)
+    - perl(URI::Escape)
+perl-Math-Base-Convert:
+  '0.11':
+  - build:
+    - perl
+    - perl-macros
+perl-Math-BigInt:
+  2.3.2:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Math::Complex)
+    - perl(Test::More)
+    runtime:
+    - perl(Carp)
+    - perl(Math::Complex)
+perl-Math-BigInt-FastCalc:
+  0.501.600:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Math::BigInt)
+    - perl(Test::More)
+    - perl-Math-BigInt
+    - perl(parent)
+    runtime:
+    - perl(Carp)
+    - perl(Math::BigInt)
+    - perl-Math-BigInt
+perl-Math-BigInt-GMP:
+  '1.7000':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Math::BigInt)
+    - perl(Test::More)
+    - gmp-devel
+    - perl(Test::Pod)
+    - perl(Test::Pod::Coverage)
+    - perl-Math-BigInt
+    runtime:
+    - perl(Carp)
+    - perl(Math::BigInt)
+    - perl-Math-BigInt
+perl-Math-BigInt-Pari:
+  1.301.300:
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(Math::BigInt)
+    - perl(Math::Pari)
+    - perl(Test::More)
+    - perl-Math-BigInt
+    runtime:
+    - perl(Math::BigInt)
+    - perl(Math::Pari)
+    - perl-Math-BigInt
+perl-Math-Complex:
+  '1.59':
+  - build:
+    - perl
+    - perl-macros
+perl-Math-GMP:
+  '2.25':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::GMP)
+    - gmp-devel
+perl-Math-GSL:
+  0.440.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::GSL)
+    - perl(Module::Build)
+    - perl(PkgConfig)
+    - perl(Test::Class)
+    - perl(Test::Exception)
+    - perl(Test::Most)
+    - perl(Test::Taint)
+    - perl(parent)
+    - perl(version)
+    - gsl-devel
+    runtime:
+    - perl(parent)
+    - perl(version)
+perl-Math-Int64:
+  0.570.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+    runtime:
+    - perl-base
+perl-Math-Pari:
+  '2.030518':
+  - build:
+    - perl
+    - perl-macros
+    - unzip
+perl-Math-PlanePath:
+  '129':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Math::Libm)
+    - perl(constant::defer)
+    runtime:
+    - perl(Math::Libm)
+    - perl(constant::defer)
+perl-Math-Prime-Util-GMP:
+  '0.52':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Math::BigInt)
+    - gmp-devel
+perl-Math-Random:
+  '0.72':
+  - build:
+    - perl
+    - perl-macros
+perl-MediaWiki-API:
+  '0.52':
+  - build:
+    - perl
+    - perl-macros
+    - perl(JSON)
+    - perl(LWP::UserAgent)
+    - perl(Test::More)
+    runtime:
+    - perl(JSON)
+    - perl(LWP::UserAgent)
+    - perl(Test::More)
+perl-MemHandle:
+  '0.07':
+  - build:
+    - perl
+    - perl-macros
+perl-Menlo:
+  '1.9019':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Common::Index)
+    - perl(CPAN::DistnameInfo)
+    - perl(CPAN::Meta)
+    - perl(CPAN::Meta::Check)
+    - perl(CPAN::Meta::Requirements)
+    - perl(CPAN::Meta::YAML)
+    - perl(Capture::Tiny)
+    - perl(Class::Tiny)
+    - perl(ExtUtils::Config)
+    - perl(ExtUtils::Helpers)
+    - perl(ExtUtils::InstallPaths)
+    - perl(File::Which)
+    - perl(File::pushd)
+    - perl(Getopt::Long)
+    - perl(HTTP::Tiny)
+    - perl(HTTP::Tinyish)
+    - perl(JSON::PP)
+    - perl(Module::CPANfile)
+    - perl(Module::CoreList)
+    - perl(Module::Metadata)
+    - perl(Parse::CPAN::Meta)
+    - perl(Parse::PMFile)
+    - perl(String::ShellQuote)
+    - perl(Test::More)
+    - perl(URI)
+    - perl(local::lib)
+    - perl(parent)
+    - perl(version)
+    runtime:
+    - perl(CPAN::Common::Index)
+    - perl(CPAN::DistnameInfo)
+    - perl(CPAN::Meta)
+    - perl(CPAN::Meta::Check)
+    - perl(CPAN::Meta::Requirements)
+    - perl(CPAN::Meta::YAML)
+    - perl(Capture::Tiny)
+    - perl(Class::Tiny)
+    - perl(ExtUtils::Config)
+    - perl(ExtUtils::Helpers)
+    - perl(ExtUtils::InstallPaths)
+    - perl(File::Which)
+    - perl(File::pushd)
+    - perl(Getopt::Long)
+    - perl(HTTP::Tiny)
+    - perl(HTTP::Tinyish)
+    - perl(JSON::PP)
+    - perl(Module::CPANfile)
+    - perl(Module::CoreList)
+    - perl(Module::Metadata)
+    - perl(Parse::CPAN::Meta)
+    - perl(Parse::PMFile)
+    - perl(String::ShellQuote)
+    - perl(URI)
+    - perl(local::lib)
+    - perl(parent)
+    - perl(version)
+perl-Module-Build:
+  '0.423400':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Meta)
+    - perl(CPAN::Meta::YAML)
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::ParseXS)
+    - perl(Module::Metadata)
+    - perl(Parse::CPAN::Meta)
+    - perl(Perl::OSType)
+    - perl(TAP::Harness)
+    - perl(version)
+    runtime:
+    - perl(CPAN::Meta)
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::ParseXS)
+    - perl(Module::Metadata)
+    - perl(Perl::OSType)
+    - perl(TAP::Harness)
+    - perl(version)
+perl-Module-Build-CleanInstall:
+  '0.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(List::MoreUtils)
+    - perl(Module::Build)
+    - perl(parent)
+    runtime:
+    - perl(Module::Build)
+    - perl(parent)
+perl-Module-Build-Using-PkgConfig:
+  '0.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::PkgConfig)
+    - perl(Module::Build)
+    - perl(Test::More)
+    runtime:
+    - perl(ExtUtils::PkgConfig)
+    - perl(Module::Build)
+perl-Module-CPANTS-Analyse:
+  1.20.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Archive::Any::Lite)
+    - perl(Archive::Tar)
+    - perl(Array::Diff)
+    - perl(CPAN::Meta::Validator)
+    - perl(CPAN::Meta::YAML)
+    - perl(Class::Accessor)
+    - perl(Data::Binary)
+    - perl(ExtUtils::MakeMaker::CPANfile)
+    - perl(File::Find::Object)
+    - perl(JSON::PP)
+    - perl(List::Util)
+    - perl(Module::Find)
+    - perl(Parse::Distname)
+    - perl(Perl::PrereqScanner::NotQuiteLite)
+    - perl(Software::License)
+    - perl(Test::FailWarnings)
+    - perl(Test::More)
+    - perl(version)
+    runtime:
+    - perl(Archive::Any::Lite)
+    - perl(Archive::Tar)
+    - perl(Array::Diff)
+    - perl(CPAN::Meta::Validator)
+    - perl(CPAN::Meta::YAML)
+    - perl(Class::Accessor)
+    - perl(Data::Binary)
+    - perl(File::Find::Object)
+    - perl(JSON::PP)
+    - perl(List::Util)
+    - perl(Module::Find)
+    - perl(Parse::Distname)
+    - perl(Perl::PrereqScanner::NotQuiteLite)
+    - perl(Software::License)
+    - perl(version)
+perl-Module-CoreList:
+  '5.20240320':
+  - build:
+    - perl
+    - perl-macros
+    - perl(version)
+    runtime:
+    - perl(version)
+perl-Module-Depends:
+  '0.16':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Accessor::Chained)
+    - perl(Module::Build)
+    - perl(Parse::CPAN::Meta)
+    runtime:
+    - perl(Class::Accessor::Chained)
+    - perl(Parse::CPAN::Meta)
+perl-Module-ExtractUse:
+  '0.345':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Parse::RecDescent)
+    - perl(Pod::Strip)
+    - perl(Test::Deep)
+    - perl(Test::NoWarnings)
+    runtime:
+    - perl(Parse::RecDescent)
+    - perl(Pod::Strip)
+perl-Module-Install-ExtraTests:
+  '0.008':
+  - build:
+    - perl
+    - perl-macros
+perl-Module-Manifest-Skip:
+  '0.23':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::ShareDir::Install)
+    - perl(Moo)
+    runtime:
+    - perl(Moo)
+perl-Module-Reader:
+  '0.003003':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+perl-Module-Refresh:
+  '0.18':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::Temp)
+    - perl(Path::Class)
+perl-Module-Signature:
+  '0.88':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(IPC::Run)
+    - gpg
+    runtime:
+    - gpg
+perl-Mojo-Pg:
+  '4.27':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBD::Pg)
+    - perl(Mojolicious)
+    - perl(SQL::Abstract::Pg)
+    runtime:
+    - perl(DBD::Pg)
+    - perl(Mojolicious)
+    - perl(SQL::Abstract::Pg)
+perl-Mojo-RabbitMQ-Client:
+  0.3.1:
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::ShareDir)
+    - perl(List::Util)
+    - perl(Module::Build::Tiny)
+    - perl(Mojolicious)
+    - perl(Net::AMQP)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    runtime:
+    - perl(File::ShareDir)
+    - perl(List::Util)
+    - perl(Mojolicious)
+    - perl(Net::AMQP)
+perl-Mojolicious-Plugin-AssetPack:
+  '2.14':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Which)
+    - perl(IPC::Run3)
+    - perl(Mojolicious)
+    - perl(Test::More)
+    - perl(Mojolicious)
+    runtime:
+    - perl(File::Which)
+    - perl(IPC::Run3)
+    - perl(Mojolicious)
+    - perl(Mojolicious)
+perl-Mojolicious-Plugin-OAuth2:
+  '2.02':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::Socket::SSL)
+    - perl(Mojolicious)
+    - perl(Test::More)
+    runtime:
+    - perl(IO::Socket::SSL)
+    - perl(Mojolicious)
+perl-Mojolicious-Plugin-RenderFile:
+  '0.12':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Mojolicious)
+    runtime:
+    - perl(Mojolicious)
+perl-Mojolicious-Plugin-Webpack:
+  '1.02':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::chdir)
+    - perl(Mojolicious)
+    - perl(Test::More)
+    runtime:
+    - perl(File::chdir)
+    - perl(Mojolicious)
+perl-MooX-late:
+  '0.100':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Moo)
+    - perl(Sub::HandlesVia)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(Type::Utils)
+    - perl(Module::Runtime)
+    runtime:
+    - perl(Moo)
+    - perl(Sub::HandlesVia)
+    - perl(Type::Utils)
+perl-Moose:
+  '2.2207':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Meta::Check)
+    - perl(CPAN::Meta::Requirements)
+    - perl(Carp)
+    - perl(Class::Load)
+    - perl(Class::Load::XS)
+    - perl(Data::OptList)
+    - perl(Devel::GlobalDestruction)
+    - perl(Devel::OverloadInfo)
+    - perl(Devel::StackTrace)
+    - perl(Dist::CheckConflicts)
+    - perl(Eval::Closure)
+    - perl(List::Util)
+    - perl(MRO::Compat)
+    - perl(Module::Metadata)
+    - perl(Module::Runtime)
+    - perl(Module::Runtime::Conflicts)
+    - perl(Package::DeprecationManager)
+    - perl(Package::Stash)
+    - perl(Package::Stash::XS)
+    - perl(Params::Util)
+    - perl(Scalar::Util)
+    - perl(Sub::Exporter)
+    - perl(Sub::Util)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Needs)
+    - perl(Try::Tiny)
+    - perl(parent)
+    runtime:
+    - perl(Carp)
+    - perl(Class::Load)
+    - perl(Class::Load::XS)
+    - perl(Data::OptList)
+    - perl(Devel::GlobalDestruction)
+    - perl(Devel::OverloadInfo)
+    - perl(Devel::StackTrace)
+    - perl(Dist::CheckConflicts)
+    - perl(Eval::Closure)
+    - perl(List::Util)
+    - perl(MRO::Compat)
+    - perl(Module::Runtime)
+    - perl(Module::Runtime::Conflicts)
+    - perl(Package::DeprecationManager)
+    - perl(Package::Stash)
+    - perl(Package::Stash::XS)
+    - perl(Params::Util)
+    - perl(Scalar::Util)
+    - perl(Sub::Exporter)
+    - perl(Sub::Util)
+    - perl(Try::Tiny)
+    - perl(parent)
+perl-MooseX-App:
+  1.430.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Config::Any)
+    - perl(List::Util)
+    - perl(Module::Pluggable)
+    - perl(Moose)
+    - perl(Pod::Elemental)
+    - perl(Test::Most)
+    - perl(Test::NoWarnings)
+    - perl(namespace::autoclean)
+    - perl(Config::Any)
+    runtime:
+    - perl(Config::Any)
+    - perl(List::Util)
+    - perl(Module::Pluggable)
+    - perl(Moose)
+    - perl(Pod::Elemental)
+    - perl(namespace::autoclean)
+perl-MooseX-Attribute-ENV:
+  '0.02':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Moose)
+    runtime:
+    - perl(Moose)
+perl-MooseX-AuthorizedMethods:
+  '0.006':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(Moose)
+    - perl(aliased)
+    - perl(Sub::Name)
+    runtime:
+    - perl(Moose)
+    - perl(aliased)
+perl-MooseX-Getopt:
+  0.760.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Getopt::Long)
+    - perl(Getopt::Long::Descriptive)
+    - perl(Module::Build)
+    - perl(Module::Build::Tiny)
+    - perl(Module::Metadata)
+    - perl(Module::Runtime)
+    - perl(Moose)
+    - perl(Moose::Meta::Attribute)
+    - perl(Moose::Meta::Class)
+    - perl(Moose::Role)
+    - perl(Moose::Util)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::Role::Parameterized)
+    - perl(Path::Tiny)
+    - perl(Test::Deep)
+    - perl(Test::Fatal)
+    - perl(Test::Moose)
+    - perl(Test::More)
+    - perl(Test::Needs)
+    - perl(Test::Trap)
+    - perl(Test::Warnings)
+    - perl(Try::Tiny)
+    - perl(namespace::autoclean)
+    runtime:
+    - perl(Getopt::Long)
+    - perl(Getopt::Long::Descriptive)
+    - perl(Moose)
+    - perl(Moose::Meta::Attribute)
+    - perl(Moose::Role)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::Role::Parameterized)
+    - perl(Try::Tiny)
+    - perl(namespace::autoclean)
+perl-MooseX-HasDefaults:
+  '0.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Moose)
+    - perl(Test::Exception)
+    runtime:
+    - perl(Moose)
+perl-MooseX-Iterator:
+  '0.11':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Moose)
+    runtime:
+    - perl(Moose)
+perl-MooseX-LazyLogDispatch:
+  '0.02':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::Scalar)
+    - perl(Log::Dispatch::Configurator)
+    - perl(Moose)
+    runtime:
+    - perl(Log::Dispatch::Configurator)
+    - perl(Moose)
+perl-MooseX-Log-Log4perl:
+  '0.47':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::Scalar)
+    - perl(Log::Log4perl)
+    - perl(Moo)
+    runtime:
+    - perl(Log::Log4perl)
+    - perl(Moo)
+perl-MooseX-LogDispatch:
+  '1.2002':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::Scalar)
+    - perl(Log::Dispatch::Configurator)
+    - perl(Moose)
+    - perl(Test::Exception)
+    runtime:
+    - perl(Log::Dispatch::Configurator)
+    - perl(Moose)
+perl-MooseX-MultiMethods:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::Declare)
+    - perl(Devel::PartialDump)
+    - perl(Moose)
+    - perl(MooseX::Method::Signatures)
+    - perl(MooseX::Types::Moose)
+    - perl(MooseX::Types::VariantTable)
+    - perl(Sub::Install)
+    - perl(aliased)
+    - perl(namespace::autoclean)
+    - perl(MooseX::Declare)
+    - perl(Test::Exception)
+    - perl(Test::NoWarnings)
+    runtime:
+    - perl(Devel::Declare)
+    - perl(Devel::PartialDump)
+    - perl(Moose)
+    - perl(MooseX::Method::Signatures)
+    - perl(MooseX::Types::Moose)
+    - perl(MooseX::Types::VariantTable)
+    - perl(Sub::Install)
+    - perl(aliased)
+    - perl(namespace::autoclean)
+perl-MooseX-Role-Cmd:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IPC::Cmd)
+    - perl(Moose)
+    - perl(Test::Exception)
+    runtime:
+    - perl(IPC::Cmd)
+    - perl(Moose)
+perl-MooseX-Role-Parameterized:
+  '1.11':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Meta::Check)
+    - perl(CPAN::Meta::Requirements)
+    - perl(Module::Build::Tiny)
+    - perl(Module::Metadata)
+    - perl(Module::Runtime)
+    - perl(Moose)
+    - perl(Moose::Exporter)
+    - perl(Moose::Meta::Role)
+    - perl(Moose::Role)
+    - perl(Moose::Util)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(Test::Fatal)
+    - perl(Test::Moose)
+    - perl(Test::More)
+    - perl(Test::Needs)
+    - perl(namespace::autoclean)
+    - perl(namespace::clean)
+    runtime:
+    - perl(Module::Runtime)
+    - perl(Moose)
+    - perl(Moose::Exporter)
+    - perl(Moose::Meta::Role)
+    - perl(Moose::Role)
+    - perl(Moose::Util)
+    - perl(namespace::autoclean)
+    - perl(namespace::clean)
+perl-MooseX-Storage:
+  '0.53':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Meta::Requirements)
+    - perl(IO::AtomicFile)
+    - perl(JSON::MaybeXS)
+    - perl(JSON::PP)
+    - perl(Module::Metadata)
+    - perl(Module::Runtime)
+    - perl(Moose)
+    - perl(Moose::Meta::Attribute)
+    - perl(Moose::Role)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(String::RewritePrefix)
+    - perl(Test::Deep)
+    - perl(Test::Deep::Type)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Needs)
+    - perl(YAML::Any)
+    - perl(namespace::autoclean)
+    runtime:
+    - perl(IO::AtomicFile)
+    - perl(JSON::MaybeXS)
+    - perl(Module::Runtime)
+    - perl(Moose)
+    - perl(Moose::Meta::Attribute)
+    - perl(Moose::Role)
+    - perl(String::RewritePrefix)
+    - perl(YAML::Any)
+    - perl(namespace::autoclean)
+perl-MooseX-TransactionalMethods:
+  '0.009':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Moose)
+    - perl(Sub::Name)
+    - perl(aliased)
+    runtime:
+    - perl(Moose)
+    - perl(Sub::Name)
+    - perl(aliased)
+perl-MooseX-Types-Common:
+  '0.001014':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build::Tiny)
+    - perl(Module::Metadata)
+    - perl(MooseX::Types)
+    - perl(MooseX::Types::Moose)
+    - perl(Test::Deep)
+    - perl(Test::More)
+    - perl(Test::Warnings)
+    runtime:
+    - perl(MooseX::Types)
+    - perl(MooseX::Types::Moose)
+perl-MooseX-Types-Parameterizable:
+  '0.09':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Data::Dump)
+    - perl(Devel::PartialDump)
+    - perl(Digest::MD5)
+    - perl(Moose)
+    - perl(MooseX::NonMoose)
+    - perl(MooseX::Types)
+    - perl(MooseX::Types::Structured)
+    - perl(Scalar::Util)
+    - perl(Set::Scalar)
+    - perl(Test::Most)
+    - perl(Test::Requires)
+    runtime:
+    - perl(Data::Dump)
+    - perl(Devel::PartialDump)
+    - perl(Digest::MD5)
+    - perl(Moose)
+    - perl(MooseX::NonMoose)
+    - perl(MooseX::Types)
+    - perl(Scalar::Util)
+perl-MooseX-Types-Structured:
+  '0.36':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DateTime)
+    - perl(Devel::PartialDump)
+    - perl(Module::Build::Tiny)
+    - perl(Module::Metadata)
+    - perl(Moose)
+    - perl(Moose::Meta::TypeCoercion)
+    - perl(Moose::Meta::TypeConstraint)
+    - perl(Moose::Meta::TypeConstraint::Parameterizable)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::Types)
+    - perl(MooseX::Types::Moose)
+    - perl(Sub::Exporter)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Needs)
+    - perl(namespace::clean)
+    runtime:
+    - perl(Devel::PartialDump)
+    - perl(Moose)
+    - perl(Moose::Meta::TypeCoercion)
+    - perl(Moose::Meta::TypeConstraint)
+    - perl(Moose::Meta::TypeConstraint::Parameterizable)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::Types)
+    - perl(Sub::Exporter)
+    - perl(namespace::clean)
+perl-MouseX-Getopt:
+  '0.38':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Getopt::Long)
+    - perl(Getopt::Long::Descriptive)
+    - perl(Module::Build::Tiny)
+    - perl(Mouse)
+    - perl(Mouse::Meta::Attribute)
+    - perl(Mouse::Meta::Class)
+    - perl(Mouse::Role)
+    - perl(Mouse::Util::TypeConstraints)
+    - perl(MouseX::ConfigFromFile)
+    - perl(MouseX::SimpleConfig)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    - perl(Test::Mouse)
+    - perl(Test::Warn)
+    runtime:
+    - perl(Getopt::Long)
+    - perl(Getopt::Long::Descriptive)
+    - perl(Mouse)
+    - perl(Mouse::Meta::Attribute)
+    - perl(Mouse::Role)
+    - perl(Mouse::Util::TypeConstraints)
+perl-MouseX-Types:
+  '0.06':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Any::Moose)
+    - perl(Mouse)
+    - perl(Test::Exception)
+    runtime:
+    - perl(Any::Moose)
+    - perl(Mouse)
+perl-MouseX-Types-Path-Class:
+  '0.07':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Mouse)
+    - perl(MouseX::Types)
+    - perl(Path::Class)
+    - perl(Test::More)
+    - perl(Test::UseAllModules)
+    runtime:
+    - perl(Mouse)
+    - perl(MouseX::Types)
+    - perl(Path::Class)
+perl-Mozilla-CA:
+  20240313.0.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+perl-MusicBrainz-DiscID:
+  '0.06':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::Pod)
+    - pkg-config
+    - pkgconfig(libdiscid)
+    runtime:
+    - perl(Carp)
+    - perl(XSLoader)
+perl-Net-AMQP-RabbitMQ:
+  '2.40010':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Math::Int64)
+    - openssl-devel
+    runtime:
+    - perl(Math::Int64)
+perl-Net-ARP:
+  1.0.12:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Net::Pcap)
+perl-Net-Curl:
+  0.550.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::PkgConfig)
+perl-Net-DBus:
+  1.2.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::Pod)
+    - perl(Test::Pod::Coverage)
+    - perl(XML::Twig)
+    - dbus-1-devel
+    - pkg-config
+    runtime:
+    - perl(XML::Twig)
+perl-Net-DNS-Paranoid:
+  0.90.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Accessor::Lite)
+    - perl(Module::Build)
+    - perl(Module::Build::Tiny)
+    - perl(Net::DNS)
+    - perl(Test::More)
+    - perl(parent)
+    runtime:
+    - perl(Class::Accessor::Lite)
+    - perl(Net::DNS)
+    - perl(parent)
+perl-Net-DNS-SEC:
+  1.230.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp)
+    - perl(DynaLoader)
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::Find)
+    - perl(File::Spec)
+    - perl(IO::File)
+    - perl(Net::DNS)
+    - perl(Test::More)
+    - libopenssl-devel
+    runtime:
+    - perl(Carp)
+    - perl(DynaLoader)
+    - perl(File::Spec)
+    - perl(IO::File)
+    - perl(Net::DNS)
+perl-Net-Daemon:
+  '0.49':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Sys::Syslog)
+    runtime:
+    - perl(Sys::Syslog)
+perl-Net-GPSD3:
+  '0.19':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DateTime)
+    - perl(DateTime::Format::W3CDTF)
+    - perl(GPS::Point)
+    - perl(IO::Socket::INET6)
+    - perl(JSON::XS)
+    runtime:
+    - perl(DateTime)
+    - perl(DateTime::Format::W3CDTF)
+    - perl(GPS::Point)
+    - perl(IO::Socket::INET6)
+    - perl(JSON::XS)
+perl-Net-HTTP:
+  '6.23':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Compress::Raw::Zlib)
+    - perl(IO::Uncompress::Gunzip)
+    - perl(URI)
+    runtime:
+    - perl(Compress::Raw::Zlib)
+    - perl(IO::Uncompress::Gunzip)
+    - perl(URI)
+perl-Net-HTTP-Spore:
+  '0.09':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Load)
+    - perl(Digest::SHA)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Request)
+    - perl(IO::All)
+    - perl(JSON)
+    - perl(LWP::UserAgent)
+    - perl(Moose)
+    - perl(Moose::Exporter)
+    - perl(Moose::Meta::Method)
+    - perl(Moose::Role)
+    - perl(Moose::Util::MetaRole)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::Role::Parameterized)
+    - perl(MooseX::Types)
+    - perl(MooseX::Types::Moose)
+    - perl(MooseX::Types::URI)
+    - perl(Test::Exception)
+    - perl(Test::Moose)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(XML::Simple)
+    - perl(YAML)
+    - perl(Regexp::IPv6)
+    runtime:
+    - perl(Class::Load)
+    - perl(Digest::SHA)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Request)
+    - perl(IO::All)
+    - perl(JSON)
+    - perl(LWP::UserAgent)
+    - perl(Moose)
+    - perl(Moose::Exporter)
+    - perl(Moose::Meta::Method)
+    - perl(Moose::Role)
+    - perl(Moose::Util::MetaRole)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::Role::Parameterized)
+    - perl(MooseX::Types)
+    - perl(MooseX::Types::Moose)
+    - perl(MooseX::Types::URI)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(XML::Simple)
+    - perl(YAML)
+    - perl(Regexp::IPv6)
+perl-Net-HTTPS-Any:
+  '0.12':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Net::SSLeay)
+    - perl(Tie::IxHash)
+    - perl(URI::Escape)
+    - perl(Test::Pod)
+    - perl(Test::Pod::Coverage)
+    runtime:
+    - perl(Net::SSLeay)
+    - perl(Tie::IxHash)
+    - perl(URI::Escape)
+perl-Net-IDN-Nameprep:
+  '1.102':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Test::NoWarnings)
+    - perl(Unicode::Stringprep)
+    runtime:
+    - perl(Unicode::Stringprep)
+perl-Net-IP:
+  '1.26':
+  - build:
+    - perl
+    - perl-macros
+perl-Net-MQTT-Simple:
+  1.290.0:
+  - build:
+    - perl
+    - perl-macros
+perl-Net-Pcap:
+  '0.21':
+  - build:
+    - perl
+    - perl-macros
+    - libpcap-devel
+    runtime:
+    - perl(Data::Hexdumper)
+    - perl(NetPacket)
+    - '%{name}'
+    - '%{name}'
+perl-Net-SLP:
+  '1.5':
+  - build:
+    - perl
+    - perl-macros
+    - openslp-devel
+perl-Net-SNMP-Mixin:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Package::Generator)
+    - perl(Package::Reaper)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Package::Generator)
+    - perl(Package::Reaper)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-CiscoDot1qVlanStatic:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-CiscoDot1qVlanStaticTrunks:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-Dot1abLldp:
+  '0.18':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-Dot1dBase:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-Dot1dStp:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-Dot1qFdb:
+  '0.06':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-Dot1qVlanStatic:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-IfInfo:
+  '1.01':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-InetCidrRouteTable:
+  '0.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-IpCidrRouteTable:
+  '0.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-IpRouteTable:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-NXOSDot1dBase:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-NXOSDot1dStp:
+  '0.01':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SNMP-Mixin-NXOSDot1qFdb:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+    - netcfg
+    runtime:
+    - perl(Net::SNMP)
+    - perl(Net::SNMP::Mixin)
+    - perl(Sub::Exporter)
+perl-Net-SSH2:
+  '0.73':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - libgcrypt-devel
+    - libssh2-devel
+    - openssl-devel
+perl-Net-SSLeay:
+  1.940.0:
+  - build:
+    - perl
+    - perl-macros
+    - libopenssl-devel
+    - zlib-devel
+    - perl(Test::Exception)
+    - perl(Test::NoWarnings)
+    - perl(Test::Pod)
+    - perl(Test::Warn)
+perl-Net-Twitter:
+  '4.01043':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp::Clan)
+    - perl(Class::Load)
+    - perl(Data::Visitor::Callback)
+    - perl(DateTime)
+    - perl(DateTime::Format::Strptime)
+    - perl(Devel::StackTrace)
+    - perl(Digest::SHA)
+    - perl(HTML::Entities)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Response)
+    - perl(IO::Socket::SSL)
+    - perl(JSON::MaybeXS)
+    - perl(LWP::Protocol::https)
+    - perl(LWP::UserAgent)
+    - perl(Moose)
+    - perl(Moose::Exporter)
+    - perl(Moose::Meta::Method)
+    - perl(Moose::Role)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::Role::Parameterized)
+    - perl(namespace::autoclean)
+    - perl(Net::OAuth)
+    - perl(Net::OAuth::Message)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Warn)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(Net::HTTP)
+    runtime:
+    - perl(Carp::Clan)
+    - perl(Class::Load)
+    - perl(Data::Visitor::Callback)
+    - perl(DateTime)
+    - perl(DateTime::Format::Strptime)
+    - perl(Devel::StackTrace)
+    - perl(Digest::SHA)
+    - perl(HTML::Entities)
+    - perl(HTTP::Request::Common)
+    - perl(IO::Socket::SSL)
+    - perl(JSON::MaybeXS)
+    - perl(LWP::Protocol::https)
+    - perl(Moose)
+    - perl(Moose::Exporter)
+    - perl(Moose::Meta::Method)
+    - perl(Moose::Role)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::Role::Parameterized)
+    - perl(namespace::autoclean)
+    - perl(Net::OAuth)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(Net::HTTP)
+perl-Net-Twitter-Lite:
+  '0.12008':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTTP::Request::Common)
+    - perl(JSON)
+    - perl(LWP::Protocol::https)
+    - perl(LWP::UserAgent)
+    - perl(Module::Build::Tiny)
+    - perl(Test::Fatal)
+    - perl(Test::Simple)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(parent)
+    - perl(Net::HTTP)
+    runtime:
+    - perl(HTTP::Request::Common)
+    - perl(JSON)
+    - perl(LWP::Protocol::https)
+    - perl(LWP::UserAgent)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(parent)
+    - perl(Net::HTTP)
+perl-Net-XMPP:
+  '1.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Authen::SASL)
+    - perl(Digest::SHA)
+    - perl(LWP::Online)
+    - perl(Module::Build)
+    - perl(Test::More)
+    - perl(XML::Stream)
+    - perl(YAML::Tiny)
+    runtime:
+    - perl(Authen::SASL)
+    - perl(Digest::SHA)
+    - perl(XML::Stream)
+perl-Net-Z3950-ZOOM:
+  '1.30':
+  - build:
+    - perl
+    - perl-macros
+    - perl(MARC::Record)
+    - gcc-c++
+    - libyaz-devel
+    - openssl-devel
+    runtime:
+    - perl(MARC::Record)
+    - openssl
+    - yaz
+perl-NetAddr-IP:
+  '4.079':
+  - build:
+    - perl
+    - perl-macros
+perl-Number-Bytes-Human:
+  '0.11':
+  - build:
+    - perl
+    - perl-macros
+perl-Number-Format:
+  '1.76':
+  - build:
+    - perl
+    - perl-macros
+perl-Number-Phone:
+  '3.9002':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBM::Deep)
+    - perl(Data::Dumper::Concise)
+    - perl(Devel::CheckOS)
+    - perl(Devel::Deprecations::Environmental)
+    - perl(Devel::Hide)
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::Find::Rule)
+    - perl(File::ShareDir)
+    - perl(File::ShareDir::Install)
+    - perl(Parallel::ForkManager)
+    - perl(Scalar::Util)
+    - perl(Test::Differences)
+    - perl(Test::More)
+    - perl(Test::Warnings)
+    runtime:
+    - perl(DBM::Deep)
+    - perl(Data::Dumper::Concise)
+    - perl(Devel::CheckOS)
+    - perl(Devel::Deprecations::Environmental)
+    - perl(File::Find::Rule)
+    - perl(File::ShareDir)
+    - perl(Scalar::Util)
+perl-Number-WithError:
+  '1.01':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Params::Util)
+    - perl(Test::LectroTest)
+    - perl(prefork)
+    runtime:
+    - perl(Params::Util)
+    - perl(prefork)
+perl-OLE-Storage_Lite:
+  '0.22':
+  - build:
+    - perl
+    - perl-macros
+perl-ORLite:
+  2.0.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::XSAccessor)
+    - perl(Class::XSAccessor::Array)
+    - perl(DBD::SQLite)
+    - perl(DBI)
+    - perl(File::Path)
+    - perl(File::Remove)
+    - perl(Params::Util)
+    - perl(Test::Deep)
+    - perl(Test::Script)
+    - perl(Class::XSAccessor)
+    - sqlite
+    - perl(Test::Deep)
+    runtime:
+    - perl(DBD::SQLite)
+    - perl(DBI)
+    - perl(File::Path)
+    - perl(File::Remove)
+    - perl(Params::Util)
+perl-Object-Import:
+  '1.005':
+  - build:
+    - perl
+    - perl-macros
+    - perl(MRO::Compat)
+    - netcfg
+    runtime:
+    - perl(MRO::Compat)
+perl-Object-Signature:
+  '1.08':
+  - build:
+    - perl
+    - perl-macros
+perl-Ogg-Vorbis-Header:
+  '0.11':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Inline)
+    - perl(Inline::C)
+    - perl(Inline::MakeMaker)
+    - gcc
+    - libogg-devel
+    - libvorbis-devel
+    - make
+    runtime:
+    - perl(Inline)
+    - perl(Inline::C)
+perl-OpenGL:
+  '0.70':
+  - build:
+    - perl
+    - perl-macros
+    - Mesa-dri
+    - freeglut-devel
+    - gcc-c++
+    - xvfb-run
+    - pkgconfig(xi)
+    - pkgconfig(xmu)
+perl-PAR-Packer:
+  1.61.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Archive::Zip)
+    - perl(Compress::Zlib)
+    - perl(Digest::SHA)
+    - perl(ExtUtils::CBuilder)
+    - perl(Getopt::ArgvFile)
+    - perl(IO::Compress::Gzip)
+    - perl(IPC::Run3)
+    - perl(Module::ScanDeps)
+    - perl(PAR)
+    - perl(PAR::Dist)
+    runtime:
+    - perl(Archive::Zip)
+    - perl(Compress::Zlib)
+    - perl(Digest::SHA)
+    - perl(Getopt::ArgvFile)
+    - perl(IO::Compress::Gzip)
+    - perl(Module::ScanDeps)
+    - perl(PAR)
+    - perl(PAR::Dist)
+perl-PAR-Packer-test:
+  1.61.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Archive::Zip)
+    - perl(Compress::Zlib)
+    - perl(Digest::SHA)
+    - perl(ExtUtils::CBuilder)
+    - perl(Getopt::ArgvFile)
+    - perl(IO::Compress::Gzip)
+    - perl(IPC::Run3)
+    - perl(Module::ScanDeps)
+    - perl(PAR)
+    - perl(PAR::Dist)
+    runtime:
+    - perl(Archive::Zip)
+    - perl(Compress::Zlib)
+    - perl(Digest::SHA)
+    - perl(Getopt::ArgvFile)
+    - perl(IO::Compress::Gzip)
+    - perl(Module::ScanDeps)
+    - perl(PAR)
+    - perl(PAR::Dist)
+perl-PDF-Reuse:
+  '0.39':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Compress::Zlib)
+    - perl(Font::TTF)
+    - perl(Text::PDF::TTFont0)
+    - perl(Test::Deep)
+    runtime:
+    - perl(Compress::Zlib)
+    - perl(Font::TTF)
+    - perl(Text::PDF::TTFont0)
+perl-PDF-Table:
+  1.6.0:
+  - build:
+    - perl
+    - perl-macros
+perl-PDL:
+  '2.081':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Meta)
+    - perl(Carp)
+    - perl(Devel::CheckLib)
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::ParseXS)
+    - perl(File::Map)
+    - perl(File::Which)
+    - perl(Filter::Simple)
+    - perl(IPC::Cmd)
+    - perl(List::Util)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::Warn)
+    - perl(Text::Balanced)
+    - gcc-fortran
+    - gd-devel
+    - gsl-devel
+    - ncurses-devel
+    - perl(Astro::FITS::Header)
+    - perl(ExtUtils::F77)
+    - perl(Inline)
+    - perl(Inline::C)
+    - perl(OpenGL)
+    - perl(Pod::Select)
+    - pkgconfig(gl)
+    - pkgconfig(glut)
+    - pkgconfig(xi)
+    - pkgconfig(xmu)
+    runtime:
+    - perl(File::Map)
+    - perl(File::Which)
+    - perl(Filter::Simple)
+    - perl(List::Util)
+    - perl(Text::Balanced)
+    - perl(Astro::FITS::Header)
+    - perl(Inline)
+    - perl(Inline::C)
+perl-POE:
+  '1.370':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO)
+    - perl(IO::Handle)
+    - perl(IO::Pipely)
+    - perl(IO::Tty)
+    - perl(POE::Test::Loops)
+    - perl(Storable)
+    - netcfg
+    runtime:
+    - perl(IO)
+    - perl(IO::Handle)
+    - perl(IO::Pipely)
+    - perl(IO::Tty)
+    - perl(POE::Test::Loops)
+    - perl(Storable)
+perl-POSIX-strftime-Compiler:
+  0.460.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Module::Build::Tiny)
+    - perl(Test::More)
+    - timezone
+perl-PPI:
+  1.278.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Inspector)
+    - perl(Clone)
+    - perl(List::Util)
+    - perl(Params::Util)
+    - perl(Storable)
+    - perl(Task::Weaken)
+    - perl(Test::More)
+    - perl(Test::NoWarnings)
+    - perl(Test::Object)
+    - perl(Test::SubCalls)
+    - perl(parent)
+    runtime:
+    - perl(Clone)
+    - perl(List::Util)
+    - perl(Params::Util)
+    - perl(Storable)
+    - perl(Task::Weaken)
+perl-PadWalker:
+  '2.5':
+  - build:
+    - perl
+    - perl-macros
+perl-Pango:
+  '1.227':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Cairo)
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib)
+    - xorg-x11
+    - xorg-x11-Xvfb
+    - xorg-x11-server
+    - pkgconfig(cairo)
+    - pkgconfig(pango)
+    - perl(Gtk2)
+    runtime:
+    - perl(Cairo)
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::PkgConfig)
+    - perl(Glib)
+perl-Parallel-Scoreboard:
+  '0.08':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Accessor::Lite)
+    - perl(HTML::Entities)
+    - perl(JSON)
+    - perl(Sub::Uplevel)
+    runtime:
+    - perl(Class::Accessor::Lite)
+    - perl(HTML::Entities)
+    - perl(JSON)
+perl-Params-Coerce:
+  '0.15':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Params::Util)
+    runtime:
+    - perl(Params::Util)
+perl-Parse-CPAN-Packages-Fast:
+  '0.09':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::DistnameInfo)
+    - perl(CPAN::Version)
+    - perl(IO::Uncompress::Gunzip)
+    runtime:
+    - perl(CPAN::DistnameInfo)
+    - perl(CPAN::Version)
+    - perl(IO::Uncompress::Gunzip)
+perl-Parse-Yapp:
+  '1.21':
+  - build:
+    - perl
+    - perl-macros
+perl-Pass-OTP:
+  1.702.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Convert::Base32)
+    - perl(Digest::HMAC)
+    - perl(Digest::SHA)
+    - perl(Math::BigInt)
+    runtime:
+    - perl(Convert::Base32)
+    - perl(Digest::HMAC)
+    - perl(Digest::SHA)
+    - perl(Math::BigInt)
+perl-Passwd-Keyring-Gnome:
+  '1.0000':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::PkgConfig)
+    - perl(File::ShareDir)
+    - perl(Module::Build)
+    - perl(Pod::Markdown)
+    - perl(Pod::Readme)
+    - perl(Test::Pod::Coverage)
+    - libgnome-keyring-devel
+    runtime:
+    - perl(File::ShareDir)
+perl-Passwd-Keyring-KDEWallet:
+  '1.0001':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::ShareDir)
+    - perl(Module::Build)
+    - perl(Net::DBus)
+    - perl(Pod::Markdown)
+    - perl(Pod::Readme)
+    - perl(Proc::SyncExec)
+    - perl(Test::Pod::Coverage)
+    - perl(Try::Tiny)
+    - perl(File::Which)
+    runtime:
+    - perl(File::ShareDir)
+    - perl(Net::DBus)
+    - perl(Proc::SyncExec)
+    - perl(Try::Tiny)
+perl-Perl-Critic-Community:
+  1.0.3:
+  - build:
+    - perl
+    - perl-macros
+    - perl(List::Util)
+    - perl(Module::Build::Tiny)
+    - perl(Module::Metadata)
+    - perl(PPI)
+    - perl(Path::Tiny)
+    - perl(Perl::Critic)
+    - perl(Perl::Critic::Policy::Objects::ProhibitIndirectSyntax)
+    - perl(Perl::Critic::Policy::Subroutines::ProhibitAmpersandSigils)
+    - perl(Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref)
+    - perl(Perl::Critic::Policy::Variables::ProhibitConditionalDeclarations)
+    - perl(Perl::Critic::Policy::Variables::ProhibitLoopOnHash)
+    - perl(Perl::Critic::Policy::Variables::RequireLexicalLoopIterators)
+    - perl(parent)
+    - perl(version)
+    runtime:
+    - perl(List::Util)
+    - perl(PPI)
+    - perl(Path::Tiny)
+    - perl(Perl::Critic)
+    - perl(Perl::Critic::Policy::Objects::ProhibitIndirectSyntax)
+    - perl(Perl::Critic::Policy::Subroutines::ProhibitAmpersandSigils)
+    - perl(Perl::Critic::Policy::ValuesAndExpressions::ProhibitArrayAssignAref)
+    - perl(Perl::Critic::Policy::Variables::ProhibitConditionalDeclarations)
+    - perl(Perl::Critic::Policy::Variables::ProhibitLoopOnHash)
+    - perl(Perl::Critic::Policy::Variables::RequireLexicalLoopIterators)
+    - perl(parent)
+    - perl(version)
+perl-Perl-Critic-Pulp:
+  '99':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::String)
+    - perl(List::MoreUtils)
+    - perl(PPI)
+    - perl(PPI::Document)
+    - perl(PPI::Dumper)
+    - perl(Perl::Critic)
+    - perl(Perl::Critic::Policy)
+    - perl(Perl::Critic::Utils)
+    - perl(Perl::Critic::Utils::PPI)
+    - perl(Perl::Critic::Violation)
+    - perl(Pod::Escapes)
+    - perl(Pod::MinimumVersion)
+    - perl(version)
+    runtime:
+    - perl(IO::String)
+    - perl(List::MoreUtils)
+    - perl(PPI)
+    - perl(PPI::Document)
+    - perl(PPI::Dumper)
+    - perl(Perl::Critic)
+    - perl(Perl::Critic::Policy)
+    - perl(Perl::Critic::Utils)
+    - perl(Perl::Critic::Utils::PPI)
+    - perl(Perl::Critic::Violation)
+    - perl(Pod::Escapes)
+    - perl(Pod::MinimumVersion)
+    - perl(version)
+perl-Perl-LanguageServer:
+  2.6.2:
+  - build:
+    - perl
+    - perl-macros
+    - perl(AnyEvent)
+    - perl(AnyEvent::AIO)
+    - perl(Class::Refresh)
+    - perl(Compiler::Lexer)
+    - perl(Coro)
+    - perl(Data::Dump)
+    - perl(Encode::Locale)
+    - perl(Hash::SafeKeys)
+    - perl(IO::AIO)
+    - perl(JSON)
+    - perl(Moose)
+    - perl(PadWalker)
+    - dos2unix
+    runtime:
+    - perl(AnyEvent)
+    - perl(AnyEvent::AIO)
+    - perl(Class::Refresh)
+    - perl(Compiler::Lexer)
+    - perl(Coro)
+    - perl(Data::Dump)
+    - perl(Encode::Locale)
+    - perl(Hash::SafeKeys)
+    - perl(IO::AIO)
+    - perl(JSON)
+    - perl(Moose)
+    - perl(PadWalker)
+perl-Perl-Tidy:
+  20240202.0.0:
+  - build:
+    - perl
+    - perl-macros
+perl-PerlIO-gzip:
+  '0.20':
+  - build:
+    - perl
+    - perl-macros
+    - zlib-devel
+perl-PerlIO-utf8_strict:
+  '0.010':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::Exception)
+    - perl(Test::More)
+perl-PerlIO-via-dynamic:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+perl-Pinto:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Apache::Htpasswd)
+    - perl(App::Cmd)
+    - perl(App::Cmd::Command::help)
+    - perl(App::Cmd::Setup)
+    - perl(Archive::Extract)
+    - perl(Archive::Tar)
+    - perl(Authen::Simple::Passwd)
+    - perl(CPAN::Checksums)
+    - perl(CPAN::DistnameInfo)
+    - perl(CPAN::Meta)
+    - perl(CPAN::Meta::Requirements)
+    - perl(Capture::Tiny)
+    - perl(Class::Load)
+    - perl(Cwd::Guard)
+    - perl(DBD::SQLite)
+    - perl(DBIx::Class)
+    - perl(DBIx::Class::Core)
+    - perl(DBIx::Class::ResultSet)
+    - perl(DBIx::Class::Schema)
+    - perl(DateTime)
+    - perl(DateTime::TimeZone)
+    - perl(DateTime::TimeZone::Local::Unix)
+    - perl(DateTime::TimeZone::OffsetOnly)
+    - perl(Devel::StackTrace)
+    - perl(Digest::SHA)
+    - perl(Dist::Metadata)
+    - perl(File::HomeDir)
+    - perl(File::NFSLock)
+    - perl(File::Which)
+    - perl(HTTP::Body)
+    - perl(HTTP::Date)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Response)
+    - perl(HTTP::Server::PSGI)
+    - perl(HTTP::Status)
+    - perl(IO::Interactive)
+    - perl(IO::Prompt)
+    - perl(IO::String)
+    - perl(IO::Zlib)
+    - perl(JSON)
+    - perl(JSON::PP)
+    - perl(LWP::UserAgent)
+    - perl(List::MoreUtils)
+    - perl(Module::CoreList)
+    - perl(Module::Faker::Dist)
+    - perl(Module::Metadata)
+    - perl(Moose)
+    - perl(Moose::Role)
+    - perl(MooseX::Aliases)
+    - perl(MooseX::ClassAttribute)
+    - perl(MooseX::Configuration)
+    - perl(MooseX::MarkAsMethods)
+    - perl(MooseX::NonMoose)
+    - perl(MooseX::SetOnce)
+    - perl(MooseX::StrictConstructor)
+    - perl(MooseX::Types)
+    - perl(MooseX::Types::Moose)
+    - perl(Path::Class)
+    - perl(Path::Class::Dir)
+    - perl(Path::Class::File)
+    - perl(Plack)
+    - perl(Plack::MIME)
+    - perl(Plack::Middleware::Auth::Basic)
+    - perl(Plack::Request)
+    - perl(Plack::Response)
+    - perl(Plack::Runner)
+    - perl(Plack::Test)
+    - perl(Proc::Fork)
+    - perl(Proc::Terminator)
+    - perl(Readonly)
+    - perl(Router::Simple)
+    - perl(Starman)
+    - perl(String::Format)
+    - perl(Term::ANSIColor)
+    - perl(Test::Exception)
+    - perl(Test::File)
+    - perl(Test::LWP::UserAgent)
+    - perl(Test::More)
+    - perl(Test::TCP)
+    - perl(Throwable::Error)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(URI::file)
+    - perl(UUID::Tiny)
+    - perl(Variable::Magic)
+    - perl(version)
+    - timezone
+    runtime:
+    - perl(App::Cmd)
+    - perl(App::Cmd::Command::help)
+    - perl(App::Cmd::Setup)
+    - perl(Archive::Extract)
+    - perl(Archive::Tar)
+    - perl(Authen::Simple::Passwd)
+    - perl(CPAN::Checksums)
+    - perl(CPAN::DistnameInfo)
+    - perl(CPAN::Meta)
+    - perl(CPAN::Meta::Requirements)
+    - perl(Class::Load)
+    - perl(Cwd::Guard)
+    - perl(DBD::SQLite)
+    - perl(DBIx::Class)
+    - perl(DBIx::Class::Core)
+    - perl(DBIx::Class::ResultSet)
+    - perl(DBIx::Class::Schema)
+    - perl(DateTime)
+    - perl(DateTime::TimeZone)
+    - perl(DateTime::TimeZone::Local::Unix)
+    - perl(DateTime::TimeZone::OffsetOnly)
+    - perl(Devel::StackTrace)
+    - perl(Digest::SHA)
+    - perl(Dist::Metadata)
+    - perl(File::HomeDir)
+    - perl(File::NFSLock)
+    - perl(File::Which)
+    - perl(HTTP::Date)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Status)
+    - perl(IO::Interactive)
+    - perl(IO::Prompt)
+    - perl(IO::String)
+    - perl(IO::Zlib)
+    - perl(JSON)
+    - perl(JSON::PP)
+    - perl(LWP::UserAgent)
+    - perl(List::MoreUtils)
+    - perl(Module::CoreList)
+    - perl(Module::Metadata)
+    - perl(Moose)
+    - perl(Moose::Role)
+    - perl(MooseX::Aliases)
+    - perl(MooseX::ClassAttribute)
+    - perl(MooseX::Configuration)
+    - perl(MooseX::MarkAsMethods)
+    - perl(MooseX::NonMoose)
+    - perl(MooseX::SetOnce)
+    - perl(MooseX::StrictConstructor)
+    - perl(MooseX::Types)
+    - perl(MooseX::Types::Moose)
+    - perl(Path::Class)
+    - perl(Path::Class::Dir)
+    - perl(Path::Class::File)
+    - perl(Plack)
+    - perl(Plack::MIME)
+    - perl(Plack::Middleware::Auth::Basic)
+    - perl(Plack::Request)
+    - perl(Plack::Response)
+    - perl(Plack::Runner)
+    - perl(Proc::Fork)
+    - perl(Proc::Terminator)
+    - perl(Readonly)
+    - perl(Router::Simple)
+    - perl(Starman)
+    - perl(String::Format)
+    - perl(Term::ANSIColor)
+    - perl(Throwable::Error)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(URI::file)
+    - perl(UUID::Tiny)
+    - perl(Variable::Magic)
+    - perl(version)
+perl-PlRPC:
+  0.202.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Net::Daemon)
+    runtime:
+    - perl(Net::Daemon)
+perl-Plack-Middleware-Header:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Plack::Middleware)
+    - perl(parent)
+    runtime:
+    - perl(Plack::Middleware)
+    - perl(parent)
+perl-Plack-Middleware-Session:
+  '0.33':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Cookie::Baker)
+    - perl(Digest::HMAC_SHA1)
+    - perl(Digest::SHA)
+    - perl(HTTP::Cookies)
+    - perl(HTTP::Request::Common)
+    - perl(LWP::UserAgent)
+    - perl(Module::Build::Tiny)
+    - perl(Plack)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    runtime:
+    - perl(Cookie::Baker)
+    - perl(Digest::HMAC_SHA1)
+    - perl(Digest::SHA)
+    - perl(Plack)
+perl-Pod-AsciiDoctor:
+  '0.102002':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Path::Tiny)
+    - perl(Pod::Parser)
+    - perl(Test::More)
+    - perl(autodie)
+    - perl(parent)
+    - perl(Pod::Parser)
+    runtime:
+    - perl(Path::Tiny)
+    - perl(Pod::Parser)
+    - perl(autodie)
+    - perl(parent)
+perl-Pod-MinimumVersion:
+  '50':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::String)
+    - perl(Pod::Parser)
+    - perl(version)
+    runtime:
+    - perl(IO::String)
+    - perl(Pod::Parser)
+    - perl(version)
+perl-Pod-POM:
+  '2.01':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Slurper)
+    - perl(Test::Differences)
+    - perl(Text::Diff)
+    - perl(parent)
+    runtime:
+    - perl(parent)
+perl-Pod-Readme:
+  1.2.3:
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Changes)
+    - perl(CPAN::Meta)
+    - perl(Class::Method::Modifiers)
+    - perl(File::Slurp)
+    - perl(Getopt::Long::Descriptive)
+    - perl(IO::String)
+    - perl(List::Util)
+    - perl(Module::CoreList)
+    - perl(Module::Metadata)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(MooX::HandlesVia)
+    - perl(Path::Tiny)
+    - perl(Pod::Simple)
+    - perl(Pod::Simple::Text)
+    - perl(Role::Tiny)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::Kit)
+    - perl(Try::Tiny)
+    - perl(Type::Tiny)
+    - perl(Types::Standard)
+    - perl(namespace::autoclean)
+    runtime:
+    - perl(CPAN::Changes)
+    - perl(CPAN::Meta)
+    - perl(Class::Method::Modifiers)
+    - perl(File::Slurp)
+    - perl(Getopt::Long::Descriptive)
+    - perl(List::Util)
+    - perl(Module::CoreList)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(MooX::HandlesVia)
+    - perl(Path::Tiny)
+    - perl(Pod::Simple)
+    - perl(Role::Tiny)
+    - perl(Try::Tiny)
+    - perl(Type::Tiny)
+    - perl(Types::Standard)
+    - perl(namespace::autoclean)
+perl-Pod-Usage:
+  '2.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Pod::Perldoc)
+    - perl(Pod::Simple)
+    - perl(Pod::Text)
+    runtime:
+    - perl(Pod::Perldoc)
+    - perl(Pod::Simple)
+    - perl(Pod::Text)
+perl-Pod-Xhtml:
+  '1.61':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Pod::ParseUtils)
+    - perl(Pod::Parser)
+    - perl(Test::Assertions::TestScript)
+    - perl(URI::Escape)
+    runtime:
+    - perl(Pod::ParseUtils)
+    - perl(Pod::Parser)
+    - perl(Test::Assertions::TestScript)
+    - perl(URI::Escape)
+perl-PostScript-Simple:
+  '0.09':
+  - build:
+    - perl
+    - perl-macros
+perl-Prima:
+  '1.72000':
+  - build:
+    - perl
+    - perl-macros
+    - giflib-devel
+    - libpng-devel
+    - libtiff-devel
+    - xkeyboard-config
+    - xorg-x11
+    - xorg-x11-Xvfb
+    - pkgconfig(x11)
+    - pkgconfig(xcomposite)
+    - pkgconfig(xcursor)
+    - pkgconfig(xext)
+    - pkgconfig(xft)
+    - pkgconfig(xpm)
+    - pkgconfig(xproto)
+    - pkgconfig(xrandr)
+    - pkgconfig(xrender)
+    runtime:
+    - xorg-x11
+perl-Proc-Daemon:
+  '0.23':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Proc::ProcessTable)
+perl-Proc-PID-File:
+  '1.29':
+  - build:
+    - perl
+    - perl-macros
+perl-Proc-ProcessTable:
+  '0.636':
+  - build:
+    - perl
+    - perl-macros
+perl-Proc-SyncExec:
+  '1.01':
+  - build:
+    - perl
+    - perl-macros
+perl-Protocol-HTTP2:
+  '1.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(AnyEvent)
+    - perl(MIME::Base64)
+    - perl(Module::Build::Tiny)
+    - perl(Net::SSLeay)
+    - perl(Test::LeakTrace)
+    - perl(Test::More)
+    - perl(Test::TCP)
+    runtime:
+    - perl(MIME::Base64)
+perl-RDF-Simple:
+  '0.421':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::MethodMaker)
+    - perl(File::Slurp)
+    - perl(IO::CaptureOutput)
+    - perl(LWP::UserAgent)
+    - perl(Regexp::Common)
+    - perl(Test::File)
+    - perl(XML::SAX)
+    - perl(Module::Install)
+    runtime:
+    - perl(Class::MethodMaker)
+    - perl(File::Slurp)
+    - perl(LWP::UserAgent)
+    - perl(Regexp::Common)
+    - perl(XML::SAX)
+perl-RPC-XML:
+  '0.82':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(HTTP::Daemon)
+    - perl(HTTP::Message)
+    - perl(IO::Socket::IP)
+    - perl(LWP)
+    - perl(Module::Load)
+    - perl(Scalar::Util)
+    - perl(Test::More)
+    - perl(XML::Parser)
+    - perl(HTTP::Daemon)
+    runtime:
+    - perl(HTTP::Daemon)
+    - perl(HTTP::Message)
+    - perl(LWP)
+    - perl(Module::Load)
+    - perl(Scalar::Util)
+    - perl(XML::Parser)
+perl-RT-Extension-PriorityAsString:
+  '1.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(RT)
+    runtime:
+    - perl(RT)
+perl-RT-Extension-ReferenceIDoitObjects:
+  '1.00':
+  - build:
+    - perl
+    - perl-macros
+    - perl(RT)
+    runtime:
+    - perl(RT)
+perl-Readonly:
+  '2.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build::Tiny)
+perl-Regexp-Assemble:
+  '0.38':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+perl-Regexp-Common:
+  '2017060201':
+  - build:
+    - perl
+    - perl-macros
+perl-Rex:
+  1.14.3:
+  - build:
+    - perl
+    - perl-macros
+    - perl(AWS::Signature4)
+    - perl(CPAN::Meta::Requirements)
+    - perl(Data::Validate::IP)
+    - perl(Devel::Caller)
+    - perl(Digest::HMAC_SHA1)
+    - perl(autodie)
+    - perl(File::ShareDir::Install)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(Hash::Merge)
+    - perl(IO::Pty)
+    - perl(IO::String)
+    - perl(JSON::MaybeXS)
+    - perl(LWP::UserAgent)
+    - perl(List::Util)
+    - perl(Module::Load::Conditional)
+    - perl(Module::Metadata)
+    - perl(Net::OpenSSH)
+    - perl(Net::OpenSSH::ShellQuoter)
+    - perl(Net::SFTP::Foreign)
+    - perl(Sort::Naturally)
+    - perl(String::Escape)
+    - perl(Sub::Override)
+    - perl(Term::ReadKey)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::Output)
+    - perl(Test::UseAllModules)
+    - perl(Test::Warnings)
+    - perl(Text::Glob)
+    - perl(URI)
+    - perl(URI::QueryParam)
+    - perl(XML::Simple)
+    - perl(version)
+    - perl(ExtUtils::MakeMaker)
+    - git-core
+    - perl(YAML)
+    runtime:
+    - perl(AWS::Signature4)
+    - perl(Data::Validate::IP)
+    - perl(Devel::Caller)
+    - perl(Digest::HMAC_SHA1)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(Hash::Merge)
+    - perl(IO::Pty)
+    - perl(IO::String)
+    - perl(JSON::MaybeXS)
+    - perl(LWP::UserAgent)
+    - perl(List::Util)
+    - perl(Net::OpenSSH)
+    - perl(Net::OpenSSH::ShellQuoter)
+    - perl(Net::SFTP::Foreign)
+    - perl(Sort::Naturally)
+    - perl(Term::ReadKey)
+    - perl(Text::Glob)
+    - perl(URI)
+    - perl(URI::QueryParam)
+    - perl(XML::Simple)
+    - perl(version)
+    - perl(YAML)
+perl-SDL:
+  '2.548':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::SDL)
+    - perl(CPAN)
+    - perl(Capture::Tiny)
+    - perl(ExtUtils::CBuilder)
+    - perl(File::ShareDir)
+    - perl(Module::Build)
+    - perl(Test::Most)
+    - perl(Test::Simple)
+    - perl(Tie::Simple)
+    - Mesa-devel
+    - libSDL-devel
+    - libSDL_Pango-devel
+    - libSDL_gfx-devel
+    - libSDL_image-devel
+    - libSDL_mixer-devel
+    - libSDL_net-devel
+    - libSDL_sound-devel
+    - libSDL_ttf-devel
+    - dejavu-fonts
+    - udev
+    runtime:
+    - perl(CPAN)
+    - perl(File::ShareDir)
+    - perl(Tie::Simple)
+perl-SOAP-Lite:
+  '1.27':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Inspector)
+    - perl(Compress::Zlib)
+    - perl(ExtUtils::MakeMaker)
+    - perl(HTTP::Daemon)
+    - perl(IO::File)
+    - perl(IO::SessionData)
+    - perl(IO::Socket::SSL)
+    - perl(LWP::Protocol::https)
+    - perl(LWP::UserAgent)
+    - perl(MIME::Base64)
+    - perl(MIME::Tools)
+    - perl(Scalar::Util)
+    - perl(Task::Weaken)
+    - perl(Test::More)
+    - perl(Test::Warn)
+    - perl(Test::MockObject)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(XML::Parser)
+    - perl(XML::Parser::Lite)
+    - perl(constant)
+    runtime:
+    - perl(Class::Inspector)
+    - perl(Compress::Zlib)
+    - perl(IO::SessionData)
+    - perl(IO::Socket::SSL)
+    - perl(LWP::Protocol::https)
+    - perl(LWP::UserAgent)
+    - perl(MIME::Base64)
+    - perl(Scalar::Util)
+    - perl(Task::Weaken)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(XML::Parser)
+    - perl(XML::Parser::Lite)
+    - perl(constant)
+perl-SQL-Abstract-Classic:
+  '1.91':
+  - build:
+    - perl
+    - perl-macros
+    - perl(MRO::Compat)
+    - perl(SQL::Abstract)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    - perl(Test::Warn)
+    - perl(Text::Balanced)
+    runtime:
+    - perl(MRO::Compat)
+    - perl(SQL::Abstract)
+    - perl(Text::Balanced)
+perl-SQL-Abstract-Limit:
+  '0.143':
+  - build:
+    - perl
+    - perl-macros
+    - perl(DBI)
+    - perl(ExtUtils::MakeMaker)
+    - perl(SQL::Abstract)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    runtime:
+    - perl(DBI)
+    - perl(ExtUtils::MakeMaker)
+    - perl(SQL::Abstract)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+perl-SQL-Translator:
+  1.650.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Carp::Clan)
+    - perl(DBI)
+    - perl(Digest::SHA)
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::ShareDir)
+    - perl(File::ShareDir::Install)
+    - perl(JSON::MaybeXS)
+    - perl(List::Util)
+    - perl(Moo)
+    - perl(Package::Variant)
+    - perl(Parse::RecDescent)
+    - perl(Sub::Quote)
+    - perl(Test::Differences)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    - perl(Try::Tiny)
+    - perl(XML::Writer)
+    - perl(YAML)
+    runtime:
+    - perl(Carp::Clan)
+    - perl(DBI)
+    - perl(Digest::SHA)
+    - perl(File::ShareDir)
+    - perl(List::Util)
+    - perl(Moo)
+    - perl(Package::Variant)
+    - perl(Parse::RecDescent)
+    - perl(Sub::Quote)
+    - perl(Try::Tiny)
+perl-SVN-Hooks:
+  '1.36':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Data::Util)
+    - perl(JIRA::REST)
+    - perl(SVN::Look)
+    - perl(SVN::Notify)
+    - perl(URI::file)
+    - subversion-perl
+    runtime:
+    - perl(Data::Util)
+    - perl(JIRA::REST)
+    - perl(SVN::Look)
+    - perl(SVN::Notify)
+    - subversion-perl
+perl-SVN-Look:
+  '0.43':
+  - build:
+    - perl
+    - perl-macros
+    - perl(List::MoreUtils)
+    - perl(URI::file)
+    - perl(XML::Simple)
+    - subversion
+    runtime:
+    - perl(List::MoreUtils)
+    - perl(XML::Simple)
+    - subversion
+perl-Safe:
+  '2.35':
+  - build:
+    - perl
+    - perl-macros
+perl-Scriptalicious:
+  '1.17':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Term::ReadKey)
+    runtime:
+    - perl(Term::ReadKey)
+perl-Search-Elasticsearch:
+  8.120.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Any::URI::Escape)
+    - perl(Devel::GlobalDestruction)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Request)
+    - perl(HTTP::Tiny)
+    - perl(IO::Compress::Deflate)
+    - perl(IO::Compress::Gzip)
+    - perl(IO::Socket::SSL)
+    - perl(IO::Uncompress::Gunzip)
+    - perl(IO::Uncompress::Inflate)
+    - perl(JSON::MaybeXS)
+    - perl(JSON::PP)
+    - perl(LWP::UserAgent)
+    - perl(Log::Any)
+    - perl(Log::Any::Adapter)
+    - perl(Log::Any::Adapter::Callback)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Net::IP)
+    - perl(Package::Stash)
+    - perl(Sub::Exporter)
+    - perl(Test::Deep)
+    - perl(Test::Exception)
+    - perl(Test::More)
+    - perl(Test::Pod)
+    - perl(Test::SharedFork)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(namespace::clean)
+    runtime:
+    - perl(Any::URI::Escape)
+    - perl(Devel::GlobalDestruction)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Request)
+    - perl(HTTP::Tiny)
+    - perl(IO::Compress::Deflate)
+    - perl(IO::Compress::Gzip)
+    - perl(IO::Uncompress::Gunzip)
+    - perl(IO::Uncompress::Inflate)
+    - perl(JSON::MaybeXS)
+    - perl(JSON::PP)
+    - perl(LWP::UserAgent)
+    - perl(Log::Any)
+    - perl(Log::Any::Adapter)
+    - perl(Module::Runtime)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Net::IP)
+    - perl(Package::Stash)
+    - perl(Sub::Exporter)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(namespace::clean)
+perl-Search-Xapian:
+  1.2.25.5:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::Leak)
+    - libxapian-devel
+perl-Selenium-Remote-Driver:
+  '1.49':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Archive::Zip)
+    - perl(Clone)
+    - perl(File::Which)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Request)
+    - perl(HTTP::Response)
+    - perl(IO::String)
+    - perl(IO::Uncompress::Unzip)
+    - perl(JSON)
+    - perl(LWP::UserAgent)
+    - perl(List::Util)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Sub::Install)
+    - perl(Test::Deep)
+    - perl(Test::Fatal)
+    - perl(Test::LWP::UserAgent)
+    - perl(Test::LongString)
+    - perl(Test::MockModule)
+    - perl(Try::Tiny)
+    - perl(XML::Simple)
+    - perl(namespace::clean)
+    runtime:
+    - perl(Archive::Zip)
+    - perl(Clone)
+    - perl(File::Which)
+    - perl(HTTP::Headers)
+    - perl(HTTP::Request)
+    - perl(HTTP::Response)
+    - perl(IO::String)
+    - perl(IO::Uncompress::Unzip)
+    - perl(JSON)
+    - perl(LWP::UserAgent)
+    - perl(List::Util)
+    - perl(Moo)
+    - perl(Moo::Role)
+    - perl(Sub::Install)
+    - perl(Test::LongString)
+    - perl(Try::Tiny)
+    - perl(XML::Simple)
+    - perl(namespace::clean)
+    - lsof
+perl-Sereal:
+  '5.004':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Sereal::Decoder)
+    - perl(Sereal::Encoder)
+    - perl(Test::Deep)
+    - perl(Test::Differences)
+    - perl(Test::LongString)
+    - perl(Test::More)
+    - perl(Test::Warn)
+    runtime:
+    - perl(Sereal::Decoder)
+    - perl(Sereal::Encoder)
+perl-Sereal-Decoder:
+  '5.004':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::ParseXS)
+    - perl(Test::Deep)
+    - perl(Test::Differences)
+    - perl(Test::LongString)
+    - perl(Test::More)
+    - perl(Test::Warn)
+perl-Sereal-Encoder:
+  '5.004':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::ParseXS)
+    - perl(Sereal::Decoder)
+    - perl(Test::Deep)
+    - perl(Test::Differences)
+    - perl(Test::LongString)
+    - perl(Test::More)
+    - perl(Test::Warn)
+    runtime:
+    - perl(Sereal::Decoder)
+perl-Smart-Args:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Exporter)
+    - perl(Module::Build::Tiny)
+    - perl(Moose::Util::TypeConstraints)
+    - perl(MooseX::Types::Moose)
+    - perl(Mouse)
+    - perl(Mouse::Util::TypeConstraints)
+    - perl(MouseX::Types)
+    - perl(MouseX::Types::Mouse)
+    - perl(PadWalker)
+    - perl(Scalar::Util)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    runtime:
+    - perl(Exporter)
+    - perl(Mouse)
+    - perl(Mouse::Util::TypeConstraints)
+    - perl(PadWalker)
+    - perl(Scalar::Util)
+perl-Sniffer-HTTP:
+  '0.28':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Accessor)
+    - perl(Class::Data::Inheritable)
+    - perl(HTTP::Request)
+    - perl(HTTP::Response)
+    - perl(Image::Info)
+    - perl(LWP::Simple)
+    - perl(Net::Pcap)
+    - perl(NetPacket::TCP)
+    - perl(Test::Deep)
+    - perl(Test::HTTP::LocalServer)
+    - perl(URI)
+    - perl(URI::file)
+    - perl(parent)
+    runtime:
+    - perl(Class::Accessor)
+    - perl(Class::Data::Inheritable)
+    - perl(HTTP::Request)
+    - perl(HTTP::Response)
+    - perl(LWP::Simple)
+    - perl(Net::Pcap)
+    - perl(NetPacket::TCP)
+    - perl(parent)
+    - perl(Net::Pcap)
+    - net-tools-deprecated
+    - '%{name}'
+perl-Socket6:
+  '0.29':
+  - build:
+    - perl
+    - perl-macros
+perl-Specio:
+  '0.48':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::StackTrace)
+    - perl(Eval::Closure)
+    - perl(List::Util)
+    - perl(MRO::Compat)
+    - perl(Module::Runtime)
+    - perl(Role::Tiny)
+    - perl(Role::Tiny::With)
+    - perl(Sub::Quote)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Needs)
+    - perl(Try::Tiny)
+    - perl(XString)
+    - perl(parent)
+    - perl(version)
+    runtime:
+    - perl(Devel::StackTrace)
+    - perl(Eval::Closure)
+    - perl(List::Util)
+    - perl(MRO::Compat)
+    - perl(Module::Runtime)
+    - perl(Role::Tiny)
+    - perl(Role::Tiny::With)
+    - perl(Sub::Quote)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Try::Tiny)
+    - perl(XString)
+    - perl(parent)
+    - perl(version)
+perl-Spoon:
+  '0.24':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IO::All)
+    - perl(Spiffy)
+    - perl(Template)
+    - perl(URI)
+    - perl(CGI)
+    runtime:
+    - perl(IO::All)
+    - perl(Spiffy)
+    - perl(Template)
+    - perl(URI)
+    - perl(CGI)
+perl-Spreadsheet-Read:
+  0.900.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Data::Peek)
+    - perl(File::Temp)
+    - perl(IO::Scalar)
+    - perl(Test::More)
+    - perl(Test::NoWarnings)
+    - perl(Spreadsheet::ParseExcel)
+    - perl(Spreadsheet::ParseExcel::FmtDefault)
+    - perl(Spreadsheet::ParseXLSX)
+    - perl(Text::CSV_XS)
+    runtime:
+    - perl(Data::Peek)
+    - perl(File::Temp)
+    - perl(IO::Scalar)
+    - perl(Test::More)
+    - perl(Test::NoWarnings)
+    - perl(HTML::Entities)
+    - perl(Spreadsheet::Read)
+    - perl(Term::ReadKey)
+    - perl(Text::CSV_XS)
+    - perl(Tk)
+    - perl(Tk::TableMatrix::Spreadsheet)
+    uggests:
+    - perl-Spreadsheet-Read-scripts
+perl-Spreadsheet-ReadSXC:
+  0.380.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Archive::Zip)
+    - perl(Moo)
+    - perl(PerlIO::gzip)
+    - perl(PerlX::Maybe)
+    - perl(XML::Twig)
+    - perl(XML::Twig::XPath)
+    - perl(XML::XPath)
+    - perl(XML::XPathEngine)
+    runtime:
+    - perl(Archive::Zip)
+    - perl(Moo)
+    - perl(PerlIO::gzip)
+    - perl(PerlX::Maybe)
+    - perl(XML::Twig)
+    - perl(XML::Twig::XPath)
+    - perl(XML::XPath)
+    - perl(XML::XPathEngine)
+perl-Starlet:
+  '0.31':
+  - build:
+    - perl
+    - perl-macros
+    - perl(LWP::UserAgent)
+    - perl(Module::Install)
+    - perl(Parallel::Prefork)
+    - perl(Plack)
+    - perl(Server::Starter)
+    - perl(Test::More)
+    - perl(Test::TCP)
+    - perl(Class::Accessor::Lite)
+    - perl(List::MoreUtils)
+    runtime:
+    - perl(Parallel::Prefork)
+    - perl(Plack)
+    - perl(Server::Starter)
+perl-Statistics-TTest:
+  1.1.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Statistics::Descriptive)
+    - perl(Statistics::Distributions)
+    runtime:
+    - perl(Statistics::Descriptive)
+    - perl(Statistics::Distributions)
+perl-String-Approx:
+  '3.28':
+  - build:
+    - perl
+    - perl-macros
+perl-String-CRC32:
+  '2.100':
+  - build:
+    - perl
+    - perl-macros
+perl-String-Format:
+  '1.18':
+  - build:
+    - perl
+    - perl-macros
+perl-Sub-Delete:
+  '1.00002':
+  - build:
+    - perl
+    - perl-macros
+perl-Sub-Name:
+  '0.27':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::CheckBin)
+perl-Syntax-Keyword-Gather:
+  '1.003002':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Sub::Exporter::Progressive)
+    - perl(Test::More)
+    runtime:
+    - perl(Sub::Exporter::Progressive)
+perl-Sys-LoadAvg:
+  '0.03':
+  - build:
+    - perl
+    - perl-macros
+perl-Sys-MemInfo:
+  '0.99':
+  - build:
+    - perl
+    - perl-macros
+perl-Sys-Syscall:
+  '0.25':
+  - build:
+    - perl
+    - perl-macros
+perl-Sys-Utmp:
+  '1.8':
+  - build:
+    - perl
+    - perl-macros
+perl-Task-Weaken:
+  '1.06':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Config)
+    - perl(ExtUtils::MakeMaker)
+    - perl(File::Spec)
+    - perl(File::Spec::Functions)
+    - perl(Scalar::Util)
+    - perl(Test::More)
+    - perl(Test::Warn)
+    runtime:
+    - perl(Scalar::Util)
+perl-Template-GD:
+  '2.66':
+  - build:
+    - perl
+    - perl-macros
+    - perl(GD)
+    - perl(Template)
+    runtime:
+    - perl(GD)
+    - perl(Template)
+perl-Template-Plugin-JSON-Escape:
+  '0.02':
+  - build:
+    - perl
+    - perl-macros
+    - perl(JSON)
+    - perl(Template)
+    runtime:
+    - perl(JSON)
+    - perl(Template)
+perl-Template-Plugin-Latex:
+  '3.12':
+  - build:
+    - perl
+    - perl-macros
+    - perl(LaTeX::Driver)
+    - perl(LaTeX::Encode)
+    - perl(LaTeX::Table)
+    - perl(Template)
+    runtime:
+    - perl(LaTeX::Driver)
+    - perl(LaTeX::Encode)
+    - perl(LaTeX::Table)
+    - perl(Template)
+perl-Tenjin:
+  '1.000001':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::Entities)
+    - perl(Try::Tiny)
+    runtime:
+    - perl(HTML::Entities)
+perl-Term-Encoding:
+  '0.03':
+  - build:
+    - perl
+    - perl-macros
+perl-Term-ReadLine-Gnu:
+  '1.46':
+  - build:
+    - perl
+    - perl-macros
+    - ncurses-devel
+    - readline-devel
+perl-Term-TermKey:
+  '0.17':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::CBuilder)
+    - perl(Module::Build)
+    - perl(Module::Build::Using::PkgConfig)
+    - perl(Test::More)
+    - perl(Test::Refcount)
+    - perl(Alien::libtermkey)
+perl-Term-Terminfo:
+  '0.09':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::CChecker)
+    - perl(Module::Build)
+    - perl(Module::Build::Using::PkgConfig)
+    - perl(Test::More)
+    - ncurses5-devel
+perl-Test-CheckManifest:
+  '1.43':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Meta::YAML)
+    - perl(Cwd)
+    - perl(Pod::Coverage::TrustPod)
+    runtime:
+    - perl(Cwd)
+perl-Test-ClassAPI:
+  '1.07':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Inspector)
+    - perl(Config::Tiny)
+    - perl(Params::Util)
+    runtime:
+    - perl(Class::Inspector)
+    - perl(Config::Tiny)
+    - perl(Params::Util)
+perl-Test-Deep:
+  '1.204':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(Test::More)
+    - perl(Test::Tester)
+    runtime:
+    - perl(Test::More)
+    - perl-Test-Simple
+perl-Test-DiagINC:
+  '0.010':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+perl-Test-Differences:
+  0.710.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(Data::Dumper)
+    - perl(Test::More)
+    - perl(Text::Diff)
+    runtime:
+    - perl(Capture::Tiny)
+    - perl(Data::Dumper)
+    - perl(Test::More)
+    - perl(Text::Diff)
+perl-Test-HTTP-MockServer:
+  0.0.1:
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTTP::Parser)
+    - perl(HTTP::Response)
+    - perl(JSON::XS)
+    - perl(Module::Build)
+    - perl(LWP::UserAgent)
+    - netcfg
+    runtime:
+    - perl(HTTP::Parser)
+    - perl(HTTP::Response)
+    - perl(JSON::XS)
+    - netcfg
+perl-Test-Harness:
+  3.480.0:
+  - build:
+    - perl
+    - perl-macros
+perl-Test-Inter:
+  1.110.0:
+  - build:
+    - perl
+    - perl-macros
+perl-Test-LWP-UserAgent:
+  '0.036':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Meta::Requirements)
+    - perl(HTTP::Date)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Response)
+    - perl(HTTP::Status)
+    - perl(IO::Socket::IP)
+    - perl(LWP::UserAgent)
+    - perl(Module::Metadata)
+    - perl(Path::Tiny)
+    - perl(Safe::Isa)
+    - perl(Test::Deep)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Needs)
+    - perl(Test::RequiresInternet)
+    - perl(Test::Warnings)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(namespace::clean)
+    - perl(parent)
+    runtime:
+    - perl(HTTP::Date)
+    - perl(HTTP::Request)
+    - perl(HTTP::Response)
+    - perl(HTTP::Status)
+    - perl(IO::Socket::IP)
+    - perl(LWP::UserAgent)
+    - perl(Safe::Isa)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(namespace::clean)
+    - perl(parent)
+perl-Test-Log-Dispatch:
+  '0.03':
+  - build:
+    - perl
+    - perl-macros
+    - perl(List::MoreUtils)
+    - perl(Log::Dispatch::Array)
+    - perl(Test::Tester)
+    runtime:
+    - perl(List::MoreUtils)
+    - perl(Log::Dispatch::Array)
+perl-Test-Memory-Cycle:
+  '1.06':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::Cycle)
+    - perl(PadWalker)
+    runtime:
+    - perl(Devel::Cycle)
+    - perl(PadWalker)
+perl-Test-MemoryGrowth:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+perl-Test-Mock-LWP:
+  '0.08':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::MockObject)
+    runtime:
+    - perl(Test::MockObject)
+perl-Test-MockFile:
+  0.36.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Slurper)
+    - perl(Overload::FileCheck)
+    - perl(Test2::Bundle::Extended)
+    - perl(Test2::Harness::Util::IPC)
+    - perl(Test2::Plugin::NoWarnings)
+    - perl(Test2::Tools::Explain)
+    - perl(Test::MockModule)
+    - perl(Test::More)
+    - perl(Text::Glob)
+    runtime:
+    - perl(Overload::FileCheck)
+    - perl(Text::Glob)
+perl-Test-MockTime-HiRes:
+  '0.08':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build::Tiny)
+    - perl(Test::Class)
+    - perl(Test::MockTime)
+    - perl(Test::Requires)
+    runtime:
+    - perl(Test::MockTime)
+perl-Test-NoWarnings:
+  '1.06':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::Builder)
+    - perl(Test::Tester)
+    runtime:
+    - perl(Test::Builder)
+perl-Test-Object:
+  '0.08':
+  - build:
+    - perl
+    - perl-macros
+perl-Test-PerlTidy:
+  '20230226':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Path::Tiny)
+    - perl(Perl::Tidy)
+    - perl(Test::More)
+    - perl(Text::Diff)
+    - perl(parent)
+    runtime:
+    - perl(Path::Tiny)
+    - perl(Perl::Tidy)
+    - perl(Text::Diff)
+    - perl(parent)
+perl-Test-Pod:
+  '1.52':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Pod::Simple)
+    runtime:
+    - perl(Pod::Simple)
+perl-Test-Refcount:
+  '0.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Test::More)
+perl-Test-Simple:
+  '1.302198':
+  - build:
+    - perl
+    - perl-macros
+perl-Test-Spelling:
+  '0.25':
+  - build:
+    - perl
+    - perl-macros
+    - perl(IPC::Run3)
+    - perl(Pod::Spell)
+    - perl(Test::More)
+    - perl(Test::Tester)
+    runtime:
+    - perl(IPC::Run3)
+    - perl(Pod::Spell)
+perl-Test-Strict:
+  '0.52':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(IO::Scalar)
+    - perl(Test::More)
+perl-Test-SubCalls:
+  '1.10':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Hook::LexWrap)
+    runtime:
+    - perl(Hook::LexWrap)
+perl-Test-WWW-Mechanize-CGI:
+  '0.1':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::WWW::Mechanize)
+    - perl(WWW::Mechanize::CGI)
+    - perl(CGI)
+    runtime:
+    - perl(Test::WWW::Mechanize)
+    - perl(WWW::Mechanize::CGI)
+    - perl(CGI)
+perl-Test-YAML:
+  '1.07':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::Base)
+    runtime:
+    - perl(Test::Base)
+perl-Test-YAML-Valid:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+    - perl(YAML)
+    runtime:
+    - perl(YAML)
+perl-Text-Aspell:
+  '0.09':
+  - build:
+    - perl
+    - perl-macros
+    - aspell-devel
+    - aspell-en
+    - gcc
+    - glibc-devel
+perl-Text-BibTeX:
+  0.890.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Capture::Tiny)
+    - perl(Config::AutoConf)
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::LibBuilder)
+    - perl(Module::Build)
+    - perl(Scalar::Util)
+    - glibc-devel
+    runtime:
+    - perl(Scalar::Util)
+perl-Text-CSV_XS:
+  1.530.0:
+  - build:
+    - perl
+    - perl-macros
+perl-Text-Hunspell:
+  '2.16':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::Hunspell)
+    - perl(ExtUtils::MakeMaker)
+    - gcc-c++
+    - hunspell-devel
+perl-Text-Markdown:
+  '1.000031':
+  - build:
+    - perl
+    - perl-macros
+    - perl(List::MoreUtils)
+    - perl(Test::Differences)
+    - perl(Test::Exception)
+perl-Text-Markdown-Discount:
+  '0.16':
+  - build:
+    - perl
+    - perl-macros
+    - libmarkdown-devel
+    runtime:
+    - discount
+perl-Text-RecordParser:
+  1.6.5:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Class::Accessor)
+    - perl(IO::Scalar)
+    - perl(List::MoreUtils)
+    - perl(Readonly)
+    - perl(Test::Exception)
+    - perl(Text::Autoformat)
+    runtime:
+    - perl(Class::Accessor)
+    - perl(IO::Scalar)
+    - perl(List::MoreUtils)
+    - perl(Readonly)
+    - perl(Text::Autoformat)
+perl-Text-Soundex:
+  '3.05':
+  - build:
+    - perl
+    - perl-macros
+perl-Text-Table:
+  '1.135':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Test::More)
+    - perl(Text::Aligner)
+    runtime:
+    - perl(Text::Aligner)
+perl-Text-Textile:
+  '2.13':
+  - build:
+    - perl
+    - perl-macros
+perl-Text-Tokenizer:
+  0.4.6:
+  - build:
+    - perl
+    - perl-macros
+perl-Text-VimColor:
+  '0.29':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::ShareDir)
+    - perl(File::ShareDir::Install)
+    - perl(Path::Class)
+    - perl(Test::File::ShareDir::Dist)
+    - perl(Test::More)
+    - vim
+    - vim-data
+    - perl(Test::File::ShareDir::Dist)
+    runtime:
+    - perl(File::ShareDir)
+    - perl(Path::Class)
+    - vim
+    - '%{name}'
+perl-Tickit:
+  '0.51':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::CBuilder)
+    - perl(ExtUtils::PkgConfig)
+    - perl(List::MoreUtils)
+    - perl(Module::Build)
+    - perl(Parser::MGC)
+    - perl(Struct::Dumb)
+    - perl(Test::Fatal)
+    - perl(Test::HexString)
+    - perl(Test::Identity)
+    - perl(Test::More)
+    - perl(Test::Refcount)
+    - libtermkey-devel
+    - pkgconfig
+    runtime:
+    - perl(List::MoreUtils)
+    - perl(Parser::MGC)
+    - perl(Struct::Dumb)
+perl-Tie-EncryptedHash:
+  '1.24':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Crypt::Blowfish)
+    - perl(Crypt::CBC)
+    - perl(Crypt::DES)
+    runtime:
+    - perl(Crypt::Blowfish)
+    - perl(Crypt::CBC)
+    - perl(Crypt::DES)
+perl-Tie-Function:
+  '0.02':
+  - build:
+    - perl
+    - perl-macros
+perl-Time-ParseDate:
+  '2015.103':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Time::Piece)
+    - timezone
+perl-TimeDate:
+  '2.33':
+  - build:
+    - perl
+    - perl-macros
+perl-Tk:
+  '804.036':
+  - build:
+    - perl
+    - perl-macros
+    - liberation-fonts
+    - libjpeg-devel
+    - libpng-devel
+    - xkeyboard-config
+    - pkgconfig(x11)
+    - pkgconfig(xft)
+    - pkgconfig(xproto)
+    - pkgconfig(xt)
+    - xvfb-run
+    - perl(Devel::Leak)
+    - perl(Test::More)
+    - perl(Test::Pod)
+    - xorg-x11-Xnest
+    - xorg-x11-Xvfb
+    - xorg-x11-fonts
+    - xorg-x11-fonts-100dpi
+    - xorg-x11-fonts-scalable
+    - zlib-devel
+    - perl(Encode)
+    - perl(ExtUtils::MakeMaker)
+    - xorg-x11-server
+    runtime:
+    - '%{name}'
+perl-Tk-Clock:
+  '0.44':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+    - perl(Test::NoWarnings)
+    - perl(Tk)
+    - perl(Tk::Canvas)
+    - perl(Tk::Derived)
+    - perl(Tk::Widget)
+    runtime:
+    - perl(Test::More)
+    - perl(Test::NoWarnings)
+    - perl(Tk)
+    - perl(Tk::Canvas)
+    - perl(Tk::Derived)
+    - perl(Tk::Widget)
+perl-Tk-TableMatrix:
+  '1.29':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::MakeMaker)
+    - perl(Tk)
+    - perl(Tk::MMutil)
+    - perl-Tk-devel
+    - pkgconfig(x11)
+    - pkgconfig(xproto)
+    runtime:
+    - perl(Tk)
+perl-Tree-DAG_Node:
+  '1.32':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Slurp::Tiny)
+    - perl(File::Spec)
+    - perl(File::Temp)
+    - perl(Test::More)
+    runtime:
+    - perl(File::Slurp::Tiny)
+perl-Type-Tiny:
+  '2.004000':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Exporter::Tiny)
+    - perl(Test::More)
+    runtime:
+    - perl(Exporter::Tiny)
+perl-Types-Serialiser:
+  '1.01':
+  - build:
+    - perl
+    - perl-macros
+    - perl(common::sense)
+    runtime:
+    - perl(common::sense)
+perl-UNIVERSAL-ref:
+  '0.14':
+  - build:
+    - perl
+    - perl-macros
+    - perl(B::Utils)
+    runtime:
+    - perl(B::Utils)
+perl-URPM:
+  '5.224':
+  - build:
+    - perl
+    - perl-macros
+    - perl(ExtUtils::Depends)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::PkgConfig)
+    - perl(MDV::Packdrakeng)
+    - perl(Test::Pod)
+    - rpm-devel
+    runtime:
+    - perl(MDV::Packdrakeng)
+perl-UUID:
+  0.330.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN::Meta)
+    - perl(Devel::CheckLib)
+    - perl(ExtUtils::MakeMaker)
+    - perl(List::Util)
+    - perl(Test::More)
+    - perl(Try::Tiny)
+    - perl(version)
+    - libuuid-devel
+perl-Unicode-Collate:
+  '1.31':
+  - build:
+    - perl
+    - perl-macros
+perl-Unicode-EastAsianWidth:
+  '12.0':
+  - build:
+    - perl
+    - perl-macros
+perl-Unix-Mknod:
+  '0.04':
+  - build:
+    - perl
+    - perl-macros
+perl-Variable-Magic:
+  0.640.0:
+  - build:
+    - perl
+    - perl-macros
+perl-Verilog-Perl:
+  '3.480':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Digest::SHA)
+    - perl(Pod::Usage)
+    - bison
+    - flex
+    - gcc-c++
+    runtime:
+    - perl(Pod::Usage)
+perl-Vimana:
+  '2.26':
+  - build:
+    - perl
+    - perl-macros
+    - perl(App::CLI)
+    - perl(Archive::Extract)
+    - perl(Archive::Zip)
+    - perl(DateTime)
+    - perl(Exporter::Lite)
+    - perl(File::Path)
+    - perl(File::Type)
+    - perl(HTML::Entities)
+    - perl(HTTP::Lite)
+    - perl(JSON::PP)
+    - perl(LWP::Simple)
+    - perl(LWP::UserAgent)
+    - perl(Mouse)
+    - perl(Path::Class)
+    - perl(Regexp::Common)
+    - perl(Test::More)
+    - perl(URI)
+    - perl(Web::Scraper)
+    - perl(YAML)
+    - perl(parent)
+    - vim
+    - perl(Data::Util)
+    runtime:
+    - perl(App::CLI)
+    - perl(Archive::Extract)
+    - perl(Archive::Zip)
+    - perl(DateTime)
+    - perl(Exporter::Lite)
+    - perl(File::Path)
+    - perl(File::Type)
+    - perl(HTML::Entities)
+    - perl(HTTP::Lite)
+    - perl(JSON::PP)
+    - perl(LWP::Simple)
+    - perl(LWP::UserAgent)
+    - perl(Mouse)
+    - perl(Path::Class)
+    - perl(Regexp::Common)
+    - perl(URI)
+    - perl(Web::Scraper)
+    - perl(YAML)
+    - perl(parent)
+    - vim
+perl-WWW-Form-UrlEncoded:
+  '0.26':
+  - build:
+    - perl
+    - perl-macros
+    - perl(JSON::PP)
+    - perl(Module::Build)
+    - perl(Test::More)
+perl-WWW-Mechanize:
+  2.180.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::Form)
+    - perl(HTML::HeadParser)
+    - perl(HTML::TokeParser)
+    - perl(HTML::TreeBuilder)
+    - perl(HTTP::Cookies)
+    - perl(HTTP::Daemon)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(LWP)
+    - perl(LWP::Simple)
+    - perl(LWP::UserAgent)
+    - perl(Path::Tiny)
+    - perl(Test::Deep)
+    - perl(Test::Fatal)
+    - perl(Test::Memory::Cycle)
+    - perl(Test::More)
+    - perl(Test::Output)
+    - perl(Test::Taint)
+    - perl(Test::Warnings)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(URI::URL)
+    - perl(URI::file)
+    runtime:
+    - perl(HTML::Form)
+    - perl(HTML::HeadParser)
+    - perl(HTML::TokeParser)
+    - perl(HTML::TreeBuilder)
+    - perl(HTTP::Cookies)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(LWP::UserAgent)
+    - perl(URI::URL)
+    - perl(URI::file)
+perl-WWW-Mechanize-PhantomJS:
+  '0.24':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTML::Selector::XPath)
+    - perl(HTTP::Daemon)
+    - perl(HTTP::Response)
+    - perl(LWP::Simple)
+    - perl(Object::Import)
+    - perl(Selenium::Remote::Driver)
+    - perl(Test::HTTP::LocalServer)
+    - perl(URI)
+    - perl(URI::file)
+    - perl(WWW::Mechanize::Link)
+    runtime:
+    - perl(HTML::Selector::XPath)
+    - perl(HTTP::Response)
+    - perl(Object::Import)
+    - perl(Selenium::Remote::Driver)
+    - perl(WWW::Mechanize::Link)
+    - phantomjs
+perl-WWW-OpenSearch:
+  '0.17':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Data::Page)
+    - perl(LWP)
+    - perl(URI)
+    - perl(URI::Template)
+    - perl(XML::Feed)
+    - perl(XML::LibXML)
+    - perl(Module::Install)
+    runtime:
+    - perl(Data::Page)
+    - perl(LWP)
+    - perl(URI)
+    - perl(URI::Template)
+    - perl(XML::Feed)
+    - perl(XML::LibXML)
+perl-WWW-Pastebin-PastebinCom-Create:
+  '1.003':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Moo)
+    - perl(WWW::Mechanize)
+    runtime:
+    - perl(Moo)
+    - perl(WWW::Mechanize)
+perl-WWW-Shorten:
+  '3.094':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Getopt::Long)
+    - perl(LWP::UserAgent)
+    - perl(Test::More)
+    - perl(Try::Tiny)
+    runtime:
+    - perl(Getopt::Long)
+    - perl(LWP::UserAgent)
+    - perl(Try::Tiny)
+perl-WWW-Wikipedia:
+  '2.05':
+  - build:
+    - perl
+    - perl-macros
+    - perl(LWP::Protocol::https)
+    - perl(LWP::UserAgent)
+    - perl(Text::Autoformat)
+    - perl(URI)
+    runtime:
+    - perl(LWP::Protocol::https)
+    - perl(LWP::UserAgent)
+    - perl(Text::Autoformat)
+    - perl(URI)
+perl-Web-Machine:
+  '0.17':
+  - build:
+    - perl
+    - perl-macros
+    - perl(HTTP::Headers::ActionPack)
+    - perl(HTTP::Message::PSGI)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Response)
+    - perl(HTTP::Status)
+    - perl(Hash::MultiValue)
+    - perl(IO::Handle::Util)
+    - perl(Module::Runtime)
+    - perl(Net::HTTP)
+    - perl(Plack::Component)
+    - perl(Plack::Request)
+    - perl(Plack::Response)
+    - perl(Plack::Runner)
+    - perl(Plack::Test)
+    - perl(Plack::Util)
+    - perl(Sub::Exporter)
+    - perl(Test::FailWarnings)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Try::Tiny)
+    - perl(parent)
+    runtime:
+    - perl(HTTP::Headers::ActionPack)
+    - perl(HTTP::Status)
+    - perl(Hash::MultiValue)
+    - perl(IO::Handle::Util)
+    - perl(Module::Runtime)
+    - perl(Plack::Component)
+    - perl(Plack::Request)
+    - perl(Plack::Response)
+    - perl(Plack::Util)
+    - perl(Sub::Exporter)
+    - perl(Try::Tiny)
+    - perl(parent)
+perl-Web-Simple:
+  '0.033':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Data::Dumper::Concise)
+    - perl(HTTP::Body)
+    - perl(Moo)
+    - perl(Plack)
+    - perl(Syntax::Keyword::Gather)
+    - perl(Test::More)
+    - perl(strictures)
+    - perl(warnings::illegalproto)
+    runtime:
+    - perl(HTTP::Body)
+    - perl(Moo)
+    - perl(Plack)
+    - perl(Syntax::Keyword::Gather)
+    - perl(strictures)
+    - perl(warnings::illegalproto)
+perl-WebService-MusicBrainz:
+  1.0.6:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Module::Build)
+    - perl(Mojolicious)
+    runtime:
+    - perl(Mojolicious)
+perl-Webinject-Gui:
+  '1.56':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Tk)
+    - perl(Tk::Compound)
+    - perl(Tk::NoteBook)
+    - perl(Tk::PNG)
+    - perl(Tk::ProgressBar::Mac)
+    - perl(Tk::ROText)
+    - perl(Tk::Stderr)
+    - perl(Webinject)
+    runtime:
+    - perl(Tk)
+    - perl(Tk::Compound)
+    - perl(Tk::NoteBook)
+    - perl(Tk::PNG)
+    - perl(Tk::ProgressBar::Mac)
+    - perl(Tk::ROText)
+    - perl(Tk::Stderr)
+    - perl(Webinject)
+perl-Wx:
+  '0.9932':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::wxWidgets)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::ParseXS)
+    - perl(ExtUtils::XSpp)
+    - gcc-c++
+    - wxWidgets-3_0-nostl-devel
+    - xspp
+    runtime:
+    - perl(Alien::wxWidgets)
+    - perl(ExtUtils::MakeMaker)
+    - perl(ExtUtils::ParseXS)
+    - perl(ExtUtils::XSpp)
+    - '%(rpmqpack'
+perl-Wx-GLCanvas:
+  '0.09':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Wx)
+    - perl(Wx::build::MakeMaker)
+    - gcc-c++
+    - perl(Alien::wxWidgets)
+    - wxWidgets-3_0-nostl-devel
+    - wxWidgets-ansi-devel
+    - xvfb-run
+    runtime:
+    - perl(Wx)
+    - perl(Wx::build::MakeMaker)
+perl-Wx-Perl-ProcessStream:
+  '0.32':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Wx)
+    runtime:
+    - perl(Wx)
+perl-X11-Xlib:
+  0.250.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::CheckLib)
+    - perl(ExtUtils::Depends)
+    - perl(Try::Tiny)
+    - gcc
+    - libX11-devel
+    - libXtst-devel
+    - xvfb-run
+    runtime:
+    - perl(Try::Tiny)
+perl-XML-DT:
+  '0.69':
+  - build:
+    - perl
+    - perl-macros
+    - perl(XML::DTDParser)
+    - perl(XML::LibXML)
+    - perl(parent)
+    - perl(HTTP::Tiny)
+    runtime:
+    - perl(XML::DTDParser)
+    - perl(XML::LibXML)
+    - perl(parent)
+    - perl(HTTP::Tiny)
+perl-XML-Generator:
+  '1.13':
+  - build:
+    - perl
+    - perl-macros
+perl-XML-Hash-LX:
+  '0.07':
+  - build:
+    - perl
+    - perl-macros
+    - perl(XML::LibXML)
+    - perl(lib::abs)
+    - perl(Test::Pod::Coverage)
+    - perl(Types::Serialiser)
+    runtime:
+    - perl(XML::LibXML)
+    - perl(Types::Serialiser)
+perl-XML-LibXML:
+  '2.0210':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Alien::Base::Wrapper)
+    - perl(Alien::Libxml2)
+    - perl(XML::NamespaceSupport)
+    - perl(XML::SAX)
+    - perl(XML::SAX::Base)
+    - perl(XML::SAX::DocumentLocator)
+    - perl(XML::SAX::Exception)
+    - perl(parent)
+    - pkgconfig(libxml-2.0)
+    runtime:
+    - perl(XML::NamespaceSupport)
+    - perl(XML::SAX)
+    - perl(XML::SAX::Base)
+    - perl(XML::SAX::DocumentLocator)
+    - perl(XML::SAX::Exception)
+    - perl(parent)
+perl-XML-LibXSLT:
+  '2.002001':
+  - build:
+    - perl
+    - perl-macros
+    - perl(File::Path)
+    - perl(XML::LibXML)
+    - libxslt-devel
+    runtime:
+    - perl(File::Path)
+    - perl(XML::LibXML)
+perl-XML-Parser:
+  2.470.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(LWP::UserAgent)
+    - libexpat-devel
+    runtime:
+    - perl(LWP::UserAgent)
+perl-XML-Quick:
+  '0.07':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::XML)
+perl-XML-SAX:
+  '1.02':
+  - build:
+    - perl
+    - perl-macros
+    - perl(XML::NamespaceSupport)
+    - perl(XML::SAX::Base)
+    runtime:
+    - perl(XML::NamespaceSupport)
+    - perl(XML::SAX::Base)
+perl-XML-SAX-Expat:
+  '0.51':
+  - build:
+    - perl
+    - perl-macros
+    - perl(XML::NamespaceSupport)
+    - perl(XML::Parser)
+    - perl(XML::SAX)
+    - perl(XML::SAX::Base)
+    runtime:
+    - perl(XML::NamespaceSupport)
+    - perl(XML::Parser)
+    - perl(XML::SAX)
+    - perl(XML::SAX::Base)
+perl-XML-Twig:
+  '3.52':
+  - build:
+    - perl
+    - perl-macros
+    - perl(XML::Parser)
+    - expat
+    - perl-HTML-Tidy
+    - perl-IO-CaptureOutput
+    - perl-Test-Exception
+    - perl-Test-Pod
+    - perl-Text-Iconv
+    - perl-Text-Wrapper
+    - perl-Tie-IxHash
+    - perl-Unicode-Map8
+    - perl-XML-Filter-BufferText
+    - perl-XML-Handler-YAWriter
+    - perl-XML-Parser
+    - perl-XML-SAX-Writer
+    - perl-XML-Simple
+    - perl-XML-XPath
+    - perl-XML-XPathEngine
+    runtime:
+    - perl(XML::Parser)
+    - expat
+    - perl-XML-Parser
+    - perl(Encode)
+perl-XML-Writer:
+  '0.900':
+  - build:
+    - perl
+    - perl-macros
+perl-XML-XSLT:
+  '0.48':
+  - build:
+    - fdupes
+    - perl
+    - perl-macros
+    - perl(XML::DOM)
+    - perl(XML::Parser)
+    runtime:
+    - perl(XML::DOM)
+    - perl(XML::Parser)
+perl-XSLoader:
+  '0.24':
+  - build:
+    - perl
+    - perl-macros
+perl-YAML-Syck:
+  '1.34':
+  - build:
+    - perl
+    - perl-macros
+perl-ZMQ-LibZMQ3:
+  '1.19':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::PPPort)
+    - perl(ExtUtils::ParseXS)
+    - perl(Task::Weaken)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(Test::TCP)
+    - perl(ZMQ::Constants)
+    - pkgconfig(libzmq)
+    runtime:
+    - perl(Task::Weaken)
+    - perl(ZMQ::Constants)
+perl-ZMQ-LibZMQ4:
+  '0.01':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Devel::PPPort)
+    - perl(ExtUtils::ParseXS)
+    - perl(Task::Weaken)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Requires)
+    - perl(Test::TCP)
+    - perl(ZMQ::Constants)
+    - pkgconfig(libzmq)
+    runtime:
+    - perl(Task::Weaken)
+    - perl(ZMQ::Constants)
+perl-autobox:
+  3.0.1:
+  - build:
+    - perl
+    - perl-macros
+    - perl(IPC::System::Simple)
+    - perl(Scope::Guard)
+    - perl(Test::Fatal)
+    - perl(version)
+    runtime:
+    - perl(Scope::Guard)
+    - perl(version)
+perl-common-sense:
+  '3.75':
+  - build:
+    - perl
+    - perl-macros
+perl-constant-defer:
+  '6':
+  - build:
+    - perl
+    - perl-macros
+perl-constant-lexical:
+  2.0.300:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Lexical::Sub)
+    runtime:
+    - perl(Lexical::Sub)
+perl-experimental:
+  '0.031':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Test::More)
+    - perl(version)
+    runtime:
+    - perl(version)
+perl-ldap:
+  '0.68':
+  - build:
+    - perl
+    - perl-macros
+    - perl(Convert::ASN1)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Text::Soundex)
+    - perl(Digest::MD5)
+    - perl(IO::Socket::IP)
+    - perl(JSON)
+    - perl(MIME::Base64)
+    - perl(URI)
+    runtime:
+    - perl(Convert::ASN1)
+perl-libintl-perl:
+  '1.33':
+  - build:
+    - perl
+    - perl-macros
+    - perl(version)
+    runtime:
+    - perl(version)
+    - gettext-runtime
+perl-libwww-perl:
+  6.770.0:
+  - build:
+    - perl
+    - perl-macros
+    - perl(Encode::Locale)
+    - perl(File::Listing)
+    - perl(HTML::Entities)
+    - perl(HTML::HeadParser)
+    - perl(HTTP::CookieJar::LWP)
+    - perl(HTTP::Cookies)
+    - perl(HTTP::Daemon)
+    - perl(HTTP::Date)
+    - perl(HTTP::Negotiate)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Response)
+    - perl(HTTP::Status)
+    - perl(LWP::MediaTypes)
+    - perl(Module::Load)
+    - perl(Net::HTTP)
+    - perl(Test::Fatal)
+    - perl(Test::More)
+    - perl(Test::Needs)
+    - perl(Test::RequiresInternet)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(WWW::RobotRules)
+    - perl(parent)
+    runtime:
+    - perl(Encode::Locale)
+    - perl(File::Listing)
+    - perl(HTML::Entities)
+    - perl(HTML::HeadParser)
+    - perl(HTTP::Cookies)
+    - perl(HTTP::Date)
+    - perl(HTTP::Negotiate)
+    - perl(HTTP::Request)
+    - perl(HTTP::Request::Common)
+    - perl(HTTP::Response)
+    - perl(HTTP::Status)
+    - perl(LWP::MediaTypes)
+    - perl(Module::Load)
+    - perl(Net::HTTP)
+    - perl(Try::Tiny)
+    - perl(URI)
+    - perl(URI::Escape)
+    - perl(WWW::RobotRules)
+    - perl(parent)
+perl-local-lib:
+  '2.000029':
+  - build:
+    - perl
+    - perl-macros
+    - perl(CPAN)
+    - perl(ExtUtils::Install)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Module::Build)
+    runtime:
+    - perl(CPAN)
+    - perl(ExtUtils::Install)
+    - perl(ExtUtils::MakeMaker)
+    - perl(Module::Build)
+    - '%{name}'
+    - /usr/bin/cpan
+perl-threads:
+  '2.21':
+  - build:
+    - perl
+    - perl-macros
